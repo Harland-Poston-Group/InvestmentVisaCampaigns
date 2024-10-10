@@ -513,13 +513,13 @@ a {
 
 #take-the-opportunity-section{
     padding: 2rem 0;
-    background: $brand_purple url("https://campaigns-iv.test/images/campaigns/1-CTA-RD-DTP-Top.webp") no-repeat 100% 100%;
+    background: $brand_purple url("/images/campaigns/1-CTA-RD-DTP-Top.webp") no-repeat 100% 100%;
     //background: $brand_purple url("~@/assets/img/1-CTA-RD-DTP.webp") no-repeat 100% 100%;
     background-size: cover;
     height: 770px;
 
     @media (max-width:768px) {
-        background: url("https://campaigns-iv.test/images/campaigns/CTA-Block-SVG-MOB.svg") no-repeat;
+        background: url("/images/campaigns/CTA-Block-SVG-MOB.svg") no-repeat;
         background-size:cover;
         height: 770px;
     }
@@ -793,7 +793,7 @@ a {
     // background: linear-gradient(180deg, rgba(231, 215, 182, 0.6) 0%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
     //background: transparent linear-gradient(180deg, #CCAD7600 0%, #CCAD7680 61%, #CCAD7600 100%) 0% 0% no-repeat padding-box;
     background-size: cover;
-    background: url("https://campaigns-iv.test/images/BGtestimonials-section-pm.svg") no-repeat scroll;
+    background: url("/images/BGtestimonials-section-pm.svg") no-repeat scroll;
     position: relative;
     z-index: 2;
     padding-bottom: 10rem;
@@ -1116,7 +1116,7 @@ a {
 
 .footer-pm{
     color: #fff;
-    background: url("https://campaigns-iv.test/images/Backgd-Footer.svg");
+    background: url("/images/Backgd-Footer.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
