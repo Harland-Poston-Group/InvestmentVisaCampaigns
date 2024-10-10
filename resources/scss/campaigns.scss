@@ -208,7 +208,7 @@ a {
 }
 #form-container-element-banner, .banner-form {
     #modal-awareness-form {
-        margin-top: 85px;
+        margin-top: 0;
     }
 }
 .visas-disclaimer {
@@ -1498,6 +1498,14 @@ a {
     // background-size: cover;
 
     @media (max-width:768px) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 350px;
+        z-index: 999999;
+
 
         .private-meetings-country-form{
             width: 100%!important;
