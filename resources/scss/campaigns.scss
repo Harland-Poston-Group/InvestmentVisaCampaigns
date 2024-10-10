@@ -103,6 +103,10 @@ a {
             margin-top: unset;
             width: 100%;
             position: relative;
+            background: url("https://campaigns-iv.test/assets/img/campaigns/greece/Backgd-mob-form.svg");
+            background-size: cover;
+            box-shadow: none;
+            padding-bottom: 2rem;
 
             .input-container{
                 gap: 0px;
@@ -696,9 +700,19 @@ a {
 
 
     @media (max-width:768px) {
-        background: url("https://campaigns-iv.test/images/campaigns/take-the-opportunity-section") no-repeat;
+        background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
         background-size:cover;
         height: 770px;
+
+        .salesman-intro {
+            position: relative !important;
+
+        }
+
+        .schedule-button {
+            position: relative !important;
+        }
+
     }
 
     .row{
@@ -727,6 +741,7 @@ a {
         transform: rotate(1.2deg);
 
         @media (max-width:768px) {
+            display: none;
             width: 70%;
             left: 0;
             top: 30px;
@@ -1594,13 +1609,24 @@ a {
             border-radius: 50%;
             height: 180px;
             z-index: -1;
-            top: 40px;
+            top: 30px;
             position: relative;
-            right: -90px;
+            right: 0;
         }
         .anim {
             position: relative;
             bottom: 30px;
+        }
+        @media (max-width:768px) {
+            .flag {
+                top: 50px;
+                right: -90px;
+            }
+            .anim {
+                position: relative;
+                bottom: 10px;
+            }
+
         }
 
     }
