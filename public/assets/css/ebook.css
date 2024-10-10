@@ -1,0 +1,476 @@
+/* Our brand's gold color */
+/* GREY TEXT */
+/* Harland & Poston Brand Blue */
+.download-button {
+  border-radius: 20px;
+  background: #2B70A6;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  border: none;
+  padding: 5px 25px;
+  margin-top: 25px;
+  transition: 0.2s all;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.download-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#ebook-top-banner {
+  position: relative;
+  background-image: url("/assets/img/banner-ebook.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  #ebook-top-banner {
+    background-position: right;
+  }
+}
+@media (max-width: 600px) {
+  #ebook-top-banner {
+    background-image: url("/assets/img/banner-ebook-mobile.jpg");
+    height: 430px;
+  }
+}
+#ebook-top-banner .container {
+  position: relative;
+}
+#ebook-top-banner .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+#ebook-top-banner .logo-container {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 200px;
+}
+@media (max-width: 600px) {
+  #ebook-top-banner .logo-container {
+    left: 20px;
+    width: 160px;
+  }
+}
+
+#ebook-first-section .title {
+  font-size: 48px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .title {
+    font-size: 34px;
+  }
+}
+#ebook-first-section .top-element {
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .top-element {
+    padding-bottom: unset;
+  }
+}
+@media (max-width: 768px) {
+  #ebook-first-section .top-element .row {
+    flex-direction: column-reverse;
+  }
+}
+#ebook-first-section .left-column {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .left-column {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+#ebook-first-section .right-column {
+  position: relative;
+}
+#ebook-first-section .right-column .ebook-preview {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #ebook-first-section .right-column .ebook-preview {
+    top: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  #ebook-first-section .right-column .ebook-preview {
+    width: 50%;
+    right: 0;
+  }
+}
+@media (max-width: 500px) {
+  #ebook-first-section .right-column .ebook-preview {
+    width: 60%;
+  }
+}
+#ebook-first-section .info-container {
+  border-top: 5px solid #C3922E;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .info-container {
+    padding-bottom: 40px;
+  }
+}
+#ebook-first-section .info-container .item-title {
+  font-weight: 400;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .info-container .item-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  #ebook-first-section .info-container .row {
+    gap: 40px;
+  }
+}
+#ebook-first-section .gold-bar {
+  background: #CDAE76;
+  color: white;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+#ebook-first-section .gold-bar .gold-bar-title {
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .gold-bar .gold-bar-title {
+    font-weight: 400;
+    font-size: 24px;
+  }
+}
+#ebook-first-section .gold-bar p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  #ebook-first-section .gold-bar {
+    padding-bottom: 40px;
+    padding-top: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  #ebook-first-section .second-container {
+    width: unset;
+    max-width: unset;
+    background: #CDAE76;
+    color: white;
+    text-align: center;
+  }
+  #ebook-first-section .second-container p {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  #ebook-first-section .container:first-of-type {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #complete-guide-section {
+    overflow: hidden;
+  }
+}
+#complete-guide-section .container {
+  padding-bottom: 60px;
+}
+#complete-guide-section .image-container {
+  width: 100%;
+}
+#complete-guide-section .image-container img {
+  width: 100%;
+}
+@media (max-width: 430px) {
+  #complete-guide-section .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  #complete-guide-section .image-container img {
+    width: 140%;
+  }
+}
+#complete-guide-section .complete-guide-title {
+  text-align: center;
+}
+#complete-guide-section .complete-guide-title h2 {
+  font-size: 50px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  #complete-guide-section .complete-guide-title h2 {
+    font-size: 34px;
+  }
+}
+#complete-guide-section .download-button {
+  margin: auto;
+  margin-top: 25px;
+}
+
+footer {
+  background: #CDAE76;
+  color: white;
+  border-radius: unset;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  color: white;
+}
+@media (max-width: 991px) {
+  footer .container {
+    justify-content: unset;
+    -moz-column-gap: unset;
+         column-gap: unset;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  footer .container .logo-container {
+    width: 160x;
+  }
+}
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+}
+footer .logo-container {
+  width: 240px;
+}
+footer .vertical-bar {
+  border-left: 2px solid white;
+}
+@media (max-width: 768px) {
+  footer .vertical-bar {
+    border: 2px solid white;
+    width: 100%;
+  }
+}
+footer .social-media-title {
+  font-size: 20px;
+}
+footer .social-media-icons-wrapper {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  footer .social-media-icons-wrapper {
+    gap: 35px;
+    padding: 10px 20px;
+  }
+}
+footer .social-media-container {
+  display: flex;
+  gap: 20px;
+  margin-top: unset !important;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+footer .social-media-container .social-media-link:hover i {
+  opacity: 0.8;
+}
+footer .social-media-container .social-media-link i {
+  transition: 0.2s all;
+}
+
+body .form-background-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition: 0.4s all;
+}
+body .form-background-container.active {
+  background: rgba(0, 0, 0, 0.4);
+}
+body .form-background-container form {
+  margin-top: 10px !important;
+}
+body #form-container-element-banner {
+  padding: 20px 30px;
+  width: 450px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+@media (max-width: 991px) {
+  body #form-container-element-banner {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  body #form-container-element-banner {
+    width: 100%;
+    height: 100%;
+  }
+}
+body .close-modal-container {
+  text-align: end;
+}
+body .close-modal-container i {
+  font-size: 18px;
+}
+body .close-modal-container i:hover {
+  cursor: pointer;
+}
+body #ebook-form {
+  row-gap: 12px;
+}
+@media (max-width: 768px) {
+  body #ebook-form {
+    row-gap: 15px !important;
+  }
+}
+body #ebook-form .input-container {
+  display: flex;
+  gap: 8px;
+}
+body #ebook-form .input-container input {
+  width: 100%;
+}
+body #submitButton:disabled {
+  opacity: 0.7;
+}
+
+.ebook-thank-you-page {
+  background: #CDAE76;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ebook-thank-you-page #main-section {
+  background: white;
+}
+.ebook-thank-you-page #main-section .content-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  padding: 60px 0;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .ebook-thank-you-page #main-section .content-container {
+    -moz-column-gap: unset;
+         column-gap: unset;
+  }
+}
+.ebook-thank-you-page #main-section .content-container .content {
+  font-size: 18px;
+}
+.ebook-thank-you-page #main-section .content-container .content h1, .ebook-thank-you-page #main-section .content-container .content h2, .ebook-thank-you-page #main-section .content-container .content h3 {
+  font-weight: 400;
+}
+.ebook-thank-you-page #main-section .content-container .content p {
+  margin: unset;
+}
+.ebook-thank-you-page #main-section .content-container .social-media-element {
+  margin-top: 40px;
+}
+.ebook-thank-you-page #main-section .content-container .title {
+  font-size: 34px;
+}
+.ebook-thank-you-page #main-section .image-container {
+  width: 100%;
+  position: relative;
+  height: calc(100% + 120px);
+}
+.ebook-thank-you-page #main-section .image-container img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 700px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 991px) {
+  .ebook-thank-you-page #main-section .image-container img {
+    height: 150%;
+    width: unset;
+    right: 0;
+  }
+}
+.ebook-thank-you-page .social-media-icons-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 1420px) {
+  .ebook-thank-you-page .social-media-icons-grid-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+.ebook-thank-you-page .social-media-icons-grid-footer .white-round-div {
+  background: white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 auto;
+  transition: 0.2s all;
+}
+.ebook-thank-you-page .social-media-icons-grid-footer .white-round-div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.ebook-thank-you-page .social-media-icons-grid-footer .white-round-div:hover {
+  background-color: #C3922E;
+  cursor: pointer;
+}
+.ebook-thank-you-page .social-media-icons-grid-footer .white-round-div:hover i {
+  color: white;
+}
+.ebook-thank-you-page .social-media-icons-grid-footer i {
+  color: #C3922E;
+  transition: 0.2s all;
+  font-size: 20px;
+}

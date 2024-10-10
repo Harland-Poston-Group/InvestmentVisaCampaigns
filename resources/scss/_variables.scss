@@ -1,0 +1,65 @@
+$red: red;
+$card_red_status: #F80000;
+$error_color: #F4403B;
+$website_font: 'Chivo', sans-serif;
+$golden: rgb(235, 201, 12);
+
+/* Our brand's gold color */
+$brand_gold: #C3922E;
+$brand_mid_golden: #D9AB4D;
+$brand_light_golden: #EEBC56;
+$brand_gold_alternative: #DBA943;
+
+/* Our brand's Purple color */
+$brand_purple: #6A257A;
+$brand_mid_purple: #B08BB9;
+$brand_light_purple: #B08BB980;
+$brand_purple_alternative: #B08BB9;
+
+// beaujolais
+
+$beaujolais: #AA2159;
+
+$light_blue: #D4ECFA;
+
+$link-color: #6A257A;
+
+/* Baby Blue Background Color used in the PM's Landing Pages */
+$baby_blue: #DBEAF2;
+
+/* GREY TEXT */
+$grey_text_footer: #707070;
+$grey_alt_background: #F5F5F5;
+$grey_text: #969595;
+$grey_text2: #828282;
+$grey_text3: #383838;
+$grey_text4: #313131;
+
+// $button_red: #F4403B;
+$button_red: #C3922E;
+$cards_background: #FBFCFF;
+$grey_background: #FAFAFA;
+$grey_secondary_background: #F4F5F8;
+$blue_bg: #1E3B6B;
+
+/* Harland & Poston Brand Blue */
+$hpg_blue: #1e2931;
+$hpg_blue_secondary: #19232A;
+$hpg_blue_tertiary: #2a353c;
+$hpg_blue_gold_areas_background: #131b20;
+$hpg_blue_gradient: linear-gradient(180deg, rgb(50, 72, 88) 0%, rgb(30, 41, 49) 100%);
+$hpg_blue_gradient_dark: #1E2931;
+$hpg_blue_gradient_light: #324858;
+$body-links: 700;
+
+// Opacity value on button hover
+$opacity-button-hover: 0.75;
+
+
+// Mobile fonts - Shorthand - https://developer.mozilla.org/en-US/docs/Web/CSS/font
+$font-mobile-header: 900 normal 30px $website_font;
+$font-mobile-content: 500 normal 16px $website_font;
+
+$font-desktop-section-header: 300 normal 36px $website_font;
+$font-section-title: 900 normal 41px $website_font;
+

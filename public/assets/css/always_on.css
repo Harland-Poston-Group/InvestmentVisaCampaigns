@@ -1,0 +1,188 @@
+/* Our brand's gold color */
+/* GREY TEXT */
+/* Harland & Poston Brand Blue */
+#benefits-of-living-in-portugal-v2-section .container {
+  padding-top: 60px;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .row {
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  #benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .row {
+    row-gap: 25px;
+    width: 100%;
+    margin: auto;
+  }
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item {
+  border-radius: 20px;
+  padding: 20px 30px;
+  padding: 40px 30px 20px 30px;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+@media (max-width: 768px) {
+  #benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item {
+    padding: 25px 30px 20px 30px;
+    height: 225px;
+  }
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item.col-md-3 {
+  width: 28%;
+}
+@media (max-width: 768px) {
+  #benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item.col-md-3 {
+    width: 100%;
+  }
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .background-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  z-index: 1;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .background-fade {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 40%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.2s all;
+  background: linear-gradient(180deg, rgb(30, 59, 107) 0%, rgb(30, 59, 107) 70%, rgba(28, 72, 119, 0) 100%, rgba(0, 212, 255, 0) 100%);
+}
+@media (max-width: 768px) {
+  #benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .background-fade {
+    height: 50%;
+  }
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .background-fade-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 3;
+  transition: 0.4s all;
+  opacity: 0;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item:hover .background-fade {
+  background: linear-gradient(180deg, rgb(30, 59, 107) 0%, rgb(30, 59, 107) 100%);
+  height: 100%;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item:hover .background-fade-hover {
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 28%, rgba(28, 72, 119, 0) 55%, rgba(0, 212, 255, 0) 56%);
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item:hover .content .text {
+  opacity: 1;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .content .title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  #benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .content .title {
+    font-size: 22px;
+  }
+}
+#benefits-of-living-in-portugal-v2-section .benefits-of-living-wrapper .benefit-item .content .text {
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+#ph-selling-points-v2-section .container {
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+#ph-selling-points-v2-section .selling-points-container {
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  #ph-selling-points-v2-section .selling-points-container {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  #ph-selling-points-v2-section .selling-points-container.row {
+    row-gap: 25px;
+  }
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #ph-selling-points-v2-section .selling-points-container .selling-point {
+    height: 225px;
+  }
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point .background-fade {
+  background: linear-gradient(0deg, rgb(28, 72, 119) 0%, rgb(28, 72, 119) 70%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point .background-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point .content {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point .content .title {
+  margin: unset;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 2px 0px 5px rgba(28, 72, 119, 0.92);
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point .content .text {
+  font-size: 22px;
+}
+#ph-selling-points-v2-section .selling-points-container .selling-point.col-md-3 {
+  width: 28%;
+}
+@media (max-width: 768px) {
+  #ph-selling-points-v2-section .selling-points-container .selling-point.col-md-3 {
+    width: 100%;
+  }
+}
