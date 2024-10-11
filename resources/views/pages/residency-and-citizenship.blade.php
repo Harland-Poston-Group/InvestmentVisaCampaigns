@@ -453,7 +453,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                         </div>
                     </div>
                 </div>
-            </div><div phpb-blocks-container="" class="IDLZ8A1ZV0HAWEH1 footer-iv row"><img src="https://campaigns.investmentvisa.com/uploads/575c5209364bf9d5ea512e55674b5a4319dc82b2/IV-Logo-Color-Negat.png" alt="Investment Visa">
+            </div><div phpb-blocks-container="" class="IDLZ8A1ZV0HAWEH1 footer-iv row"><img src="/images/residency//IV-Logo-Color-Negat.png" alt="Investment Visa">
                 <h4 data-raw-content="true">FOLLOW US</h4>
                 <div class="footer-social-icons"><a href="https://facebook.com" title="Follow us on Facebook" target="_blank" class="IDLZ8A1ZV3UMWGA2"><i data-raw-content="true" class="fab fa-facebook-f"></i></a><a href="https://twitter.com" title="Follow us on Twitter" target="_blank" class="IDLZ8A1ZV4ENWLN3"><i data-raw-content="true" class="fa-brands fa-x-twitter"></i></a><a href="https://instagram.com" title="Follow us on Instagram" target="_blank" class="IDLZ8A1ZV6RJ9E04"><i data-raw-content="true" class="fa-brands fa-instagram"></i></a><a href="https://youtube.com" title="Follow us on Youtube" target="_blank" class="IDLZ8A1ZV7J2R2F5"><i data-raw-content="true" class="fa-brands fa-youtube"></i></a><a href="https://linkedin.com" title="Follow us on Linkedin" target="_blank" class="IDLZ8A1ZV896CFK6"><i data-raw-content="true" class="fa-brands fa-linkedin-in"></i></a></div>
                 <p data-raw-content="true"></p>
