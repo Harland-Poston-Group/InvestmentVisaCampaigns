@@ -49,15 +49,14 @@
     <!-- <link rel="stylesheet" href="{{-- mix('/assets/css/campaigns.css') --}}"> -->
     <!-- <link rel="stylesheet" href="/assets/css/private-meetings.css"> -->
 
-    @vite('/resources/scss/always_on.scss') <!-- Include SCSS via Vite -->
-    @vite('/resources/scss/app.scss') <!-- Include SCSS via Vite -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}"> <!-- Compiled CSS for app -->
+    <link rel="stylesheet" href="{{ mix('css/always_on.css') }}"> <!-- Compiled CSS for always_on -->
+    <link rel="stylesheet" href="{{ mix('css/campaigns.css') }}"> <!-- Compiled CSS for campaigns -->
+    {{--- <link rel="stylesheet" href="{{ mix('css/private-meetings.css') }}"> --}} <!-- Compiled CSS for private_meetings -->
 
-    @vite('/resources/scss/always_on.scss') <!-- Include SCSS via Vite -->
-    @vite('resources/scss/campaigns.scss') <!-- Include SCSS via Vite -->
-    {{-- @vite('resources/css/campaigns.css" />') --}}
+    <script src="{{ mix('js/app.js') }}" defer></script> <!-- Compiled JS for app -->
+    <script src="{{ mix('js/campaigns.js') }}" defer></script> <!-- Compiled JS for campaigns -->
 
-    @vite('resources/js/campaigns.js" />')
-    @vite('resources/js/app.js" />')
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-820557028">

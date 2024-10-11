@@ -189,6 +189,7 @@ a {
         object-fit: fill;
         height: fit-content;
         z-index: 1;
+        top: 40px;
 
         @media (max-width:768px) {
 
@@ -227,7 +228,6 @@ a {
 }
 
 .logo-link {
-    position: absolute;
     left: 0;
     top: 10%;
 }

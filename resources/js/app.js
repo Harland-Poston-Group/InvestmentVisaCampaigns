@@ -1,4 +1,4 @@
-import './bootstrap';
+import './bootstrap.js';
 import grapesjs from 'grapesjs';
 import Alpine from 'alpinejs';
 
