@@ -108,7 +108,7 @@ a {
             margin-top: unset;
             width: 100%;
             position: relative;
-            //background: url("https://campaigns-iv.test/assets/img/campaigns/greece/Backgd-mob-form.svg");
+            //background: url("/assets/img/campaigns/greece/Backgd-mob-form.svg");
             background-size: cover;
             box-shadow: none;
             padding-top: 8rem;
@@ -622,7 +622,7 @@ a {
 }
 #private-meetings-booking-sections{
 
-    background: url("https://campaigns-iv.test/assets/img/campaigns/greece/BackgdGreece-Finest.svg");
+    background: url("/assets/img/campaigns/greece/BackgdGreece-Finest.svg");
     padding-bottom: 10rem;
     background-repeat: no-repeat;
     .row{
@@ -744,8 +744,8 @@ a {
 
 #take-the-opportunity-section{
     padding: 2rem 0;
-    // background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-DTP-Mask.webp") no-repeat 100% 100%;
-    background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-2-DTP.webp") no-repeat 100% 100%;
+    // background: url("/assets/img/campaigns/greece/CTA-MW-DTP-Mask.webp") no-repeat 100% 100%;
+    background: url("/assets/img/campaigns/greece/CTA-MW-2-DTP.webp") no-repeat 100% 100%;
     //background: linear-gradient(to bottom, $brand_purple, transparent);
     z-index: 1;
     background-size: cover;
@@ -765,7 +765,7 @@ a {
 
 
     @media (max-width:768px) {
-        background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
+        background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
         background-size:cover;
         height: 770px;
 
@@ -1055,7 +1055,7 @@ a {
     // background: linear-gradient(180deg, rgba(231, 215, 182, 0.6) 0%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
     //background: transparent linear-gradient(180deg, #CCAD7600 0%, #CCAD7680 61%, #CCAD7600 100%) 0% 0% no-repeat padding-box;
     //background-size: cover;
-    //background: url("https://campaigns-iv.test/images/BGtestimonials-section-pm.svg") no-repeat scroll;
+    //background: url("/images/BGtestimonials-section-pm.svg") no-repeat scroll;
     position: relative;
     z-index: 2;
 
@@ -1418,7 +1418,7 @@ a {
 
 .footer-pm{
     color: #fff;
-    background: url("https://campaigns-iv.test/images/Backgd-Footer.svg");
+    background: url("/images/Backgd-Footer.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
