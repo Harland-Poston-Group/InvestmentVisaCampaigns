@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/private-meetings.js": "/js/private-meetings.js",
+    "/js/campaigns.js": "/js/campaigns.js",
+    "/js/residency.js": "/js/residency.js",
+    "/js/notify.js": "/js/notify.js",
+    "/css/app.css": "/css/app.css",
+    "/css/always_on.css": "/css/always_on.css",
+    "/css/campaigns.css": "/css/campaigns.css",
+    "/css/private-meetings.css": "/css/private-meetings.css",
+    "/css/residency.css": "/css/residency.css"
+}
