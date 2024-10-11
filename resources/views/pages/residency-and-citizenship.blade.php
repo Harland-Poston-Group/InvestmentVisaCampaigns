@@ -441,7 +441,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
             </section><div phpb-blocks-container="" id="expert-section" class="IDLZ8ADCALKBFK11 row">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-4"><img src="/uploads/a58f0447237a9736f9370ba0bf4a425024572deb/SHobson-366x366.webp" alt="Investment Visa Expert" class="investor-image">
+                        <div class="col-12 col-sm-4"><img src="/images/residency/SHobson-366x366.webp" alt="Investment Visa Expert" class="investor-image">
                             <h4 data-raw-content="true" class="investor-title">George Hobson</h4>
                             <div class="investor-position">Investment Advisor</div>
                         </div>
