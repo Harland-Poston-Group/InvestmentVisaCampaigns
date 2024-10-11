@@ -170,6 +170,7 @@
     </div>
 </section>
 <!-- Navbar -->
+{{--
 <nav id="campaign-navbar" class="navbar navbar-expand-lg navbar-light sticky-top d-block d-sm-none">
     <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Brand</a> -->
@@ -200,7 +201,7 @@
         </div>
     </div>
 </nav>
-
+--}}
 {{-- Banner --}}
 <section id="private-meetings-banner" class="">
 
@@ -417,6 +418,7 @@
             {{-- <i class="fa fa-times close-button" aria-hidden="true"></i> --}}
 
         </div>
+
 
     </div>
 </section>
@@ -850,7 +852,7 @@
 {{-- Footer --}}
 @include('components.footer-cp')
 
-{{-- Form Element --}}
+{{-- Form Element--}}
 <div id="form-container-element" class="generic-form-container">
 
     {{-- <h3 class="gold bolder form-title">Discover how expat life in Portugal can become a reality</h3> --}}

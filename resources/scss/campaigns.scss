@@ -92,6 +92,11 @@ a {
     @media (max-width:768px) {
         height: auto;
 
+        #mobile-hero {
+            width: 100%;
+        }
+
+
         .slider-mask {
             width: 100%;
         }
@@ -103,7 +108,7 @@ a {
             margin-top: unset;
             width: 100%;
             position: relative;
-            background: url("https://campaigns-iv.test/assets/img/campaigns/greece/Backgd-mob-form.svg");
+            //background: url("https://campaigns-iv.test/assets/img/campaigns/greece/Backgd-mob-form.svg");
             background-size: cover;
             box-shadow: none;
             padding-top: 8rem;
@@ -203,13 +208,18 @@ a {
         #form-container-element-banner.private-meetings-country-form .flag-container {
             position: absolute;
             z-index: 9;
-            top: -150px;
+            top: -125px;
         }
     }
 }
 #form-container-element-banner, .banner-form {
     #modal-awareness-form {
         margin-top: 0;
+
+        @media (max-width:768px) {
+            margin-top: 5rem;
+        }
+
     }
 }
 .visas-disclaimer {
@@ -298,6 +308,9 @@ a {
     h2.title {
         font-size: 45px;
         font-weight: 700;
+
+
+
     }
 
     .item {
@@ -345,6 +358,40 @@ a {
 
     @media (max-width:768px) {
         margin-top: 100px;
+
+            h2.title {
+                font-size: 24px;
+        }
+        .item {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+
+            .item-title {
+                font-size: 22px;
+                line-height: 25px;
+            }
+
+            .itemdesc {
+                width: 50%;
+                bottom: 0;
+            }
+            .desctext {
+                font-size: 16px;
+                line-height: 17px;
+                font-weight: 500;
+            }
+
+        }
+
+        .item img {
+            max-width: 40%;
+            margin-right: 10%;
+        }
+
     }
 
     .topics-list{
@@ -487,6 +534,7 @@ a {
 
 #property-slider-section {
 
+
     .property-card {
         position: relative;
         &:hover {
@@ -514,9 +562,6 @@ a {
     }
 
 
-
-
-
     .property-image {
         width: 100%;
     }
@@ -531,11 +576,25 @@ a {
     .content h2 {
         font-size: 36px;
         font-weight: 700;
+
+        @media (max-width:768px) {
+
+                font-size: 22px;
+
+        }
+
+
     }
     .property-price {
         font-size: 30px;
         color: $brand_purple;
         font-weight: 500;
+
+        @media (max-width:768px) {
+
+            font-size: 20px;
+
+        }
     }
 }
 
@@ -734,6 +793,7 @@ a {
         @media (max-width:768px) {
             display: flex;
             justify-content: flex-end;
+            right: 90px;
         }
     }
 
@@ -1020,6 +1080,10 @@ a {
     .testimonial-img {
         border-radius: 50%;
         width: 300px;
+
+        @media (max-width:768px) {
+            width: 50%;
+        }
     }
 
     // .title-container{
@@ -1166,6 +1230,11 @@ a {
             position: relative;
             flex-direction: column;
 
+            @media (max-width:768px) {
+                padding: 0;
+            }
+
+
             &.expanded{
                 .read-more{
                     display: none;
@@ -1275,6 +1344,12 @@ a {
             left: 10px;
             right: 10px;
             text-align: right;
+
+            @media (max-width:768px) {
+                left: 0;
+                text-align: left;
+            }
+
 
             .client-name{
                 // font-size: 18px;
@@ -1508,7 +1583,7 @@ a {
         top: 0;
         left: 0;
         bottom: 0;
-        width: 46%;
+        width: 100%;
         z-index: 999999;
 
 
@@ -1575,6 +1650,7 @@ a {
             @media (max-width:768px) {
                 width: 160px;
                 left: 25px;
+                top: 15%;
             }
         }
     }
@@ -1633,11 +1709,10 @@ a {
         @media (max-width:768px) {
             .flag {
                 top: 50px;
-                right: -90px;
             }
             .anim {
                 position: relative;
-                bottom: 10px;
+                bottom: 25px;
             }
 
         }

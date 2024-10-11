@@ -388,10 +388,11 @@ $(document).ready(function() {
     });
 });
 
+/*
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
     this.classList.toggle('collapsed');
 });
-
+*/
 $(function(){
     $(window).scroll(function() {
         const scrollTop = $(this).scrollTop();
