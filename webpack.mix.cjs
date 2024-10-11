@@ -5,7 +5,7 @@ mix.sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/private-meetings.scss', 'public/css')
     .sass('resources/scss/campaigns.scss', 'public/css')
     .sass('resources/scss/always_on.scss', 'public/css')
-    .css('resources/css/app.css', 'public/css')
+    //.css('resources/css/app.css', 'public/css')
     .css('resources/css/residency.css', 'public/css');
 
 // Compile JS files
