@@ -49,7 +49,7 @@
     <!-- <link rel="stylesheet" href="{{-- mix('/assets/css/campaigns.css') --}}"> -->
     <!-- <link rel="stylesheet" href="/assets/css/private-meetings.css"> -->
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}"> <!-- Compiled CSS for app -->
+    {{--<link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}<!-- Compiled CSS for app -->
     <link rel="stylesheet" href="{{ mix('css/always_on.css') }}"> <!-- Compiled CSS for always_on -->
     <link rel="stylesheet" href="{{ mix('css/campaigns.css') }}"> <!-- Compiled CSS for campaigns -->
     {{--- <link rel="stylesheet" href="{{ mix('css/private-meetings.css') }}"> --}} <!-- Compiled CSS for private_meetings -->
