@@ -106,7 +106,8 @@ a {
             background: url("https://campaigns-iv.test/assets/img/campaigns/greece/Backgd-mob-form.svg");
             background-size: cover;
             box-shadow: none;
-            padding-bottom: 2rem;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
 
             .input-container{
                 gap: 0px;
@@ -552,6 +553,11 @@ a {
         line-height: 26px;
     }
 
+    @media (max-width:768px) {
+        p.desctext {
+            font-size: 16px;
+        }
+    }
 
 
 }
@@ -1398,11 +1404,10 @@ a {
     }
 
     .ph-footer-logo{
-        margin: auto;
-        margin-top: 25px;
+        margin: 25px auto auto;
 
         @media (max-width:500px) {
-            width: 120px;
+
         }
     }
 
@@ -1503,7 +1508,7 @@ a {
         top: 0;
         left: 0;
         bottom: 0;
-        right: 350px;
+        width: 46%;
         z-index: 999999;
 
 
@@ -1651,7 +1656,7 @@ a {
         @media (max-width:768px) {
             grid-template-columns: 1fr 2fr;
             position: absolute;
-            top: 0;
+            top: 22px;
             left: 0;
             right: 0;
             text-align: center;
