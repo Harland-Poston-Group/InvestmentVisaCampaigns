@@ -46,7 +46,7 @@
     {{-- End of Intl Tel Input --}}
 
     {{-- Always On CSS File --}}
-    <!-- <link rel="stylesheet" href="{{ mix('/assets/css/campaigns.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{-- mix('/assets/css/campaigns.css') --}}"> -->
     <!-- <link rel="stylesheet" href="/assets/css/private-meetings.css"> -->
 
     @vite('/resources/scss/always_on.scss') <!-- Include SCSS via Vite -->
