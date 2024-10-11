@@ -520,7 +520,7 @@ a {
 }
 
 #private-meetings-booking-sections {
-  background: url("https://campaigns-iv.test/assets/img/campaigns/greece/BackgdGreece-Finest.svg");
+  background: url("/assets/img/campaigns/greece/BackgdGreece-Finest.svg");
   padding-bottom: 10rem;
   background-repeat: no-repeat;
 }
@@ -621,7 +621,7 @@ a {
 
 #take-the-opportunity-section {
   padding: 2rem 0;
-  background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-2-DTP.webp") no-repeat 100% 100%;
+  background: url("/assets/img/campaigns/greece/CTA-MW-2-DTP.webp") no-repeat 100% 100%;
   z-index: 1;
   background-size: cover;
   height: 677px;
@@ -640,7 +640,7 @@ a {
 }
 @media (max-width: 768px) {
   #take-the-opportunity-section {
-    background: url("https://campaigns-iv.test/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
+    background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
     background-size: cover;
     height: 770px;
   }
@@ -1196,7 +1196,7 @@ a {
 
 .footer-pm {
   color: #fff;
-  background: url("https://campaigns-iv.test/images/Backgd-Footer.svg");
+  background: url("/images/Backgd-Footer.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
