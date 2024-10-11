@@ -5,8 +5,8 @@
     "/js/residency.js": "/js/residency.js",
     "/js/notify.js": "/js/notify.js",
     "/css/app.css": "/css/app.css",
+    "/css/residency.css": "/css/residency.css",
     "/css/always_on.css": "/css/always_on.css",
     "/css/campaigns.css": "/css/campaigns.css",
-    "/css/private-meetings.css": "/css/private-meetings.css",
-    "/css/residency.css": "/css/residency.css"
+    "/css/private-meetings.css": "/css/private-meetings.css"
 }
