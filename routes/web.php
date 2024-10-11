@@ -24,10 +24,10 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/run-npm-prod', function () {
-    Artisan::call('npm:run-prod');
-    return Artisan::output();
-});
+// Route::get('/run-npm-prod', function () {
+//     Artisan::call('npm:run-prod');
+//     return Artisan::output();
+// });
 
 
 Route::get('/editor', [EditorController::class, 'index'])->name('editor');
