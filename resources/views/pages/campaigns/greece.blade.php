@@ -373,16 +373,15 @@
                 <input type="hidden" name="secondary-address" class="secondary-address" value="">
 
                 {{-- What are you looking for? --}}
-                {{--
                 <label for="visaSelect">What are you looking for?</label>
                 <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
-                    <option selected hidden value="">{{ __('content.form_enquiry_subject_placeholder') }}</option>
+                    <option selected hidden value="">What are you looking for?</option>
                     <option value="Portugal Golden Visa">Portugal Golden Visa</option>
-                    <option value="Portugal D2 Visa">{{ __('content.portugal_d2_visa') }}</option>
-                    <option value="Work visa">{{ __('content.work_visa') }}</option>
-                    <option value="Retirement">{{ __('content.retirement') }}</option>
-                    <option value="Investment Opportunities">{{ __('content.investment_opportunities') }}</option>
-                </select> --}}
+                    <option value="Portugal D2 Visa">Portugal D2 Visa</option>
+                    <option value="Work visa">Work Visa</option>
+                    <option value="Retirement">Retirement</option>
+                    <option value="Investment Opportunities">Investment Opportunities</option>
+                </select>
                 <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
                     <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
                     <h5>You have selected Work Visa.</h5>Investment Visa does not offer services in regards to Work Visas.
