@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\EditorController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\PageController;
@@ -22,6 +23,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/run-npm-prod', function () {
+    Artisan::call('npm:run-prod');
+    return Artisan::output();
+});
 
 
 Route::get('/editor', [EditorController::class, 'index'])->name('editor');
