@@ -385,11 +385,11 @@
                 {{-- <label for="visaSelect">What are you looking for?</label> --}}
                 <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
                     <option selected hidden value="">What are you looking for?</option>
-                    <option value="Greece Golden Visa">Greece Golden Visa</option>
                     <option value="Business Visa">Business Visa</option>
-                    <option value="Work visa">Work Visa</option>
-                    <option value="Retirement">Retirement</option>
+                    <option value="Greece Golden Visa">Greece Golden Visa</option>
                     <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+                    <option value="Retirement">Retirement</option>
+                    <option value="Work visa">Work Visa</option>
                 </select>
                 <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
                     <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
@@ -910,11 +910,11 @@
         {{-- <label for="visaSelect">What are you looking for?</label> --}}
         <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
             <option selected hidden value="">What are you looking for?</option>
-            <option value="Greece Golden Visa">Greece Golden Visa</option>
             <option value="Business Visa">Business Visa</option>
-            <option value="Work visa">Work Visa</option>
-            <option value="Retirement">Retirement</option>
+            <option value="Greece Golden Visa">Greece Golden Visa</option>
             <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+            <option value="Retirement">Retirement</option>
+            <option value="Work visa">Work Visa</option>
         </select>
         <div id="" class="alert alert-danger work-visa-message">
             <h5>You have selected Work Visa.</h5>

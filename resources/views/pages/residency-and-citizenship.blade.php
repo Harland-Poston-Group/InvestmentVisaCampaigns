@@ -134,11 +134,11 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div class="col-12">
                         <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal IDM0XXP2SVMHHN615">
                             <option selected hidden value="">What are you looking for?</option>
-                            <option value="Greece Golden Visa">Greece Golden Visa</option>
                             <option value="Business Visa">Business Visa</option>
-                            <option value="Work visa">Work Visa</option>
-                            <option value="Retirement">Retirement</option>
+                            <option value="Greece Golden Visa">Greece Golden Visa</option>
                             <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+                            <option value="Retirement">Retirement</option>
+                            <option value="Work visa">Work Visa</option>
                         </select></div>
                 </div>
                 <div class="form-group row mb-2">
