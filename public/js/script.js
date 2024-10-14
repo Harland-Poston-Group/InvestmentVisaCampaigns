@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
     // Check if the URL contains '/campaign'
     if (currentUrl.indexOf("/campaign") !== -1) {
         // Set a new title for the page
-        document.title = "Investment Visa US Campaign";
+        document.title = "Investment Visa Residency and Citizenship";
     }
 
     if (currentUrl.indexOf("/thankyou") !== -1) {
