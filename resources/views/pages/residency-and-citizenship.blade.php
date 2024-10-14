@@ -350,7 +350,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
-                                                            <p data-raw-content="true" class="subtitle">From UK</p><img src="https://campaigns.investmentvisa.com/uploads/e35f255f1cf467ec2975479f4b452205379ca68c/Flag_of_the_United_Kingdom.png" alt="flag" class="image-top-right">
+                                                            <p data-raw-content="true" class="subtitle">From UK</p>
+                                                            <img src="/images/residency/Flag_of_the_United_Kingdom.png" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
@@ -361,7 +362,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
-                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p><img src="https://campaigns.investmentvisa.com/uploads/0801b47e96846a887939f40c2773b628f19e1731/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
+                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
+                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
@@ -376,7 +378,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
-                                                            <p data-raw-content="true" class="subtitle">From USA</p><img src="https://campaigns.investmentvisa.com/uploads/55c553dd5f60f5da2e39a93c23f98510a26d07db/united-states-of-america.webp" alt="flag" class="image-top-right">
+                                                            <p data-raw-content="true" class="subtitle">From USA</p>
+                                                            <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
@@ -387,7 +390,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
-                                                            <p data-raw-content="true" class="subtitle">From UK</p><img src="https://campaigns.investmentvisa.com/uploads/e35f255f1cf467ec2975479f4b452205379ca68c/Flag_of_the_United_Kingdom.png" alt="flag" class="image-top-right">
+                                                            <p data-raw-content="true" class="subtitle">From UK</p>
+                                                            <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
@@ -398,7 +402,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
-                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p><img src="https://campaigns.investmentvisa.com/uploads/0801b47e96846a887939f40c2773b628f19e1731/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
+                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
+                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
