@@ -101,7 +101,7 @@ $(document).ready(function () {
       type: 'loop',
       perPage: 1,
       perMove: 1,
-      autoplay: true,
+      autoplay: false,
       interval: 3500,
       speed: '500',
       easing: 'ease',

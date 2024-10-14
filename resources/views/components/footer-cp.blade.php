@@ -21,7 +21,7 @@
             </a>
         </div>
 
-        <h5 style="font-size: 26px;" class="uppercase mt-4 bold follow-us-text text-white">FOLLOW US</h5>
+        <h5 style="font-size: 20px; margin-bottom: 40px;" class="uppercase mt-4 bold follow-us-text text-white">FOLLOW US</h5>
 
         {{-- Social Media Icons --}}
         <div class="social-media-container mb-5">

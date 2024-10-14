@@ -192,7 +192,7 @@ a {
         top: 40px;
 
         @media (max-width:768px) {
-
+            width: 150px;
         }
     }
 
@@ -218,7 +218,7 @@ a {
         margin-top: 0;
 
         @media (max-width:768px) {
-            margin-top: 5rem;
+            margin-top: 0;
         }
 
     }
@@ -266,7 +266,7 @@ a {
         }
 
         .text-container{
-            padding: 25px 50px 25px 0;
+            padding: 25px 0 25px 0;
             background: none;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -335,16 +335,18 @@ a {
 
     .item .item-title {
         text-align: left;
-        line-height: 50px;
-        font-size: 45px;
+        line-height: 40px;
+        font-size: 35px;
         font-weight: 700;
+
     }
     .item .desctext {
         color: $brand_purple;
         text-align: left;
-        line-height: 24px;
+        line-height: 34px;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 500;
+        width: 80%;
     }
 
     .left-title-banner {
@@ -360,7 +362,8 @@ a {
         margin-top: 100px;
 
             h2.title {
-                font-size: 24px;
+                font-size: 30px;
+                margin-top:60px !important;
         }
         .item {
             text-align: left;
@@ -369,6 +372,7 @@ a {
             align-content: center;
             justify-content: flex-start;
             align-items: center;
+            margin-bottom: 20px;
 
             .item-title {
                 font-size: 22px;
@@ -390,6 +394,7 @@ a {
         .item img {
             max-width: 40%;
             margin-right: 10%;
+            align-self: flex-start;
         }
 
     }
@@ -572,10 +577,12 @@ a {
         height: 300px; /* Set your desired height here */
         object-fit: cover; /* Ensures the image covers the area without distortion */
         width: 100%; /* Ensures the image takes the full width of its container */
+        border-radius: 5px;
     }
     .content h2 {
         font-size: 36px;
         font-weight: 700;
+        margin-top: 30px;
 
         @media (max-width:768px) {
 
@@ -607,12 +614,18 @@ a {
     }
     p.desctext {
         color: $brand_purple;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 24px;
-        line-height: 26px;
+        line-height: 34px;
     }
 
     @media (max-width:768px) {
+        h2.title {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+
         p.desctext {
             font-size: 16px;
         }
@@ -620,10 +633,17 @@ a {
 
 
 }
+
+#property-slider-section {
+    @media (max-width:768px) {
+        margin-top: 0 !important;
+    }
+}
+
 #private-meetings-booking-sections{
 
     background: url("/assets/img/campaigns/greece/BackgdGreece-Finest.svg");
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
     background-repeat: no-repeat;
     .row{
         justify-content: flex-end;
@@ -770,12 +790,13 @@ a {
         height: 770px;
 
         .salesman-intro {
-            position: relative !important;
+          //  position: absolute !important;
 
         }
 
         .schedule-button {
-            position: relative !important;
+            top: 160% !important;
+            left: 0 !important;
         }
 
     }
@@ -818,12 +839,14 @@ a {
 
     .salesman-intro{
         position: absolute;
-        left: -100px;
-        bottom: -40px;
+        left: -70%;
+        bottom: -45%;
         z-index: 1;
 
         @media (max-width:768px) {
-
+            position: relative;
+            left: -100px;
+            bottom: -80px;
         }
 
         .name,
@@ -867,20 +890,23 @@ a {
         flex-direction: column;
         gap: 22px;
         align-items: start;
+        margin-top: 50px;
 
         .title{
-            font-size: 38px;
+            font-size: 50px;
             font-weight: 700;
             color: #fff !important;
 
             @media (max-width:768px) {
-                font-size: 38px;
+                font-size: 32px;
             }
         }
 
         .subtitle{
             color: #fff !important;
             font-size: 20px;
+            line-height: 34px;
+            font-weight: 500;
 
             @media (max-width:768px) {
                 font-size: 18px;
@@ -904,8 +930,8 @@ a {
             letter-spacing: 1px;
             text-transform: uppercase;
             position: absolute;
-            bottom: 0;
-            left: 15%;
+            top: 130%;
+            left: 20%;
 
             &:hover{
                 background: #D4ECFA;
@@ -1073,7 +1099,12 @@ a {
         text-align: left;
         font-size: 40px;
         font-weight: 700;
-        padding-bottom: 1rem;
+        padding-bottom: 60px;
+
+        @media (max-width:768px) {
+            font-size: 30px;
+        }
+
 
     }
 
@@ -1282,7 +1313,7 @@ a {
                 // -webkit-line-clamp: 5;
                 // line-clamp: 5;
                 color: $brand_purple;
-                font-weight: 700;
+                font-weight: 500;
                 font-size: 18px;
                 display: flex;
                 -webkit-box-orient: vertical;
@@ -1291,6 +1322,7 @@ a {
                 white-space: collapse;
                 position: relative;
                 bottom: 60px;
+                min-height: 135px;
 
                 @media (max-width:580px) {
                     -webkit-line-clamp: unset;
@@ -1323,13 +1355,19 @@ a {
             }
 
             .client-name {
-                font-size: 20px;
+                font-size: 28px;
                 font-weight: 700;
                 color: $brand_purple;
                 align-self: flex-start;
                 position: absolute;
                 bottom: 20px;
                 left: 65px;
+
+                @media (max-width:768px) {
+                    bottom: 0;
+                    left: 45px;
+                }
+
             }
 
         }
@@ -1479,7 +1517,7 @@ a {
     }
 
     .ph-footer-logo{
-        margin: 25px auto auto;
+        margin: 25px auto 50px auto;
 
         @media (max-width:500px) {
 
@@ -1715,7 +1753,10 @@ a {
             }
             .anim {
                 position: relative;
-                bottom: 25px;
+                bottom: 30px;
+                left: 0;
+                width: 200px !important;
+                height: auto !important;
             }
 
         }

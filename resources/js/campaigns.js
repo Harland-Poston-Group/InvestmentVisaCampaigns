@@ -253,7 +253,7 @@ if( $(".testimonials-slider").length ){
         perPage: 3,
         perMove: 1,
         gap: '50px',
-        autoplay: true,
+        autoplay: false,
         interval: 6000,
         speed: '500',
         easing: 'ease',

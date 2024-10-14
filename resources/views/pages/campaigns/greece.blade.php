@@ -303,12 +303,17 @@
 
             <div class="container">
 
-                <div class="text-container">
+                <div class="text-container d-none d-sm-block d-xs-block">
                     <h3 class="title animate__animated animate__fadeInLeft">
                         Unlock Your European Dream<br> With the Greece Golden Visa
                     </h3>
                 </div>
 
+                <div class="text-container d-md-none d-lg-none d-xl-none">
+                    <h3 class="title animate__animated animate__fadeInLeft">
+                        Unlock Your European<br> Dream With the Greece<br> Golden Visa
+                    </h3>
+                </div>
                 <div class="white-element"></div>
 
             </div>
@@ -432,12 +437,12 @@
         <!-- List of topics -->
         <div class="row">
             <div class="col-12">
-                <h2 class="title my-5">Experience the Mediterranean Lifestyle<br>and Secure Your Future In Europe</h2>
+                <h2 class="title" style="margin-top: 100px; margin-bottom: 60px;">Experience the Mediterranean Lifestyle<br>and Secure Your Future In Europe</h2>
             </div>
             <div class="col-12 col-sm-4 item">
                 <img alt="greece" src="/assets/img/campaigns/greece/LIFST-Gr@1x.webp">
                 <div class="itemdesc">
-                    <h3 class="item-title mb-3">Stable<br>Environment</h3>
+                    <h3 class="item-title mb-4">Stable<br>Environment</h3>
                     <p class="desctext">Greece offers a high quality of life, a favorable climate, and friendly communities.</p>
                 </div>
 
@@ -445,14 +450,14 @@
             <div class="col-12 col-sm-4 item">
                 <img alt="greece" src="/assets/img/campaigns/greece/RA-Greece@2x.webp">
                 <div class="itemdesc">
-                <h3 class="item-title mb-3">Investment<br>Opportunities</h3>
+                <h3 class="item-title mb-4">Investment<br>Opportunities</h3>
                 <p class="desctext">Invest in one of Europe’s most promising real estate markets and secure a future for you and your family.</p>
                 </div>
             </div>
             <div class="col-12 col-sm-4 item">
                 <img alt="greece" src="/assets/img/campaigns/greece/EU-Flag@2x.webp">
                 <div class="itemdesc">
-                <h3 class="item-title mb-3">Access To the<br> Schengen Area</h3>
+                <h3 class="item-title mb-4">Access To the<br> Schengen Area</h3>
                 <p class="desctext">Enjoy seamless travel across 26 European countries with your Golden Visa.</p>
                 </div>
             </div>
@@ -466,7 +471,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="title mt-5 mb-3">Greece’s Finest Properties Await</h2>
+                <h2 class="title mb-4" style="margin-top: 80px;">Greece’s Finest Properties Await</h2>
                 <p class="desctext">Experience unparalleled luxury and timeless beauty with our exclusive selection of<br> homes, perfectly suited for your Golden Visa investment in Greece.</p>
             </div>
         </div>
@@ -681,7 +686,11 @@
         </div>
     </div>
 </section>
-
+<style>
+    .splide__pagination {
+        display: none !important;
+    }
+</style>
 
 {{-- Take the Opportunity --}}
 <section id="take-the-opportunity-section" class="animate__animated animate__bounceInUp animate__delay-2s">
@@ -692,7 +701,7 @@
         <div class="row">
 
             {{-- Left Content --}}
-            <div class="col-md-6">
+            <div class="col-md-8">
 
                 <div class="cta-content">
 
@@ -708,7 +717,7 @@
             </div>
 
             {{-- Seller's Image --}}
-            <div class="col-md-6 salesman-area-wrapper" style="position: relative;">
+            <div class="col-md-4 salesman-area-wrapper" style="position: relative;">
 
                 {{-- Salesman Name --}}
                 <div class="salesman-intro">
@@ -762,7 +771,7 @@
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/APetrus@2x.webp">
                                 </div>
-                                <div class="content">
+                                <div class="content h-100">
                                     <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
                                     <!--<i class="fa-solid fa-quote-left"></i>-->
                                     Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.                                </div>
@@ -776,7 +785,7 @@
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/BSaab@2x.webp">
                                 </div>
-                                <div class="content">
+                                <div class="content h-100">
                                     <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
                                     <!--<i class="fa-solid fa-quote-left"></i>-->
                                     The process was easy, and the support we received made all the difference. I can't recommend the Greece Golden Visa enough.
@@ -792,7 +801,7 @@
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/NJoyce@2x.webp">
                                 </div>
-                                <div class="content">
+                                <div class="content h-100">
                                     <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
                                     <!--<i class="fa-solid fa-quote-left"></i>-->
                                     Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.
