@@ -33,7 +33,7 @@
 
     </div>
 
-    <form id="modal-awareness-form" class="email-validation generic-form" action="/thank-you-submission" onsubmit="recaptchaFunction(event)">
+    <form id="modal-awareness-form" class="email-validation generic-form catch-submission" action="/thank-you">
 
         <div class="input-container">
 

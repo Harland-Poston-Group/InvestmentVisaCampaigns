@@ -41,9 +41,14 @@ Route::get('/page', function () {
     return view('page', compact('html', 'css'));
 });
 
+
+
 Route::get('/campaigns/goldenvisagreece', [PageController::class, 'campaigns']);
 
 Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 Route::get('/thank-you', [PageController::class, 'thankYou']);
 
 Route::get('/private-meetings/{country}', [App\Http\Controllers\LandingPageController::class, 'country_private_meetings'])->name('country_private_meetings');
+
+// Form Submission
+Route::post('/form-submission', [App\Http\Controllers\EnquiriesController::class, 'landing_page_enquiry'])->name('country_private_meetings');

@@ -311,7 +311,7 @@
 
                 </div>
 
-                <form id="modal-awareness-form" class="email-validation generic-form private-meetings-form" action="/thank-you-submission" onsubmit="recaptchaFunction(event)">
+                <form id="modal-awareness-form" class="email-validation generic-form private-meetings-form catch-submission">
 
                     <div class="input-container">
 
@@ -853,7 +853,7 @@
 
         {{-- <h3 class="gold bolder form-title">Discover how expat life in Portugal can become a reality</h3> --}}
 
-        <form id="modal-awareness-form" class="email-validation generic-form private-meetings-form" action="/thank-you-submission" onsubmit="recaptchaFunction(event)">
+        <form id="modal-awareness-form" class="email-validation generic-form private-meetings-form catch-submission">
 
             <input type="text" name="first_name" placeholder="First Name*" required>
             <input type="text" name="last_name" placeholder="Last Name*" required>

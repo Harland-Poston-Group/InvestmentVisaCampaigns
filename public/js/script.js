@@ -402,7 +402,8 @@ jQuery("#campaign-form").on("submit", function(e){
 
 
     jQuery.ajax({
-        url: "/form-submission.php",
+        // url: "/form-submission.php",
+        url: "/form-submission",
         type: "POST",
         // headers: {
         //     'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
