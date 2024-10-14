@@ -1693,18 +1693,21 @@ a {
         .flag {
             display: flex;
             margin: 0 auto;
-            width: 180px;
+            width: 150px;
             background: #dbeaf2;
             border-radius: 50%;
-            height: 180px;
+            height: 150px;
             z-index: -1;
-            top: 30px;
+            top: 46px;
             position: relative;
             right: 0;
         }
         .anim {
-            position: relative;
-            bottom: 30px;
+            position: absolute;
+            bottom: 60px;
+            left: -12px;
+            right: 0;
+            width: 170px !important;
         }
         @media (max-width:768px) {
             .flag {
@@ -1791,7 +1794,28 @@ a {
 
     input,select,textarea{
         font-size: 15px;
+        color: #1E3B6BB3;
     }
+
+    .generic-form-container .generic-form input:focus, .generic-form-container .generic-form select:focus, .generic-form-container .generic-form textarea:focus {
+        box-shadow: 0 0 3px #1E3B6BB3;
+        outline: 1px solid #1E3B6BB3;
+        /* border: 1px solid #d9ab4d; */
+    }
+
+    .iti--separate-dial-code .iti__selected-dial-code {
+        color: #1E3B6BB3;
+    }
+
+        ::placeholder {
+        color: #1E3B6BB3;
+        opacity: 1; /* Firefox */
+    }
+
+    ::-ms-input-placeholder { /* Edge 12 -18 */
+        color: #1E3B6BB3;
+    }
+
 
     .checkbox-wrapper label:before{
         border: 1px solid #4682B4;
@@ -1823,7 +1847,7 @@ a {
     width: fit-content;
     margin: auto;
     border: none;
-    background: #1E3B6B;
+    background: $beaujolais;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;

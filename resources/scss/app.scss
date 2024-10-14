@@ -1455,16 +1455,33 @@ footer.generic-footer{
     }
 }
 
+.generic-form-container .generic-form input:focus, .generic-form-container .generic-form select:focus, .generic-form-container .generic-form textarea:focus {
+    box-shadow: 0 0 3px #1E3B6BB3;
+    outline: 1px solid #1E3B6BB3;
+    /* border: 1px solid #d9ab4d; */
+}
+
+select#visaSelect option {
+    margin: 40px;
+    color: #1E3B6BB3;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
 .generic-form-container{
     top: 25px;
     background: transparent linear-gradient(180deg, #FFFFFF 0%, #E7D7B6 100%) 0% 0% no-repeat padding-box;
     position: fixed;
     width: 500px;
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     z-index: 10;
-    box-shadow: 0px 0px 8px #00000042;
+    box-shadow: 0 0 8px #00000042;
     transition: 0.2s all;
+
+    label {
+        font-size: 14px;
+        color: #1E3B6BB3;
+    }
 
     @media (max-width:540px) {
         width: 100%;

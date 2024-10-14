@@ -21,3 +21,15 @@ mix.sourceMaps();
 if (mix.inProduction()) {
     mix.version();
 }
+mix.webpackConfig({
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000, // Limit size of entry points
+        maxAssetSize: 512000,      // Limit size of assets
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
+});

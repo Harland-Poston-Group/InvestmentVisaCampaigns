@@ -13,6 +13,14 @@
     <title></title>
     <link rel="stylesheet" href="/css/residency.css" />
 
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/always_on.css">
+    <link rel="stylesheet" href="/css/campaigns.css">
+    <script src="/js/app.js" defer></script>
+    <script src="/js/campaigns.js" defer></script>
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/css/grapes.min.css" integrity="sha512-F+EUNfBQvAXDvJcKgbm5DgtsOcy+5uhbGuH8VtK0ru/N6S3VYM9OHkn9ACgDlkwoxesxgeaX/6BdrQItwbBQNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/grapes.min.js" integrity="sha512-TavCuu5P1hn5roGNJSursS0xC7ex1qhRcbAG90OJYf5QEc4C/gQfFH/0MKSzkAFil/UBCTJCe/zmW5Ei091zvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

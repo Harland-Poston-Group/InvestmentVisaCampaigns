@@ -322,10 +322,10 @@
                 </div>
             </div>
             <!-- Flag and text element -->
-            <div class="flag-text-container my-4">
+            <div class="flag-text-container my-3">
                 <!-- Text -->
                 <div class="text">
-                    <h4 class="title text-center">Invest In Your Future<br>Get Started Now</h4>
+                    <h4 class="title text-center" style="font-size: 28px;">Invest In Your Future<br>Get Started Now</h4>
                 </div>
 
             </div>
@@ -399,7 +399,7 @@
                     type="submit"
                     data-sitekey="your_site_key"
                     data-callback="onSubmit"
-                >BOOK YOUR MEETING</button>
+                >Book Your Meeting</button>
 
                 {{-- Keep me updated Checkbox --}}
                 <div class="checkbox-wrapper">
