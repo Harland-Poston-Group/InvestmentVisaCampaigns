@@ -159,6 +159,9 @@ class Dynamics_Helper {
         // The email to where the notification of this submission should be sent to
         $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
 
+        // Set timezone to Portugal
+        date_default_timezone_set('Europe/Lisbon');
+
         // If there's a contact with this submission's email
         if( $existing_lead ){
 
