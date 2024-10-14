@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class DynamicsEnquiry extends Mailable
+class DynamicsExistingContactEnquiry extends Mailable
 {
     use Queueable, SerializesModels;
 
