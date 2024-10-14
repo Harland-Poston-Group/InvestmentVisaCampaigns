@@ -131,13 +131,14 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-12"><select name="enquiry_subject" id="enquiry_subject" class="form-control minimal IDM0XXP2SVMHHN615">
-                            <option value="0">What are you looking for?</option>
-                            <option value="Portugal Golden Visa">Portugal Golden Visa</option>
-                            <option value="Portugal D2 Visa">Portugal D2 Visa</option>
-                            <option value="Work Visa">Work Visa</option>
+                    <div class="col-12">
+                        <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal IDM0XXP2SVMHHN615">
+                            <option selected hidden value="">What are you looking for?</option>
+                            <option value="Greece Golden Visa">Greece Golden Visa</option>
+                            <option value="Business Visa">Business Visa</option>
+                            <option value="Work visa">Work Visa</option>
                             <option value="Retirement">Retirement</option>
-                            <option value="Investment Opportunities">Investment Opportunities</option>
+                            <option value="Other Investment Opportunities">Other Investment Opportunities</option>
                         </select></div>
                 </div>
                 <div class="form-group row mb-2">
