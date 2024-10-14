@@ -486,6 +486,7 @@ jQuery(".catch-submission").on("submit", function(e){
 
             if (window.location.hash !== '#debug') {
                 window.location.href = "/thank-you";
+                console.log('test');
             }
         }
     });
