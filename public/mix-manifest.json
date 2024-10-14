@@ -1,12 +1,12 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/private-meetings.js": "/js/private-meetings.js",
-    "/js/campaigns.js": "/js/campaigns.js",
-    "/js/residency.js": "/js/residency.js",
-    "/js/notify.js": "/js/notify.js",
-    "/css/app.css": "/css/app.css",
-    "/css/residency.css": "/css/residency.css",
-    "/css/always_on.css": "/css/always_on.css",
-    "/css/campaigns.css": "/css/campaigns.css",
-    "/css/private-meetings.css": "/css/private-meetings.css"
+    "/js/app.js": "/js/app.js?id=b2a3486e97a9c5e884052aac578d3b89",
+    "/js/private-meetings.js": "/js/private-meetings.js?id=cb9090e5480f87f05c33f34b93988026",
+    "/js/campaigns.js": "/js/campaigns.js?id=04986d667478e34f0030cbe35a7cdd2a",
+    "/js/residency.js": "/js/residency.js?id=e5155f2ec52b4d778814fc532eedff5f",
+    "/js/notify.js": "/js/notify.js?id=da706e1ca1562f75b781faef88563b8f",
+    "/css/app.css": "/css/app.css?id=ccfc815aaef2bb3fc70026ddec8df17e",
+    "/css/residency.css": "/css/residency.css?id=68b329da9893e34099c7d8ad5cb9c940",
+    "/css/always_on.css": "/css/always_on.css?id=6543a115a5d42ec34f78e084ff17a1de",
+    "/css/campaigns.css": "/css/campaigns.css?id=2feea5f2c2ffbc44c47b1b9e3cd67efb",
+    "/css/private-meetings.css": "/css/private-meetings.css?id=ca3a6bd03d20dd21037009d87cc9d3c1"
 }
