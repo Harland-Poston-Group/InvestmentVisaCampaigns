@@ -351,7 +351,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
                                                             <p data-raw-content="true" class="subtitle">From UK</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Kingdom.png" alt="flag" class="image-top-right">
+                                                            <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
