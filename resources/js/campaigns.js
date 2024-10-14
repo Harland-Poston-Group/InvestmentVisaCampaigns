@@ -456,13 +456,13 @@ jQuery(".catch-submission").on("submit", function(e){
 
                 console.log('success: ' + response);
 
-                Toastify({
-                    text: 'Thank you for your enquiry. We\'ll be in contact, shortly',
-                    duration: 5000, // 5 seconds
-                    gravity: "top", // top or bottom
-                    position: "center", // left, center, or right
-                    backgroundColor: "#6A257A", // customize color
-                }).showToast();
+                // Toastify({
+                //     text: 'Thank you for your enquiry. We\'ll be in contact, shortly',
+                //     duration: 5000, // 5 seconds
+                //     gravity: "top", // top or bottom
+                //     position: "center", // left, center, or right
+                //     backgroundColor: "#6A257A", // customize color
+                // }).showToast();
 
             }else{
 
