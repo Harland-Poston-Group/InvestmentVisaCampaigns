@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title></title>
-    <link rel="stylesheet" href="https://campaigns-builder.test/themes/demo/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/css/grapes.min.css" integrity="sha512-F+EUNfBQvAXDvJcKgbm5DgtsOcy+5uhbGuH8VtK0ru/N6S3VYM9OHkn9ACgDlkwoxesxgeaX/6BdrQItwbBQNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/grapes.min.js" integrity="sha512-TavCuu5P1hn5roGNJSursS0xC7ex1qhRcbAG90OJYf5QEc4C/gQfFH/0MKSzkAFil/UBCTJCe/zmW5Ei091zvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/css/grapes.min.css" integrity="sha512-F+EUNfBQvAXDvJcKgbm5DgtsOcy+5uhbGuH8VtK0ru/N6S3VYM9OHkn9ACgDlkwoxesxgeaX/6BdrQItwbBQNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/grapes.min.js" integrity="sha512-TavCuu5P1hn5roGNJSursS0xC7ex1qhRcbAG90OJYf5QEc4C/gQfFH/0MKSzkAFil/UBCTJCe/zmW5Ei091zvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +101,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <nav phpb-blocks-container="" class="navbar">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-sm-4"><a href="#" class="navbar-brand IDM0DR6XYD8PE7H10"><img src="/images/IV-Logo-Color-Negat.png" alt="Investment Visa" class="d-inline-block align-text-top"></a></div>
+                                <div class="col-12 col-sm-4"><a href="#" class="navbar-brand IDM0DR6XYD8PE7H10">
+                                        <img src="/images/IV-Logo-Color-Negat.png" alt="Investment Visa" class="d-inline-block align-text-top"></a></div>
                                 <div class="col-12 col-sm-8 d-flex justify-content-end">
                                     <!-- Toggler button for mobile --><button type="button" data-raw-content="true" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><!-- Menu -->
                                     <div id="navbar" class="menu col-12 col-sm-8">
@@ -164,7 +166,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSES4FV82"><img src="/images/Lifestyle.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSES4FV82">
+                                    <img src="/images/Lifestyle.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Quality<br>of Life</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSGSYFNP3">
@@ -176,7 +179,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSIT3W8G4"><img src="/images/Access-EU.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSIT3W8G4">
+                                    <img src="/images/Access-EU.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Travel Visa-Free</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSJKTCKL5">
@@ -188,7 +192,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSLKXG3U6"><img src="/images/Bizz%20Opport.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSLKXG3U6">
+                                    <img src="/images/Bizz%20Opport.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Business Prospects</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSMHCMR67">
@@ -200,7 +205,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSOZ1S0Z8"><img src="/images/HealthEdu.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSOZ1S0Z8">
+                                    <img src="/images/HealthEdu.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Health &amp; Education</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSPFVJ6G9">
@@ -220,7 +226,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSTX3E4K10"><img src="/images/Peace%20of%20Mind.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSTX3E4K10">
+                                    <img src="/images/Peace%20of%20Mind.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Plan B Safety</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSUN8G1Z11">
@@ -232,7 +239,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSWZB72012"><img src="/images/Visa.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSWZB72012">
+                                    <img src="/images/Visa.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Powerfull Passport</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXSX1G3PQ13">
@@ -244,7 +252,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
                         <div class="flip-card">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSZOXN0W14"><img src="/images/Finantial%20Advantage.svg" alt="Avatar">
+                                <div class="flip-card-front IDLZ6PRXSZOXN0W14">
+                                    <img src="/images/Finantial%20Advantage.svg" alt="Avatar">
                                     <h1 data-raw-content="true">Tax Benefits</h1>
                                 </div>
                                 <div class="flip-card-back IDLZ6PRXT1JJ8Y815">
@@ -257,7 +266,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
             </div><div id="map-block" class="row IDLZ88Q12FVKHWG1 map-block">
                 <div phpb-blocks-container="" class="col-12">
                     <h2 data-raw-content="true" class="title">Grant of Residency or Citizenship</h2>
-                    <h4 data-raw-content="true" class="subtitle">on the Basis of an Investment</h4><img src="/images/WorldMap-934x469-Dktp.webp" alt="map">
+                    <h4 data-raw-content="true" class="subtitle">on the Basis of an Investment</h4>
+                    <img src="/images/WorldMap-934x469-Dktp.webp" alt="map">
                 </div>
                 <div class="col-12">
                     <h2 data-raw-content="true" class="desc-title">At Investment Visa, we offer you a unique opportunity:</h2>
@@ -273,13 +283,16 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                     </div>
                 </div>
                 <div class="col-12 col-sm-6">
-                    <h4 data-raw-content="true" class="title-left"><strong>100%</strong> Application Success Rate</h4><img src="/images/Smiling-Consultant-663z414px-Dktp.webp" alt="Investment Visa Meetings" class="img-left">
+                    <h4 data-raw-content="true" class="title-left"><strong>100%</strong> Application Success Rate</h4>
+                    <img src="/images/Smiling-Consultant-663z414px-Dktp.webp" alt="Investment Visa Meetings" class="img-left">
                 </div>
-                <div class="col-12 col-sm-6"><img src="/images/WorkedWith-796x497px-Dktp.webp" alt="Investment Visa Meetings" class="img-right">
+                <div class="col-12 col-sm-6">
+                    <img src="/images/WorkedWith-796x497px-Dktp.webp" alt="Investment Visa Meetings" class="img-right">
                     <h4 data-raw-content="true" class="title-right"><span style="font-weight:normal;">Worked with</span><br>90+ Nationalities</h4>
                 </div>
                 <div class="col-12">
-                    <h4 data-raw-content="true" class="title-bottom">Global Experts</h4><img src="/images/Experts-At-Work-663x414-Dktp.webp" alt="Investment Visa Meetings" class="img-bottom">
+                    <h4 data-raw-content="true" class="title-bottom">Global Experts</h4>
+                    <img src="/images/Experts-At-Work-663x414-Dktp.webp" alt="Investment Visa Meetings" class="img-bottom">
                 </div>
             </div><section class="pt-0 pb-5 IDLZ8HLN6ZLNAGL1">
                 <div id="testimonials" class="container">
@@ -451,8 +464,10 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
 
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-<script src="https://campaigns-builder.test/themes/demo/js/script.js"></script>
-<button id="scrollToTopBtn" title="Go to top"><img src="/images/GoTopArrow.png"></button>
+<script src="/js/script.js"></script>
+<button id="scrollToTopBtn" title="Go to top">
+    <img src="/images/GoTopArrow.png">
+</button>
 
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYDWX32BH1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GYDWX32BH1'); </script>
 
