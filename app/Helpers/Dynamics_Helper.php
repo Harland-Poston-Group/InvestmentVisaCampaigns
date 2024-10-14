@@ -156,6 +156,9 @@ class Dynamics_Helper {
         // Check if there's a lead with the same email in Dynamics
         $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
+        // The email to where the notification of this submission should be sent to
+        $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+
         // If there's a contact with this submission's email
         if( $existing_lead ){
 
@@ -165,7 +168,7 @@ class Dynamics_Helper {
             $existing_message = $existing_lead['ans_message'];
 
             // Email the admin of the form submission
-            Mail::to('antonio.lima@portugalhomes.com')
+            Mail::to($admin_notification_emails)
             ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($post));
 
             // Get the current timestamp in desired format
@@ -192,7 +195,7 @@ class Dynamics_Helper {
             // Contact/Lead Creation
 
             // Email the admin of the form submission
-            Mail::to('antonio.lima@portugalhomes.com')
+            Mail::to($admin_notification_emails)
             ->send(new \App\Mail\Admin\DynamicsEnquiry($post));
 
             // Run the function that will submit the data over to Dynamics 365
