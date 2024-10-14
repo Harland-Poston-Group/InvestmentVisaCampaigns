@@ -1,5 +1,5 @@
 @component('mail::message')
-<p style="text-align: center;margin-bottom:5px"><b>A Dynamics contact was created through a form submission - check the details below:</b></p>
+<p style="text-align: center;margin-bottom:5px"><b>A Dynamics contact was updated through a form submission - check the details below:</b></p>
 
 <ul class="gv-calculation-results-ul">
 <li style="justify-content: space-between">
@@ -21,6 +21,10 @@
 <li style="justify-content: space-between">
 <strong>Submission Page:</strong>
 <span class="value-float-right">{!! $maildata['ans_firstpageseen'] !!}</span>
+</li>
+<li style="justify-content: space-between">
+<strong>Lead ID:</strong>
+<span class="value-float-right">{!! $maildata['leadid'] !!}</span>
 </li>
 <li style="justify-content: space-between">
 <strong>Subject:</strong>

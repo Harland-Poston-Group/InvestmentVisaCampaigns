@@ -161,7 +161,12 @@ class Dynamics_Helper {
 
             // Lead exists, get the existing message
             $lead_id = $existing_lead['leadid'];
+            $post['leadid'] = $lead_id;
             $existing_message = $existing_lead['ans_message'];
+
+            // Email the admin of the form submission
+            Mail::to('antonio.lima@portugalhomes.com')
+            ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($post));
 
             // Get the current timestamp in desired format
             $timestamp = date('d/m/Y H:i'); // Example: 03/10/2024 08:55
@@ -186,13 +191,13 @@ class Dynamics_Helper {
         }else{
             // Contact/Lead Creation
 
+            // Email the admin of the form submission
+            Mail::to('antonio.lima@portugalhomes.com')
+            ->send(new \App\Mail\Admin\DynamicsEnquiry($post));
+
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
         }
-
-        // Email the admin of the form submission
-        Mail::to('antonio.lima@portugalhomes.com')
-        ->send(new \App\Mail\Admin\DynamicsEnquiry($post));
 
         // Check for failures
         // if (count(Mail::failures()) > 0) {
