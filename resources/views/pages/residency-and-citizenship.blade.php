@@ -363,7 +363,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
                                                             <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
+                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
@@ -403,7 +403,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
                                                             <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.png" alt="flag" class="image-top-right">
+                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
                                                         </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
                                                         <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
                                                     </div>
