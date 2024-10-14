@@ -1710,6 +1710,22 @@ a {
     background: #B08BB980;
 }
 
+#fade-in-booking-section {
+
+    .flag-container {
+        display: flex;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: -74px !important;
+
+        .anim {
+           bottom: 38px !important;
+        }
+    }
+}
+
 #form-container-element-banner.private-meetings-country-form{
 
     right: 0;
@@ -1770,6 +1786,7 @@ a {
         flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
+        margin: 1rem 0;
 
 
         @media (max-width:768px) {
