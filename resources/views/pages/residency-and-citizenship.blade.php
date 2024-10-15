@@ -135,8 +135,8 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                         <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal IDM0XXP2SVMHHN615">
                             <option selected hidden value="">What are you looking for?</option>
                             <option value="Business Visa">Business Visa</option>
-                            <option value="Greece Golden Visa">Greece Golden Visa</option>
-                            <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+                            <option value="Greece Golden Visa">Golden Visa</option>
+                            <option value="Other Investment Opportunities">Investment Opportunities</option>
                             <option value="Retirement">Retirement</option>
                             <option value="Work visa">Work Visa</option>
                         </select></div>
