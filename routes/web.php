@@ -43,7 +43,7 @@ Route::get('/page', function () {
 
 
 
-Route::get('/campaigns/goldenvisagreece', [PageController::class, 'campaigns']);
+Route::get('/greece-golden-visa', [PageController::class, 'campaigns']);
 
 Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 Route::get('/thank-you', [PageController::class, 'thankYou']);
