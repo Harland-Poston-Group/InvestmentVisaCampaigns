@@ -32,9 +32,6 @@ class Dynamics_Helper {
         $post = [];
         $data = $submission_data;
 
-        // dump("Hello there! Here is your dump!");
-        // dd($data);
-
         /* First we'll create the field mappings and only after, we'll automatically populate our array with the correct fields that we may have */
 
         // Define the mappings from form fields to Dynamics fields
@@ -79,31 +76,12 @@ class Dynamics_Helper {
         /* Add Tracking Information */
 
             // In case we have any available data regarding campaigns from where the user may have visited us through
-            // $utm_source = session('utm_source', '');
-            // $utm_medium = session('utm_medium', '');
-            // $utm_campaign = session('utm_campaign', '');
-
             $utm_source = Cookie::get('utm_source', '');
             $utm_medium = Cookie::get('utm_medium', '');
             $utm_campaign = Cookie::get('utm_campaign', '');
 
             // We're only using the 'source' for now
             if( !empty($utm_source) ){
-
-                // Lead Source
-                // switch ($utm_source) {
-                //     case 'google':
-                //         $post['ans_leadsource'] = 119020008;
-                //         break;
-                //     case 'google_ads':
-                //         $post['ans_leadsource'] = 119020002;
-                //         break;
-                //     case 'facebook':
-                //         $post['ans_leadsource'] = 119020001;
-                //     default:
-                //         # code...
-                //         break;
-                // }
 
                 // Original Source
                 switch ($utm_source) {
@@ -130,10 +108,6 @@ class Dynamics_Helper {
                         break;
                 }
             }
-
-            // dump('UTM Campaign: ' . $utm_campaign);
-            // dump('UTM Source: ' . $utm_source);
-            // dd('end');
 
         /* End of Tracking Information */
 
@@ -204,15 +178,6 @@ class Dynamics_Helper {
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
         }
-
-        // Check for failures
-        // if (count(Mail::failures()) > 0) {
-        //     // If failures exist, handle them here
-        //     return response()->json(['status' => 'error', 'message' => 'Email sending failed', 'failed_recipients' => Mail::failures()]);
-        // } else {
-        //     // If no failures, email was sent successfully
-        //     return response()->json(['status' => 'success', 'message' => 'Email sent successfully']);
-        // }
 
     }
 
@@ -318,18 +283,11 @@ class Dynamics_Helper {
     }
 
     // Function that will post a contact over to Dynamics 365
-    // protected function sendToDynamics365($first_name, $last_name, $email, $phone_number, $message, $property_ref, $unit_ref, $company, $job_title, $website_url, $type)
     protected static function sendToDynamics365($data)
     {
 
         // Log access token status
         Log::info('Access token retrieved: ' . (self::$access_token ? 'Success' : 'Failed'), ['context' => 'custom-debug']);
-
-        // Adding a First Page Seen to the request, this is going to be temporary
-        // if( !empty( $_SERVER['HTTP_REFERER'] ) ){
-
-        //     $data["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
-        // }
 
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
