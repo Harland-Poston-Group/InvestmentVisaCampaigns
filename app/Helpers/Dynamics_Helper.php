@@ -71,7 +71,7 @@ class Dynamics_Helper {
         });
 
         // Add the "Portugal Homes" brand to the request (identified by an ID)
-        $post['ans_brand'] = 119020000;
+        $post['ans_brand'] = 119020001;
 
         /* Add Tracking Information */
 
