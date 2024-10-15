@@ -386,9 +386,9 @@
                 {{-- <label for="visaSelect">What are you looking for?</label> --}}
                 <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
                     <option selected hidden value="">What are you looking for?</option>
-                    <option value="Business Visa">Business Visa</option>
                     <option value="Greece Golden Visa">Greece Golden Visa</option>
-                    <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+                    <option value="Business Visa">Business Visa</option>
+                    <option value="Other Investment Opportunities">Investment Opportunities</option>
                     <option value="Retirement">Retirement</option>
                     <option value="Work visa">Work Visa</option>
                 </select>
@@ -911,9 +911,9 @@
         {{-- <label for="visaSelect">What are you looking for?</label> --}}
         <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
             <option selected hidden value="">What are you looking for?</option>
-            <option value="Business Visa">Business Visa</option>
             <option value="Greece Golden Visa">Greece Golden Visa</option>
-            <option value="Other Investment Opportunities">Other Investment Opportunities</option>
+            <option value="Business Visa">Business Visa</option>
+            <option value="Other Investment Opportunities">Investment Opportunities</option>
             <option value="Retirement">Retirement</option>
             <option value="Work visa">Work Visa</option>
         </select>
