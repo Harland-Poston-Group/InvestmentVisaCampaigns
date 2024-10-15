@@ -803,6 +803,11 @@ img.header-mask {
     position: absolute;
     top: 23px;
 }
+#campaign-form.move-to-right .btn-close-form {
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+}
 
 .form-top-image {
     display: block;
