@@ -12,6 +12,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/private-meetings.js', 'public/js')
     .js('resources/js/campaigns.js', 'public/js')
     .js('resources/js/residency.js', 'public/js')
+    .js('resources/js/script.js', 'public/js')
     .js('resources/js/notify.js', 'public/js');
 
 // Enable source maps for easier debugging (optional)
