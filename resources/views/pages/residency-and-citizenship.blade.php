@@ -113,11 +113,15 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                         </div>
                     </nav>
                 </div>
-            </div><form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10"><input type="hidden" name="_token" value="{{ csrf_token() }}">
+            </div>
+            <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+                <a href="#" class="btn-close-form"><i class="far fa-times-circle"></i></a>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div phpb-blocks-container="" id="Around-The-World">
                     <!-- code -->
                     <lottie-player src="/Around-The-World.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
                 </div>
+
                 <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
                 <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
                 <div class="form-group row">
@@ -142,7 +146,9 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                         </select></div>
                 </div>
                 <div class="form-group row mb-2">
-                    <div class="col-12"><textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea></div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea>
+                    </div>
                 </div><input type="hidden" name="petname" id="petname">
                 <div class="form-group row">
                     <div class="col-12 px-3">

@@ -265,6 +265,21 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function(){
 
+
+    jQuery('#campaign-form a.btn-close-form').hide();
+
+
+    jQuery(".right-button-scroll").on( "click", function(e) {
+        jQuery('a.btn-close-form').show();
+    });
+
+    jQuery('a.btn-close-form').on( "click", function(e) {
+        jQuery('#campaign-form.move-to-right').hide();
+        jQuery('a.btn-close-form').hide();
+    });
+
+
+
     const divsToWrap = jQuery('.video-mask, .header-mask'); // Adjust the selectors to match your divs
 
     // Wrap the selected divs with a new div
@@ -277,11 +292,13 @@ jQuery(document).ready(function(){
 
 
 
+
         jQuery(".right-button-scroll").on( "click", function(e) {
             e.preventDefault();
             console.log('top');
+            jQuery('a.btn-close').addClass('123');
             jQuery('#campaign-form').hide().addClass('move-to-right');
-            // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
+            //jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#Around-The-World');
             jQuery('#campaign-form.move-to-right').show();
         });
 
@@ -346,7 +363,7 @@ jQuery('<div class="toast-container p-3 top-50 start-70 translate-middle" id="to
         let val = jQuery(this).val();
         const alert = jQuery('<div id="campaign-info" class="alert alert-warning alert-dismissible fade show" role="alert"><a class="btn-close" data-dismiss="alert" aria-label="Close"><i class="far fa-times-circle"></i></a><i class="fas fa-info-circle"></i> You have selected Work Visa<br>Investment Visa does not offer services in regards to Work Visas.</div>');
 
-        if (jQuery(this).val() === "Work Visa") {
+        if (jQuery(this).val() === "Work visa") {
             jQuery('#form-bt').attr("disabled", true);
             // const toast = new bootstrap.Toast(document.querySelector('.toast'));
             // toast.show({ delay: 50000 });
