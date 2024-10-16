@@ -287,6 +287,9 @@ a {
                     font-size: 40px
                 }
 
+                @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+                    font-size: 50px;
+                }
 
                 .title-detail{
                     font-weight: 300;
@@ -324,7 +327,9 @@ a {
             font-size: 30px;
             margin-bottom: 150px !important;
         }
-
+        @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+            font-size: 38px;
+        }
 
     }
 
@@ -792,6 +797,9 @@ a {
     and (-webkit-min-device-pixel-ratio: 2) {
         height: 360px;
     }
+    @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+        height: 350px;
+    }
 
 /*
     .fakebg {
@@ -820,6 +828,12 @@ a {
         .schedule-button {
             top: 160% !important;
             left: 0 !important;
+
+            @media (max-width:360px) {
+                top: 135% !important;
+                left: 10% !important;
+            }
+
         }
 
     }
@@ -877,6 +891,9 @@ a {
         and (-webkit-min-device-pixel-ratio: 2) {
             bottom: -7%;
         }
+        @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+            bottom: -7%;
+        }
 
 
         .name,
@@ -928,6 +945,9 @@ a {
         and (-webkit-min-device-pixel-ratio: 2) {
             margin-top: 0;
         }
+        @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+            margin-top: 0;
+        }
 
         .title{
             font-size: 50px;
@@ -943,6 +963,9 @@ a {
             and (-webkit-min-device-pixel-ratio: 2) {
                 font-size: 40px;
             }
+            @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+                font-size: 40px;
+            }
 
         }
 
@@ -954,8 +977,6 @@ a {
 
             @media (max-width:768px) {
                 font-size: 22px;
-
-
             }
 
             @media only screen
@@ -966,6 +987,10 @@ a {
                 line-height: 24px;
                 padding-right: 12rem;
             }
+            @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+                font-size: 14px;
+                line-height: 22px;
+                padding-right: 12rem;            }
 
         }
         .subtitle li {
@@ -989,6 +1014,11 @@ a {
             top: 130%;
             left: 20%;
 
+            @media screen
+            and (device-width: 360px) {
+                top: 130%;
+            }
+
 
             @media only screen
             and (min-device-width: 1024px)
@@ -997,6 +1027,9 @@ a {
                 position: relative;
             }
 
+            @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+                top: 102%;
+            }
 
             &:hover{
                 background: #D4ECFA;
