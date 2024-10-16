@@ -14,6 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+    <meta property="og:title" content="Investment Visa">
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa">
+    <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp">
+    <meta property="og:url" content="https://campaigns.investmentvisa.com/greece-golden-visa">
+    <meta name="twitter:card" content="Unlock Your European Dream With the Greece Golden Visa">
+
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     @if ( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
