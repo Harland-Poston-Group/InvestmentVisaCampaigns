@@ -280,6 +280,14 @@ a {
                     font-size: 26px;
                 }
 
+                @media only screen
+                and (min-device-width: 1024px)
+                and (max-device-width: 1366px)
+                and (-webkit-min-device-pixel-ratio: 2) {
+                    font-size: 40px
+                }
+
+
                 .title-detail{
                     font-weight: 300;
                     font-size: 36px;
@@ -309,6 +317,13 @@ a {
         font-size: 45px;
         font-weight: 700;
 
+        @media only screen
+        and (min-device-width: 1024px)
+        and (max-device-width: 1366px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            font-size: 30px;
+            margin-bottom: 150px !important;
+        }
 
 
     }
@@ -770,6 +785,14 @@ a {
     z-index: 1;
     background-size: cover;
     height: 677px;
+
+    @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        height: 360px;
+    }
+
 /*
     .fakebg {
         position: absolute;
@@ -848,6 +871,13 @@ a {
             left: -100px;
             bottom: -80px;
         }
+        @media only screen
+        and (min-device-width: 1024px)
+        and (max-device-width: 1366px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            bottom: -7%;
+        }
+
 
         .name,
         .position{
@@ -892,6 +922,13 @@ a {
         align-items: start;
         margin-top: 50px;
 
+        @media only screen
+        and (min-device-width: 1024px)
+        and (max-device-width: 1366px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            margin-top: 0;
+        }
+
         .title{
             font-size: 50px;
             font-weight: 700;
@@ -900,6 +937,13 @@ a {
             @media (max-width:768px) {
                 font-size: 32px;
             }
+            @media only screen
+            and (min-device-width: 1024px)
+            and (max-device-width: 1366px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                font-size: 40px;
+            }
+
         }
 
         .subtitle{
@@ -909,8 +953,20 @@ a {
             font-weight: 500;
 
             @media (max-width:768px) {
-                font-size: 18px;
+                font-size: 22px;
+
+
             }
+
+            @media only screen
+            and (min-device-width: 1024px)
+            and (max-device-width: 1366px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                font-size: 22px;
+                line-height: 24px;
+                padding-right: 12rem;
+            }
+
         }
         .subtitle li {
             line-height: 40px;
@@ -932,6 +988,15 @@ a {
             position: absolute;
             top: 130%;
             left: 20%;
+
+
+            @media only screen
+            and (min-device-width: 1024px)
+            and (max-device-width: 1366px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                position: relative;
+            }
+
 
             &:hover{
                 background: #D4ECFA;
@@ -1115,6 +1180,14 @@ a {
         @media (max-width:768px) {
             width: 50%;
         }
+
+        @media only screen
+        and (min-device-width: 1024px)
+        and (max-device-width: 1366px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            width: 230px;
+        }
+
     }
 
     // .title-container{
@@ -1329,6 +1402,12 @@ a {
                     line-clamp: unset;
                 }
 
+                @media only screen
+                and (min-device-width: 1024px)
+                and (max-device-width: 1366px)
+                and (-webkit-min-device-pixel-ratio: 2) {
+                    min-height: 265px;
+                }
 
 
                 .fa-quote-left {
@@ -1362,6 +1441,14 @@ a {
                 position: absolute;
                 bottom: 20px;
                 left: 65px;
+
+
+                @media only screen
+                and (min-device-width: 1024px)
+                and (max-device-width: 1366px)
+                and (-webkit-min-device-pixel-ratio: 2) {
+                    position: relative;
+                }
 
                 @media (max-width:768px) {
                     bottom: 0;
