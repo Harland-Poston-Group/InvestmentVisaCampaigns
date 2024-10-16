@@ -22,6 +22,29 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+    <meta property="og:title" content="Investment Visa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+    <meta property="og:url" content="https://campaigns.investmentvisa.com/residency-and-citizenship" />
+    <meta property="og:site_name" content="Investment Visa" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="twitter:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="msapplication-TileImage" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+
+    <meta property="og:video" content="https://campaigns.investmentvisa.com/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" />
+    <meta property="og:video:type" content="video/webm" />
+    <meta property="og:video:width" content="1200" />
+    <meta property="og:video:height" content="630" />
+
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
