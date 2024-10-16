@@ -28,7 +28,12 @@
     <meta name="twitter:description" content="Unlock Your European Dream With the Greece Golden Visa" />
     <meta name="twitter:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
 
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta name="description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta name="msapplication-TileImage" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     @if ( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
