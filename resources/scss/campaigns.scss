@@ -975,6 +975,14 @@ a {
             line-height: 34px;
             font-weight: 500;
 
+            @media screen
+            and (device-width: 360px)
+            and (device-height: 640px)
+            and (-webkit-device-pixel-ratio: 2) {
+
+                font-size: 18px !important;
+            }
+
             @media (max-width:768px) {
                 font-size: 22px;
             }
