@@ -16,12 +16,19 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
-    <meta property="og:title" content="Investment Visa">
-    <meta property="og:type" content="article" />
-    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa">
-    <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp">
-    <meta property="og:url" content="https://campaigns.investmentvisa.com/greece-golden-visa">
-    <meta name="twitter:card" content="Unlock Your European Dream With the Greece Golden Visa">
+    <meta property="og:title" content="Investment Visa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+    <meta property="og:url" content="https://campaigns.investmentvisa.com/greece-golden-visa" />
+    <meta property="og:site_name" content="Investment Visa" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta name="twitter:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
+
+
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     @if ( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
