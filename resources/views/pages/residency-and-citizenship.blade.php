@@ -337,7 +337,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                     <div class="carousel-item active">
                                         <div class="row gx-5">
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN73GDNPY2">
+                                                <div class="card IDLZ8HLN73GDNPY2 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
@@ -349,7 +349,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7CLLRDE3">
+                                                <div class="card IDLZ8HLN7CLLRDE3 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
@@ -361,7 +361,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7Q604UT4">
+                                                <div class="card IDLZ8HLN7Q604UT4 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
@@ -377,7 +377,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                     <div class="carousel-item">
                                         <div class="row">
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7VHJNWE5">
+                                                <div class="card IDLZ8HLN7VHJNWE5 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
@@ -389,7 +389,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN82E3L106">
+                                                <div class="card IDLZ8HLN82E3L106 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
@@ -401,7 +401,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN88PTZ957">
+                                                <div class="card IDLZ8HLN88PTZ957 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
@@ -416,7 +416,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row gx-5">
-                                            <div class="col-md-4 mb-3">
+                                            <div class="col-md-4 mb-3 h-100">
                                                 <div class="card IDLZ8HLN8DC2FZX8">
                                                     <div class="card-body">
                                                         <div class="card-title">
@@ -429,7 +429,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN8ID5PTD9">
+                                                <div class="card IDLZ8HLN8ID5PTD9 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Mike Porcaro</h4>
@@ -441,7 +441,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN8ND7M7W10">
+                                                <div class="card IDLZ8HLN8ND7M7W10 h-100">
                                                     <div class="card-body">
                                                         <div class="card-title">
                                                             <h4 data-raw-content="true">Ahsan Ahmed</h4>
