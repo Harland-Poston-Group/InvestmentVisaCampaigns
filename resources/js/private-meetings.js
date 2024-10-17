@@ -258,6 +258,7 @@ if( $(".testimonials-slider").length ){
         speed: '500',
         easing: 'ease',
         arrows: false,
+        autoHeight: true,
         // Appending the pagination buttons to a specific element
         // pagination: '#testimonial-slider-container',
         breakpoints: {
@@ -265,6 +266,7 @@ if( $(".testimonials-slider").length ){
                 perPage: 1
             },
         }
+
         // autoWidth: true,
     }).mount();
 

@@ -70,18 +70,18 @@
     {{-- Always On CSS File --}}
     <!-- <link rel="stylesheet" href="{{-- mix('/assets/css/campaigns.css') --}}"> -->
     <!-- <link rel="stylesheet" href="/assets/css/private-meetings.css"> -->
-
-    {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/always_on.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/campaigns.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ mix('js/campaigns.js') }}" defer></script> --}}
-
-    <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/always_on.css">
-    <link rel="stylesheet" href="/css/campaigns.css">
-    <script src="/js/app.js" defer></script>
-    <script src="/js/campaigns.js" defer></script>
+    {{--
+         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/always_on.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/campaigns.css') }}">
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/campaigns.js') defer></script>
+    {{----}}
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/always_on.css">
+        <link rel="stylesheet" href="/css/campaigns.css">
+        <script src="/js/app.js" defer></script>
+        <script src="/js/campaigns.js" defer></script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -359,7 +359,7 @@
 
             <form id="modal-awareness-form" class="email-validation generic-form private-meetings-form catch-submission">
 
-                <div class="input-container">
+                <div class="input-container row">
                     <div class="col-6">
                         <label for="first_name">First Name *</label>
                         <input type="text" name="first_name" placeholder="" required>
@@ -729,8 +729,8 @@
 
                     <h3 class="title">Ready to Start Your Journey?</h3>
 
-                    <h5 class="subtitle">Take the first step towards your European lifestyle with the Greece Golden<br>
-                        Visa. Contact us today to learn more about the application process and <br>how we can assist you in making Greece your new home!
+                    <h5 class="subtitle">
+                        Take the first step towards your European lifestyle with the Greece Golden Visa. Contact us today to learn more about the application process and  how we can assist you in making Greece your new home!
                     </h5>
 
                     <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button>

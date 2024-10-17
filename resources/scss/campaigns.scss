@@ -194,6 +194,10 @@ a {
         @media (max-width:768px) {
             width: 150px;
         }
+        @media (max-width:768px) {
+            top: 30px;
+        }
+
     }
 
     @media (max-width:768px) {
@@ -213,6 +217,7 @@ a {
         }
     }
 }
+
 #form-container-element-banner, .banner-form {
     #modal-awareness-form {
         margin-top: 0;
@@ -220,11 +225,15 @@ a {
         @media (max-width:768px) {
             margin-top: 0;
         }
+        @media (max-width:360px) {
+            padding: 0 10px;
+        }
 
     }
 }
 .visas-disclaimer {
     color: $brand_purple;
+    text-align: center;
 }
 
 .logo-link {
@@ -277,7 +286,7 @@ a {
                 margin: unset;
 
                 @media (max-width:768px) {
-                    font-size: 26px;
+                    font-size: 24px;
                 }
 
                 @media only screen
@@ -382,8 +391,9 @@ a {
         margin-top: 100px;
 
             h2.title {
-                font-size: 30px;
+                font-size: 24px;
                 margin-top:60px !important;
+                padding-left: 12px;
         }
         .item {
             text-align: left;
@@ -395,7 +405,7 @@ a {
             margin-bottom: 20px;
 
             .item-title {
-                font-size: 22px;
+                font-size: 20px;
                 line-height: 25px;
             }
 
@@ -405,7 +415,7 @@ a {
             }
             .desctext {
                 font-size: 16px;
-                line-height: 17px;
+                line-height: 22px;
                 font-weight: 500;
             }
 
@@ -605,8 +615,8 @@ a {
         margin-top: 30px;
 
         @media (max-width:768px) {
-
-                font-size: 22px;
+            font-size: 22px;
+            padding-left: 12px;
 
         }
 
@@ -620,6 +630,7 @@ a {
         @media (max-width:768px) {
 
             font-size: 20px;
+            padding-left: 12px;
 
         }
     }
@@ -641,13 +652,19 @@ a {
 
     @media (max-width:768px) {
         h2.title {
-            font-size: 35px;
+            font-size: 24px;
             font-weight: 700;
+            padding-left: 12px;
+            padding-right: 12px;
         }
 
 
         p.desctext {
+            padding-right: 12px;
+            padding-left: 12px;
             font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 2rem;
         }
     }
 
@@ -818,7 +835,7 @@ a {
     @media (max-width:768px) {
         background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
         background-size:cover;
-        height: 770px;
+        height: 705px;
 
         .salesman-intro {
           //  position: absolute !important;
@@ -882,7 +899,7 @@ a {
 
         @media (max-width:768px) {
             position: relative;
-            left: -100px;
+            left: -115px;
             bottom: -80px;
         }
         @media only screen
@@ -905,7 +922,11 @@ a {
         .name{
             font-weight: 700;
             margin-bottom: 3px;
-            font-size: 17px;
+            font-size: 16px;
+        }
+        .position{
+            font-size: 14px;
+            font-weight: 300;
         }
     }
 
@@ -955,7 +976,9 @@ a {
             color: #fff !important;
 
             @media (max-width:768px) {
-                font-size: 32px;
+                font-size: 24px;
+                padding-left: 12px;
+                padding-right: 12px;
             }
             @media only screen
             and (min-device-width: 1024px)
@@ -974,13 +997,17 @@ a {
             font-size: 20px;
             line-height: 34px;
             font-weight: 500;
+            padding-right: 8rem;
 
             @media screen
             and (device-width: 360px)
             and (device-height: 640px)
             and (-webkit-device-pixel-ratio: 2) {
 
-                font-size: 18px !important;
+                font-size: 16px !important;
+                font-weight: 300;
+                padding-left: 12px;
+                padding-right: 12px;
             }
 
             @media (max-width:768px) {
@@ -1011,11 +1038,11 @@ a {
             background: #AA2159;
             color: white;
             border-radius: 25px;
-            padding: 17px 55px;
+            padding: 12px 55px;
             transition: 0.2s all;
             width: fit-content;
-            box-shadow: 0px 4px 22px -9px rgba(0, 0, 0, 0.75);
-            font-weight: 500;
+            box-shadow: 0 4px 22px -9px rgba(0, 0, 0, 0.75);
+            font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             position: absolute;
@@ -1024,7 +1051,7 @@ a {
 
             @media screen
             and (device-width: 360px) {
-                top: 130%;
+                top: 168% !important;
             }
 
 
@@ -1193,7 +1220,7 @@ a {
 
     .container{
         padding-top: 70px;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
 
         @media (max-width:500px) {
             padding-left: 25px;
@@ -1208,7 +1235,8 @@ a {
         padding-bottom: 60px;
 
         @media (max-width:768px) {
-            font-size: 30px;
+            font-size: 24px;
+            padding-right: 1rem;
         }
 
 
@@ -1435,12 +1463,13 @@ a {
                 text-overflow: ellipsis;
                 white-space: collapse;
                 position: relative;
-                bottom: 60px;
+                bottom: 45px;
                 min-height: 135px;
 
                 @media (max-width:580px) {
                     -webkit-line-clamp: unset;
                     line-clamp: unset;
+                    bottom: 0;
                 }
 
                 @media only screen
@@ -1475,7 +1504,7 @@ a {
             }
 
             .client-name {
-                font-size: 28px;
+                font-size: 20px;
                 font-weight: 700;
                 color: $brand_purple;
                 align-self: flex-start;
@@ -1494,6 +1523,7 @@ a {
                 @media (max-width:768px) {
                     bottom: 0;
                     left: 45px;
+                    position: relative;
                 }
 
             }
@@ -1611,6 +1641,7 @@ a {
         justify-content: center;
         gap: 30px;
         margin-top: 15px;
+        margin-bottom: 40px;
 
         .white-round-div {
             background: transparent;
@@ -1640,16 +1671,22 @@ a {
         i {
             color: $brand_mid_purple;
             transition: 0.2s all;
-            font-size: 50px;
+            font-size: 25px;
         }
     }
 
     .ph-footer-logo{
-        margin: 25px auto 50px auto;
+        margin: 25px auto 40px auto;
 
-        @media (max-width:500px) {
-
+        @media (max-width:380px) {
+            width: 100%;
         }
+        img {
+            @media (max-width:360px) {
+                width: 200px;
+            }
+        }
+
     }
 
     a{
@@ -1901,9 +1938,17 @@ a {
                 left: 0;
                 width: 200px !important;
                 height: auto !important;
-            }
 
+                @media (max-width:360px) {
+                    bottom: 70px;
+                    width: 180px !important;
+                    position: absolute;
+                    left: -17px;
+                }
+
+            }
         }
+
 
     }
 

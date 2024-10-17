@@ -21,10 +21,10 @@
             </a>
         </div>
 
-        <h5 style="font-size: 20px; margin-bottom: 40px;" class="uppercase mt-4 bold follow-us-text text-white">FOLLOW US</h5>
+        <h5 style="font-size: 14px; margin-bottom: 10px;" class="uppercase mt-4 bold follow-us-text text-white">FOLLOW US</h5>
 
         {{-- Social Media Icons --}}
-        <div class="social-media-container mb-5">
+        <div class="social-media-container">
 
             <div class="white-round-div">
                 <a href="https://www.facebook.com/portugalhomeslisbon?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
@@ -58,10 +58,10 @@
 
         {{-- Company information --}}
         <span class="company-info">
-            Praça da Alegria 01, 3rd Floor - 1250-004 Lisbon - Portugal<br> info@investmentvisa.com<br> +351 213 471 603
+            Praça da Alegria 01, 3rd Floor<br> 1250-004 Lisbon - Portugal<br> info@investmentvisa.com<br> +351 213 471 603
         </span>
         <div class="footer-terms-and-conditions my-5"><a href="https://www.investmentvisa.com/privacy-policy">Terms and Conditions</a> | <a href="https://www.investmentvisa.com/privacy-policy">Privacy Policy</a></div>
-        <div class="left-span">© 2024 Investment Visa. Investment Visa is part of the Harland & Poston Group.</div>
+        <div class="left-span" style="font-size: 12px;">© 2024 Investment Visa. Investment Visa is part of the Harland & Poston Group.</div>
     </div>
 
     @if( app()->getLocale() == 'twn' || app()->getLocale() == 'zh'  )

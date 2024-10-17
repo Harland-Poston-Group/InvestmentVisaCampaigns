@@ -1447,7 +1447,10 @@ footer.generic-footer{
 #modal-awareness-form{
     .input-container{
         display: flex;
-        gap: 8px;
+        gap: 0;
+        @media (max-width:991px) {
+            gap: 8px;
+        }
 
         input{
             width: 100%;
