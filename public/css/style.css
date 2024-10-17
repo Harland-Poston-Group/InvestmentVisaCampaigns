@@ -657,19 +657,17 @@ input#keepupdated {
 /* Video */
 
 .video-container {
-    max-height: 600px;
+    max-height: 560px;
     overflow: hidden;
-}
-.video-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 80vh; /* Adjust this as needed */
 }
 
 .top-video-block {
     position: relative;
-    top: 60px;
+    top: 0;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1182,6 +1180,8 @@ body.page-residency-and-citizenship .flip-card-back {
 #testimonials p.card-text {
     display: flex;
     margin-left: 35px;
+    padding-left: 25px;
+    line-height: 25px;
 }
 
 #carouselExampleIndicators2 > a.carousel-control-prev {
@@ -1339,7 +1339,7 @@ body.mobile .navbar-toggler {
         position: relative !important;
         background-size: 100% 100%;
         max-width: 385px !important;
-        left: 0;
+        left: -18px!important;
         right: 0;
     }
 
@@ -1356,7 +1356,7 @@ body.mobile .navbar-toggler {
     }
 
     #top-menu {
-        position: relative;
+        position: fixed;
 
     }
     #top-menu > nav > div > div > div.col-12.col-sm-8.d-flex.justify-content-end {
@@ -1410,7 +1410,7 @@ body.mobile .navbar-toggler {
     }
 
     img.header-mask {
-        bottom: -3px !important;
+        bottom: 3px !important;
     }
     .video-container {
         display: block !important;
@@ -1664,5 +1664,29 @@ body.mobile .navbar-toggler {
     #thank-you-menu .social-icons-column-wrapper{
         flex-direction: column;
         gap: 10px;
+    }
+}
+/* I Pad*/
+
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    #campaign-form, #add-blog-post-form {
+        right: 5%;
+    }
+    #cards-row {
+        max-width: 80%;
+    }
+    .bottom-cards {
+        max-width: 60%;
+    }
+    #why-move-section .img-left {
+        left: 0;
+        top: 30%;
+    }
+    #expert-section > div > div > div.col-12.col-sm-8 {
+        padding-left: 15%;
     }
 }

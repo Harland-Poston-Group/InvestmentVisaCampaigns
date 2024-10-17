@@ -1,4 +1,22 @@
 jQuery(document).ready(function() {
+
+    jQuery(window).on('scroll', function() {
+        // Check if the window width is less than 768px (for mobile)
+        if (jQuery(window).width() < 768) {
+            console.log('is mobile');
+
+            if (jQuery(this).scrollTop() > 50) {
+                jQuery('#top-menu').addClass('sticky');
+            } else {
+                jQuery('#top-menu').removeClass('sticky');
+            }
+        } else {
+            // Remove the sticky class if the window is resized to be larger than 768px
+            jQuery('#top-menu').removeClass('sticky');
+        }
+    });
+
+
     jQuery("lottie-player").addClass("lottie-custom");
 
     let currentUrl = window.location.href;
