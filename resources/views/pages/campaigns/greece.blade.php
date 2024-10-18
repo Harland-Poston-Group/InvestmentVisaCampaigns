@@ -729,7 +729,7 @@
                         Take the first step towards your European lifestyle with the Greece Golden Visa. Contact us today to learn more about the application process and  how we can assist you in making Greece your new home!
                     </h5>
 
-                    <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button>
+                    <!-- <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button> -->
 
                 </div>
             </div>
@@ -754,9 +754,9 @@
                     <h6 class="position">Investment Advisor</h6>
                 </div>
 
-                {{-- Salesman Image --}}
+                {{-- Salesman Image
                 <img class="salesman-image" src="/assets/img/private_meetings/lister/RD@2xDTP.webp" style="opacity:0;">
-
+                --}}
                 {{-- Background pattern --}}
                 <!--
                     <img class="background-image desktop-image" src="/assets/img/private_meetings/Pattern-W1018px-DTP.webp">
@@ -765,6 +765,7 @@
             </div>
 
         </div>
+        <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button>
 
     </div>
 </section>

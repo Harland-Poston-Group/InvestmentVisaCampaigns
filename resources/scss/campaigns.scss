@@ -818,24 +818,17 @@ a {
         height: 350px;
     }
 
-/*
-    .fakebg {
-        position: absolute;
-        background-size: cover;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 2;
-
-    }
-*/
-
-
     @media (max-width:768px) {
         background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
         background-size:cover;
         height: 705px;
+
+    @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            height: 730px;
+        }
 
         .salesman-intro {
           //  position: absolute !important;
@@ -862,13 +855,65 @@ a {
     .container{
         position: relative;
         z-index: 3;
+
+        .schedule-button{
+            border: unset;
+            background: #AA2159;
+            color: white;
+            border-radius: 25px;
+            padding: 12px 55px;
+            transition: 0.2s all;
+            width: fit-content;
+            box-shadow: 0 4px 22px -9px rgba(0, 0, 0, 0.75);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 130%;
+            left: 20%;
+
+            @media screen
+            and (device-width: 360px) {
+                top: 168% !important;
+            }
+
+
+            @media only screen
+            and (min-device-width: 1024px)
+            and (max-device-width: 1366px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                position: relative;
+            }
+
+            @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+                top: 102%;
+            }
+
+            &:hover{
+                background: #D4ECFA;
+                color: #25283D;
+            }
+        }
+
     }
 
     .salesman-area-wrapper{
+        top: 340px;
+
         @media (max-width:768px) {
             display: flex;
             justify-content: flex-end;
             right: 90px;
+            top: 0;
+        }
+
+        /* Portrait and Landscape */
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            right: 60px;
+            top: 0;
         }
     }
 
@@ -1025,7 +1070,14 @@ a {
             @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
                 font-size: 14px;
                 line-height: 22px;
-                padding-right: 12rem;            }
+                padding-right: 12rem;
+            }
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                padding-right: 0;
+            }
 
         }
         .subtitle li {
@@ -1033,44 +1085,7 @@ a {
         }
 
 
-        .schedule-button{
-            border: unset;
-            background: #AA2159;
-            color: white;
-            border-radius: 25px;
-            padding: 12px 55px;
-            transition: 0.2s all;
-            width: fit-content;
-            box-shadow: 0 4px 22px -9px rgba(0, 0, 0, 0.75);
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            position: absolute;
-            top: 130%;
-            left: 20%;
 
-            @media screen
-            and (device-width: 360px) {
-                top: 168% !important;
-            }
-
-
-            @media only screen
-            and (min-device-width: 1024px)
-            and (max-device-width: 1366px)
-            and (-webkit-min-device-pixel-ratio: 2) {
-                position: relative;
-            }
-
-            @media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
-                top: 102%;
-            }
-
-            &:hover{
-                background: #D4ECFA;
-                color: #25283D;
-            }
-        }
 
     }
 
@@ -1797,6 +1812,15 @@ a {
             flex-direction: column;
             justify-content: center;
 
+
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                padding-top: 8rem !important;
+            }
+
+
             .flag{
                 width: 110px!important;
                 height: 110px!important;
@@ -1855,6 +1879,14 @@ a {
                 left: 25px;
                 top: 15%;
             }
+
+            /* Portrait and Landscape */
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                display: none;
+            }
         }
     }
 
@@ -1885,6 +1917,14 @@ a {
         text-align: center;
         top: -74px !important;
 
+        /* Portrait and Landscape */
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            display: none !important;
+        }
+
         .anim {
            bottom: 38px !important;
         }
@@ -1900,6 +1940,8 @@ a {
     padding: 13px 18px;
     top: 100px;
     z-index: 1;
+
+
 
     .flag-container{
         position: absolute;
@@ -2066,7 +2108,7 @@ a {
         z-index: 99;
 
         @media (max-width:768px) {
-            top: 30px;
+            top: 10px;
             right: 25px;
             fill: black;
         }
