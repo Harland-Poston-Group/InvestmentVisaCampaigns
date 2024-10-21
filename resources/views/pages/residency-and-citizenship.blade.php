@@ -44,6 +44,16 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
 
+    {{-- Intl Tel Input --}}
+
+    <link rel="stylesheet" href="/assets/css/country-code-plugin/intlTelInput.css">
+
+    <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
+    <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
+    <script src="/assets/js/country-code-plugin/utils.js"></script>
+    {{--<script src="/assets/js/country-code-plugin/tel-input-script.js"></script> --}}
+    {{-- moved to script.js --}}
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -144,7 +154,9 @@
                 <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
             </div>
             <div class="form-group row">
-                <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
+                <div class="col-12">
+                    <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension">
+                </div>
             </div>
             <div class="form-group row">
                 <div class="col-12">
@@ -557,7 +569,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/js/script.js"></script>
 <script>
     function getParam(p) {
@@ -604,18 +616,6 @@
     }
     window.addEventListener('load', addGclid);
 </script>
-<script>
-    jQuery.noConflict();
-    jQuery(function() {
-        if (jQuery(this).scrollTop() >= 200) {
-            // Display the message
-            jQuery('#topMenu').fadeIn().addClass('active');
-        } else {
-            // Hide the message if not scrolled 200 pixels
-            jQuery('#topMenu').hide().removeClass('active');
 
-        }
-    });
-</script>
 </body>
 </html>
