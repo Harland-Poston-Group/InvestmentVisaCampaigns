@@ -41,6 +41,7 @@ class Dynamics_Helper {
             'email' => 'emailaddress1',
             'email_address' =>  'emailaddress1',
             'phone_number' => 'telephone1',
+            'country_code'  => 'ans_countrycode',
             'message' => 'ans_message',
             'what_are_you_looking_for' => 'ans_whatareyoulookingfortext',
             'enquiry_subject' => 'ans_whatareyoulookingfortext',
