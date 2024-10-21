@@ -1,3 +1,27 @@
+document.getElementById('hamburgerMenu').addEventListener('click', function () {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+
+        // Check if targetId is not just '#'
+        if (targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
 $(function() {
     $(".btn-close").on("click", function(){
         $('.work-visa-message').hide().removeClass('show');
@@ -630,21 +654,4 @@ $(document).ready(function(){
 
         }
     });
-
-/*
-    $(".right-button-scroll").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
-
-    $(".enquire-button").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
-
-    $(".meeting-button").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
-*/
 })

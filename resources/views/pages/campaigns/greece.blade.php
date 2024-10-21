@@ -190,39 +190,31 @@
 
     </div>
 </section>
-<!-- Navbar -->
-{{--
-<nav id="campaign-navbar" class="navbar navbar-expand-lg navbar-light sticky-top d-block d-sm-none">
-    <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Brand</a> -->
-        <!-- Hamburger icon that toggles the menu -->
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Collapsible Menu -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <button class="btn btn-close-nav text-dark float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Close">
-                <span>&times;</span>
-            </button>
-            <ul class="navbar-nav">
-                <img class="nav-logo" src="/assets/img/campaigns/greece/iv-logo-color-posit-h-80px.png">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Benefits</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Book a Meeting</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials-section-pm">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#take-the-opportunity-section">How We Can Help</a>
-                </li>
-            </ul>
-        </div>
+<section id="top-header">
+    <div class="container">
+        <header class="header row">
+            <div class="col-6 col-sm-2">
+                <div class="logo">
+                    <a href="/" style="color: #fff; text-decoration: none;">
+                        <img src="/assets/img/logo-IV.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-10">
+                <div class="hamburger float-end" id="hamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#whats-in-it-for-you-section">Benefits</a>
+                    <a href="#private-meetings-booking-sections">Options</a>
+                    <a href="#take-the-opportunity-section">Why Us</a>
+                    <a href="#testimonials-section-pm">Testimonials</a>
+                    <a href="#take-the-opportunity-section">How We Can Help</a>
+                </nav>
+            </div>
+        </header>
     </div>
-</nav>
---}}
+</section>
 {{-- Banner --}}
 <section id="private-meetings-banner" class="">
 
@@ -310,18 +302,18 @@
     </div>
 
     <div class="container banner-container">
-
+<!--
         <a class="logo-link">
                 {{-- Default Logo --}}
                 <img id="banner-logo" src="/assets/img/campaigns/greece/iv-logo.svg">
 
-        </a>
+        </a>-->
         {{-- Left Title Banner --}}
         <div class="left-title-banner {{ $class ?? '' }}">
 
             <div class="container">
 
-                <div class="text-container d-none d-sm-block d-xs-block">
+                <div id="benefits" class="text-container d-none d-sm-block d-xs-block">
                     <h3 class="title animate__animated animate__fadeInLeft">
                         Unlock Your European Dream<br> With the Greece Golden Visa
                     </h3>
@@ -650,55 +642,6 @@
                             </div>
                         </a>
                     </div>
-
-                    {{-- Property
-                    <div class="property splide__slide col-4">
-                        <a title="Glyfada Ellinikon" class="property-link" href="https://www.investmentvisa.com/properties/" target="_blank">
-                        <div class="property-card">
-                            <div class="property-details">
-                                <img class="property-image w-100" src="/assets/img/campaigns/greece/2-min 2.png">
-                            </div>
-                            <div class="content">
-                                <h2>
-                                    Glyfada Ellinikon
-                                </h2>
-                                <span class="property-price">from € 192.000</span>
-                            </div>
-                        </div>
-                        </a>
-                    </div>--}}
-                    {{-- Property
-                    <div class="property splide__slide col-4">
-                        <a title="Voula 120" class="property-link" href="https://www.investmentvisa.com/properties/" target="_blank">
-                        <div class="property-card">
-                            <div class="property-details">
-                                <img class="property-image w-100" src="/assets/img/campaigns/greece/1.1-min (9).png">
-                            </div>
-                            <div class="content">
-                                <h2>
-                                    Voula 120
-                                </h2>
-                                <span class="property-price">from €540.000,00</span>
-                            </div>
-                        </div>
-                        </a>
-                    </div>--}}
-                    {{-- Property
-                    <div class="property splide__slide col-4">
-                        <a title="Residences Acropolis" class="property-link" href="https://www.investmentvisa.com/properties/" target="_blank">
-                        <div class="property-card">
-                            <div class="property-details">
-                                <img class="property-image w-100" src="/assets/img/campaigns/greece/m4.png">
-                            </div>
-                            <div class="content">
-                                <h2>
-                                    Residences Acropolis
-                                </h2>
-                                <span class="property-price">from €165.000,00</span>
-                            </div>
-                        </div>
-                        </a>
-                    </div>--}}
                 </ul>
             </div>
         </div>
@@ -829,47 +772,6 @@
 
                             </div>
                         </div>
-
-                        {{-- Testimonial
-                        <div class="testimonial splide__slide">
-                            <div class="testimonial-card">
-                                <div class="client-details">
-                                    <span class="client-name">Razaul Al Kaaby</span>
-                                    <br>
-                                    @if( app()->getLocale() == 'twn' || app()->getLocale() == 'zh'  )
-                                        <span class="client-location" style="display: block;margin-top:3px;">阿联酋</span>
-                                    @else
-                                        <span class="client-location">UAE</span>
-                                    @endif
-                                    <img class="country-flag" src="/assets/img/countries/flags/uae.webp">
-                                </div>
-                                <div class="content">
-                                    <i class="fa-solid fa-quote-left"></i>
-                                    George Hobson is a pleasant young man, came across as knowledgeable, experienced, hardworking, honest & disciplined; I felt very comfortable in easily making my investment.
-                                </div>
-                            </div>
-                        </div>
-                        --}}
-                        {{-- Testimonial
-                        <div class="testimonial splide__slide">
-                            <div class="testimonial-card">
-                                <div class="client-details">
-                                    <span class="client-name">Cai HuiLin</span>
-                                    <br>
-                                    @if( app()->getLocale() == 'twn' || app()->getLocale() == 'zh'  )
-                                        <span class="client-location" style="display: block;margin-top:3px;">中国</span>
-                                    @else
-                                        <span class="client-location">China</span>
-                                    @endif
-                                    <img class="country-flag" src="/assets/img/countries/flags/chn.jpg">
-                                </div>
-                                <div class="content">
-                                    <i class="fa-solid fa-quote-left"></i>
-                                    Thank you very much for your help. I'm glad to have chosen Portugal Homes as my property management agent.
-                                </div>
-                            </div>
-                        </div>
-                        --}}
                     </ul>
                 </div>
             </div>

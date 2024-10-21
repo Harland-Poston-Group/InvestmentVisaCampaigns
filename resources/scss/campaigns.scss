@@ -1938,7 +1938,7 @@ a {
     // width: 375px;
     width: 350px;
     padding: 13px 18px;
-    top: 100px;
+    top: 170px;
     z-index: 1;
 
 
@@ -2245,5 +2245,90 @@ body .private-meetings-form{
         padding: 10px 0;
         border-radius: 0;
 
+    }
+}
+#top-header {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    transition: all 0.5s ease;
+
+}
+
+#top-header.active {
+    background: #ffffffd1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    #top-banner {
+        margin-top: 75px;
+    }
+
+    #top-header {
+        z-index: 9;
+        background: #fff;
+        box-shadow: 1px 1px 10px #333;
+    }
+
+}
+
+.header {
+    width: 100%;
+    padding: 12px 0;
+}
+.header .logo {
+    font-size: 1.5em;
+}
+.nav-menu {
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav-menu a {
+    color: #6A257A;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+}
+.nav-menu a:hover {
+    color: #B08BB9;
+}
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #6A257A;
+}
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .nav-menu.active {
+        display: flex;
+        align-items: flex-start;
+        padding-left: 38px;
+    }
+    .hamburger {
+        display: block;
     }
 }
