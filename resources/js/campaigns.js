@@ -23,6 +23,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 $(function() {
+
+    $(".nav-menu a").on( "click", function(e) {
+        e.preventDefault();
+        $('.nav-menu').removeClass('active');
+    });
+
+
     $(".btn-close").on("click", function(){
         $('.work-visa-message').hide().removeClass('show');
     });
