@@ -47,8 +47,6 @@ Route::get('/greece-golden-visa', [PageController::class, 'campaigns']);
 
 Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 
-Route::get('/residency-and-citizenship-2', [PageController::class, 'residencyAndCitizenshipTwo']);
-
 Route::get('/thank-you', [PageController::class, 'thankYou']);
 
 Route::get('/private-meetings/{country}', [App\Http\Controllers\LandingPageController::class, 'country_private_meetings'])->name('country_private_meetings');
