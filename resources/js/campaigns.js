@@ -232,11 +232,18 @@ $(document).ready(function() {
 
     });
 
+    $(".side-button-link").on('click', function(){
+
+        pmFadeInSection.fadeIn(200);
+
+    });
+
     $(".popup-fade-in-form").on('click', function(){
 
         pmFadeInSection.fadeIn(200);
 
-    })
+    });
+
 
     // Close booking form fade in section
     $("#form-container-element-banner .close-button").on('click', function(){
@@ -605,4 +612,39 @@ $(document).ready(function(){
             });
     }
 
+    $(window).on('scroll', function() {
+        const scrollPosition = $(this).scrollTop();
+        // console.log('this Scroll position:', scrollPosition);
+
+        if (scrollPosition >= 100) {
+           //  $('#top-header').addClass('active');
+        }
+
+        if (scrollPosition >= 600) {
+            $('.right-button-scroll').fadeIn().addClass('active');
+        }
+        else {
+            $('.right-button-scroll').hide().removeClass('active');
+            $('#hidden-form').removeClass('active');
+            // $('#top-header').removeClass('active');
+
+        }
+    });
+
+/*
+    $(".right-button-scroll").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
+    $(".enquire-button").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
+    $(".meeting-button").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+*/
 })

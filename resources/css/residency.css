@@ -790,14 +790,15 @@ img.header-mask {
     padding-bottom: 50px;
     filter: hue-rotate(-140deg) brightness(1);
 }
-#campaign-form.move-to-right #Around-The-World {
-    display: none;
-    filter: hue-rotate(140deg) brightness(1.2) saturate(150%); /* Adjust to cancel or override */
 
+#campaign-form.move-to-right #Around-The-World {
+    /* display: none; */
+    filter: hue-rotate(140deg) brightness(1.2) saturate(150%); /* Adjust to cancel or override */
 }
 #campaign-form.move-to-right .form-top-image, #campaign-form.move-to-right .form-title, #campaign-form.move-to-right .form-subtitle {
-    display: none;
+  /*  display: none;*/
 }
+
 #campaign-form.move-to-right .btn-close {
     cursor: pointer;
     position: absolute;

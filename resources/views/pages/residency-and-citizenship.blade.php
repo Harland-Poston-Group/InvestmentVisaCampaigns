@@ -1,19 +1,14 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="">
-    <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Investment Visa - Residency and Citizenship</title>
     <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/css/grapes.min.css" integrity="sha512-F+EUNfBQvAXDvJcKgbm5DgtsOcy+5uhbGuH8VtK0ru/N6S3VYM9OHkn9ACgDlkwoxesxgeaX/6BdrQItwbBQNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.21.10/grapes.min.js" integrity="sha512-TavCuu5P1hn5roGNJSursS0xC7ex1qhRcbAG90OJYf5QEc4C/gQfFH/0MKSzkAFil/UBCTJCe/zmW5Ei091zvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+    <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-    <meta property="og:title" content="Investment Visa" />
+    <meta property="og:title" content="Investment Visa - Residency and Citizenship" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa" />
     <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
@@ -45,6 +40,9 @@
     <meta property="og:video:width" content="1200" />
     <meta property="og:video:height" content="630" />
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -54,7 +52,6 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "jfky1xya3k");
     </script>
-
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -68,17 +65,22 @@
         fbq('init', '163126273522999');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=163126273522999&ev=PageView&noscript=1"
-        /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=163126273522999&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Meta Pixel Code --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', ' https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '678459207652433'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src=" https://www.facebook.com/tr?id=678459207652433&ev=PageView&noscript=1" /></noscript> <!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', ' https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '678459207652433'); fbq('track', 'PageView'); </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src=" https://www.facebook.com/tr?id=678459207652433&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
 
     <!-- Twitter conversion tracking base code --> <script> !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments); },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js' , a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script'); twq('config','ogkqf'); </script> <!-- End Twitter conversion tracking base code -->
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -86,423 +88,478 @@
     </script>
     <!-- End Google Tag Manager -->
 
-
 </head>
-<body>
-
+<body class="page-residency-and-citizenship">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="mx-0 ">
-            <style>* { box-sizing: border-box; } body {margin: 0;}.IDLZ6PRXSBN3DIJ1.cards-section{background-color:#ffffff;}</style><div class="IDM0DR6XYB12L5I9">
-                <!-- <div id="top-menu" class="col-12">
-                <nav class="navbar" phpb-blocks-container>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 col-sm-4">
-                                <a class="navbar-brand" href="#">
-                                    <img src="/images/IV-Logo-Color-Negat.png" alt="Investment Visa" class="d-inline-block align-text-top">
-                                </a>
-                            </div>
-                            <div class="menu col-12 col-sm-8" id="navbar">
-                                <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="#">Benefits</a>
-                                    <a class="nav-link" href="#">Options</a>
-                                    <a class="nav-link" href="#">Why Us</a>
-                                    <a class="nav-link" href="#">Testimonials</a>
-                                    <a class="nav-link" href="#">How We Can Help</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div> -->
-                <div id="top-menu" class="col-12">
-                    <nav phpb-blocks-container="" class="navbar">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-12 col-sm-4"><a href="#" class="navbar-brand IDM0DR6XYD8PE7H10">
-                                        <img src="/images/IV-Logo-Color-Negat.png" alt="Investment Visa" class="d-inline-block align-text-top"></a></div>
-                                <div class="col-12 col-sm-8 d-flex justify-content-end">
-                                    <!-- Toggler button for mobile --><button type="button" data-raw-content="true" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><!-- Menu -->
-                                    <div id="navbar" class="menu col-12 col-sm-8">
-                                        <div class="navbar-nav"><a aria-current="page" href="#cards-row" class="nav-link active IDM0DR6XYF1IX2F11">Benefits</a><a href="#map-block" class="nav-link IDM0DR6XYGA3EBO12">Options</a><a href="#why-move-section" class="nav-link IDM0DR6XYGLERBF13">Why Us</a><a href="#testimonials" class="nav-link IDM0DR6XYG29B2714">Testimonials</a><a href="#expert-section" class="nav-link IDM0DR6XYG52LKG15">How We Can Help</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+<section id="top-header">
+    <div class="container">
+        <header class="header row">
+            <div class="col-6 col-sm-2">
+                <div class="logo">
+                    <a href="/" style="color: #fff; text-decoration: none;">
+                        <img src="/assets/img/logo-IV.svg">
+                    </a>
                 </div>
             </div>
-            <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
-                <a href="#" class="btn-close-form"><i class="far fa-times-circle"></i></a>
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div phpb-blocks-container="" id="Around-The-World">
-                    <!-- code -->
-                    <lottie-player src="/Around-The-World.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
+            <div class="col-6 col-sm-10">
+                <div class="hamburger float-end" id="hamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#cards">Benefits</a>
+                    <a href="#map">Options</a>
+                    <a href="#why-move">Why Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#expert-section">How We Can Help</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+</section>
+<section id="top-banner">
+    <video allowfullscreen="allowfullscreen" width="100%" height="auto" autoplay="autoplay" muted="" playsinline="" src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" loop="loop" controls="controls" class="IDLZ1B49KZV68ZI13 top-video-block video-mask">
+        <source src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" type="video/webm">
+    </video>
+    <img src="/images/headermask.png" alt="mask" class="header-mask IDLZ87PUKTPRXI95">
+    <div class="residency-form-container">
+        <div id="Around-The-World">
+            <!-- code -->
+            <lottie-player class="animated-plane" src="/Around-The-World.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
+        </div>
+        <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
+            <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
+            <div class="form-group row">
+                <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control IDM0XXP2STIRSKF11"></div>
+                <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control IDM0XXP2SUWIXAF12"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
+                        <option selected hidden value="">What are you looking for?</option>
+                        <option value="Business Visa">Business Visa</option>
+                        <option value="Greece Golden Visa">Golden Visa</option>
+                        <option value="Other Investment Opportunities">Investment Opportunities</option>
+                        <option value="Retirement">Retirement</option>
+                        <option value="Work visa">Work Visa</option>
+                    </select></div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-12">
+                    <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea>
+                </div>
+            </div>
+            <input type="hidden" name="petname" id="petname">
+            <div class="form-group row">
+
+                <div class="col-12 col-md-8">
+                    {{-- Keep me updated Checkbox --}}
+                    <div class="checkbox-wrapper">
+                        <input type="hidden" name="signup" value="0" />
+                        <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
+                        <label class="keep-me-updated-form-span" for="signup">
+                            Please keep me updated on Harland and Poston Group news, events and offers.
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-end">
+                    <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Submit</button>
+                </div>
+                <div class="col-12 px-3 my-2">
+                    <div class="desctext">
+                        By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
+                    </div>
                 </div>
 
-                <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
-                <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
-                <div class="form-group row">
-                    <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control IDM0XXP2STIRSKF11"></div>
-                    <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control IDM0XXP2SUWIXAF12"></div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-12">
-                        <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal IDM0XXP2SVMHHN615">
-                            <option selected hidden value="">What are you looking for?</option>
-                            <option value="Business Visa">Business Visa</option>
-                            <option value="Greece Golden Visa">Golden Visa</option>
-                            <option value="Other Investment Opportunities">Investment Opportunities</option>
-                            <option value="Retirement">Retirement</option>
-                            <option value="Work visa">Work Visa</option>
-                        </select></div>
-                </div>
-                <div class="form-group row mb-2">
-                    <div class="col-12">
-                        <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea>
-                    </div>
-                </div><input type="hidden" name="petname" id="petname">
-                <div class="form-group row">
-                    <div class="col-12 px-3">
-                        <div class="desctext">
-                            Please note that Portugal Homes will use the above details to contact you only. By submitting this form, you confirm that you agree to our website terms of use, our privacy policy and consent to cookies being stored on your computer.
-                        </div>
-                    </div>
-                    <!-- <div class="col-12 col-md-7">
-                        <div class="form-group keep-updated">
-                            <input type="checkbox" id="keepupdated" name="keepupdated" value="keepupdated">
-                            <label for="keepupdated">Keep me updated on Harland and Poston Group news, events and offers.</label>
-                        </div>
-                    </div> -->
-                    <div class="col-12 col-md-12 text-end"><button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary IDM0XXP2SY6G1D017">Submit</button></div>
-                </div>
-            </form><video allowfullscreen="allowfullscreen" width="100%" height="auto" autoplay="autoplay" muted="" playsinline="" src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" loop="loop" controls="controls" class="IDLZ1B49KZV68ZI13 top-video-block video-mask">
-                <source src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" type="video/webm"></video><img src="/images/headermask.png" alt="mask" class="header-mask IDLZ87PUKTPRXI95"><div class="IDLZ6PRXSBN3DIJ1 cards-section">
-                <div class="row mt-0">
-                    <div phpb-blocks-container="" class="col-12 my-5"><div phpb-blocks-container="" id="sideButton" class="col-12 IDLZ6TD8ZCE1ZKS1 right-button-scroll"><a href="#" title="Let Us Help You" id="bt-let-us-help-you" class="side-button-link IDLZ6TD8ZC8ZVSS2"><img src="/images/Cam-CTA-146x180px.webp" alt="CTA" class="let-us-help-you-img"><span class="let-us-help-you-caption IDLZ6UMAKQLCLR20">Hi, Let us Help You</span></a></div></div>
-                </div>
-                <div id="cards-row" class="row">
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSES4FV82">
-                                    <img src="/images/Lifestyle.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Quality<br>of Life</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSGSYFNP3">
-                                    <p data-raw-content="true">A second residency or citizenship enhances life quality, allowing legal living and cultural enjoyment abroad.</p>
-                                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+<section id="cards">
+    <div class="IDLZ6PRXSBN3DIJ1 cards-section container">
+        <div class="cards-grid">
+            <div id="cards-row" class="row">
+                <div class="card-container col-12 col-md-3 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSES4FV82">
+                                <img src="/images/Lifestyle.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Quality<br>of Life</h1>
                             </div>
-                        </div>
-                    </div>
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSIT3W8G4">
-                                    <img src="/images/Access-EU.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Travel Visa-Free</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSJKTCKL5">
-                                    <p data-raw-content="true">Second citizenship or residency expands travel options, unlocking visa-free travel to multiple countries.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSLKXG3U6">
-                                    <img src="/images/Bizz%20Opport.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Business Prospects</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSMHCMR67">
-                                    <p data-raw-content="true">Second residency or citizenship grants legal rights to invest and do business, accessing investment opportunities.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-3 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSOZ1S0Z8">
-                                    <img src="/images/HealthEdu.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Health &amp; Education</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSPFVJ6G9">
-                                    <p data-raw-content="true">Becoming a resident or citizen abroad grants access to top education, and Healthcare systems especially in Europe.</p>
-                                </div>
+                            <div class="flip-card-back IDLZ6PRXSGSYFNP3">
+                                <p data-raw-content="true">A second residency or citizenship enhances life quality, allowing legal living and cultural enjoyment abroad.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div phpb-blocks-container="" class="col-12 benefits-text-block">
-                        <h2 data-raw-content="true">Alternative Residency and Citizenship<br>Status Grants<span> Many Benefits</span></h2>
-                        <p data-raw-content="true">The world is changing rapidly, bringing challenges to your safety, freedom, <br>standard of living, and mobility. Investing in alternative residency or citizenship is <br>​​​​​​​the smartest move you can make for your future.</p>
-                    </div>
-                </div>
-                <div class="row bottom-cards">
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSTX3E4K10">
-                                    <img src="/images/Peace%20of%20Mind.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Plan B Safety</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSUN8G1Z11">
-                                    <p data-raw-content="true">A second nationality or residence status unlocks safer new horizons for living, working, and exploring.</p>
-                                </div>
+                <div class="card-container col-12 col-md-3 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSIT3W8G4">
+                                <img src="/images/Access-EU.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Travel Visa-Free</h1>
                             </div>
-                        </div>
-                    </div>
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSWZB72012">
-                                    <img src="/images/Visa.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Powerfull Passport</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXSX1G3PQ13">
-                                    <p data-raw-content="true">A second, powerful passport increases international mobility and expands opportunities.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div phpb-blocks-container="" class="card-container col-12 col-md-4 text-center position-relative">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front IDLZ6PRXSZOXN0W14">
-                                    <img src="/images/Finantial%20Advantage.svg" alt="Avatar">
-                                    <h1 data-raw-content="true">Tax Benefits</h1>
-                                </div>
-                                <div class="flip-card-back IDLZ6PRXT1JJ8Y815">
-                                    <p data-raw-content="true">Choosing the right country will let you benefit from tax incentives.</p>
-                                </div>
+                            <div class="flip-card-back IDLZ6PRXSJKTCKL5">
+                                <p data-raw-content="true">Second citizenship or residency expands travel options, unlocking visa-free travel to multiple countries.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><div id="map-block" class="row IDLZ88Q12FVKHWG1 map-block">
-                <div phpb-blocks-container="" class="col-12">
-                    <h2 data-raw-content="true" class="title">Grant of Residency or Citizenship</h2>
-                    <h4 data-raw-content="true" class="subtitle">on the Basis of an Investment</h4>
-                    <img src="/images/WorldMap-934x469-Dktp.webp" alt="map">
-                </div>
-                <div class="col-12">
-                    <h2 data-raw-content="true" class="desc-title">At Investment Visa, we offer you a unique opportunity:</h2>
-                    <p data-raw-content="true">Our expert investment advisors understand your unique needs. They'll guide you<br>through our diverse portfolio to help you choose the perfect residence or<br>citizenship by investment program tailored just for you.</p><a href="#top-menu" title="Enquire Us Today" class="enquire-button IDLZ88Q12SWDRMO2">Enquire Us Today</a>
-                </div>
-            </div><div id="why-move-section" class="row IDLZ8B7VH944OFX1">
-                <div class="col-12">
-                    <div class="top-text">
-                        <h1 data-raw-content="true" class="why-move-title">Why Choose Investment Visa</h1>
-                        <p data-raw-content="true" class="why-move-desc">By putting together expertise, experience and the right team, we gather a world of <br>
-                            insight and tools, that we share all along the way with people willing to embrace a<br>
-                            brighter future through investment.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <h4 data-raw-content="true" class="title-left"><strong>100%</strong> Application Success Rate</h4>
-                    <img src="/images/Smiling-Consultant-663z414px-Dktp.webp" alt="Investment Visa Meetings" class="img-left">
-                </div>
-                <div class="col-12 col-sm-6">
-                    <img src="/images/WorkedWith-796x497px-Dktp.webp" alt="Investment Visa Meetings" class="img-right">
-                    <h4 data-raw-content="true" class="title-right"><span style="font-weight:normal;">Worked with</span><br>90+ Nationalities</h4>
-                </div>
-                <div class="col-12">
-                    <h4 data-raw-content="true" class="title-bottom">Global Experts</h4>
-                    <img src="/images/Experts-At-Work-663x414-Dktp.webp" alt="Investment Visa Meetings" class="img-bottom">
-                </div>
-            </div><section class="pt-0 pb-5 IDLZ8HLN6ZLNAGL1">
-                <div id="testimonials" class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 data-raw-content="true" class="mb-3 text-center">What Our Clients Say About Us</h3>
-                        </div>
-                        <div class="col-12">
-                            <!-- <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel"> -->
-                            <div data-interval="false" id="carouselExampleIndicators2" class="carousel slide">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row gx-5">
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN73GDNPY2 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
-                                                            <p data-raw-content="true" class="subtitle">From USA</p>
-                                                            <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7CLLRDE3 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Mike Porcaro</h4>
-                                                            <p data-raw-content="true" class="subtitle">From UK</p>
-                                                            <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7Q604UT4 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Ahsan Ahmed</h4>
-                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN7VHJNWE5 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
-                                                            <p data-raw-content="true" class="subtitle">From USA</p>
-                                                            <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN82E3L106 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Mike Porcaro</h4>
-                                                            <p data-raw-content="true" class="subtitle">From UK</p>
-                                                            <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN88PTZ957 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Ahsan Ahmed</h4>
-                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row gx-5">
-                                            <div class="col-md-4 mb-3 h-100">
-                                                <div class="card IDLZ8HLN8DC2FZX8">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
-                                                            <p data-raw-content="true" class="subtitle">From USA</p>
-                                                            <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN8ID5PTD9 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Mike Porcaro</h4>
-                                                            <p data-raw-content="true" class="subtitle">From UK</p>
-                                                            <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.&nbsp;</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card IDLZ8HLN8ND7M7W10 h-100">
-                                                    <div class="card-body">
-                                                        <div class="card-title">
-                                                            <h4 data-raw-content="true">Ahsan Ahmed</h4>
-                                                            <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
-                                                            <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
-                                                        </div><i data-raw-content="true" class="fa-solid fa-quote-left"></i>
-                                                        <p data-raw-content="true" class="card-text">David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!</p><i data-raw-content="true" class="fa-solid fa-quote-right"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><a href="#carouselExampleIndicators2" role="button" data-slide="prev" class="carousel-control-prev mb-3 mr-1 IDLZ8HLN8SQGY9W11"><i data-raw-content="true" class="fa-solid fa-caret-left"></i></a><a href="#carouselExampleIndicators2" role="button" data-slide="next" class="carousel-control-next IDLZ8HLN8TDLSZC12"><i data-raw-content="true" class="fa-solid fa-caret-right"></i></a>
-                                <ol data-raw-content="true" class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class=""><br></li>
-                                    <li data-target="#carouselExampleIndicators2" data-slide-to="1" class="active"><br></li>
-                                    <li data-target="#carouselExampleIndicators2" data-slide-to="2" class=""><br></li>
-                                </ol>
+                <div class="card-container col-12 col-md-3 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSLKXG3U6">
+                                <img src="/images/Bizz%20Opport.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Business Prospects</h1>
+                            </div>
+                            <div class="flip-card-back IDLZ6PRXSMHCMR67">
+                                <p data-raw-content="true">Second residency or citizenship grants legal rights to invest and do business, accessing investment opportunities.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section><div phpb-blocks-container="" id="expert-section" class="IDLZ8ADCALKBFK11 row">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-4"><img src="/images/residency/SHobson-366x366.webp" alt="Investment Visa Expert" class="investor-image">
-                            <h4 data-raw-content="true" class="investor-title">George Hobson</h4>
-                            <div class="investor-position">Investment Advisor</div>
-                        </div>
-                        <div class="col-12 col-sm-8">
-                            <div class="investor-slogan">
-                                <h1 data-raw-content="true">Hi, how can I help you?</h1>
-                                <p data-raw-content="true">Share your thoughts with us. Let´s start a conversation.</p><a href="#campaign-form" title="Schedule a meeting" class="meeting-button IDLZ8ADCAXPEU702">Schedule a meeting</a>
+                <div class="card-container col-12 col-md-3 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSOZ1S0Z8">
+                                <img src="/images/HealthEdu.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Health &amp; Education</h1>
+                            </div>
+                            <div class="flip-card-back IDLZ6PRXSPFVJ6G9">
+                                <p data-raw-content="true">Becoming a resident or citizen abroad grants access to top education, and Healthcare systems especially in Europe.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><div phpb-blocks-container="" class="IDLZ8A1ZV0HAWEH1 footer-iv row">
-                <img src="/images/residency/IV-Logo-Color-Negat.png" alt="Investment Visa">
-                <h4 data-raw-content="true">FOLLOW US</h4>
-                <div class="footer-social-icons"><a href="https://facebook.com" title="Follow us on Facebook" target="_blank" class="IDLZ8A1ZV3UMWGA2"><i data-raw-content="true" class="fab fa-facebook-f"></i></a><a href="https://twitter.com" title="Follow us on Twitter" target="_blank" class="IDLZ8A1ZV4ENWLN3"><i data-raw-content="true" class="fa-brands fa-x-twitter"></i></a><a href="https://instagram.com" title="Follow us on Instagram" target="_blank" class="IDLZ8A1ZV6RJ9E04"><i data-raw-content="true" class="fa-brands fa-instagram"></i></a><a href="https://youtube.com" title="Follow us on Youtube" target="_blank" class="IDLZ8A1ZV7J2R2F5"><i data-raw-content="true" class="fa-brands fa-youtube"></i></a><a href="https://linkedin.com" title="Follow us on Linkedin" target="_blank" class="IDLZ8A1ZV896CFK6"><i data-raw-content="true" class="fa-brands fa-linkedin-in"></i></a></div>
-                <p data-raw-content="true"></p>
-                <div class="address-block">Praça da Alegria 01, 3rd Floor - 1250-004 Lisbon - Portugal <br>info@investmentvisa.com <br>+351 213 471 603<br><br><br>Terms &amp; Conditions | Privacy Policy<br><br>​​​​​​​<br>© 2024 Investment Visa. Investment Visa is part of the Harland &amp; Poston Group.<br></div>
-                <p data-raw-content="true"></p>
-            </div>        </div>
+            </div>
+            <div id="cards-midlle-row" class="row">
+                <div class="col-12 benefits-text-block">
+                    <h2 data-raw-content="true">Alternative Residency and Citizenship<br>Status Grants<span> Many Benefits</span></h2>
+                    <p data-raw-content="true">The world is changing rapidly, bringing challenges to your safety, freedom, <br>standard of living, and mobility. Investing in alternative residency or citizenship is <br>
+                        the smartest move you can make for your future.</p>
+                </div>
+            </div>
+            <div id="bottom-cards" class="row bottom-cards">
+                <div class="card-container col-12 col-md-4 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSTX3E4K10">
+                                <img src="/images/Peace%20of%20Mind.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Plan B Safety</h1>
+                            </div>
+                            <div class="flip-card-back IDLZ6PRXSUN8G1Z11">
+                                <p data-raw-content="true">A second nationality or residence status unlocks safer new horizons for living, working, and exploring.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container col-12 col-md-4 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSWZB72012">
+                                <img src="/images/Visa.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Powerfull Passport</h1>
+                            </div>
+                            <div class="flip-card-back IDLZ6PRXSX1G3PQ13">
+                                <p data-raw-content="true">A second, powerful passport increases international mobility and expands opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container col-12 col-md-4 text-center position-relative">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front IDLZ6PRXSZOXN0W14">
+                                <img src="/images/Finantial%20Advantage.svg" alt="Avatar">
+                                <h1 data-raw-content="true">Tax Benefits</h1>
+                            </div>
+                            <div class="flip-card-back IDLZ6PRXT1JJ8Y815">
+                                <p data-raw-content="true">Choosing the right country will let you benefit from tax incentives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="map" class="container-fluid px-0 mx-0">
+    <div id="map-block" class="row IDLZ88Q12FVKHWG1 map-block">
+        <div class="col-12">
+            <h2 data-raw-content="true" class="title">Grant of Residency or<br> Citizenship <span>on the Basis of an Investment</span></h2>
+            <!-- <h4 data-raw-content="true" class="subtitle">on the Basis of an Investment</h4>-->
+            <img src="/images/WorldMap-934x469-Dktp.webp" alt="map">
+        </div>
+        <div class="col-12">
+            <h2 data-raw-content="true" class="desc-title">At Investment Visa, we offer you a unique opportunity:</h2>
+            <p data-raw-content="true">Our expert investment advisors understand your unique needs. They'll guide you<br>through our diverse portfolio to help you choose the perfect residence or<br>citizenship by investment program tailored just for you.</p>
+            <a href="#" title="Enquire Us Today" class="enquire-button">Enquire Us Today</a>
+        </div>
+    </div>
+</section>
+<section id="why-move">
+    <div id="why-move-section" class="row IDLZ8B7VH944OFX1">
+        <div class="col-12">
+            <div class="top-text">
+                <h1 data-raw-content="true" class="why-move-title">Why Choose Investment Visa</h1>
+                <p data-raw-content="true" class="why-move-desc">By putting together expertise, experience and the right team, we gather a world of <br>
+                    insight and tools, that we share all along the way with people willing to embrace a<br>
+                    brighter future through investment.</p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <h4 data-raw-content="true" class="title-left"><strong>100%</strong> Application Success Rate</h4>
+            <img src="/images/Smiling-Consultant-663z414px-Dktp.webp" alt="Investment Visa Meetings" class="img-left">
+        </div>
+        <div class="col-12 col-sm-6">
+            <img src="/images/WorkedWith-796x497px-Dktp.webp" alt="Investment Visa Meetings" class="img-right">
+            <h4 data-raw-content="true" class="title-right"><span style="font-weight:normal;">Worked with</span><br>90+ Nationalities</h4>
+        </div>
+        <div class="col-12">
+            <h4 data-raw-content="true" class="title-bottom">Global Experts</h4>
+            <img src="/images/Experts-At-Work-663x414-Dktp.webp" alt="Investment Visa Meetings" class="img-bottom">
+        </div>
+    </div>
+</section>
+<section id="testimonials">
+    <h3 data-raw-content="true" class="mb-3 text-center">What Our Clients Say About Us</h3>
+    <div class="splide container" aria-label="Splide Basic HTML Example">
+
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
+                                <p data-raw-content="true" class="subtitle">From USA</p>
+                                <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Mike Porcaro</h4>
+                                <p data-raw-content="true" class="subtitle">From UK</p>
+                                <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Ahsan Ahmed</h4>
+                                <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
+                                <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Marjorie Tan-Thronson</h4>
+                                <p data-raw-content="true" class="subtitle">From USA</p>
+                                <img src="/images/residency/USA_Flag.png" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                Ryan, our investment advisor was very helpful with the Golden Visa process and buying the property from day one. We feel we can trust Portugal Homes, and this is the main issue when you want to invest in a foreign country. All the staff were professional and friendly.
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Mike Porcaro</h4>
+                                <p data-raw-content="true" class="subtitle">From UK</p>
+                                <img src="/images/residency/gb.jpg" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                The process was very quick and clear. I got all the information I needed in the first hour. The experience was perfect.
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 data-raw-content="true">Ahsan Ahmed</h4>
+                                <p data-raw-content="true" class="subtitle">From United Arab Emirates</p>
+                                <img src="/images/residency/Flag_of_the_United_Arab_Emirates.svg.webp" alt="flag" class="image-top-right">
+                            </div>
+                            <i data-raw-content="true" class="fa-solid fa-quote-left"></i>
+                            <p data-raw-content="true" class="card-text">
+                                David comes across as a very knowledgeable and very understanding with clients needs. His professionalism is well demonstrated in the way he tailored the options for us based on our requirements. Very happy!
+                            </p>
+                            <i data-raw-content="true" class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {{--<div class="splide__pagination"></div> --}}
+    </div>
+</section>
+<div id="expert-section" class="IDLZ8ADCALKBFK11 row">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-4"><img src="/images/residency/SHobson-366x366.webp" alt="Investment Visa Expert" class="investor-image">
+                <h4 data-raw-content="true" class="investor-title">George Hobson</h4>
+                <div class="investor-position">Investment Advisor</div>
+            </div>
+            <div class="col-12 col-sm-8">
+                <div class="investor-slogan">
+                    <h1 data-raw-content="true">Hi, how can I help you?</h1>
+                    <p data-raw-content="true">Share your thoughts with us. Let´s start a conversation.</p>
+                    <a href="#" title="Schedule a meeting" class="meeting-button IDLZ8ADCAXPEU702">Schedule a meeting</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<section id="call-cta" class="container mx-0 p-0">
+    <div class="row mx-0 mt-0">
+        <div class="col-12 my-5"><div  id="sideButton" class="col-12 IDLZ6TD8ZCE1ZKS1 right-button-scroll">
+                <a href="#" title="Let Us Help You" id="bt-let-us-help-you" class="side-button-link IDLZ6TD8ZC8ZVSS2">
+                    <img src="/images/Cam-CTA-146x180px.webp" alt="CTA" class="let-us-help-you-img">
+                    <span class="let-us-help-you-caption IDLZ6UMAKQLCLR20">Hi, Let us Help You</span>
+                </a>
+
+            </div>
+            <div id="hidden-form" class="container">
+                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+                    <a href="#" class="btn-close-form">
+                        <svg class="btn-close-form" xmlns="http://www.w3.org/2000/svg" width="30.805" height="27.168" viewBox="0 0 30.805 27.168">
+                            <g transform="translate(18033.465 23183.839)">
+                                <path d="M1.859.118l31.6,2.011A2.193,2.193,0,0,1,35.44,4.148,1.619,1.619,0,0,1,33.7,5.93L2.1,3.92A2.193,2.193,0,0,1,.118,1.9,1.619,1.619,0,0,1,1.859.118Z" transform="translate(-18029.738 -23184) rotate(40)"/>
+                                <path d="M1.859-.118l31.6-2.011A1.619,1.619,0,0,1,35.2-.346a2.193,2.193,0,0,1-1.977,2.019L1.623,3.683A1.619,1.619,0,0,1-.118,1.9,2.193,2.193,0,0,1,1.859-.118Z" transform="translate(-18032 -23159.574) rotate(-40)"/>
+                            </g>
+                        </svg>
+                    </a>
+                    {{-- <i class="far fa-times-circle"></i> --}}
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                    <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
+                    <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
+                    <div class="form-group row">
+                        <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control IDM0XXP2STIRSKF11"></div>
+                        <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control IDM0XXP2SUWIXAF12"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
+                                <option selected hidden value="">What are you looking for?</option>
+                                <option value="Business Visa">Business Visa</option>
+                                <option value="Greece Golden Visa">Golden Visa</option>
+                                <option value="Other Investment Opportunities">Investment Opportunities</option>
+                                <option value="Retirement">Retirement</option>
+                                <option value="Work visa">Work Visa</option>
+                            </select></div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-12">
+                            <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea>
+                        </div>
+                    </div>
+                    <input type="hidden" name="petname" id="petname">
+                    <div class="form-group row">
+
+                        <div class="col-12 col-md-8">
+                            {{-- Keep me updated Checkbox --}}
+                            <div class="checkbox-wrapper">
+                                <input type="hidden" name="signup" value="0" />
+                                <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
+                                <label class="keep-me-updated-form-span" for="signup">
+                                    Please keep me updated on Harland and Poston Group news, events and offers.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-end">
+                            <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Submit</button>
+                        </div>
+                        <div class="col-12 px-3 my-2">
+                            <div class="desctext">
+                                By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<div class="IDLZ8A1ZV0HAWEH1 footer-iv row">
+    <img src="/images/residency/IV-Logo-Color-Negat.png" alt="Investment Visa">
+    <h4 data-raw-content="true">FOLLOW US</h4>
+    <div class="footer-social-icons">
+        <a href="https://facebook.com" title="Follow us on Facebook" target="_blank" class="IDLZ8A1ZV3UMWGA2"><i data-raw-content="true" class="fab fa-facebook-f"></i></a><a href="https://twitter.com" title="Follow us on Twitter" target="_blank" class="IDLZ8A1ZV4ENWLN3"><i data-raw-content="true" class="fa-brands fa-x-twitter"></i></a><a href="https://instagram.com" title="Follow us on Instagram" target="_blank" class="IDLZ8A1ZV6RJ9E04"><i data-raw-content="true" class="fa-brands fa-instagram"></i></a><a href="https://youtube.com" title="Follow us on Youtube" target="_blank" class="IDLZ8A1ZV7J2R2F5"><i data-raw-content="true" class="fa-brands fa-youtube"></i></a><a href="https://linkedin.com" title="Follow us on Linkedin" target="_blank" class="IDLZ8A1ZV896CFK6"><i data-raw-content="true" class="fa-brands fa-linkedin-in"></i></a></div>
+    <p data-raw-content="true"></p>
+    <div class="address-block">Praça da Alegria 01, 3rd Floor - 1250-004 Lisbon - Portugal <br>info@investmentvisa.com <br>+351 213 471 603<br><br><br>Terms &amp; Conditions | Privacy Policy<br><br>​​​​​​​<br>© 2024 Investment Visa. Investment Visa is part of the Harland &amp; Poston Group.<br></div>
+    <p data-raw-content="true"></p>
+</div>
+
+
+<button id="scrollToTopBtn" title="Go to top">
+    <img src="/images/GoTopArrow.png">
+</button>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
 <script src="/js/script.js"></script>
-<button id="scrollToTopBtn" title="Go to top">
-    <img src="/images/GoTopArrow.png">
-</button>
-
 <script>
-
     function getParam(p) {
         var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
         return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
@@ -547,9 +604,6 @@
     }
     window.addEventListener('load', addGclid);
 </script>
-
-</body>
-</html>
 <script>
     jQuery.noConflict();
     jQuery(function() {
@@ -563,3 +617,5 @@
         }
     });
 </script>
+</body>
+</html>

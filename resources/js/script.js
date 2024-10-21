@@ -1,23 +1,52 @@
+jQuery.noConflict();
+document.getElementById('hamburgerMenu').addEventListener('click', function () {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+});
+
+const splide = new Splide('.splide', {
+    type: 'loop',
+    gap: 60,
+    pagination: true,
+    arrows: false,
+    perPage: 3,
+    perMove: 1,
+    autoplay: true,
+    interval: 6000,
+    speed: '500',
+    easing: 'ease',
+    // Appending the pagination buttons to a specific element
+    // pagination: '#testimonial-slider-container',
+    breakpoints: {
+        991: {
+            perPage: 1
+        },
+    }
+    // autoWidth: true,
+});
+
+splide.mount();
+
+
 jQuery(document).ready(function() {
 
     jQuery(window).on('scroll', function() {
         // Check if the window width is less than 768px (for mobile)
         if (jQuery(window).width() < 768) {
-            console.log('is mobile');
 
-            if (jQuery(this).scrollTop() > 50) {
-                jQuery('#top-menu').addClass('sticky');
+            if (jQuery(this).scrollTop() > 120) {
+                jQuery('#top-header').addClass('sticky');
             } else {
-                jQuery('#top-menu').removeClass('sticky');
+                jQuery('#top-header').removeClass('sticky');
             }
         } else {
             // Remove the sticky class if the window is resized to be larger than 768px
-            jQuery('#top-menu').removeClass('sticky');
+            jQuery('#top-header').removeClass('sticky');
         }
     });
 
 
-    jQuery("lottie-player").addClass("lottie-custom");
+   // jQuery("lottie-player").addClass("lottie-custom");
 
     let currentUrl = window.location.href;
 
@@ -40,8 +69,6 @@ jQuery(document).ready(function() {
             '<a href="https://www.investmentvisa.com/privacy-policy" target="_blank">Terms & Conditions</a> | <a href="https://www.investmentvisa.com/privacy-policy" target="_blank">Privacy Policy</a>'
         );
     });
-
-
 });
     jQuery(document).ready(function() {
 
@@ -249,8 +276,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+jQuery(window).on('scroll', function() {
+    const scrollPosition = jQuery(this).scrollTop();
+     // console.log('this Scroll position:', scrollPosition);
+
+    if (scrollPosition >= 100) {
+        jQuery('#top-header').addClass('active');
+    }
+
+    if (scrollPosition >= 600) {
+        jQuery('.right-button-scroll').fadeIn().addClass('active');
+    }
+    else {
+        jQuery('.right-button-scroll').hide().removeClass('active');
+        jQuery('#hidden-form').removeClass('active');
+        jQuery('#top-header').removeClass('active');
+
+    }
+});
+
 
 jQuery(document).ready(function() {
+
+    jQuery(".nav-menu a").on( "click", function(e) {
+        e.preventDefault();
+        jQuery('.nav-menu').removeClass('active');
+    });
 
     jQuery('#top-menu .container-fluid').removeClass('container-fluid').addClass('container');
 
@@ -259,44 +310,27 @@ jQuery(document).ready(function() {
     // Wrap the content of .footer-iv with the new div
     jQuery('.footer-iv').wrapInner(newDiv);
 
-    jQuery(window).on('scroll', function() {
-        const scrollPosition = jQuery(this).scrollTop();
-        // console.log('Scroll position:', scrollPosition);
-
-        if (scrollPosition >= 600) {
-            jQuery('.right-button-scroll').fadeIn().addClass('active');
-        }
-        else {
-            jQuery('#campaign-form').removeClass('move-to-right').fadeIn();
-            jQuery('.right-button-scroll').hide().removeClass('active');
-            // jQuery('#scrollToTopBtn').fadeOut()
-        }
-    });
-
     jQuery(".right-button-scroll").on( "click", function(e) {
         e.preventDefault();
-        jQuery('#campaign-form').hide().addClass('move-to-right');
-       // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
-        jQuery('#campaign-form.move-to-right').show();
+        jQuery('#hidden-form').addClass('active');
+    });
+
+    jQuery(".enquire-button").on( "click", function(e) {
+        e.preventDefault();
+        jQuery('#hidden-form').addClass('active');
+    });
+
+    jQuery(".meeting-button").on( "click", function(e) {
+        e.preventDefault();
+        jQuery('#hidden-form').addClass('active');
     });
 });
 
 jQuery(document).ready(function(){
 
-
-    jQuery('#campaign-form a.btn-close-form').hide();
-
-
-    jQuery(".right-button-scroll").on( "click", function(e) {
-        jQuery('a.btn-close-form').show();
-    });
-
     jQuery('a.btn-close-form').on( "click", function(e) {
-        jQuery('#campaign-form.move-to-right').hide();
-        jQuery('a.btn-close-form').hide();
+        jQuery('#hidden-form').removeClass('active');
     });
-
-
 
     const divsToWrap = jQuery('.video-mask, .header-mask'); // Adjust the selectors to match your divs
 
@@ -306,18 +340,9 @@ jQuery(document).ready(function(){
 
     if(jQuery(window).width() < 767)
     {
-        jQuery('#campaign-form').insertAfter('.video-wrapper');
-
-
-
-
         jQuery(".right-button-scroll").on( "click", function(e) {
             e.preventDefault();
-            console.log('top');
-            jQuery('a.btn-close').addClass('123');
-            jQuery('#campaign-form').hide().addClass('move-to-right');
-            //jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#Around-The-World');
-            jQuery('#campaign-form.move-to-right').show();
+            jQuery('#hidden-form').addClass('active');
         });
 
 
@@ -364,32 +389,20 @@ jQuery(document).ready(function(){
         jQuery('body').addClass('admin-page');
     }
     */
-/*
-jQuery('<div class="toast-container p-3 top-50 start-70 translate-middle" id="toastPlacement" data-original-class="toast-container p-3">' +
-    '<div aria-live="polite" aria-atomic="true" class="position-relative bd-example-toasts">' +
-    '<div class="toast" data-bs-autohide="false">\n' +
-    '  <div class="toast-header">\n' +
-    '    <i class="fas fa-info-circle"></i> You have selected Work Visa\n' +
-    '    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>\n' +
-    '  </div>\n' +
-    '  <div class="toast-body">\n' +
-    '    Investment Visa does not offer services in regards to Work Visas.\n' +
-    '  </div>\n' +
-    '</div></div></div>').insertAfter('#campaign-form .form-title');
-*/
-    jQuery("#enquiry_subject").change(function() {
-        let val = jQuery(this).val();
-        const alert = jQuery('<div id="campaign-info" class="alert alert-warning alert-dismissible fade show" role="alert"><a class="btn-close" data-dismiss="alert" aria-label="Close"><i class="far fa-times-circle"></i></a><i class="fas fa-info-circle"></i> You have selected Work Visa<br>Investment Visa does not offer services in regards to Work Visas.</div>');
 
-        if (jQuery(this).val() === "Work visa") {
-            jQuery('#form-bt').attr("disabled", true);
-            // const toast = new bootstrap.Toast(document.querySelector('.toast'));
-            // toast.show({ delay: 50000 });
-            alert.appendTo('#campaign-form');
-        }
-        else {
-            jQuery('#form-bt').attr("disabled", false);
-            jQuery('.alert').hide().removeClass('show');
+    const alert = jQuery('<div id="campaign-info" class="alert alert-warning alert-dismissible fade show mx-auto position-fixed" role="alert"><a class="btn-close" data-dismiss="alert" aria-label="Close"></a>You have selected <b>\'Work Visa\'</b><br>Investment Visa does not offer services in regards to Work Visas.</div>');
+
+    jQuery(".enquiry_subject").on("change", function() {
+        const val = jQuery(this).val();
+
+        if (val === "Work visa") {
+            jQuery(".form-send-bt").prop("disabled", true);
+            alert.prependTo('.video-wrapper').show();
+            jQuery(".alert").addClass("show");
+
+        } else {
+            jQuery(".form-send-bt").prop("disabled", false);
+            jQuery('.alert').removeClass('show').hide();
         }
     });
 

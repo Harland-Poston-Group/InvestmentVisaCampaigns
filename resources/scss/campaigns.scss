@@ -2155,3 +2155,95 @@ body .private-meetings-form{
 .follow-us-text{
     font-size: 40px;
 }
+.right-button-scroll {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    top: 15%;
+    max-width: 95px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    box-shadow: -1px 3px 10px #333;
+}
+#hidden-form {
+    position: fixed;
+    left: 107%;
+    top: 20%;
+    transition: all 1s ease;
+}
+#hidden-form.active {
+    transition: all 1s ease;
+    transform: translate(-44%, 0);
+    left: 107%;
+}
+
+#hidden-form #campaign-form,#hidden-form  #add-blog-post-form {
+    background: #EDECEA;
+    box-shadow: 0px 2px 6px #ccc;
+}
+
+#campaign-form {
+    position: relative !important;
+    max-width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+
+#campaign-form > a.btn-close-form {
+    z-index: 5;
+    position: relative;
+    bottom: 40px;
+}
+
+
+.let-us-help-you-img {
+    width: 100%;
+}
+
+.let-us-help-you-caption{
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+    line-height: normal;
+    width: 100%;
+    z-index: 5;
+    background: url("/images/sidebutton-bg.svg");
+}
+@media (max-width: 360px){
+    .right-button-scroll{
+        display: none;
+        left: 0;
+        top: 85%;
+        bottom: 0;
+        padding-left: 20px;
+        max-width: 100%;
+        box-shadow: 2px 6px 6px #333;
+    }
+
+
+    .let-us-help-you-img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: 2;
+        position: relative;
+        top: 30px;
+    }
+    .let-us-help-you-caption {
+        background: rgb(106, 37, 122);
+        background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 50%);
+        color: #6A257AFF;
+        z-index: 0;
+        padding: 10px 0;
+        border-radius: 0;
+
+    }
+}
