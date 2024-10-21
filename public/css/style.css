@@ -999,6 +999,13 @@ body.page-residency-and-citizenship .flip-card {
     cursor: help;
 }
 
+@media (max-width: 320px) {
+    body.page-residency-and-citizenship .flip-card {
+        width: 130px;
+        height: 168px;
+    }
+}
+
 /* This container is needed to position the front and back side */
 body.page-residency-and-citizenship .flip-card-inner {
     position: relative;
@@ -1145,6 +1152,9 @@ section#cards {
     font-weight: 800;
     font-size: 35px;
 }
+.map-block img {
+    width: 100%;
+}
 
 .map-block p{
     line-height: 30px;
@@ -1257,6 +1267,8 @@ section#cards {
     transition: all 1s ease;
     transform: translate(-44%, 0);
     left: 107%;
+    top: 3%;
+    z-index: 99;
 }
 
 #hidden-form #campaign-form,#hidden-form  #add-blog-post-form {
@@ -1528,6 +1540,12 @@ body.mobile .navbar-toggler {
     display: flex;
 }
 
+@media (max-width: 320px) {
+    .video-wrapper {
+        max-height: 180px;
+    }
+}
+
 .swiper-container {
     width: 100%;
     padding-top: 50px;
@@ -1542,7 +1560,7 @@ body.mobile .navbar-toggler {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 360px){
+@media (max-width: 768px){
 
     img {
         max-width: 100%;
@@ -1604,7 +1622,8 @@ body.mobile .navbar-toggler {
     }
 
     img.header-mask {
-        bottom: -1px !important;
+        bottom: -2px !important;
+        left: 1px;
     }
     .video-container {
         display: block !important;
@@ -1623,7 +1642,6 @@ body.mobile .navbar-toggler {
         max-width: 100% !important;
         margin: 0 auto;
         display: block;
-        padding-left: 18px;
     }
     .bottom-cards {
         max-width: 100% !important;
@@ -1656,7 +1674,7 @@ body.mobile .navbar-toggler {
     }
 
     #why-move-section .title-right {
-        left: 25% !important;
+        left: 10% !important;
     }
 
     .right-button-scroll{
@@ -1716,9 +1734,10 @@ body.mobile .navbar-toggler {
     }
 
     #why-move-section .title-left {
-        left: 0 !important;
+        left: 2% !important;
         position: relative !important;
     }
+
     #why-move-section .img-right {
         right: 0 !important;
     }
