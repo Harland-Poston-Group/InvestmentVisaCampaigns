@@ -633,6 +633,7 @@ input#keepupdated {
     align-items: flex-start;
     justify-content: center;
     height: 80vh; /* Adjust this as needed */
+    width: 100%;
 }
 
 .top-video-block {
