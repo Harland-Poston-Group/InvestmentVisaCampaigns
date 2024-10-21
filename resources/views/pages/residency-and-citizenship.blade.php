@@ -503,7 +503,7 @@
                         <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
+                        <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-12">
