@@ -1941,6 +1941,12 @@ a {
     top: 170px;
     z-index: 1;
 
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        top: 75px;
+    }
 
 
     .flag-container{
