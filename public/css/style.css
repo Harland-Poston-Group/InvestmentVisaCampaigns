@@ -1154,6 +1154,7 @@ section#cards {
 }
 .map-block img {
     width: 100%;
+    max-width: 935px;
 }
 
 .map-block p{
@@ -1714,9 +1715,11 @@ body.mobile .navbar-toggler {
 
     }
     #hidden-form {
-        top: 10%;
+        top: 3%;
     }
-
+    #hidden-form.active {
+        top: 3%;
+    }
     .map-block .title {
         font-size: 30px;
     }
@@ -1915,12 +1918,107 @@ body.mobile .navbar-toggler {
         gap: 10px;
     }
 }
+
+/* surface Pro*/
+
+@media only screen
+and (min-device-width: 912px)
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    #top-header .container {
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        max-height: 513px;
+    }
+
+    .residency-form-container {
+        top: 10%;
+        right: 2%;
+    }
+    section#cards {
+        padding: 180px 0 0 0;
+    }
+    section#cards .container{
+        max-width: 100%;
+    }
+    #cards-row {
+        max-width: 80%;
+    }
+    #bottom-cards {
+        max-width: 60%;
+    }
+    #why-move-section .img-left {
+        left: 0;
+        top: 120px;
+    }
+
+    #testimonials p.card-text {
+        padding-left: 0;
+    }
+
+    .investor-slogan {
+        margin-left: 120px;
+    }
+    #hidden-form {
+        top: 26%;
+    }
+
+    #hidden-form.active {
+        transition: all 1s ease;
+        transform: translate(-44%, 0);
+        left: 85%;
+        top: 26%;
+    }
+
+
+}
+
+
 /* I Pad*/
 
 @media only screen
 and (min-device-width: 1024px)
 and (max-device-width: 1366px)
 and (-webkit-min-device-pixel-ratio: 2) {
+    .video-wrapper {
+        max-height: 569px;
+    }
 
+    .residency-form-container {
+        top: 10%;
+        right: 7%;
+    }
+    section#cards {
+        padding: 180px 0 0 0;
+    }
+    #cards-row {
+        max-width: 80%;
+    }
+    #bottom-cards {
+        max-width: 60%;
+    }
+    #why-move-section .img-left {
+        left: 10%;
+        top: 120px;
+    }
 
+    #testimonials p.card-text {
+        padding-left: 0;
+    }
+
+    .investor-slogan {
+        margin-left: 120px;
+    }
+    #hidden-form {
+        top: 26%;
+    }
+    #hidden-form.active {
+        transition: all 1s ease;
+        transform: translate(-44%, 0);
+        left: 98%;
+        top: 26%;
+    }
 }
