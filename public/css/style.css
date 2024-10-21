@@ -1261,14 +1261,14 @@ section#cards {
 #hidden-form {
     position: fixed;
     left: 107%;
-    top: 20%;
+    top: 30%;
     transition: all 1s ease;
 }
 #hidden-form.active {
     transition: all 1s ease;
     transform: translate(-44%, 0);
     left: 107%;
-    top: 3%;
+    top: 30%;
     z-index: 99;
 }
 
