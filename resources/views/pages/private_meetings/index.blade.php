@@ -144,7 +144,8 @@
         </div>
 
         {{-- <div class="text">Talk To Us</div> --}}
-        <div class="text">Hi, how can we help?</div>
+        {{-- <div class="text">Hi, how can we help?</div> --}}
+        <div class="text">Questions?<br>Talk to an expert</div>
 
     </div>
 
