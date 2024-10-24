@@ -148,6 +148,7 @@ class Dynamics_Helper {
         if( !empty( $_SERVER['HTTP_REFERER'] ) ){
 
             $post["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
+            $maildata["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
         }
 
         // dd($post);
