@@ -30,19 +30,19 @@
 </li>
 @isset( $maildata['utm_source'] )
 <li style="justify-content: space-between">
-<strong>UTM Source:</strong>
+<strong>Source:</strong>
 <span class="value-float-right">{!! $maildata['utm_source'] !!}</span>
 </li>
 @endisset
 @isset( $maildata['utm_campaign'] )
 <li style="justify-content: space-between">
-<strong>UTM Campaign:</strong>
+<strong>Campaign:</strong>
 <span class="value-float-right">{!! $maildata['utm_campaign'] !!}</span>
 </li>
 @endisset
 @isset( $maildata['utm_medium'] )
 <li style="justify-content: space-between">
-<strong>UTM Medium:</strong>
+<strong>Medium:</strong>
 <span class="value-float-right">{!! $maildata['utm_medium'] !!}</span>
 </li>
 @endisset
