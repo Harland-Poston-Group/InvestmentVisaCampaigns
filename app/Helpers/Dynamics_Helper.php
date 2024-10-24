@@ -74,6 +74,11 @@ class Dynamics_Helper {
         // Add the "Portugal Homes" brand to the request (identified by an ID)
         $post['ans_brand'] = 119020001;
 
+        if( !empty( $_SERVER['HTTP_REFERER'] ) ){
+
+            $post["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
+        }
+
         /* Add Tracking Information */
 
             // In case we have any available data regarding campaigns from where the user may have visited us through
@@ -144,12 +149,6 @@ class Dynamics_Helper {
                 break;
         }
 
-
-        if( !empty( $_SERVER['HTTP_REFERER'] ) ){
-
-            $post["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
-            $maildata["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
-        }
 
         // dd($post);
 
