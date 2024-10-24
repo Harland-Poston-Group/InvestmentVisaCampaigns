@@ -112,6 +112,28 @@ class Dynamics_Helper {
 
         /* End of Tracking Information */
 
+        /* Specifying the maildata variable section -- where the final touches of maildata info will be defined */
+
+            // maildata variable
+            $maildata = $post;
+
+            // utm_source
+            if( isset($utm_source) && !empty($utm_source) ){
+                $maildata['utm_source'] = $utm_source;
+            }
+
+            // utm_medium
+            if( isset($utm_medium) && !empty($utm_medium) ){
+                $maildata['utm_medium'] = $utm_medium;
+            }
+
+            // utm_campaign
+            if( isset($utm_campaign) && !empty($utm_campaign) ){
+                $maildata['utm_campaign'] = $utm_campaign;
+            }
+
+        /* End of maildata variable section */
+
         // If it's a work visa submission - do not accept it
         switch ( strtolower($post['ans_whatareyoulookingfortext']) ) {
             case 'work visa':
@@ -128,6 +150,8 @@ class Dynamics_Helper {
             $post["ans_firstpageseen"] = $_SERVER['HTTP_REFERER'];
         }
 
+        // dd($post);
+
         // Check if there's a lead with the same email in Dynamics
         $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
@@ -143,11 +167,12 @@ class Dynamics_Helper {
             // Lead exists, get the existing message
             $lead_id = $existing_lead['leadid'];
             $post['leadid'] = $lead_id;
+            $maildata['leadid'] = $lead_id;
             $existing_message = $existing_lead['ans_message'];
 
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
-            ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($post));
+            ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
 
             // Get the current timestamp in desired format
             $timestamp = date('d/m/Y H:i'); // Example: 03/10/2024 08:55
@@ -174,7 +199,7 @@ class Dynamics_Helper {
 
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
-            ->send(new \App\Mail\Admin\DynamicsEnquiry($post));
+            ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
 
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
