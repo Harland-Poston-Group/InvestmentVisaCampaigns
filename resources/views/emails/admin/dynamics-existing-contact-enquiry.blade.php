@@ -10,6 +10,12 @@
 <strong>Contact Number:</strong>
 <span class="value-float-right">{!! $maildata['telephone1'] !!}</span>
 </li>
+@isset($maildata['ans_countrycode'])
+<li style="justify-content: space-between">
+<strong>Country Code:</strong>
+<span class="value-float-right">{!! $maildata['ans_countrycode'] !!}</span>
+</li>
+@endisset
 {{-- <li style="justify-content: space-between">
 <strong>Country Code:</strong>
 <span class="value-float-right">{!! $maildata['country_code'] !!}</span>
@@ -22,20 +28,42 @@
 <strong>Submission Page:</strong>
 <span class="value-float-right">{!! $maildata['ans_firstpageseen'] !!}</span>
 </li>
+@isset( $maildata['utm_source'] )
+<li style="justify-content: space-between">
+<strong>UTM Source:</strong>
+<span class="value-float-right">{!! $maildata['utm_source'] !!}</span>
+</li>
+@endisset
+@isset( $maildata['utm_campaign'] )
+<li style="justify-content: space-between">
+<strong>UTM Campaign:</strong>
+<span class="value-float-right">{!! $maildata['utm_campaign'] !!}</span>
+</li>
+@endisset
+@isset( $maildata['utm_medium'] )
+<li style="justify-content: space-between">
+<strong>UTM Medium:</strong>
+<span class="value-float-right">{!! $maildata['utm_medium'] !!}</span>
+</li>
+@endisset
 <li style="justify-content: space-between">
 <strong>Lead ID:</strong>
 <span class="value-float-right">{!! $maildata['leadid'] !!}</span>
 </li>
+@isset( $maildata['ans_whatareyoulookingfortext'] )
 <li style="justify-content: space-between">
 <strong>Subject:</strong>
 <span class="value-float-right">{!! $maildata['ans_whatareyoulookingfortext'] !!}</span>
 </li>
+@endisset
 </ul>
 
+@isset( $maildata['ans_message'] )
 ## Message
 @component('mail::panel')
     {!! $maildata['ans_message'] !!}
 @endcomponent
+@endisset
 
 Thanks,<br>
 {{ config('app.name') }}
