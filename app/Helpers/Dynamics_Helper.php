@@ -139,6 +139,25 @@ class Dynamics_Helper {
 
         /* End of maildata variable section */
 
+        /* DETECT COUNTRY OF ORIGIN OF SUBMISSION */
+            /* This may come in handy as there are some submissions that are coming without the country code, with this happening,
+            we can capture either way the country of submission of the user, it is almost certain that the phone number introduced is correspondent to the
+            country where the person is located, thus mitigating this issue, assuming these are real users and not BOTs */
+
+            try {
+                // Fetch country of origin based on user's IP
+                $ip = request()->ip(); // Get the user's IP address
+                $country_of_origin = self::getCountryFromIP($ip);
+
+                // Set the country of origin in maildata
+                $maildata['country_of_origin'] = $country_of_origin ?? 'N/A';
+            } catch (\Exception $e) {
+                \Log::error("Error fetching country of origin: " . $e->getMessage());
+                $maildata['country_of_origin'] = 'N/A'; // Default value if any error occurs
+            }
+
+        /* END OF COUNTRY DETECTION */
+
         // If it's a work visa submission - do not accept it
         switch ( strtolower($post['ans_whatareyoulookingfortext']) ) {
             case 'work visa':
@@ -149,8 +168,6 @@ class Dynamics_Helper {
                 break;
         }
 
-
-        // dd($post);
 
         // Check if there's a lead with the same email in Dynamics
         $existing_lead = self::checkExistingLead($post['emailaddress1']);
@@ -328,6 +345,29 @@ class Dynamics_Helper {
             Log::error('Failed to send data to Dynamics 365: ' . $response->body(), ['context' => 'custom-debug']);
             // Handle the error as needed
             throw new \Exception('Failed to send data to Dynamics 365' . $response->body());
+        }
+    }
+
+    /**
+     * Helper function to get the country from the user's IP using geoplugin.com API.
+     *
+     * @param string $ip
+     * @return string|null
+     */
+    protected static function getCountryFromIP($ip)
+    {
+        try {
+            // Use Laravel's HTTP client to fetch geolocation data
+            $response = \Illuminate\Support\Facades\Http::get("http://www.geoplugin.net/json.gp?ip={$ip}");
+
+            if ($response->ok()) {
+                $data = $response->json();
+                return $data['geoplugin_countryName'] ?? null;
+            }
+            return null; // Return null if API response is not ok
+        } catch (\Exception $e) {
+            \Log::error("Error fetching geolocation data: " . $e->getMessage());
+            return null; // Return null in case of any error
         }
     }
 }

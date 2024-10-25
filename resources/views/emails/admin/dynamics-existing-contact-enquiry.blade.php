@@ -16,6 +16,12 @@
 <span class="value-float-right">{!! $maildata['ans_countrycode'] !!}</span>
 </li>
 @endisset
+@isset($maildata['country_of_origin'])
+<li style="justify-content: space-between">
+<strong>Submitted From:</strong>
+<span class="value-float-right">{!! $maildata['country_of_origin'] !!}</span>
+</li>
+@endisset
 {{-- <li style="justify-content: space-between">
 <strong>Country Code:</strong>
 <span class="value-float-right">{!! $maildata['country_code'] !!}</span>
