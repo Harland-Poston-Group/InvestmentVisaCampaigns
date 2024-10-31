@@ -805,7 +805,7 @@ a {
     background: url("/assets/img/campaigns/greece/CTA-MW-2-DTP.webp") no-repeat 100% 100%;
     //background: linear-gradient(to bottom, $brand_purple, transparent);
     z-index: 1;
-    background-size: cover;
+    background-size: contain;
     height: 677px;
 
     @media only screen

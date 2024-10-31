@@ -677,56 +677,43 @@
 
 {{-- Take the Opportunity --}}
 <section id="take-the-opportunity-section" class="animate__animated animate__bounceInUp animate__delay-2s">
-    <div class="fakebg"></div>
-    <!--<img class="salesman-image" src="/assets/img/private_meetings/lister/1-CTA-RD-DTP-Back.webp" style="opacity:0;">-->
     <div class="container">
-
         <div class="row">
-
             {{-- Left Content --}}
             <div class="col-md-8">
-
                 <div class="cta-content">
-
                     <h3 class="title">Ready to Start Your Journey?</h3>
-
                     <h5 class="subtitle">
                         Take the first step towards your European lifestyle with the Greece Golden Visa. Contact us today to learn more about the application process and  how we can assist you in making Greece your new home!
                     </h5>
+                    {{-- Salesman Name --}}
+                    <div class="salesman-intro">
 
+                        @if( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
+                            <style>
+                                .salesman-intro{
+                                    writing-mode: vertical-rl;
+                                    text-orientation: mixed;
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                }
+                            </style>
+                        @endif
+                        <h6 class="name">Mark Wills</h6>
+                        <h6 class="position">Investment Advisor</h6>
+                    </div>
                     <!-- <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button> -->
-
                 </div>
             </div>
 
             {{-- Seller's Image --}}
             <div class="col-md-4 salesman-area-wrapper" style="position: relative;">
 
-                {{-- Salesman Name --}}
-                <div class="salesman-intro">
 
-                    @if( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
-                        <style>
-                            .salesman-intro{
-                                writing-mode: vertical-rl;
-                                text-orientation: mixed;
-                                display: flex;
-                                flex-direction: column-reverse;
-                            }
-                        </style>
-                    @endif
-                    <h6 class="name">Mark Wills</h6>
-                    <h6 class="position">Investment Advisor</h6>
-                </div>
 
-                {{-- Salesman Image
-                <img class="salesman-image" src="/assets/img/private_meetings/lister/RD@2xDTP.webp" style="opacity:0;">
-                --}}
-                {{-- Background pattern --}}
-                <!--
-                    <img class="background-image desktop-image" src="/assets/img/private_meetings/Pattern-W1018px-DTP.webp">
-                    <img class="background-image mobile-image" src="/assets/img/private_meetings/Pattern-W576px-Mob.webp">
-                    -->
+                {{-- Salesman Image --}}
+                <img class="salesman-image" src="/assets/img/private_meetings/lister/RD@2xDTP.webp" style="display: none;">
+
             </div>
 
         </div>
