@@ -829,7 +829,7 @@ a {
 }
 #take-the-opportunity-section .salesman-intro {
     position: absolute;
-    left: 12px;
+    left: 0;
     bottom: -45%;
     z-index: 1;
 }
