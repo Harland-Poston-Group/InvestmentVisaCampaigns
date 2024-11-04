@@ -64,6 +64,30 @@ a {
 #private-meetings-banner {
   position: relative;
 }
+/* Default behavior: show the desktop slider and hide the mobile slider */
+.image-slider-wrapper {
+    display: block; /* Show on desktop */
+}
+
+.image-slider-mobile {
+    display: none; /* Hide on desktop */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .image-slider-wrapper {
+        display: none; /* Hide on mobile */
+    }
+
+    .image-slider-mobile {
+        display: block; /* Show on mobile */
+    }
+    .left-title-banner .container .text-container {
+        display: none;
+    }
+}
+
+
 #private-meetings-banner .slider-mask {
   position: absolute;
   z-index: 1;
