@@ -143,7 +143,8 @@
                 <!-- code -->
                 <lottie-player class="animated-plane" src="/Around-The-World.json" background="transparent" speed="1" loop="" autoplay=""></lottie-player>
             </div>
-            <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+            {{-- Header form --}}
+            <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10 header-form">
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -552,7 +553,7 @@
 
                 </div>
                 <div id="hidden-form" class="container">
-                    <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+                    <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10 modal-form">
                         <a href="#" class="btn-close-form">
                             <svg class="btn-close-form" xmlns="http://www.w3.org/2000/svg" width="30.805" height="27.168" viewBox="0 0 30.805 27.168">
                                 <g transform="translate(18033.465 23183.839)">

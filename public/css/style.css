@@ -921,10 +921,18 @@ body.page-residency-and-citizenship.mobile img.header-mask{
     background: #bbdee5;
     border-radius: 10px;
     padding: 60px 30px 0;
-    height: 527px;
+    /* height: 527px; */
     z-index: 4;
     width: 415px;
     box-shadow: 0 8px 13px #B6B6B6;
+}
+
+#campaign-form.modal-form{
+    height: 527px;
+}
+
+#campaign-form.header-form{
+    padding-bottom: 40px;
 }
 
 
