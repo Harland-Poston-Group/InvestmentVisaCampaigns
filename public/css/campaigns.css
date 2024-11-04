@@ -733,7 +733,7 @@ a {
 }
 @media (max-width: 768px) {
 
-    #take-the-opportunity-section .cta-content {
+    body.awarenesss-page #take-the-opportunity-section .cta-content {
         margin-top: 0;
     }
 
