@@ -734,7 +734,7 @@ a {
 @media (max-width: 768px) {
 
     body.awarenesss-page #take-the-opportunity-section .cta-content {
-        margin-top: 0;
+        margin-top: 0 !important;
     }
 
     #take-the-opportunity-section .schedule-button {
