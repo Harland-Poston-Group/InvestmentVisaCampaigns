@@ -1158,6 +1158,7 @@ a {
     #testimonials-section-pm .testimonials-title {
         font-size: 24px;
         padding-right: 1rem;
+        padding-bottom: 10px;
     }
 }
 #testimonials-section-pm .testimonial-img {
@@ -1368,6 +1369,7 @@ a {
         -webkit-line-clamp: unset;
         line-clamp: unset;
         bottom: 0;
+        min-height: unset;
     }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
