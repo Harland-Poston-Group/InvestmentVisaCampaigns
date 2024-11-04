@@ -746,9 +746,8 @@ a {
   align-items: center;
 }
 #take-the-opportunity-section .container {
-  position: relative;
-  z-index: 3;
-    max-width: 95%;
+    position: relative;
+    z-index: 3;
 }
 #take-the-opportunity-section .container .schedule-button {
   border: unset;
