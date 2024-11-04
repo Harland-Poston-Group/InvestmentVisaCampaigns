@@ -212,6 +212,12 @@ a {
     }
 }
 
+@media (max-width: 991px) {
+    body.awarenesss-page #modal-awareness-form .input-container {
+        gap: 0px !important;
+    }
+}
+
 #form-container-element-banner #modal-awareness-form, .banner-form #modal-awareness-form {
     margin-top: 0;
 }
