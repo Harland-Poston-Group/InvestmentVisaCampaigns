@@ -689,15 +689,16 @@ a {
 }
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
   #take-the-opportunity-section {
-    height: 350px;
+      height: 350px;
       background-position-x: 60%;
+      min-height: 350px;
   }
 }
 @media (max-width: 768px) {
   #take-the-opportunity-section {
     background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
     background-size: cover;
-    height: 705px;
+    height: 945px;
   }
 }
 @media only screen and (max-width: 768px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -865,6 +866,8 @@ a {
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
   #take-the-opportunity-section .cta-content {
     margin-top: 0;
+      gap: 0;
+
   }
 }
 #take-the-opportunity-section .cta-content .title {
