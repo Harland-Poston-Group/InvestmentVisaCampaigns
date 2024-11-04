@@ -883,6 +883,10 @@ img.header-mask {
     height: 100%;
 }
 
+body.page-residency-and-citizenship.mobile img.header-mask{
+    height: unset;
+}
+
 .residency-form-container {
     top: 20%;
     right: 17%;
@@ -1494,6 +1498,8 @@ section#cards {
 #testimonials .carousel-control-next,#testimonials .carousel-control-prev {
     width: 4% !important;
 }
+
+
 #testimonials p.card-text {
     display: flex;
     margin-left: 35px;
@@ -1597,9 +1603,33 @@ section#cards {
 #testimonials .card-title .image-top-right {
     position: absolute;
     right: 30px;
-    top: 20px;
+    top: 30px;
     width: 30px;
 }
+
+#testimonials{
+    padding-bottom: 3rem;
+}
+
+#testimonials .card-body{
+    padding-top: 25px;
+}
+
+#testimonials .splide__pagination{
+    bottom: -2.5em;
+}
+
+@media (min-width:576px) and (max-width:768px) {
+    .header.row .col-6.col-sm-2{
+        width: 35%;
+    }
+
+    .header.row .col-6.col-sm-10{
+        width: 65%;
+    }
+}
+
+
 #scrollToTopBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -1765,7 +1795,7 @@ body.mobile .navbar-toggler {
         right: 0;
     }
     #campaign-form, #add-blog-post-form {
-        height: 575px;
+        /* height: 575px; */
     }
 
 

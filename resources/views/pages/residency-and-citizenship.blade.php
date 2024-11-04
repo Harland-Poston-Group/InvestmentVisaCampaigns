@@ -134,7 +134,7 @@
     </section>
 
     <section id="top-banner">
-        <video allowfullscreen="allowfullscreen" width="100%" height="auto" autoplay="autoplay" muted="" playsinline="" src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" loop="loop" controls="controls" class="IDLZ1B49KZV68ZI13 top-video-block video-mask">
+        <video allowfullscreen="allowfullscreen" width="100%" height="auto" autoplay="autoplay" muted="" playsinline="" src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" loop="loop"" class="IDLZ1B49KZV68ZI13 top-video-block video-mask">
             <source src="/video/IV-Vid-Site-Story-Generic-Invest-5kbs-Dktp.webm" type="video/webm">
         </video>
         <img src="/images/headermask.png" alt="mask" class="header-mask IDLZ87PUKTPRXI95">
