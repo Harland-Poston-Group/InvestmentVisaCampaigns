@@ -679,31 +679,31 @@ a {
   z-index: 1;
   background-size: cover;
   height: auto;
-  min-height: 71vh;
+  min-height: 78vh;
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   #take-the-opportunity-section {
     height: 360px;
-      background-position-x: 60%;
   }
 }
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
   #take-the-opportunity-section {
-      height: 350px;
-      background-position-x: 60%;
-      min-height: 350px;
+      height: 420px;
+      min-height: 420px;
   }
 }
 @media (max-width: 768px) {
   #take-the-opportunity-section {
     background: url("/assets/img/campaigns/greece/CTA-MW-2-MOB.webp") no-repeat;
     background-size: cover;
-    height: 945px;
+      height: 730px;
+      padding: 5rem 0;
+      background-position: bottom;
   }
 }
 @media only screen and (max-width: 768px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #take-the-opportunity-section {
-    height: 730px;
+    height: 790px;
   }
 }
 @media (max-width: 768px) {
@@ -724,6 +724,7 @@ a {
 #take-the-opportunity-section .container {
   position: relative;
   z-index: 3;
+    max-width: 95%;
 }
 #take-the-opportunity-section .container .schedule-button {
   border: unset;
@@ -798,14 +799,15 @@ a {
   }
 }
 #take-the-opportunity-section .salesman-intro {
-  position: relative;
+  position: absolute;
+  left: 12px;
+  bottom: -45%;
   z-index: 1;
-    align-self: end;
 }
 @media (max-width: 768px) {
   #take-the-opportunity-section .salesman-intro {
     position: relative;
-    left: -115px;
+    left: 12px;
     bottom: -80px;
   }
 }
@@ -816,7 +818,8 @@ a {
 }
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
   #take-the-opportunity-section .salesman-intro {
-    bottom: -7%;
+      bottom: 0;
+      position: relative;
   }
 }
 #take-the-opportunity-section .salesman-intro .name,
@@ -866,8 +869,6 @@ a {
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
   #take-the-opportunity-section .cta-content {
     margin-top: 0;
-      gap: 0;
-
   }
 }
 #take-the-opportunity-section .cta-content .title {
@@ -878,7 +879,7 @@ a {
 @media (max-width: 768px) {
   #take-the-opportunity-section .cta-content .title {
     font-size: 24px;
-    padding-left: 12px;
+    padding-left: 0;
     padding-right: 12px;
   }
 }
@@ -893,11 +894,12 @@ a {
   }
 }
 #take-the-opportunity-section .cta-content .subtitle {
-  color: #fff !important;
-  font-size: 20px;
-  line-height: 34px;
-  font-weight: 500;
-  padding-right: 8rem;
+    color: #fff !important;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 500;
+    padding-right: 8rem;
+    max-width: 80%;
 }
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
   #take-the-opportunity-section .cta-content .subtitle {
