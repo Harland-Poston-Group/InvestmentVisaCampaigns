@@ -916,10 +916,16 @@ body.page-residency-and-citizenship.mobile img.header-mask{
     width: 150px;
 }
 
-@media (min-width:768px) {
+@media (min-width:350px) {
     .footer-logo{
         width: 200px!important;
         margin: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .footer-logo{
+        width: 100%;
     }
 }
 
@@ -940,6 +946,18 @@ body.page-residency-and-citizenship.mobile img.header-mask{
 
 #campaign-form.header-form{
     padding-bottom: 40px;
+}
+
+@media (max-height:730px) {
+    #campaign-form.header-form{
+        padding-bottom: unset;
+    }
+}
+
+@media (max-height:660px) {
+    .residency-form-container{
+        top: 15%;
+    }
 }
 
 
