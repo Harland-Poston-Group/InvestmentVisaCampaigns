@@ -438,6 +438,21 @@ $(document).ready(function(){
     // Wrap the selected divs with a new div
     divsToWrap.wrapAll('<div class="video-wrapper"></div>');
 
+    // Add a click animation on the flipcards
+    if($(window).width() < 767){
+
+        // Flipcard
+        $('.flip-card').on('click', function(){
+
+            let content = $(this).find('.flip-card-back p').html();
+
+            console.log(content);
+            Notify(content, null, null, 'success');
+
+        })
+
+    }
+
 
     if($(window).width() < 767)
     {
@@ -449,11 +464,11 @@ $(document).ready(function(){
 
         $('body').addClass('mobile');
         $(".header-mask").attr("src", "/images/headermask-mobile.png").appendTo('.video-container');
-        $('#cards-row .card-container').removeClass('col-12').addClass('col-6');
-        $('.bottom-cards .card-container').removeClass('col-12').addClass('col-6');
-        $('#cards-row .card-container').slice(0, 2).wrapAll('<div class="row"></div>');
-        $('#cards-row .card-container').slice(-2).wrapAll('<div class="row"></div>');
-        $('.bottom-cards .card-container').wrapAll('<div class="bottom-cards-inner row"></div>');
+        // $('#cards-row .card-container').removeClass('col-12').addClass('col-6');
+        // $('.bottom-cards .card-container').removeClass('col-12').addClass('col-6');
+        // $('#cards-row .card-container').slice(0, 2).wrapAll('<div class="row"></div>');
+        // $('#cards-row .card-container').slice(-2).wrapAll('<div class="row"></div>');
+        // $('.bottom-cards .card-container').wrapAll('<div class="bottom-cards-inner row"></div>');
         $('.title-bottom').insertAfter('.img-bottom');
         $('.title-left').insertAfter('.img-left');
 
