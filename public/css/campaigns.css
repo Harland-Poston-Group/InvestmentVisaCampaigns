@@ -315,6 +315,17 @@ a {
     font-size: 45px;
     font-weight: 700;
 }
+
+@media (min-width: 1200px) {
+    #whats-in-it-for-you-section h2.title {
+        font-size: 30px;
+    }
+    .left-title-banner .container .text-container .title {
+        font-size: 50px;
+    }
+}
+
+
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
     #whats-in-it-for-you-section h2.title {
         font-size: 30px !important;
@@ -362,6 +373,19 @@ a {
     font-size: 60px;
     top: -150px;
 }
+
+@media (max-width: 980px) {
+    #whats-in-it-for-you-section .item {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     #whats-in-it-for-you-section {
         margin-top: 100px;
