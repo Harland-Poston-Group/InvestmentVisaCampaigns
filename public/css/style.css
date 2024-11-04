@@ -111,9 +111,9 @@ body {
 
 
 body { background-color: #fff }
-* ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1) }
-* ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2) }
-* ::-webkit-scrollbar { width: 10px }
+/* * ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1) }
+* ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.7) }
+* ::-webkit-scrollbar { width: 10px } */
 
 /* Notifications Element */
 #notifications {
@@ -914,6 +914,13 @@ body.page-residency-and-citizenship.mobile img.header-mask{
     border-radius: 50%;
     height: 150px;
     width: 150px;
+}
+
+@media (min-width:768px) {
+    .footer-logo{
+        width: 200px!important;
+        margin: auto;
+    }
 }
 
 #campaign-form, #add-blog-post-form {
@@ -2016,6 +2023,10 @@ body.mobile .navbar-toggler {
     .carousel-inner .carousel-item-prev {
         transform: translateX(-33%);
     }
+}
+
+#map{
+    overflow: hidden;
 }
 
 @media (max-width:500px) {

@@ -406,10 +406,10 @@ $(document).ready(function() {
 
     $('#top-menu .container-fluid').removeClass('container-fluid').addClass('container');
 
-    const newDiv = $('<div class="col-12"></div>');
+    // const newDiv = $('<div class="col-12"></div>');
 
     // Wrap the content of .footer-iv with the new div
-    $('.footer-iv').wrapInner(newDiv);
+    // $('.footer-iv').wrapInner(newDiv);
 
     $(".right-button-scroll").on( "click", function(e) {
         e.preventDefault();
