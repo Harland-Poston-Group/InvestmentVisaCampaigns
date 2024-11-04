@@ -732,13 +732,13 @@ a {
 }
 @media (max-width: 768px) {
   #take-the-opportunity-section .schedule-button {
-    top: 140% !important;
+    top: 95% !important;
     left: 0 !important;
   }
 }
 @media (max-width: 768px) and (max-width: 360px) {
   #take-the-opportunity-section .schedule-button {
-    top: 135% !important;
+    top: 95% !important;
     left: 10% !important;
   }
 }
