@@ -1808,7 +1808,7 @@ body.mobile .navbar-toggler {
     }
     img.header-mask {
         bottom: -2px !important;
-        left: 1px;
+        left: 0px;
     }
     .video-container {
         display: block !important;
