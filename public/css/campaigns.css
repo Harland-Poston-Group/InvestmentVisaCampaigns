@@ -733,7 +733,6 @@ a {
 }
 @media (max-width: 768px) {
     #take-the-opportunity-section .schedule-button {
-        top: 95% !important;
         left: 0 !important;
     }
 }
