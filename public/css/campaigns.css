@@ -732,8 +732,14 @@ a {
     }
 }
 @media (max-width: 768px) {
+
+    #take-the-opportunity-section .cta-content {
+        margin-top: 0;
+    }
+
     #take-the-opportunity-section .schedule-button {
         left: 0 !important;
+        top: 92% !important;
     }
 }
 @media (max-width: 768px) and (max-width: 360px) {
@@ -778,7 +784,7 @@ a {
 }
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
     #take-the-opportunity-section .container .schedule-button {
-        top: 102%;
+        top: 80%;
     }
 }
 #take-the-opportunity-section .container .schedule-button:hover {
@@ -948,7 +954,7 @@ a {
     #take-the-opportunity-section .cta-content .subtitle {
         font-size: 14px;
         line-height: 22px;
-        padding-right: 12rem;
+        padding-right: 5rem;
     }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
