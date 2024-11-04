@@ -728,7 +728,7 @@ a {
 @media only screen and (max-width: 768px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     #take-the-opportunity-section {
         height: 790px;
-        padding-top: inherit;
+        padding-top: 2rem;
     }
 }
 @media (max-width: 768px) {
@@ -738,8 +738,8 @@ a {
     }
 
     #take-the-opportunity-section .schedule-button {
-        left: 0 !important;
-        top: 92% !important;
+        left: 4% !important;
+        top: 130% !important;
     }
 }
 @media (max-width: 768px) and (max-width: 360px) {
