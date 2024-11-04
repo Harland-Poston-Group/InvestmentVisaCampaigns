@@ -244,8 +244,8 @@
         <img class="mask" src="/assets/img/private_meetings/Hero-Slid-Mask-@2x-DTP.webp">
     </div>
 
-    {{-- Image Slider --}}
-    <div class="image-slider-wrapper d-block mobile-hidden">
+    {{-- Image Slider d-block --}}
+    <div class="image-slider-wrapper  mobile-hidden">
         <div class="splide banner-image-slider">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -319,13 +319,13 @@
         </div>
     </div>
     {{-- Moblide Hero --}}
-    <div class="image-slider-mobile d-block d-sm-none">
+    <div class="image-slider-mobile desktop-hidden">
         <img id="mobile-hero" src="/assets/img/campaigns/greece/GR-Scene-Med-Mob.webp">
     </div>
 
     <div class="container banner-container">
 <!--
-        <a class="logo-link">
+        <a class="logo-link">d-block d-sm-none
                 {{-- Default Logo --}}
                 <img id="banner-logo" src="/assets/img/campaigns/greece/iv-logo.svg">
 
@@ -708,9 +708,6 @@
 
             {{-- Seller's Image --}}
             <div class="col-md-4 salesman-area-wrapper" style="position: relative;">
-
-
-
                 {{-- Salesman Image --}}
                 <img class="salesman-image" src="/assets/img/private_meetings/lister/RD@2xDTP.webp" style="display: none;">
 
