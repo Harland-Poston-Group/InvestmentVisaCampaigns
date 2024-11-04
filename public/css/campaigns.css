@@ -836,7 +836,7 @@ a {
 @media (max-width: 768px) {
     #take-the-opportunity-section .salesman-intro {
         position: relative;
-        left: 12px;
+        left: 0;
         bottom: -80px;
     }
 }
