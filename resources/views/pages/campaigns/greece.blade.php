@@ -335,17 +335,17 @@
 
             <div class="container">
 
-                <div id="benefits" class="text-container d-none d-sm-block d-xs-block">
+                <div id="benefits" class="text-container d-sm-block d-xs-block">
                     <h3 class="title animate__animated animate__fadeInLeft">
                         Unlock Your European Dream<br> With the Greece Golden Visa
                     </h3>
                 </div>
 
-                <div class="text-container d-md-none d-lg-none d-xl-none">
+                {{-- <div class="text-container d-md-none d-lg-none d-xl-none">
                     <h3 class="title animate__animated animate__fadeInLeft">
                         Unlock Your European<br> Dream With the Greece<br> Golden Visa
                     </h3>
-                </div>
+                </div> --}}
                 <div class="white-element"></div>
 
             </div>
@@ -469,8 +469,13 @@
         <!-- List of topics -->
         <div class="row">
             <div class="col-12">
-                <h2 class="title" style="margin-top: 100px; margin-bottom: 60px;">Experience the Mediterranean Lifestyle<br>and Secure Your Future In Europe</h2>
+                <h2 class="title" style="">Experience the Mediterranean Lifestyle<br> and Secure Your Future In Europe</h2>
             </div>
+
+        </div>
+
+        <div class="row">
+            {{-- Image Grid --}}
             <div class="col-12 col-sm-4 item">
                 <img alt="greece" src="/assets/img/campaigns/greece/LIFST-Gr@1x.webp">
                 <div class="itemdesc">
