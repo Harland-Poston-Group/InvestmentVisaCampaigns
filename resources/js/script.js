@@ -416,6 +416,11 @@ $(document).ready(function() {
         $('#hidden-form').addClass('active');
     });
 
+    $(".popup-modal").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
     $(".enquire-button").on( "click", function(e) {
         e.preventDefault();
         $('#hidden-form').addClass('active');

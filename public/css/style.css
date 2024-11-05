@@ -941,7 +941,7 @@ body.page-residency-and-citizenship.mobile img.header-mask{
 }
 
 #campaign-form.modal-form{
-    height: 527px;
+    /* height: 527px; */
 }
 
 #campaign-form.header-form{
@@ -1399,16 +1399,35 @@ section#cards {
 }
 #hidden-form {
     position: fixed;
-    left: 107%;
+    /* left: 107%; */
+    /* right: -50%; */
+    right:-500px;
     top: 30%;
     transition: all 1s ease;
 }
 #hidden-form.active {
     transition: all 1s ease;
-    transform: translate(-44%, 0);
-    left: 107%;
+    /* transform: translate(-44%, 0);
+    left: 107%; */
+    right: 20px;
     top: 30%;
     z-index: 99;
+}
+
+@media (max-width:500px) {
+    #hidden-form {
+        width: 100%;
+    }
+
+    #hidden-form.active{
+        right: 0;
+    }
+
+    #hidden-form #campaign-form{
+        /* width: 100%; */
+        max-width: 95%;
+        margin: auto;
+    }
 }
 
 #hidden-form #campaign-form,#hidden-form  #add-blog-post-form {
@@ -1840,7 +1859,8 @@ body.mobile .navbar-toggler {
         right: 10px;
     }
     img.header-mask {
-        bottom: -2px !important;
+        /* bottom: -2px !important; */
+        bottom: 0;
         left: 0px;
     }
     .video-container {
@@ -1896,19 +1916,20 @@ body.mobile .navbar-toggler {
     }
 
     .right-button-scroll{
-        display: none;
+        /* display: none;
         left: 0;
         top: 85%;
         bottom: 0;
         padding-left: 20px;
         max-width: 100%;
-        box-shadow: 2px 6px 6px #333;
+        box-shadow: 2px 6px 6px #333; */
     }
 
     #hidden-form.active {
         transition: all 1s ease;
-        transform: translate(-44%, 0);
-        left: 42%;
+        /* transform: translate(-44%, 0);
+        left: 42%; */
+        /* right: 20px; */
     }
 
     #campaign-form > a.btn-close-form {
@@ -1917,19 +1938,19 @@ body.mobile .navbar-toggler {
 
 
     .let-us-help-you-img {
-        border-radius: 50%;
+        /* border-radius: 50%;
         width: 80px;
         height: 80px;
         z-index: 2;
         position: relative;
-        top: 30px;
+        top: 30px; */
     }
     .let-us-help-you-caption {
-        background: rgb(106, 37, 122);
+        /* background: rgb(106, 37, 122);
         background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 40%);
         color: #6A257AFF;
         z-index: 0;
-        padding: 10px 0;
+        padding: 10px 0; */
 
     }
     #hidden-form {
@@ -2416,8 +2437,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #hidden-form.active {
         transition: all 1s ease;
-        transform: translate(-44%, 0);
-        left: 85%;
+        /* transform: translate(-44%, 0);
+        left: 85%; */
         top: 26%;
     }
 
@@ -2435,6 +2456,69 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-left: 10px;
     }
 }
+
+#mobile-fixed-bottom-cta{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    /* background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 40%); */
+    background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 60%);
+
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    display: none;
+}
+
+@media (max-width:768px) {
+    #mobile-fixed-bottom-cta{
+        display: flex;
+    }
+}
+
+#mobile-fixed-bottom-cta .rep-image-wrapper{
+    position: relative;
+}
+
+#mobile-fixed-bottom-cta .rep-image-container{
+    border-radius: 100%;
+    overflow: hidden;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: -13px;
+    right: 0;
+}
+
+#mobile-fixed-bottom-cta .cta-text{
+    color: #6A257A;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width:460px) {
+    #mobile-fixed-bottom-cta{
+        gap: 30px;
+        background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 50%);
+    }
+}
+
+@media (max-width:360px) {
+    #mobile-fixed-bottom-cta{
+        gap: 15px;
+    }
+}
+
+@media (max-width:768px) {
+
+    #call-cta{
+        display: none;
+    }
+
+}
+
 
 /* I Pad*/
 
@@ -2476,8 +2560,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
     #hidden-form.active {
         transition: all 1s ease;
-        transform: translate(-44%, 0);
-        left: 98%;
+        /* transform: translate(-44%, 0);
+        left: 98%; */
         top: 26%;
     }
 }
