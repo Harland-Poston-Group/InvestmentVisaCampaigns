@@ -1640,6 +1640,8 @@ section#cards {
     font-weight: 700;
     margin: 2rem 0;
     padding-bottom: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 #testimonials .card-title h4{
     color: #6A257A;
