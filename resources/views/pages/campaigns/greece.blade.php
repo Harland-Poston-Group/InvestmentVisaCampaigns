@@ -338,7 +338,7 @@
                 <div id="benefits" class="text-container d-sm-block d-xs-block">
                     <h3 class="title animate__animated animate__fadeInLeft">
                         {{-- Unlock Your European Dream<br> With the Greece Golden Visa --}}
-                        Get your Greece Golden Visa<br> via Real Estate Investment
+                        Get your Greece Golden Visa<br>With a min. 250K <br>Real Estate Investment
                     </h3>
                 </div>
 
