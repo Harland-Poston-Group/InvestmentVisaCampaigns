@@ -348,7 +348,6 @@
                     </h3>
                 </div> --}}
                 <div class="white-element"></div>
-
             </div>
 
         </div>
