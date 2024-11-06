@@ -337,7 +337,8 @@
 
                 <div id="benefits" class="text-container d-sm-block d-xs-block">
                     <h3 class="title animate__animated animate__fadeInLeft">
-                        Unlock Your European Dream<br> With the Greece Golden Visa
+                        {{-- Unlock Your European Dream<br> With the Greece Golden Visa --}}
+                        Get your Greece Golden Visa<br> via Real Estate Investment
                     </h3>
                 </div>
 
@@ -680,46 +681,40 @@
     }
 </style>
 
-{{-- Take the Opportunity --}}
-<section id="take-the-opportunity-section" class="animate__animated animate__bounceInUp animate__delay-2s">
-    <div class="container">
-        <div class="row">
-            {{-- Left Content --}}
-            <div class="col-md-8">
-                <div class="cta-content">
-                    <h3 class="title">Ready to Start Your Journey?</h3>
-                    <h5 class="subtitle">
-                        Take the first step towards your European lifestyle with the Greece Golden Visa. Contact us today to learn more about the application process and  how we can assist you in making Greece your new home!
-                    </h5>
-                    {{-- Salesman Name --}}
-                    <div class="salesman-intro">
 
-                        @if( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
-                            <style>
-                                .salesman-intro{
-                                    writing-mode: vertical-rl;
-                                    text-orientation: mixed;
-                                    display: flex;
-                                    flex-direction: column-reverse;
-                                }
-                            </style>
-                        @endif
-                        <h6 class="name">Mark Wills</h6>
-                        <h6 class="position">Investment Advisor</h6>
+{{-- Ready To Start Your Journey --}}
+<section id="ready-to-start-your-journey-section">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-7 content-column">
+                <div class="content-container">
+
+                    <h2 class="title">Ready to Start your Journey?</h2>
+
+                    <p class="cta-description">Take the first step towards your European lifestyle with the Greece Golden Visa. Contact us today to learn more about the application process and how we can assist you in making Greece your new home!</p>
+
+                    <button class="cta-button popup-fade-in-form">Contact us now</button>
+
+                    <div class="agent-info-container">
+                        <span class="name">Mark Wills</span>
+                        <span class="position">Investment Advisor</span>
                     </div>
-                    <!-- <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button> -->
+
                 </div>
             </div>
 
-            {{-- Seller's Image --}}
-            <div class="col-md-4 salesman-area-wrapper" style="position: relative;">
-                {{-- Salesman Image --}}
-                <img class="salesman-image" src="/assets/img/private_meetings/lister/RD@2xDTP.webp" style="display: none;">
+            {{-- Image Column --}}
+            <div class="col-md-5 image-column">
+
+                <img class="gradient-flare" src="/assets/img/private_meetings/lister/grad-dtp.webp">
+
+                <img src="/assets/img/private_meetings/lister/mark-bg.webp">
 
             </div>
 
         </div>
-        <button class="schedule-button popup-fade-in-form">CONTACT US NOW</button>
 
     </div>
 </section>
@@ -735,55 +730,79 @@
         <div class="testimonials-content">
 
             {{-- Mobile Testimonials Slider --}}
-            <div class="splide testimonials-slider" aria-label="Splide Basic HTML Example">
-                <div class="splide__track">
-                    <ul class="splide__list">
+            <div class="testimonials-slider" aria-label="Splide Basic HTML Example">
+                {{-- <div class="splide__track">
+                    <ul class="splide__list"> --}}
+
                         {{-- Testimonial --}}
-                        <div class="testimonial splide__slide">
+                        <div class="testimonial">
                             <div class="testimonial-card">
+
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/APetrus@2x.webp">
                                 </div>
+
                                 <div class="content h-100">
-                                    <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
+                                    <div>
+                                        <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
+                                    </div>
                                     <!--<i class="fa-solid fa-quote-left"></i>-->
-                                    Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.                                </div>
-                                <span class="client-name">Alexander Petrus</span>
+                                    <div class="text-container">
+                                        Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.
+
+                                        <span class="client-name">Alexander Petrus</span>
+                                    </div>
+
+                                </div>
 
                             </div>
                         </div>
+
                         {{-- Testimonial --}}
-                        <div class="testimonial splide__slide">
+                        <div class="testimonial">
                             <div class="testimonial-card">
+
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/BSaab@2x.webp">
                                 </div>
+
                                 <div class="content h-100">
-                                    <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
-                                    <!--<i class="fa-solid fa-quote-left"></i>-->
-                                    The process was easy, and the support we received made all the difference. I can't recommend the Greece Golden Visa enough.
+                                    <div>
+                                        <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
+                                    </div>
+
+                                    <div class="text-container">
+                                        The process was easy, and the support we received made all the difference. I can't recommend the Greece Golden Visa enough.
+                                        <span class="client-name">Beniel Saab</span>
+                                    </div>
                                 </div>
-                                <span class="client-name">Beniel Saab</span>
+
 
                             </div>
                         </div>
 
                         {{-- Testimonial --}}
-                        <div class="testimonial splide__slide">
+                        <div class="testimonial">
                             <div class="testimonial-card">
                                 <div class="client-details">
                                     <img alt="testimonial image" class="testimonial-img" src="/assets/img/campaigns/greece/NJoyce@2x.webp">
                                 </div>
                                 <div class="content h-100">
-                                    <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
-                                    <!--<i class="fa-solid fa-quote-left"></i>-->
-                                    Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.
+
+                                    <div>
+                                        <img class="quotemark" src="/assets/img/campaigns/greece/Quotation-Marks.svg">
+                                    </div>
+
+                                    <div class="text-container">
+                                        Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.
+                                        <span class="client-name">Neena Joyce</span>
+                                    </div>
                                 </div>
-                                <span class="client-name">Neena Joyce</span>
+
 
                             </div>
-                        </div>
-                    </ul>
+                        {{-- </div>
+                    </ul> --}}
                 </div>
             </div>
 
@@ -791,6 +810,7 @@
 
     </div>
 </section>
+
 <section id="call-cta" class="container mx-0 p-0">
     <div class="row mx-0 mt-0">
         <div class="col-12 my-5">
@@ -870,6 +890,7 @@
     </div>
 
 </section>
+
 {{-- Footer --}}
 @include('components.footer-cp')
 
@@ -978,6 +999,9 @@
     </div>
 
 </div>
+
+{{-- Bottom Mobile Bar --}}
+@include('partials.bottom_fixed_cta')
 
 {{-- Down Cheron --}}
 <div class="double-down-chevron-bottom">

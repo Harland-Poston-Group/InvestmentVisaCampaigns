@@ -1,5 +1,5 @@
 {{-- Form used in the Private Meetings Performance Pages Per Country - Fade In --}}
-<div id="form-container-element-banner" class="generic-form-container private-meetings-country-form">
+<div id="form-container-element-banner" class="generic-form-container fade-in-form private-meetings-country-form">
 
     {{-- Close Button --}}
     {{-- <span class="close-button">X</span> --}}

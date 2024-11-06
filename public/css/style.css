@@ -95,7 +95,7 @@ body {
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
 }
 
 .sidebar {
@@ -855,7 +855,7 @@ h1 {
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
 }
 
 .sidebar {
@@ -1860,7 +1860,7 @@ body.mobile .navbar-toggler {
     }
     img.header-mask {
         /* bottom: -2px !important; */
-        bottom: 0;
+        bottom: -2px;
         left: 0px;
     }
     .video-container {
@@ -2455,68 +2455,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .investor-slogan {
         margin-left: 10px;
     }
-}
-
-#mobile-fixed-bottom-cta{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 5px 0;
-    display: flex;
-    /* background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 40%); */
-    background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 60%);
-
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    display: none;
-}
-
-@media (max-width:768px) {
-    #mobile-fixed-bottom-cta{
-        display: flex;
-    }
-}
-
-#mobile-fixed-bottom-cta .rep-image-wrapper{
-    position: relative;
-}
-
-#mobile-fixed-bottom-cta .rep-image-container{
-    border-radius: 100%;
-    overflow: hidden;
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    bottom: -13px;
-    right: 0;
-}
-
-#mobile-fixed-bottom-cta .cta-text{
-    color: #6A257A;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-@media (max-width:460px) {
-    #mobile-fixed-bottom-cta{
-        gap: 30px;
-        background: linear-gradient(90deg, rgba(106, 37, 122, 1) 0%, rgba(255, 255, 255, 1) 50%);
-    }
-}
-
-@media (max-width:360px) {
-    #mobile-fixed-bottom-cta{
-        gap: 15px;
-    }
-}
-
-@media (max-width:768px) {
-
-    #call-cta{
-        display: none;
-    }
-
 }
 
 

@@ -45,7 +45,6 @@
 
 
     {{-- Intl Tel Input --}}
-
     <link rel="stylesheet" href="/assets/css/country-code-plugin/intlTelInput.css">
 
     <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
@@ -97,6 +96,9 @@
         })(window,document,'script','dataLayer','GTM-N5WRRKQX');
     </script>
     <!-- End Google Tag Manager -->
+
+    {{-- App.css --}}
+    <link rel="stylesheet" href="/css/app.css">
 
 </head>
 <body class="page-residency-and-citizenship">
@@ -561,7 +563,7 @@
     {{-- Modal Form --}}
     @include('partials.forms.modal_form')
 
-    <div class="IDLZ8A1ZV0HAWEH1 footer-iv">
+    {{-- <div class="IDLZ8A1ZV0HAWEH1 footer-iv">
 
         <div class="row">
 
@@ -575,7 +577,10 @@
 
         </div>
 
-    </div>
+    </div> --}}
+
+    {{-- Footer --}}
+    @include('components.footer-cp')
 
     <button id="scrollToTopBtn" title="Go to top">
         <img src="/images/GoTopArrow.png">
@@ -592,21 +597,7 @@
     <div id="notifications"></div>
 
     {{-- Bottom Mobile Bar --}}
-    <div id="mobile-fixed-bottom-cta" class="popup-modal">
-
-        <div class="rep-image-wrapper">
-
-            <div class="rep-image-container">
-                <img src="/images/Cam-CTA-146x180px.webp">
-            </div>
-
-        </div>
-
-        <div class="cta-text">
-            <span>Hi, Let us help you.</span>
-        </div>
-
-    </div>
+    @include('partials.bottom_fixed_cta')
 
     <script>
         function getParam(p) {

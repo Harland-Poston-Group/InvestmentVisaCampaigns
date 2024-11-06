@@ -286,6 +286,7 @@ $(document).ready(function() {
 /* Testimonial Slider */
 if( $(".testimonials-slider").length ){
 
+    /*
     var testimonial_slide = new Splide('.testimonials-slider', {
         type: 'loop',
         perPage: 3,
@@ -304,7 +305,8 @@ if( $(".testimonials-slider").length ){
             },
         }
         // autoWidth: true,
-    }).mount();
+    }).mount();`
+
 
     // Adaptar a height do container ao tamanho de cada slider dado que há testimonials com tamanhos diferentes no website
     testimonial_slide.on('mounted moved', function () {
@@ -322,6 +324,8 @@ if( $(".testimonials-slider").length ){
         }
 
     })
+
+    */
 }
 /* Properties Slider */
 if( $(".properties-slider").length ){
@@ -340,8 +344,11 @@ if( $(".properties-slider").length ){
         // pagination: '#testimonial-slider-container',
         breakpoints: {
             991: {
-                perPage: 1
+                perPage: 2
             },
+            640: {
+                perPage: 1
+            }
         }
         // autoWidth: true,
     }).mount();

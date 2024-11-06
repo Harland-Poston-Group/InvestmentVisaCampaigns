@@ -27,27 +27,27 @@
         <div class="social-media-container">
 
             <div class="white-round-div">
-                <a href="https://www.facebook.com/portugalhomeslisbon?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
+                <a href="https://www.facebook.com/hpginvestmentvisa/" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://twitter.com/pthomeslisbon?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
+                <a href="https://x.com/investment_visa" target="_blank">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.instagram.com/portugalhomes?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
+                <a href="https://www.instagram.com/investment_visa/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.linkedin.com/company/portugal-homes?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
+                <a href="https://www.linkedin.com/company/investmentvisa" target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.youtube.com/c/HarlandPostonGroup?utm_source=landing_page_awareness&utm_medium=footer_social&utm_campaign=landing_page_awareness" target="_blank">
+                <a href="https://www.youtube.com/c/HarlandPostonGroup" target="_blank">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
             </div>
