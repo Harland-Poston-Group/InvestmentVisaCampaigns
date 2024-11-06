@@ -1,18 +1,10 @@
 import './bootstrap.js';
-import grapesjs from 'grapesjs';
 import Alpine from 'alpinejs';
 
 import 'animate.css';
 
 window.Alpine = Alpine;
 Alpine.start();
-
-const editor = grapesjs.init({
-    container: '#gjs',
-    fromElement: true,
-    width: 'auto',
-    height: '500px',
-});
 
 jQuery('#why-portugal-homes-section-pm').addClass('animate-on-scroll');
 
