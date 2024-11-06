@@ -2,6 +2,20 @@
 
     <div class="container main-container">
 
+        @php
+
+            $currentUrl = $_SERVER['REQUEST_URI'];
+
+            if (strpos($currentUrl, 'greece-golden-visa') !== false) {
+                $page = 'greece_gv';
+            } elseif (strpos($currentUrl, 'residency-and-citizenship') !== false) {
+                $page = 'residency_and_citizenship';
+            } else {
+                $page = 'iv_landing_page';
+            }
+
+        @endphp
+
         {{-- Investment Visa Logo --}}
         <div class="ph-footer-logo">
             <a href="https://www.investmentvisa.com/?utm_source=lp_usa_awareness&utm_medium=logo_footer&utm_campaign=usa_awareness">
@@ -27,27 +41,27 @@
         <div class="social-media-container">
 
             <div class="white-round-div">
-                <a href="https://www.facebook.com/hpginvestmentvisa/" target="_blank">
+                <a href="https://www.facebook.com/hpginvestmentvisa?utm_source=landing_page_{{ $page }}&utm_medium=footer_social&utm_campaign=landing_page_{{ $page }}" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://x.com/investment_visa" target="_blank">
+                <a href="https://x.com/investment_visa?utm_source=landing_page_{{ $page }}&utm_medium=footer_social&utm_campaign=landing_page_{{ $page }}" target="_blank">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.instagram.com/investment_visa/" target="_blank">
+                <a href="https://www.instagram.com/investment_visa?utm_source=landing_page_{{ $page }}&utm_medium=footer_social&utm_campaign=landing_page_{{ $page }}" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.linkedin.com/company/investmentvisa" target="_blank">
+                <a href="https://www.linkedin.com/company/investmentvisa?utm_source=landing_page_{{ $page }}&utm_medium=footer_social&utm_campaign=landing_page_{{ $page }}" target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </div>
             <div class="white-round-div">
-                <a href="https://www.youtube.com/c/HarlandPostonGroup" target="_blank">
+                <a href="https://www.youtube.com/c/HarlandPostonGroup?utm_source=landing_page_{{ $page }}&utm_medium=footer_social&utm_campaign=landing_page_{{ $page }}" target="_blank">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
             </div>
