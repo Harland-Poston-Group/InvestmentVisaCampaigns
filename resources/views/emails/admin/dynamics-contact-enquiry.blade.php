@@ -54,6 +54,12 @@
 <span class="value-float-right">{!! $maildata['ans_whatareyoulookingfortext'] !!}</span>
 </li>
 @endisset
+@isset($maildata['ans_investmentamount'])
+<li style="justify-content: space-between">
+<strong>Investment Amount:</strong>
+<span class="value-float-right">{!! $maildata['ans_investmentamount'] !!}</span>
+</li>
+@endisset
 </ul>
 
 @isset( $maildata['ans_message'] )
