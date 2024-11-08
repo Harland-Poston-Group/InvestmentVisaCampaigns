@@ -423,12 +423,19 @@
                     <option value="Retirement">Retirement</option>
                     <option value="Work visa">Work Visa</option>
                 </select>
+                <select id="investment" class="investment_selector" name="investment_amount" required>
+                    <option selected hidden value="">How much are you willing to Invest?</option>
+                    <option value="50,000 - 250,000">50,000 - 250,000</option>
+                    <option value="250,000 - 500,000">250,000 - 500,000</option>
+                    <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
+                    <option value="None of the above">None of the above</option>
+                </select>
                 <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
                     <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
                     <h5>You have selected Work Visa.</h5>Investment Visa does not offer services in regards to Work Visas.
                 </div>
                 <label for="message">Message</label>
-                <textarea name="message" placeholder=""></textarea>
+                <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea>
                 <span class="visas-disclaimer">Investment Visa <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
                 <button
                     id="submitButton"
@@ -853,11 +860,24 @@
                                 <option value="Other Investment Opportunities">Investment Opportunities</option>
                                 <option value="Retirement">Retirement</option>
                                 <option value="Work visa">Work Visa</option>
-                            </select></div>
+                            </select>
+                        </div>
                     </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <select id="investment" class="investment_selector" name="investment_amount" required>
+                                <option selected hidden value="">How much are you willing to Invest?</option>
+                                <option value="50,000 - 250,000">50,000 - 250,000</option>
+                                <option value="250,000 - 500,000">250,000 - 500,000</option>
+                                <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
+                                <option value="None of the above">None of the above</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group row mb-2">
                         <div class="col-12">
-                            <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea>
+                            <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916" required></textarea>
                         </div>
                     </div>
                     <input type="hidden" name="petname" id="petname">
@@ -946,12 +966,19 @@
             <option value="Retirement">Retirement</option>
             <option value="Work visa">Work Visa</option>
         </select>
+        <select id="investment" class="investment_selector" name="investment_amount" required>
+            <option selected hidden value="">How much are you willing to Invest?</option>
+            <option value="50,000 - 250,000">50,000 - 250,000</option>
+            <option value="250,000 - 500,000">250,000 - 500,000</option>
+            <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
+            <option value="None of the above">None of the above</option>
+        </select>
         <div id="" class="alert alert-danger work-visa-message">
             <h5>You have selected Work Visa.</h5>
             Portugal Homes does not offer services in regards to Work Visas.
         </div>
 
-        <textarea name="message" placeholder="Leave us a message..."></textarea>
+        <textarea name="message" placeholder="Leave us a message..." required></textarea>
 
         <span class="visas-disclaimer">Investment Visa <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
 

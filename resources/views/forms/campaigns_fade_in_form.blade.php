@@ -1,6 +1,5 @@
 {{-- Form used in the Private Meetings Performance Pages Per Country - Fade In --}}
 <div id="form-container-element-banner" class="generic-form-container fade-in-form private-meetings-country-form">
-
     {{-- Close Button --}}
     {{-- <span class="close-button">X</span> --}}
     {{-- <img class="close-button" src="/assets/img/icons/X-Cancel.svg"> --}}
@@ -83,13 +82,20 @@
             <option value="Retirement">Retirement</option>
             <option value="Other Investment Opportunities">Other Investment Opportunities</option>
         </select>
+        <select id="investment" class="investment_selector" name="investment_amount" required>
+            <option selected hidden value="">How much are you willing to Invest?</option>
+            <option value="50,000 - 250,000">50,000 - 250,000</option>
+            <option value="250,000 - 500,000">250,000 - 500,000</option>
+            <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
+            <option value="None of the above">None of the above</option>
+        </select>
         <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
             <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
             <h5>You have selected Work Visa.</h5>
             Investment Visa does not offer services in regards to Work Visas.
         </div>
 
-        <textarea name="message" placeholder="Leave us a message..."></textarea>
+        <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea>
 
         <button
             id="submitButton"
@@ -110,7 +116,7 @@
 
         {{-- Consent text --}}
         <div class="consent-text">
-            Please note that Investment Visa will use the above details to contact you only. By submitting this form, you confirm that you agree to our website terms of use, our privacy policy and consent to cookies being stored on your computer.
+            By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
         </div>
 
     </form>
