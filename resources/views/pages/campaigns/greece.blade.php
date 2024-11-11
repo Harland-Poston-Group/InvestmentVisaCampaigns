@@ -36,17 +36,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    @if ( app()->getLocale() == 'zh' || app()->getLocale() == 'twn' )
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
-
-        <style>
-            body{
-                font-family: "Noto Sans SC", sans-serif!important;
-                font-optical-sizing: auto;
-                font-style: normal;
-            }
-        </style>
-    @endif
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -63,36 +52,14 @@
     <script src="/assets/js/country-code-plugin/utils.js"></script>
     <script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
 
-    {{-- <script src="/assets/js/us-awareness.js"></script> --}}
-
     {{-- End of Intl Tel Input --}}
 
-    {{-- Always On CSS File --}}
-    <!-- <link rel="stylesheet" href="{{-- mix('/assets/css/campaigns.css') --}}"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/private-meetings.css"> -->
-    {{--
-         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="stylesheet" href="{{ mix('css/always_on.css') }}">
-        <link rel="stylesheet" href="{{ mix('css/campaigns.css') }}">
-        <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="{{ mix('js/campaigns.js') defer></script>
-    {{----}}
-        <link rel="stylesheet" href="/css/app.css">
-        <link rel="stylesheet" href="/css/always_on.css">
-        <link rel="stylesheet" href="/css/campaigns.css">
-        <script src="/js/app.js" defer></script>
-        <script src="/js/campaigns.js" defer></script>
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N5WRRKQX');
-    </script>
-    <!-- End Google Tag Manager -->
-
-
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/always_on.css">
+    <link rel="stylesheet" href="/css/campaigns.css">
+    <script src="/js/app.js" defer></script>
+    <script src="/js/campaigns.js" defer></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -144,14 +111,8 @@
 
     {{-- @include('components.includes') --}}
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "8cbky6xbea");
-    </script>
+    {{-- Includes --}}
+    @include('partials.scripts')
 
     <!-- Hotjar Tracking Code for https://campaigns.investmentvisa.com/greece-golden-visa -->
     <script>
