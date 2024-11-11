@@ -44,7 +44,7 @@ class Dynamics_Helper {
             'country_code'  => 'ans_countrycode',
             'countrycode'   =>  'ans_countrycode',
             'message' => 'ans_message',
-            // 'investment_amount' =>  'ans_investmentamount',
+            'investment_amount' =>  'ans_investmentamount',
             'what_are_you_looking_for' => 'ans_whatareyoulookingfortext',
             'enquiry_subject' => 'ans_whatareyoulookingfortext',
             'ref_property' => 'ans_propertyref',
