@@ -44,30 +44,7 @@
         {{-- <input type="email" name="email" placeholder="Email*" required> --}}
 
         {{-- Email Input --}}
-        <div class="email-input-container">
-            <input type="email" id="email_address" name="email_address" placeholder="Email*" style="width:100%" required>
-
-            {{-- Zero Bounce status code --}}
-            <span class="zerobounce-status">Invalid email</span>
-
-            {{-- Loading Spinning Icon --}}
-            <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <style>
-                    .spinner_qM83{
-                        animation:spinner_8HQG 1.05s infinite
-                    }
-                    .spinner_oXPr{
-                        animation-delay:.1s
-                    }
-                    .spinner_ZTLf{
-                        animation-delay:.2s
-                    }
-                    @keyframes spinner_8HQG{0%,57.14%{animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)}28.57%{animation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)}100%{transform:translate(0)}}
-                </style>
-                <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
-            </svg>
-
-        </div>
+        @include('forms.inputs.email')
 
         <input type="tel" id="phone_number" class="contact-number phone-number-extension" name="phone_number" placeholder="Phone Number*" style="width:100%" required>
 
@@ -75,27 +52,33 @@
 
         {{-- What are you looking for? --}}
         {{-- <label for="visaSelect">What are you looking for?</label> --}}
-        <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
+        {{-- <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
             <option value="Greece Golden Visa">Greece Golden Visa</option>
             <option value="Business Visa">Business Visa</option>
             <option value="Work visa">Work Visa</option>
             <option value="Retirement">Retirement</option>
             <option value="Other Investment Opportunities">Other Investment Opportunities</option>
-        </select>
-        <select id="investment" class="investment_selector" name="investment_amount" required>
+        </select> --}}
+
+        {{-- What are you looking for? --}}
+        @include('forms.inputs.what_are_you_looking_for')
+
+
+        {{-- <select id="investment" class="investment_selector" name="investment_amount" required>
             <option selected hidden value="">How much are you willing to Invest?</option>
             <option value="50,000 - 250,000">50,000 - 250,000</option>
             <option value="250,000 - 500,000">250,000 - 500,000</option>
             <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
             <option value="None of the above">None of the above</option>
-        </select>
-        <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
-            <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
-            <h5>You have selected Work Visa.</h5>
-            Investment Visa does not offer services in regards to Work Visas.
-        </div>
+        </select> --}}
 
-        <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea>
+        {{-- Investment Amount --}}
+        @include('forms.inputs.investment_amount')
+
+        {{-- <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea> --}}
+
+        {{-- Message --}}
+        @include('forms.inputs.message')
 
         <button
             id="submitButton"
@@ -106,18 +89,24 @@
         >BOOK YOUR MEETING</button>
 
         {{-- Keep me updated Checkbox --}}
-        <div class="checkbox-wrapper">
+        {{-- <div class="checkbox-wrapper">
             <input type="hidden" name="signup" value="0" />
             <input type="checkbox" class="stylize" name="signup" value="1" id="signup3">
             <label class="keep-me-updated-form-span" for="signup3">
                 Please keep me updated on Harland and Poston Group news, events and offers.
             </label>
-        </div>
+        </div> --}}
+
+        {{-- Keep me updated Checkbox --}}
+        @include('forms.inputs.keep_me_updated_checkbox')
 
         {{-- Consent text --}}
-        <div class="consent-text">
+        {{-- <div class="consent-text">
             By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
-        </div>
+        </div> --}}
+
+        {{-- Consent text --}}
+        @include('forms.content.consent_text')
 
     </form>
 

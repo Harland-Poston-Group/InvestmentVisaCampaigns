@@ -551,7 +551,7 @@ $(document).ready(function(){
 });
 
 // Form submission
-$("#campaign-form").on("submit", function(e){
+$("#campaign-form, .generic-form-submission").on("submit", function(e){
 
     e.preventDefault();
 

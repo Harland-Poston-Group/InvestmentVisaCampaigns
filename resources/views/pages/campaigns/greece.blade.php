@@ -332,72 +332,64 @@
 
                 <div class="input-container row">
                     <div class="col-6">
-                        <label for="first_name">First Name *</label>
-                        <input type="text" name="first_name" placeholder="" required>
+                        {{-- <label for="first_name">First Name *</label> --}}
+                        <input type="text" name="first_name" placeholder="First Name *" required>
                     </div>
                     <div class="col-6">
-                        <label for="last_name">Last Name *</label>
-                        <input type="text" name="last_name" placeholder="" required>
+                        {{-- <label for="last_name">Last Name *</label> --}}
+                        <input type="text" name="last_name" placeholder="Last Name *" required>
                     </div>
                 </div>
 
                 {{-- <input type="email" name="email" placeholder="Email*" required> --}}
 
                 {{-- Email Input --}}
-                <div class="email-input-container">
-                    <label for="email_address">E-mail Address *</label>
-                    <input type="email" id="email_address" name="email_address" placeholder="" style="width:100%" required>
+                @include('forms.inputs.email')
 
-                    {{-- Zero Bounce status code --}}
-                    <span class="zerobounce-status">Invalid email</span>
+                {{-- <label for="phone_number">Phone Number *</label>
+                <input type="tel" id="phone_number" class="contact-number phone-number-extension" name="phone_number" placeholder="" style="width:100%" required> --}}
 
-                    {{-- Loading Spinning Icon --}}
-                    <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <style>
-                            .spinner_qM83{
-                                animation:spinner_8HQG 1.05s infinite
-                            }
-                            .spinner_oXPr{
-                                animation-delay:.1s
-                            }
-                            .spinner_ZTLf{
-                                animation-delay:.2s
-                            }
-                            @keyframes spinner_8HQG{0%,57.14%{animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)}28.57%{animation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)}100%{transform:translate(0)}}
-                        </style>
-                        <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
-                    </svg>
-
-                </div>
-                <label for="phone_number">Phone Number *</label>
-                <input type="tel" id="phone_number" class="contact-number phone-number-extension" name="phone_number" placeholder="" style="width:100%" required>
+                {{-- Phone Number --}}
+                @include('forms.inputs.phone_number')
 
                 <input type="hidden" name="secondary-address" class="secondary-address" value="">
 
                 {{-- What are you looking for? --}}
                 {{-- <label for="visaSelect">What are you looking for?</label> --}}
-                <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
+                {{-- <select id="visaSelect" class="what_are_you_looking_for visa-select" name="what_are_you_looking_for" required>
                     <option selected hidden value="">What are you looking for?</option>
                     <option value="Greece Golden Visa">Greece Golden Visa</option>
                     <option value="Business Visa">Business Visa</option>
                     <option value="Other Investment Opportunities">Investment Opportunities</option>
                     <option value="Retirement">Retirement</option>
                     <option value="Work visa">Work Visa</option>
-                </select>
-                <select id="investment" class="investment_selector" name="investment_amount" required>
+                </select> --}}
+
+                {{-- What are you looking for? --}}
+                @include('forms.inputs.what_are_you_looking_for')
+
+                {{-- <select id="investment" class="investment_selector" name="investment_amount" required>
                     <option selected hidden value="">How much are you willing to Invest?</option>
                     <option value="50,000 - 250,000">50,000 - 250,000</option>
                     <option value="250,000 - 500,000">250,000 - 500,000</option>
                     <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
                     <option value="None of the above">None of the above</option>
-                </select>
-                <div id="" class="alert alert-warning alert-dismissible fade work-visa-message hidden" role="alert">
-                    <a class="btn-close" data-dismiss="alert" aria-label="Close"></a>
-                    <h5>You have selected Work Visa.</h5>Investment Visa does not offer services in regards to Work Visas.
+                </select> --}}
+
+                {{-- Investment Amount --}}
+                @include('forms.inputs.investment_amount')
+
+                <div>
+                    <label for="message">Message</label>
+
+                    {{-- Message --}}
+                    @include('forms.inputs.message')
                 </div>
-                <label for="message">Message</label>
-                <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea>
-                <span class="visas-disclaimer">Investment Visa <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
+
+                {{-- <textarea name="message" placeholder="Tell us more so we can provide you with better help." required></textarea> --}}
+
+                @include('forms.content.visas-disclaimer')
+
                 <button
                     id="submitButton"
                     class="submit-button g-recaptcha"
@@ -407,18 +399,24 @@
                 >Book Your Meeting</button>
 
                 {{-- Keep me updated Checkbox --}}
-                <div class="checkbox-wrapper">
+                {{-- <div class="checkbox-wrapper">
                     <input type="hidden" name="signup" value="0" />
                     <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
                     <label class="keep-me-updated-form-span" for="signup">
                         Please keep me updated on Harland and Poston Group news, events and offers.
                     </label>
-                </div>
+                </div> --}}
+
+                {{-- Keep me updated Checkbox --}}
+                @include('forms.inputs.keep_me_updated_checkbox')
 
                 {{-- Consent text --}}
-                <div class="consent-text">
+                {{-- <div class="consent-text">
                     By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
-                </div>
+                </div> --}}
+
+                {{-- Consent text --}}
+                @include('forms.content.consent_text')
 
             </form>
 

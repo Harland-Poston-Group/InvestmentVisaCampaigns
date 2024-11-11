@@ -1601,6 +1601,16 @@ a {
     right: 0;
     z-index: 999999;
     /* Form */
+
+    @media (max-width:360px) {
+
+        #form-container-element-banner{
+            #modal-awareness-form{
+                padding: 0;
+            }
+        }
+
+    }
 }
 @media (max-width: 768px) {
     #fade-in-booking-section {
