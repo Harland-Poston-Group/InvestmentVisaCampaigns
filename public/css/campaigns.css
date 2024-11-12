@@ -320,12 +320,12 @@ a {
     font-size: 24px;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .left-title-banner .container .text-container .title {
     font-size: 40px !important;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   .left-title-banner .container .text-container .title {
     font-size: 25px;
   }
@@ -364,13 +364,13 @@ a {
   margin-bottom: 50px;
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #whats-in-it-for-you-section h2.title {
     font-size: 30px !important;
     margin-bottom: 150px !important;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #whats-in-it-for-you-section h2.title {
     /* font-size: 18px; */
     font-size: 30px;
@@ -825,12 +825,12 @@ a {
   min-height: 78vh;
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section {
     height: 360px;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section {
     height: 420px;
     min-height: 420px;
@@ -845,7 +845,7 @@ a {
     background-position: bottom;
   }
 }
-@media only screen and (max-width: 768px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 768px) and (min-width: 320px) and (max-width: 568px) {
   #take-the-opportunity-section {
     height: 790px;
     padding-top: 3rem;
@@ -898,12 +898,12 @@ a {
     top: 168% !important;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section .container .schedule-button {
     position: relative;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section .container .schedule-button {
     top: 80%;
   }
@@ -926,7 +926,7 @@ a {
     top: 0;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) {
   #take-the-opportunity-section .salesman-area-wrapper {
     right: 60px;
     top: 0;
@@ -965,12 +965,12 @@ a {
     bottom: -80px;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section .salesman-intro {
     bottom: -7%;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section .salesman-intro {
     bottom: 0;
     position: relative;
@@ -1021,12 +1021,12 @@ a {
   margin-top: 50px;
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section .cta-content {
     margin-top: 0;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section .cta-content {
     margin-top: 0;
   }
@@ -1044,12 +1044,12 @@ a {
     padding-right: 12px;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section .cta-content .title {
     font-size: 40px;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section .cta-content .title {
     font-size: 40px;
   }
@@ -1076,21 +1076,21 @@ a {
     font-size: 22px;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #take-the-opportunity-section .cta-content .subtitle {
     font-size: 22px;
     line-height: 24px;
     padding-right: 12rem;
   }
 }
-@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
   #take-the-opportunity-section .cta-content .subtitle {
     font-size: 14px;
     line-height: 22px;
     padding-right: 5rem;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) {
   #take-the-opportunity-section .cta-content .subtitle {
     padding-right: 0;
   }
@@ -1256,7 +1256,7 @@ a {
     width: 50%;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #testimonials-section-pm .testimonial-img {
     width: 230px;
   }
@@ -1769,7 +1769,7 @@ a {
     top: 15%;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) {
   #fade-in-booking-section .container .fade-in-logo {
     display: none;
   }
@@ -1827,7 +1827,7 @@ a {
     font-size: 30px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) {
   #form-container-element-banner.private-meetings-country-form {
     top: 75px;
   }
