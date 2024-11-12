@@ -91,7 +91,7 @@ body {
 
 .header {
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .container {
@@ -664,8 +664,15 @@ input#keepupdated {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 80vh; /* Adjust this as needed */
+    /* height: 80vh; */ /* Adjust this as needed */
+    height: 85vh;
     width: 100%;
+}
+
+@media (min-width:768px) {
+    .video-container {
+        min-height: 600px;
+    }
 }
 
 .top-video-block {
@@ -781,6 +788,14 @@ input#keepupdated {
     align-items: center;
     justify-content: flex-end;
 }
+
+@media (min-width:768px) and (max-width:912px) {
+    .nav-menu{
+        font-size: 15px;
+    }
+}
+
+
 .nav-menu a {
     color: #6A257A;
     text-decoration: none;
@@ -845,7 +860,8 @@ h1 {
 img.header-mask {
     width: 100%;
     position: absolute;
-    bottom: 0px;
+    /* bottom: 0px; */
+    bottom: -1px;
     z-index: 2;
     height: 100%;
 }
