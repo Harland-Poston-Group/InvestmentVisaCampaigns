@@ -366,7 +366,7 @@
                 </select> --}}
 
                 {{-- What are you looking for? --}}
-                @include('forms.inputs.what_are_you_looking_for')
+                @include('forms.inputs.what_are_you_looking_for_greece_gv_lp')
 
                 {{-- <select id="investment" class="investment_selector" name="investment_amount" required>
                     <option selected hidden value="">How much are you willing to Invest?</option>
