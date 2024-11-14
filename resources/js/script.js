@@ -411,25 +411,7 @@ $(document).ready(function() {
     // Wrap the content of .footer-iv with the new div
     // $('.footer-iv').wrapInner(newDiv);
 
-    $(".right-button-scroll").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
 
-    $(".popup-modal").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
-
-    $(".enquire-button").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
-
-    $(".meeting-button").on( "click", function(e) {
-        e.preventDefault();
-        $('#hidden-form').addClass('active');
-    });
 });
 
 $(document).ready(function(){
@@ -449,10 +431,10 @@ $(document).ready(function(){
         // Flipcard
         $('.flip-card').on('click', function(){
 
-            let content = $(this).find('.flip-card-back p').html();
+            // let content = $(this).find('.flip-card-back p').html();
 
-            console.log(content);
-            Notify(content, null, null, 'success');
+            // console.log(content);
+            // Notify(content, null, null, 'success');
 
         })
 

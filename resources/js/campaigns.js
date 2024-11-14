@@ -265,7 +265,7 @@ $(document).ready(function() {
 
     $(".side-button-link").on('click', function(){
 
-        pmFadeInSection.fadeIn(200);
+        // pmFadeInSection.fadeIn(200);
 
     });
 
@@ -333,9 +333,9 @@ if( $(".properties-slider").length ){
     var properties_slide = new Splide('.properties-slider', {
         type: 'loop',
         perPage: 3,
-        perMove: 1,
+        perMove: 3,
         gap: '50px',
-        autoplay: false,
+        autoplay: true,
         interval: 6000,
         speed: '500',
         easing: 'ease',

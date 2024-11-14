@@ -21,3 +21,31 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+$(document).ready(function() {
+
+    // const newDiv = $('<div class="col-12"></div>');
+
+    // Wrap the content of .footer-iv with the new div
+    // $('.footer-iv').wrapInner(newDiv);
+
+    $(".right-button-scroll").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
+    $(".popup-modal").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
+    $(".enquire-button").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+
+    $(".meeting-button").on( "click", function(e) {
+        e.preventDefault();
+        $('#hidden-form').addClass('active');
+    });
+});

@@ -8,7 +8,7 @@
 
     <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +55,9 @@
 
     {{-- Includes --}}
     @include('partials.scripts')
+
+    {{-- App.js --}}
+    <script src="/js/app.js" defer></script>
 
     {{-- App.css --}}
     <link rel="stylesheet" href="/css/app.css">
@@ -126,8 +129,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="form-group row">
                     <div class="col-12">
                         {{-- <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"> --}}
@@ -171,9 +172,9 @@
                     </div>
                 </div>
                 <input type="hidden" name="petname" id="petname">
-                <div class="form-group row">
+                <div class="form-group row align-center">
 
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-4">
                         {{-- Keep me updated Checkbox --}}
                         {{-- <div class="checkbox-wrapper">
                             <input type="hidden" name="signup" value="0" />
@@ -184,11 +185,11 @@
                         </div> --}}
 
                         {{-- Keep me updated Checkbox --}}
-                        @include('forms.inputs.keep_me_updated_checkbox')
+                        {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
                     </div>
 
                     {{-- Submit button --}}
-                    <div class="col-12 col-md-4 text-end">
+                    <div class="col-12 col-md-8 text-end">
                         <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Submit</button>
                     </div>
 

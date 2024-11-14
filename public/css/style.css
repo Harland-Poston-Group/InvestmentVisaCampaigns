@@ -359,15 +359,6 @@ body { background-color: #fff }
     background-color: #554c57;
     border: none;
 }
-select.form-control,
-input.form-control,
-textarea.form-control {
-    -webkit-box-shadow: inset 1px 1px 7px 0 #ccc;
-    -moz-box-shadow: inset 1px 1px 7px 0 #ccc;
-    box-shadow: inset 1px 1px 7px 0 #ccc;
-}
-
-
 
 select:-moz-focusring {
     color: transparent;
@@ -406,9 +397,9 @@ input#keepupdated {
     padding-bottom: 50px;
 }
 
-.desctext {
+/* .desctext {
     font-size: 12px;
-}
+} */
 .form-group.keep-updated label:before {
     content:'';
     -webkit-appearance: none;
@@ -437,17 +428,16 @@ input#keepupdated {
     transform: rotate(45deg);
 }
 
-#form-bt {
+/* #form-bt {
     color: #fff;
     background: #AA2159;
     font-weight: 600;
     border-radius: 20px;
     border: 2px solid #6A257A;
     padding: 4px 30px;
-    position: relative;
     top: 14px;
     float: right;
-}
+} */
 #form-bt:disabled,
 #from-bt[disabled] {
     cursor: not-allowed;
@@ -460,14 +450,14 @@ input#keepupdated {
     position: relative;
     bottom:30px ;
 }
-.form-subtitle {
+/* .form-subtitle {
     color: #6A257A;
     font-size: 18px;
     margin-bottom: 0;
     position: relative;
     bottom: 20px;
 
-}
+} */
 .button,
 .sub-btn{
     width: 100%;
@@ -787,12 +777,6 @@ input#keepupdated {
     align-self: flex-end;
     align-items: center;
     justify-content: flex-end;
-}
-
-@media (min-width:768px) and (max-width:912px) {
-    .nav-menu{
-        font-size: 15px;
-    }
 }
 
 
@@ -1393,7 +1377,8 @@ section#cards {
     /* left: 107%; */
     /* right: -50%; */
     right:-500px;
-    top: 30%;
+    /* top: 30%; */
+    top: 40px;
     transition: all 1s ease;
 }
 #hidden-form.active {
@@ -1401,7 +1386,7 @@ section#cards {
     /* transform: translate(-44%, 0);
     left: 107%; */
     right: 20px;
-    top: 30%;
+    /* top: 30%; */
     z-index: 99;
 }
 

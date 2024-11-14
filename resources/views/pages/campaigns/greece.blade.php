@@ -380,7 +380,7 @@
                 @include('forms.inputs.investment_amount')
 
                 <div>
-                    <label for="message">Message</label>
+                    {{-- <label for="message">Message</label> --}}
 
                     {{-- Message --}}
                     @include('forms.inputs.message')
@@ -408,7 +408,7 @@
                 </div> --}}
 
                 {{-- Keep me updated Checkbox --}}
-                @include('forms.inputs.keep_me_updated_checkbox')
+                {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
 
                 {{-- Consent text --}}
                 {{-- <div class="consent-text">
@@ -640,11 +640,6 @@
         </div>
     </div>
 </section>
-<style>
-    .splide__pagination {
-        display: none !important;
-    }
-</style>
 
 
 {{-- Ready To Start Your Journey --}}
@@ -779,14 +774,16 @@
 <section id="call-cta" class="container mx-0 p-0">
     <div class="row mx-0 mt-0">
         <div class="col-12 my-5">
-            <div  id="sideButton" class="col-12 IDLZ6TD8ZCE1ZKS1 right-button-scroll">
-                <a href="#" title="Let Us Help You" id="bt-let-us-help-you" class="side-button-link IDLZ6TD8ZC8ZVSS2">
+            <div  id="sideButton" class="col-12 right-button-scroll">
+                <a href="#" title="Let Us Help You" id="bt-let-us-help-you" class="side-button-link">
                     <img src="/images/Cam-CTA-146x180px.webp" alt="CTA" class="let-us-help-you-img">
-                    <span class="let-us-help-you-caption IDLZ6UMAKQLCLR20">Hi, Let us Help You</span>
+                    <span class="let-us-help-you-caption">Hi, Let us Help You</span>
                 </a>
             </div>
-            <div id="hidden-form" class="container">
-                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="IDM0XXP2SKWKUUH10">
+            <div id="hidden-form">
+
+                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form">
+
                     <a href="#" class="btn-close-form">
                         <svg class="btn-close-form" xmlns="http://www.w3.org/2000/svg" width="30.805" height="27.168" viewBox="0 0 30.805 27.168">
                             <g transform="translate(18033.465 23183.839)">
@@ -795,71 +792,73 @@
                             </g>
                         </svg>
                     </a>
+
                     {{-- <i class="far fa-times-circle"></i> --}}
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                     <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
                     <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
+
                     <div class="form-group row">
-                        <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control IDM0XXP2STIRSKF11"></div>
-                        <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control IDM0XXP2SUWIXAF12"></div>
+                        <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control"></div>
+                        <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control"></div>
                     </div>
+
                     <div class="form-group row">
-                        <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"></div>
+                        <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control"></div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control IDM0XXP2SVZXDD514"></div>
-                    </div>
+
                     <div class="form-group row">
                         <div class="col-12">
-                            <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
-                                <option selected hidden value="">What are you looking for?</option>
-                                <option value="Business Visa">Business Visa</option>
-                                <option value="Greece Golden Visa">Golden Visa</option>
-                                <option value="Other Investment Opportunities">Investment Opportunities</option>
-                                <option value="Retirement">Retirement</option>
-                                <option value="Work visa">Work Visa</option>
-                            </select>
+                            {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control"> --}}
+
+                            {{-- Email Input --}}
+                            @include('forms.inputs.email')
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control"></div>
+                    </div>
+
                     <div class="form-group row">
                         <div class="col-12">
-                            <select id="investment" class="investment_selector" name="investment_amount" required>
-                                <option selected hidden value="">How much are you willing to Invest?</option>
-                                <option value="50,000 - 250,000">50,000 - 250,000</option>
-                                <option value="250,000 - 500,000">250,000 - 500,000</option>
-                                <option value="500,000 - 1,000,000+">500,000 - 1,000,000+</option>
-                                <option value="None of the above">None of the above</option>
-                            </select>
+                            @include('forms.inputs.what_are_you_looking_for_greece_gv_lp')
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            {{-- Investment Amount --}}
+                            @include('forms.inputs.investment_amount')
                         </div>
                     </div>
 
                     <div class="form-group row mb-2">
                         <div class="col-12">
-                            <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916" required></textarea>
+                            {{-- Message --}}
+                            @include('forms.inputs.message')
                         </div>
                     </div>
-                    <input type="hidden" name="petname" id="petname">
+
+                    <input type="hidden" name="petname" id="petname"
+                    >
                     <div class="form-group row">
 
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-md-4">
                             {{-- Keep me updated Checkbox --}}
-                            <div class="checkbox-wrapper">
-                                <input type="hidden" name="signup" value="0" />
-                                <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
-                                <label class="keep-me-updated-form-span" for="signup">
-                                    Please keep me updated on Harland and Poston Group news, events and offers.
-                                </label>
-                            </div>
+                            {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
                         </div>
-                        <div class="col-12 col-md-4 text-end">
+
+                        <div class="col-12 col-md-8 text-end">
                             <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Submit</button>
                         </div>
+
                         <div class="col-12 px-3 my-2">
-                            <div class="desctext">
-                                By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
-                            </div>
+                            {{-- Consent text --}}
+                            @include('forms.content.consent_text')
                         </div>
+
                     </div>
                 </form>
             </div>

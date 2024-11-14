@@ -255,12 +255,12 @@ jQuery(document).ready(function() {
         }
     });
 
-    jQuery(".right-button-scroll").on( "click", function(e) {
-        e.preventDefault();
-        jQuery('#campaign-form').hide().addClass('move-to-right');
-        // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
-        jQuery('#campaign-form.move-to-right').show();
-    });
+    // jQuery(".right-button-scroll").on( "click", function(e) {
+    //     e.preventDefault();
+    //     jQuery('#campaign-form').hide().addClass('move-to-right');
+    //     // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
+    //     jQuery('#campaign-form.move-to-right').show();
+    // });
 });
 
 jQuery(document).ready(function(){
@@ -277,13 +277,13 @@ jQuery(document).ready(function(){
 
 
 
-        jQuery(".right-button-scroll").on( "click", function(e) {
-            e.preventDefault();
-            console.log('top');
-            jQuery('#campaign-form').hide().addClass('move-to-right');
-            // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
-            jQuery('#campaign-form.move-to-right').show();
-        });
+        // jQuery(".right-button-scroll").on( "click", function(e) {
+        //     e.preventDefault();
+        //     console.log('top');
+        //     jQuery('#campaign-form').hide().addClass('move-to-right');
+        //     // jQuery('<a href="#" class="btn-close"><i class="far fa-times-circle"></i></a>').insertBefore('#campaign-form .form-title');
+        //     jQuery('#campaign-form.move-to-right').show();
+        // });
 
 
         jQuery('body').addClass('mobile');

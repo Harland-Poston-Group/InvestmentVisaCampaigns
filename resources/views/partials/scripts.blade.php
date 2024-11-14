@@ -1,3 +1,5 @@
+@if (env('APP_ENV') == 'production')
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -43,3 +45,5 @@
         })(window,document,'script','dataLayer','GTM-N5WRRKQX');
     </script>
     <!-- End Google Tag Manager -->
+
+@endif

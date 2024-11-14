@@ -4122,6 +4122,21 @@ footer {
   font-size: 18px;
 }
 
+.align-center {
+  align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+  .nav-menu {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  header .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 #section-anchor-links-element {
   position: fixed;
   top: 0;
@@ -6483,4 +6498,100 @@ select.form-control:focus {
   .footer-pm .footer-terms-and-conditions {
     display: none;
   }
+}
+
+.page-thank-you a {
+  color: #6A257A;
+}
+
+#hidden-form {
+  position: fixed;
+  /* left: 107%; */
+  /* right: -50%; */
+  right: -500px;
+  /* top: 30%; */
+  top: 40px;
+  transition: all 1s ease;
+}
+#hidden-form form {
+  background: #EDECEA;
+}
+
+#hidden-form.active {
+  transition: all 1s ease;
+  /* transform: translate(-44%, 0);
+  left: 107%; */
+  right: 20px;
+  /* top: 30%; */
+  z-index: 99;
+}
+
+@media (max-width: 500px) {
+  #hidden-form {
+    width: 100%;
+  }
+  #hidden-form.active {
+    right: 0;
+  }
+  #hidden-form #campaign-form {
+    /* width: 100%; */
+    max-width: 95%;
+    margin: auto;
+  }
+}
+#hidden-form #campaign-form, #hidden-form #add-blog-post-form {
+  background: #EDECEA;
+  box-shadow: 0px 2px 6px #ccc;
+  position: relative;
+  border-radius: 10px;
+  padding: 60px 30px 0;
+  /* height: 527px; */
+  z-index: 4;
+  width: 415px;
+  box-shadow: 0 8px 13px #B6B6B6;
+}
+
+.form-group {
+  margin: 4px 0;
+}
+
+.form-title {
+  color: #AA2159;
+  font-weight: 800;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 30px;
+}
+
+.form-subtitle {
+  color: #6A257A;
+  font-size: 18px;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 20px;
+}
+
+#form-bt {
+  color: #fff;
+  background: #AA2159;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 2px solid #6A257A;
+  padding: 4px 30px;
+  /* position: relative; */
+  top: 14px;
+  float: right;
+}
+#form-bt:disabled, #form-bt[disabled] {
+  cursor: not-allowed;
+}
+
+.desctext {
+  font-size: 12px;
+}
+
+select.form-control,
+input.form-control,
+textarea.form-control {
+  box-shadow: inset 1px 1px 7px 0 #ccc;
 }

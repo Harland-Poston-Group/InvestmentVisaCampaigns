@@ -8,8 +8,8 @@
 /* Baby Blue Background Color used in the PM's Landing Pages */
 /* GREY TEXT */
 /* Harland & Poston Brand Blue */
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #6A257A !important;
+body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #6A257A;
 }
 
 a {
@@ -150,6 +150,7 @@ a {
   }
   #private-meetings-banner .left-title-banner {
     padding-left: 20px;
+    padding-right: 20px;
   }
 }
 #private-meetings-banner .image-slider-wrapper {
@@ -652,6 +653,13 @@ a {
   font-size: 36px;
   font-weight: 700;
   margin-top: 30px;
+}
+
+#property-slider-section .splide__pagination {
+  bottom: -2.5em;
+}
+#property-slider-section .splide__pagination__page.is-active {
+  background: #6A257A;
 }
 
 @media (max-width: 768px) {
@@ -2050,25 +2058,12 @@ body .private-meetings-form .checkbox-wrapper label:before {
   box-shadow: -1px 3px 10px #333;
 }
 
-#hidden-form {
-  position: fixed;
-  left: 107%;
-  top: 20%;
-  transition: all 1s ease;
-}
-
-#hidden-form.active {
-  transition: all 1s ease;
-  transform: translate(-44%, 0);
-  left: 107%;
-}
-
 #hidden-form #campaign-form, #hidden-form #add-blog-post-form {
   background: #EDECEA;
   box-shadow: 0px 2px 6px #ccc;
 }
 
-#campaign-form {
+.top-banner #campaign-form {
   position: relative !important;
   max-width: 90%;
   margin: 0 auto;

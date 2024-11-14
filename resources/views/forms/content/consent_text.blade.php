@@ -4,5 +4,5 @@
 </div> --}}
 <div class="consent-text desctext">
     By submitting this form, you confirm that you agree that your data will be used to contact you.
-    <a class="privacy" href="https://www.portugalhomes.com/privacy-policy" target="_blank">Read More</a>
+    <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
 </div>

@@ -57,7 +57,7 @@
 
 
         {{-- Company information --}}
-        <span class="company-info">info@portugalhomes.com | +351 213 471 803<br>
+        <span class="company-info">info@investmentvisa.com | +351 213 471 803<br>
             {{ __('content.office_address') }}<br>
             AMI 14414 | APEMIP 5940
         </span>

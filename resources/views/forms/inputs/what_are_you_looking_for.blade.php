@@ -1,5 +1,5 @@
 <select id="enquiry_subject" class="what_are_you_looking_for visa-select form-control enquiry_subject" name="what_are_you_looking_for" required>
-    <option selected hidden value="">What are you looking for? *</option>
+    <option selected disabled hidden value="">What are you looking for? *</option>
     <option value="Business Visa">Business Visa</option>
     <option value="Greece Golden Visa">Golden Visa</option>
     <option value="Other Investment Opportunities">Investment Opportunities</option>
