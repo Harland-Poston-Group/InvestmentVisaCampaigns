@@ -190,8 +190,8 @@ class Dynamics_Helper {
             $existing_message = $existing_lead['ans_message'];
 
             // Email the admin of the form submission
-            Mail::to($admin_notification_emails)
-            ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
+            // Mail::to($admin_notification_emails)
+            // ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
 
             // Get the current timestamp in desired format
             $timestamp = date('d/m/Y H:i'); // Example: 03/10/2024 08:55
@@ -209,6 +209,11 @@ class Dynamics_Helper {
             try {
                 $response = self::updateExistingLead($lead_id, $post);
                 // echo "Lead updated successfully<br>. Response: <pre>" . $response. '</pre>';
+
+                // Email the admin of the form submission
+                Mail::to($admin_notification_emails)
+                ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
+
             } catch (Exception $e) {
                 echo "Error: " . $e->getMessage();
             }
@@ -216,12 +221,12 @@ class Dynamics_Helper {
         }else{
             // Contact/Lead Creation
 
-            // Email the admin of the form submission
-            Mail::to($admin_notification_emails)
-            ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
-
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
+
+                // Email the admin of the form submission
+                Mail::to($admin_notification_emails)
+                ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
         }
 
     }
