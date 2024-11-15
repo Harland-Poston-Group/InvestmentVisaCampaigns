@@ -1,5 +1,9 @@
+
+
 <div id="hidden-form">
-    <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission modal-form">
+
+    <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form">
+
         <a href="#" class="btn-close-form">
             <svg class="btn-close-form" xmlns="http://www.w3.org/2000/svg" width="30.805" height="27.168" viewBox="0 0 30.805 27.168">
                 <g transform="translate(18033.465 23183.839)">
@@ -8,64 +12,62 @@
                 </g>
             </svg>
         </a>
+
         {{-- <i class="far fa-times-circle"></i> --}}
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <h2 data-raw-content="true" class="form-title text-center">Get Started Now</h2>
         <h4 data-raw-content="true" class="form-subtitle text-center">Find the best Investment Visa options</h4>
+
         <div class="form-group row">
             <div class="col-6"><input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control"></div>
             <div class="col-6"><input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control"></div>
         </div>
+
+        <div class="form-group row">
+            <div class="col-12"><input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control"></div>
+        </div>
+
         <div class="form-group row">
             <div class="col-12">
+                {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control"> --}}
 
                 {{-- Email Input --}}
                 @include('forms.inputs.email')
             </div>
         </div>
+
+        <div class="form-group row">
+            <div class="col-12"><input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control"></div>
+        </div>
+
         <div class="form-group row">
             <div class="col-12">
-
-                {{-- Phone Number --}}
-                @include('forms.inputs.phone_number')
-
+                @include('forms.inputs.what_are_you_looking_for_greece_gv_lp')
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-12">
-
-                {{-- What are you looking for? --}}
-                @include('forms.inputs.what_are_you_looking_for')
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-12">
-
                 {{-- Investment Amount --}}
                 @include('forms.inputs.investment_amount')
-
             </div>
         </div>
 
         <div class="form-group row mb-2">
             <div class="col-12">
-
                 {{-- Message --}}
                 @include('forms.inputs.message')
             </div>
         </div>
-        <input type="hidden" name="petname" id="petname">
+
+        <input type="hidden" name="petname" id="petname"
+        >
         <div class="form-group row">
 
             <div class="col-12 col-md-4">
-
-                <!-- Keep me updated Checkbox -->
+                {{-- Keep me updated Checkbox --}}
                 {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
-                {{-- @include('forms.content.consent_text') --}}
-
             </div>
 
             <div class="col-12 col-md-8 text-end">
@@ -73,11 +75,10 @@
             </div>
 
             <div class="col-12 px-3 my-2">
-
                 {{-- Consent text --}}
                 @include('forms.content.consent_text')
-
             </div>
+
         </div>
     </form>
 </div>
