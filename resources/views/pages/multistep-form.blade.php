@@ -64,7 +64,7 @@
                         <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
                             <h2 class="title">Find out which one of our programs<br> is the best fit for your plans</h2>
 
-                            <h4 class="subtitle">Diversify your investments, grant freedom of travel and secure<br> a plan B, in a stable economy for you and your family.</h4>
+                            <h4 class="subtitle">Diversify your investments, get freedom of travel and secure<br> a plan B in a stable economy for you and your family.</h4>
                         </div>
 
                         {{-- List of questions --}}
