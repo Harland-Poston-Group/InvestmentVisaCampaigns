@@ -2,6 +2,12 @@
 @import 'variables';
 @import 'animate.css';
 
+:root {
+    --progress-bar-color: #e0e0e0; /* Background color of the bar */
+    --progress-value-color: #6A257A; /* Color of the filled progress */
+    --progress-value: 0%; // Default progress value
+}
+
 body{
     margin: 0;
     font-family: "Inter Tight", sans-serif !important;
@@ -50,6 +56,11 @@ footer{
     .subtitle{
         font-size: 18px;
     }
+}
+
+.submit-loading-spinner{
+    display: none;
+    margin-left: 5px;
 }
 
 .align-center{
@@ -2993,4 +3004,484 @@ textarea.form-control {
     -webkit-box-shadow: inset 1px 1px 7px 0 #ccc;
     -moz-box-shadow: inset 1px 1px 7px 0 #ccc;
     box-shadow: inset 1px 1px 7px 0 #ccc;
+}
+
+
+/* Multi Step Form */
+#multistep-form-section{
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+
+    // background-image:url('/assets/img/bg/multistep.jpeg');
+    background-image:url('/assets/img/bg/multistep-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+    .background-fade{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+        // opacity: 1;
+        opacity: 0;
+        transition: 0.3s all;
+    }
+
+    .first-step,
+    .last-step,
+    .thank-you-step{
+
+        .list-wrapper{
+            z-index: 1;
+        }
+
+        .name{
+            color: white;
+        }
+
+        button.next-btn{
+            background: $beaujolais;
+
+            &:hover{
+                background: $beaujolais_hover;
+            }
+        }
+    }
+
+    .first-step{
+        .bottom-progress-wrapper{
+            justify-content: flex-end;
+        }
+    }
+    
+    .multistep-wrapper{
+        max-width:1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+    
+        #multistep-form{
+            height: 100%;
+
+            .form-inner-wrapper{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .head{
+                    padding: 1.25rem 0;
+                    padding-bottom: 2rem;
+
+                    &.logo-row{
+
+                        .head-inner-wrapper{
+                            text-align: end;
+                        }
+
+                    }
+                }
+
+                .list-wrapper{
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .col-12{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+
+    button{
+        transition: 0.2s all ease-in;
+
+        &:disabled{
+            
+            filter: brightness(0.8);
+
+            &:hover{
+                cursor: not-allowed;
+            }
+        }
+
+        &.purple-bg{
+            background: $brand_purple;
+            color: white;
+            font-weight: 400;
+            border-radius: 5px;
+            padding: 8px 30px;
+            line-height: 1.2;
+            border: unset;
+
+            &:hover{
+                background: $brand_purple_hover;
+            }
+        }
+
+        &.next-btn{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    .name{
+
+        color: $brand_purple;
+        font-weight: 600;
+
+        &.thank-you-wrapper{
+
+            .title{
+                font-size: 42px;
+                line-height: 58px;
+                margin-bottom: 35px;
+
+                @media (max-width:991px) {
+                    font-size: 38px;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 36px;
+                    line-height: 45px;
+                }
+
+                @media (max-width:500px) {
+                    font-size: 28px;
+                    line-height: 38px;
+
+                    br{
+                        display: none;
+                    }
+                }
+
+            }
+
+            .subtitle{
+                font-size: 30px;
+                font-weight: 300;
+                letter-spacing: 0.5px;
+
+                @media (max-width:991px) {
+                    font-size: 26px;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 22px;
+                }
+
+                @media (max-width:500px) {
+                    font-size: 18px;
+                    line-height: 1.4;
+
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo{
+        width: 194px;
+    }
+
+    .detail{
+        margin-bottom: 10px;
+
+        .multiple-answers-option{
+            background: white;
+            color: black;
+            font-size: 12px;
+            padding: 5px 12px;
+            border-radius: 10px;
+        }
+    }
+
+    // List of options
+    .list{
+
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 45px;
+
+        &.last-step-form-wrapper{
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+
+        @media (max-width:450px) {
+            margin-top: 30px;
+        }
+
+        // Answer Item
+        .askItem{
+            padding: .5rem;
+            flex: 0 1 50%;
+            position: relative;
+            box-sizing: border-box;
+            transition: 0.3s ease all;
+
+            input{
+                display: none;
+
+                &:checked{
+                    
+                    &  ~ .itemName{
+                        border: 1px solid $brand_purple;
+                    }
+
+                    & ~ .checkbox{
+                        background: $brand_purple;
+                    }
+                }
+            }
+
+            .itemName{
+                display: block;
+                padding: 1.15rem .85rem 1.15rem 1.25rem;
+                border-radius: 0.3rem;
+                border: 1px solid #999999;
+                transition: 0.3s ease all;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            
+            .checkbox{
+                width: 10px;
+                display:block;
+                position: absolute;
+                left: -.05rem;
+                width: 1.3rem;
+                height: 1.3rem;
+                transition: 0.3s ease all;
+                border-radius: 100%;
+
+                top: 50%;
+                transform: translateY(-50%);
+                background: #f2f4f8;
+
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 45%;
+                    height: auto;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        // v2 - José's design
+        .answer-option{
+            color: $cobblestone_black;
+            font-size: 24px;
+            width: fit-content;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            input{
+                display: none;
+            }
+
+            @media (max-width:768px) {
+                font-size: 20px;
+            }
+
+            @media (max-width:768px) {
+                font-size: 18px;
+            }
+
+            .custom-circle {
+                width: 30px;
+                height: 30px;
+                border: 2px solid $brand_purple;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: border-color 0.3s;
+                background: white;
+
+                &::after {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    transition: background-color 0.3s;
+                }
+            }
+
+            .custom-label {
+                // font-size: 16px;
+                color: #333;
+                margin-left: 6px;
+            }
+          
+            input:checked + .custom-circle {
+                border-color: #6a1b9a; // Purple border
+            }
+          
+            input:checked + .custom-circle::after {
+                background-color: #6a1b9a; // Purple inner circle
+            }
+        }
+    }
+
+    // Container of the "Next" and "Previous" buttons of the form
+    .form-step-advancement-wrapper{
+        display: flex;
+        gap: 10px;
+
+        .prev-btn{
+
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                filter: brightness(0.9);
+            }
+
+            svg{
+                transform: rotate(180deg);
+
+                path{
+                    stroke: $brand_purple;
+                }
+            }
+        }
+    }
+
+    .bottom-progress-wrapper{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        padding-bottom: 100px;
+    }
+
+    .personal-data-wrapper{
+
+        display: grid;
+        gap: 15px;
+        margin-top: 30px;
+
+        @media (max-width:768px) {
+            margin-top: unset;
+        }
+
+        .input-container{
+            display: flex;
+            gap: 6px;
+        }
+
+        .wrapper{
+            display: grid;
+            gap: 3px;
+        }
+    }
+
+
+    // Overriding the Animate.css keyframe animations to make them suitable to us
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-10%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 10%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .animate__animated{
+        animation-duration: 1s;
+    }
+
+    .progress-container{
+        width: 100%;
+
+        .progress-bar {
+            display: block;
+            width: 100%; // Full width of the container
+            height: 8px; // Thickness of the bar
+            background-color: var(--progress-bar-color);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            width: var(--progress-value); // Dynamic progress value
+            height: 100%;
+            background-color: var(--progress-value-color);
+            border-radius: 10px;
+            transition: width 0.3s ease; // Smooth progress change
+        }
+    }
+
+    #no-answer-notification{
+        background: $brand_purple;
+        padding: 5px 14px;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: fit-content;
+        border-radius: 2px;
+        display: none;
+        z-index: 3;
+        box-shadow: 0px 5px 19px 0px rgba(0,0,0,0.75);
+    }
+
+    // Country Extension Code
+    .iti__selected-flag{
+        color: $cobblestone_black;
+    }
+
+    .iti__country{
+        color: $cobblestone_black;
+    }
+
 }

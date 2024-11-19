@@ -52,7 +52,8 @@ class Dynamics_Helper {
             'ref_fraction' => 'ans_unitref',
             'company' => 'companyname',
             'position' => 'jobtitle',
-            'website_url' => 'websiteurl'
+            'website_url' => 'websiteurl',
+            'quiz_submission'   =>  'ans_quiz_submission'
         ];
 
         // Loop through field mappings and populate the $post array
@@ -161,13 +162,17 @@ class Dynamics_Helper {
         /* END OF COUNTRY DETECTION */
 
         // If it's a work visa submission - do not accept it
-        switch ( strtolower($post['ans_whatareyoulookingfortext']) ) {
-            case 'work visa':
-                return false;
-                break;
-            default:
-                # Nothing happens
-                break;
+        if( isset($post['ans_whatareyoulookingfortext']) ){
+
+            switch ( strtolower($post['ans_whatareyoulookingfortext']) ) {
+                case 'work visa':
+                    return false;
+                    break;
+                default:
+                    # Nothing happens
+                    break;
+            }
+
         }
 
 
@@ -193,17 +198,20 @@ class Dynamics_Helper {
             // Mail::to($admin_notification_emails)
             // ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
 
-            // Get the current timestamp in desired format
-            $timestamp = date('d/m/Y H:i'); // Example: 03/10/2024 08:55
+            if( isset($data['message']) ){
 
-            // Append the new message with a separator
-            $new_message = "(Last updated: $timestamp)\n" . $data['message'] . "\n";
+                // Get the current timestamp in desired format
+                $timestamp = date('d/m/Y H:i'); // Example: 03/10/2024 08:55
 
-            $combined_message = trim($new_message . $existing_message );
+                // Append the new message with a separator
+                $new_message = "(Last updated: $timestamp)\n" . $data['message'] . "\n";
 
-            // Prepare data to update Dynamics
-            $post['ans_message'] = $combined_message;
+                $combined_message = trim($new_message . $existing_message );
 
+                // Prepare data to update Dynamics
+                $post['ans_message'] = $combined_message;
+                
+            }
 
             // Update the existing lead with the new message
             try {

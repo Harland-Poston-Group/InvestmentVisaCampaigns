@@ -53,3 +53,7 @@ Route::get('/private-meetings/{country}', [App\Http\Controllers\LandingPageContr
 
 // Form Submission
 Route::post('/form-submission', [App\Http\Controllers\EnquiriesController::class, 'landing_page_enquiry'])->name('country_private_meetings');
+Route::post('/multistep-form-submission', [App\Http\Controllers\EnquiriesController::class, 'multistep_form_enquiry'])->name('multistep_form_enquiry');
+
+// Test Multistep Form LP
+Route::get('/form', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');

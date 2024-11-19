@@ -4076,6 +4076,12 @@
 /* Baby Blue Background Color used in the PM's Landing Pages */
 /* GREY TEXT */
 /* Harland & Poston Brand Blue */
+:root {
+  --progress-bar-color: #e0e0e0; /* Background color of the bar */
+  --progress-value-color: #6A257A; /* Color of the filled progress */
+  --progress-value: 0%;
+}
+
 body {
   margin: 0;
   font-family: "Inter Tight", sans-serif !important;
@@ -4120,6 +4126,11 @@ footer {
 }
 .title-subtitle .subtitle {
   font-size: 18px;
+}
+
+.submit-loading-spinner {
+  display: none;
+  margin-left: 5px;
 }
 
 .align-center {
@@ -6602,4 +6613,397 @@ select.form-control,
 input.form-control,
 textarea.form-control {
   box-shadow: inset 1px 1px 7px 0 #ccc;
+}
+
+/* Multi Step Form */
+#multistep-form-section {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-image: url("/assets/img/bg/multistep-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+#multistep-form-section .background-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s all;
+}
+#multistep-form-section .first-step .list-wrapper,
+#multistep-form-section .last-step .list-wrapper,
+#multistep-form-section .thank-you-step .list-wrapper {
+  z-index: 1;
+}
+#multistep-form-section .first-step .name,
+#multistep-form-section .last-step .name,
+#multistep-form-section .thank-you-step .name {
+  color: white;
+}
+#multistep-form-section .first-step button.next-btn,
+#multistep-form-section .last-step button.next-btn,
+#multistep-form-section .thank-you-step button.next-btn {
+  background: #AA2159;
+}
+#multistep-form-section .first-step button.next-btn:hover,
+#multistep-form-section .last-step button.next-btn:hover,
+#multistep-form-section .thank-you-step button.next-btn:hover {
+  background: #89224d;
+}
+#multistep-form-section .first-step .bottom-progress-wrapper {
+  justify-content: flex-end;
+}
+#multistep-form-section .multistep-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+#multistep-form-section .multistep-wrapper #multistep-form {
+  height: 100%;
+}
+#multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
+  padding: 1.25rem 0;
+  padding-bottom: 2rem;
+}
+#multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head.logo-row .head-inner-wrapper {
+  text-align: end;
+}
+#multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .list-wrapper {
+  flex: 1;
+}
+#multistep-form-section .col-12 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#multistep-form-section button {
+  transition: 0.2s all ease-in;
+}
+#multistep-form-section button:disabled {
+  filter: brightness(0.8);
+}
+#multistep-form-section button:disabled:hover {
+  cursor: not-allowed;
+}
+#multistep-form-section button.purple-bg {
+  background: #6A257A;
+  color: white;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 8px 30px;
+  line-height: 1.2;
+  border: unset;
+}
+#multistep-form-section button.purple-bg:hover {
+  background: #572562;
+}
+#multistep-form-section button.next-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#multistep-form-section .name {
+  color: #6A257A;
+  font-weight: 600;
+}
+#multistep-form-section .name.thank-you-wrapper .title {
+  font-size: 42px;
+  line-height: 58px;
+  margin-bottom: 35px;
+}
+@media (max-width: 991px) {
+  #multistep-form-section .name.thank-you-wrapper .title {
+    font-size: 38px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #multistep-form-section .name.thank-you-wrapper .title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 500px) {
+  #multistep-form-section .name.thank-you-wrapper .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  #multistep-form-section .name.thank-you-wrapper .title br {
+    display: none;
+  }
+}
+#multistep-form-section .name.thank-you-wrapper .subtitle {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 991px) {
+  #multistep-form-section .name.thank-you-wrapper .subtitle {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  #multistep-form-section .name.thank-you-wrapper .subtitle {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  #multistep-form-section .name.thank-you-wrapper .subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  #multistep-form-section .name.thank-you-wrapper .subtitle br {
+    display: none;
+  }
+}
+#multistep-form-section .logo {
+  width: 194px;
+}
+#multistep-form-section .detail {
+  margin-bottom: 10px;
+}
+#multistep-form-section .detail .multiple-answers-option {
+  background: white;
+  color: black;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 10px;
+}
+#multistep-form-section .list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 45px;
+}
+#multistep-form-section .list.last-step-form-wrapper {
+  justify-content: flex-end;
+  flex-direction: row;
+}
+@media (max-width: 450px) {
+  #multistep-form-section .list {
+    margin-top: 30px;
+  }
+}
+#multistep-form-section .list .askItem {
+  padding: 0.5rem;
+  flex: 0 1 50%;
+  position: relative;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+}
+#multistep-form-section .list .askItem input {
+  display: none;
+}
+#multistep-form-section .list .askItem input:checked ~ .itemName {
+  border: 1px solid #6A257A;
+}
+#multistep-form-section .list .askItem input:checked ~ .checkbox {
+  background: #6A257A;
+}
+#multistep-form-section .list .askItem .itemName {
+  display: block;
+  padding: 1.15rem 0.85rem 1.15rem 1.25rem;
+  border-radius: 0.3rem;
+  border: 1px solid #999999;
+  transition: 0.3s ease all;
+}
+#multistep-form-section .list .askItem .itemName:hover {
+  cursor: pointer;
+}
+#multistep-form-section .list .askItem .checkbox {
+  width: 10px;
+  display: block;
+  position: absolute;
+  left: -0.05rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  transition: 0.3s ease all;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f2f4f8;
+}
+#multistep-form-section .list .askItem .checkbox svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45%;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+#multistep-form-section .list .answer-option {
+  color: #25283D;
+  font-size: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#multistep-form-section .list .answer-option:hover {
+  cursor: pointer;
+}
+#multistep-form-section .list .answer-option input {
+  display: none;
+}
+@media (max-width: 768px) {
+  #multistep-form-section .list .answer-option {
+    font-size: 18px;
+  }
+}
+#multistep-form-section .list .answer-option .custom-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #6A257A;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s;
+  background: white;
+}
+#multistep-form-section .list .answer-option .custom-circle::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+#multistep-form-section .list .answer-option .custom-label {
+  color: #333;
+  margin-left: 6px;
+}
+#multistep-form-section .list .answer-option input:checked + .custom-circle {
+  border-color: #6a1b9a;
+}
+#multistep-form-section .list .answer-option input:checked + .custom-circle::after {
+  background-color: #6a1b9a;
+}
+#multistep-form-section .form-step-advancement-wrapper {
+  display: flex;
+  gap: 10px;
+}
+#multistep-form-section .form-step-advancement-wrapper .prev-btn {
+  display: flex;
+  align-items: center;
+}
+#multistep-form-section .form-step-advancement-wrapper .prev-btn:hover {
+  filter: brightness(0.9);
+}
+#multistep-form-section .form-step-advancement-wrapper .prev-btn svg {
+  transform: rotate(180deg);
+}
+#multistep-form-section .form-step-advancement-wrapper .prev-btn svg path {
+  stroke: #6A257A;
+}
+#multistep-form-section .bottom-progress-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  padding-bottom: 100px;
+}
+#multistep-form-section .personal-data-wrapper {
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  #multistep-form-section .personal-data-wrapper {
+    margin-top: unset;
+  }
+}
+#multistep-form-section .personal-data-wrapper .input-container {
+  display: flex;
+  gap: 6px;
+}
+#multistep-form-section .personal-data-wrapper .wrapper {
+  display: grid;
+  gap: 3px;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+#multistep-form-section .animate__animated {
+  animation-duration: 1s;
+}
+#multistep-form-section .progress-container {
+  width: 100%;
+}
+#multistep-form-section .progress-container .progress-bar {
+  display: block;
+  width: 100%;
+  height: 8px;
+  background-color: var(--progress-bar-color);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#multistep-form-section .progress-container .progress-bar-fill {
+  width: var(--progress-value);
+  height: 100%;
+  background-color: var(--progress-value-color);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+#multistep-form-section #no-answer-notification {
+  background: #6A257A;
+  padding: 5px 14px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2px;
+  display: none;
+  z-index: 3;
+  box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.75);
+}
+#multistep-form-section .iti__selected-flag {
+  color: #25283D;
+}
+#multistep-form-section .iti__country {
+  color: #25283D;
 }

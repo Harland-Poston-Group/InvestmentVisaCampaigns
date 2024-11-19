@@ -9,6 +9,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
 use Illuminate\Routing\Controller as BaseController;
+use App\Models\Multistep_Form;
+
 
 class LandingPageController extends BaseController
 {
@@ -248,6 +250,22 @@ class LandingPageController extends BaseController
                 'country_pm'   =>  $cities
             ]
         );
+
+    }
+
+    // Test Multistep form LP
+    public function multistep_lp_1(){
+
+        // Fetch the form using the model's method
+        $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
+
+        // dump($form);
+
+        return view('pages.multistep-form',
+        [
+            'multistep_form' => $form,
+        ]
+    );
 
     }
 
