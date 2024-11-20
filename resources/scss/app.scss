@@ -3051,13 +3051,42 @@ textarea.form-control {
             color: white;
         }
 
-        button.next-btn{
+        button.next-btn,
+        button.last-question{
             background: $beaujolais;
 
             &:hover{
                 background: $beaujolais_hover;
             }
         }
+    }
+
+    .last-step{
+        .progress-container .progress-circle-wrapper{
+            .step-count{
+                color: white;
+            }
+
+            .progress-circle{
+
+                &.active{
+                    background: $beaujolais;
+                }
+            }
+        }
+
+        .form-step-advancement-wrapper{
+            .prev-btn{
+                background: rgba(0, 0, 0, 0.2);
+                border: 1px solid $beaujolais;
+                backdrop-filter: blur(10px);
+
+                svg path{
+                    stroke: $beaujolais;
+                }
+            }
+        }
+
     }
 
     .first-step{
@@ -3084,7 +3113,7 @@ textarea.form-control {
                 flex-direction: column;
 
                 .head{
-                    padding: 1.25rem 0;
+                    padding: 2rem 0;
                     padding-bottom: 4rem;
 
                     &.logo-row{
@@ -3130,8 +3159,15 @@ textarea.form-control {
             line-height: 1.2;
             border: unset;
 
+            display: inline-flex;
+            gap: 5px;
+
             &:hover{
                 background: $brand_purple_hover;
+            }
+
+            @media (max-width:768px) {
+                padding: 8px 22px;
             }
         }
 
@@ -3225,7 +3261,8 @@ textarea.form-control {
         flex-wrap: wrap;
         box-sizing: border-box;
         flex-direction: column;
-        gap: 20px;
+        // gap: 20px;
+        gap: 28px;
         margin-top: 45px;
 
         &.last-step-form-wrapper{
@@ -3233,8 +3270,8 @@ textarea.form-control {
             flex-direction: row;
         }
 
-        @media (max-width:450px) {
-            margin-top: 30px;
+        @media (max-width:768px) {
+            margin-top: 20px;
         }
 
         // Answer Item
@@ -3361,6 +3398,10 @@ textarea.form-control {
         display: flex;
         gap: 10px;
 
+        @media (max-width:768px) {
+            gap: 5px;
+        }
+
         .prev-btn{
 
             display: flex;
@@ -3382,13 +3423,37 @@ textarea.form-control {
         }
     }
 
+    .horizontal-line{
+        // position: absolute;
+        // bottom: 0;
+        // width: 100%;
+        // height: 1px;
+        // border: 1px solid #aa2159;
+        // margin: auto;
+        background-color: $beaujolais;
+        z-index: 1;
+    }
+
     .bottom-progress-wrapper{
         display: flex;
         gap: 20px;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
-        padding-bottom: 100px;
+        margin-bottom: 80px;
+        position: relative;
+
+        @media (max-height:650px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width:768px) {
+            margin-bottom: 30px;
+        }
+
+        .next-btn{
+            position: relative;
+        }
     }
 
     .personal-data-wrapper{
@@ -3443,6 +3508,11 @@ textarea.form-control {
     .progress-container{
         width: 100%;
 
+        display: flex;
+        justify-content: space-between;
+        // gap: 30px;
+        max-width: 320px;
+
         .progress-bar {
             display: block;
             width: 100%; // Full width of the container
@@ -3460,6 +3530,38 @@ textarea.form-control {
             border-radius: 10px;
             transition: width 0.3s ease; // Smooth progress change
         }
+
+        .progress-circle-wrapper{
+
+            position: relative;
+
+            .step-count{
+                position: absolute;
+                bottom: 100%;
+                margin-bottom: 3px;
+                color: black;
+                font-weight: 600;
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+            }
+
+            .progress-circle{
+                width: 18px;
+                height: 18px;
+                background: white;
+                border-radius: 100%;
+                border: 1px solid #6A257A;
+
+                &.active{
+                    background: #6A257A;
+                }
+            }
+
+        }
+
     }
 
     #no-answer-notification{

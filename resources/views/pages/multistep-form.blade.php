@@ -24,7 +24,7 @@
         <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
         <script src="/assets/js/country-code-plugin/utils.js"></script>
         <script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
-    
+
     {{-- End of Intl Tel Input --}}
 
     {{-- Includes --}}
@@ -33,13 +33,15 @@
 </head>
 <body>
 
-    
+
     {{-- Multistep Form Progress Section --}}
     <section id="multistep-form-section">
         {{-- <div class="container"> --}}
 
             {{-- Fade Element --}}
             <div class="background-fade"></div>
+
+            <div class="place-line horizontal-line"></div>
 
             <div class="multistep-wrapper">
 
@@ -79,39 +81,30 @@
 
                         <div class="bottom-progress-wrapper col-12">
 
-                            {{-- Progress of the form's completion --}}
-                            {{-- <div class="progress-container">
-                                1/1
-
-                                <div class="progress-bar" style="--progress-value: 100%;">
-                                    <div class="progress-bar-fill"></div>
-                                </div>
-                            </div> --}}
-        
                             {{-- Edit the progress of the form by advancing in it --}}
                             <div class="form-step-advancement-wrapper">
 
                                 <button class="next-btn purple-bg">Start Golden Visa Quiz @include('partials.arrows.right_arrow')</button>
-        
+
                             </div>
-        
+
                         </div>
 
                     </div>
 
                     {{-- Iterate questions and render whole element --}}
                     @foreach ($multistep_form['questions'] as $question)
-                    
+
                         <div class="form-inner-wrapper question" data-question-id="{{ $question ['id'] }}" style="display: none;">
 
                             <div class="head logo-row">
                                 <div class="head-inner-wrapper">
-    
+
                                     {{-- Logo --}}
                                     {{-- <img src="/assets/img/logos/logo-white.svg"> --}}
                                     <img class="logo" src="/assets/img/logos/logo.png">
 
-    
+
                                 </div>
                             </div>
 
@@ -130,11 +123,11 @@
 
                                     {{-- Iterate Answers --}}
                                     @foreach ($question['answers'] as $answer)
-                                        
+
                                         {{-- <label class="askItem">
                                             <input
                                                 type="{{ $question['allows_multiple_answers'] ? 'checkbox' : 'radio' }}"
-                                                name="question_{{ $question['id'] }}[]" 
+                                                name="question_{{ $question['id'] }}[]"
                                                 value="{{ $answer['id'] }}"
                                             />
                                             <span class="itemName">{{ $answer['answer_text'] }}</span>
@@ -152,7 +145,7 @@
                                             <label class="answer-option">
                                                 <input
                                                     type="{{ $question['allows_multiple_answers'] ? 'checkbox' : 'radio' }}"
-                                                    name="question_{{ $question['id'] }}[]" 
+                                                    name="question_{{ $question['id'] }}[]"
                                                     value="{{ $answer['id'] }}"
                                                 />
                                                 <span class="custom-circle"></span>
@@ -169,25 +162,49 @@
                             <div class="bottom-progress-wrapper col-12">
 
                                 @php
-                                 
+
                                     // Adding one more item to the total number of items so that the progress bar is not full at the last question
                                     // This way, the last step of the form would be the submission itself, makes more sense in the UI
                                     $adjusted_total = $loop->count + 1;
-                                 
+
                                 @endphp
 
                                 {{-- Progress of the form's completion --}}
                                 <div class="progress-container">
-                                    {{ $loop->iteration }}/{{ $adjusted_total }}
-                                    {{-- <div class="progress-bar-container">
-                                        <progress id="progress-bar" value="0" max="100"></progress>
-                                    </div> --}}
+                                    {{-- {{ $loop->iteration }}/{{ $adjusted_total }}
 
                                     <div class="progress-bar" style="--progress-value: {{ ( ($loop->iteration / $adjusted_total) * 100 ) }}%;">
                                         <div class="progress-bar-fill"></div>
-                                    </div>
+                                    </div> --}}
+
+                                    @for ($i = 1; $i <= $adjusted_total; $i++)
+
+                                        @php
+
+                                            if( $i <= $loop->iteration ){
+                                                $active_bg = 'active';
+
+                                            }else{
+                                                $active_bg = '';
+                                            }
+
+                                            if( $i == $loop->iteration ){
+                                                $step_active = 'active';
+                                            }else{
+                                                $step_active = '';
+                                            }
+
+                                        @endphp
+
+                                        <div class="progress-circle-wrapper">
+                                            <span class="step-count {{ $step_active }}">{{ $loop->iteration }}/{{ $adjusted_total }}</span>
+                                            <div class="progress-circle {{ $active_bg }}"></div>
+                                        </div>
+
+                                    @endfor
+
                                 </div>
-            
+
                                 {{-- Edit the progress of the form by advancing in it --}}
                                 <div class="form-step-advancement-wrapper">
 
@@ -197,7 +214,7 @@
                                             @include('partials.arrows.right_arrow')
                                         </button>
                                     @endif
-            
+
                                     {{-- If this is the last question - present the submit button --}}
                                     @if( $loop->last )
                                         {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
@@ -206,9 +223,9 @@
                                     @else
                                         <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
                                     @endif
-            
+
                                 </div>
-            
+
                             </div>
 
                         </div>
@@ -262,10 +279,10 @@
                                     <div class="email-input-container">
                                         <label>Email Address*</label>
                                         <input type="email" id="email_address" name="email_address" class="form-control" placeholder="" style="width:100%" required>
-                                    
+
                                         {{-- Zero Bounce status code --}}
                                         <span class="zerobounce-status">Invalid email</span>
-                                    
+
                                         {{-- Loading Spinning Icon --}}
                                         <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <style>
@@ -282,7 +299,7 @@
                                             </style>
                                             <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
                                         </svg>
-                                    
+
                                     </div>
 
                                     {{-- Phone Number --}}
@@ -291,7 +308,7 @@
                                         <label for="phone_number">Contact Number*</label>
                                         <input type="tel" id="phone_number" class="contact-number phone-number-extension form-control" name="phone_number" placeholder="" style="width:100%" required>
                                     </div>
-                                    
+
 
                                 </div>
 
@@ -301,22 +318,36 @@
                         <div class="bottom-progress-wrapper col-12">
 
                             @php
-                             
+
                                 // Adding one more item to the total number of items so that the progress bar is not full at the last question
                                 // This way, the last step of the form would be the submission itself, makes more sense in the UI
                                 // $adjusted_total = $loop->count + 1;
-                             
+
                             @endphp
 
                             {{-- Progress of the form's completion --}}
-                            <div class="progress-container">
-                                {{ $adjusted_total }}/{{ $adjusted_total }}
+                                {{-- Progress of the form's completion --}}
+                                <div class="progress-container">
 
-                                <div class="progress-bar" style="--progress-value: 100%;">
-                                    <div class="progress-bar-fill"></div>
+                                    @for ($i = 1; $i <= $adjusted_total; $i++)
+
+                                        @php
+                                            if( $i == $adjusted_total ){
+                                                $step_active = 'active';
+                                            }else{
+                                                $step_active = '';
+                                            }
+                                        @endphp
+
+                                        <div class="progress-circle-wrapper">
+                                            <span class="step-count {{ $step_active }}">{{ $adjusted_total }}/{{ $adjusted_total }}</span>
+                                            <div class="progress-circle active"></div>
+                                        </div>
+
+                                    @endfor
+
                                 </div>
-                            </div>
-        
+
                             {{-- Edit the progress of the form by advancing in it --}}
                             <div class="form-step-advancement-wrapper">
 
@@ -326,7 +357,7 @@
                                         @include('partials.arrows.right_arrow')
                                     </button>
                                 {{-- @endif --}}
-        
+
                                 {{-- If this is the last question - present the submit button --}}
                                 {{-- @if( $loop->last ) --}}
                                     {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
@@ -335,9 +366,9 @@
                                 {{-- @else --}}
                                     {{-- <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
                                 @endif --}}
-        
+
                             </div>
-        
+
                         </div>
 
                     </div>

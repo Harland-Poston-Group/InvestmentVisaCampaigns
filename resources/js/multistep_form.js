@@ -5,6 +5,7 @@ $(document).ready(function () {
     let multistepSection = $('#multistep-form-section');
     let formLastStepSection = $('#form-last-step-section')
     let backgroundFade = $('.background-fade');
+    let horizontalLine = $('.horizontal-line');
 
     // Return to previous form question
     $("body").on("click", ".prev-btn", function (e) {
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
         // Find the current question container
         var currentQuestion = $(this).closest(".question");
-        
+
         // Check if at least one input is selected
         if ( currentQuestion.find("input:checked").length > 0 || currentQuestion.find("input").length < 1 ) {
 
@@ -54,15 +55,17 @@ $(document).ready(function () {
             if ( currentQuestion.next('.question').hasClass('last-step') ) {
 
                 backgroundFade.css({'opacity':'0'});
+                horizontalLine.css({'background':'#aa2159'});
 
             }else{
 
                 backgroundFade.css({'opacity':'1'});
+                horizontalLine.css({'background':'#6A257A'});
 
             }
 
             /* Jump to next question */
-        
+
             // Hide the current question
             currentQuestion.hide();
 
@@ -122,7 +125,7 @@ $(document).ready(function () {
 
                     // // Show the next question
                     // currentQuestion.next(".question").show();
-                    
+
                 }else{
                     console.log('error: ' + response);
                 }
@@ -149,5 +152,41 @@ $(document).ready(function () {
         });
 
     })
+
+    // Adjust vertical position of the horizontal line
+    function adjustPlaceLine() {
+        const $progressWrapper = $('.bottom-progress-wrapper:visible');
+        const $placeLine = $('.place-line');
+
+        if ($progressWrapper.length && $placeLine.length) {
+            const wrapperOffset = $progressWrapper.offset().top; // Distance from top of the document
+            const wrapperHeight = $progressWrapper.outerHeight(); // Total height of the element
+            const middlePosition = wrapperOffset + (wrapperHeight / 2); // Calculate the center point
+
+            $placeLine.css({
+                top: middlePosition + 'px', // Position it at the center of the wrapper
+                left: 0, // Adjust `left` as needed
+                width: '100%', // Adjust width as needed
+                height: '2px', // Set line thickness
+                position: 'absolute', // Ensure it's absolutely positioned
+                // backgroundColor: '#000' // Example styling
+            });
+        }
+    }
+
+
+
+    // Place the element in the same vertical line as the progress of the multistep form if it exists in the page
+    if( $('.place-line').length > 0 ){
+
+        adjustPlaceLine();
+
+        // Call on every window resize
+        $(window).on('resize', function () {
+            adjustPlaceLine();
+        });
+
+
+    }
 
 });

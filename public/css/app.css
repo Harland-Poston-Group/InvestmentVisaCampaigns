@@ -6653,14 +6653,35 @@ textarea.form-control {
   color: white;
 }
 #multistep-form-section .first-step button.next-btn,
+#multistep-form-section .first-step button.last-question,
 #multistep-form-section .last-step button.next-btn,
-#multistep-form-section .thank-you-step button.next-btn {
+#multistep-form-section .last-step button.last-question,
+#multistep-form-section .thank-you-step button.next-btn,
+#multistep-form-section .thank-you-step button.last-question {
   background: #AA2159;
 }
 #multistep-form-section .first-step button.next-btn:hover,
+#multistep-form-section .first-step button.last-question:hover,
 #multistep-form-section .last-step button.next-btn:hover,
-#multistep-form-section .thank-you-step button.next-btn:hover {
+#multistep-form-section .last-step button.last-question:hover,
+#multistep-form-section .thank-you-step button.next-btn:hover,
+#multistep-form-section .thank-you-step button.last-question:hover {
   background: #89224d;
+}
+#multistep-form-section .last-step .progress-container .progress-circle-wrapper .step-count {
+  color: white;
+}
+#multistep-form-section .last-step .progress-container .progress-circle-wrapper .progress-circle.active {
+  background: #AA2159;
+}
+#multistep-form-section .last-step .form-step-advancement-wrapper .prev-btn {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #AA2159;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#multistep-form-section .last-step .form-step-advancement-wrapper .prev-btn svg path {
+  stroke: #AA2159;
 }
 #multistep-form-section .first-step .bottom-progress-wrapper {
   justify-content: flex-end;
@@ -6683,7 +6704,7 @@ textarea.form-control {
   flex-direction: column;
 }
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
-  padding: 1.25rem 0;
+  padding: 2rem 0;
   padding-bottom: 4rem;
 }
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head.logo-row .head-inner-wrapper {
@@ -6713,9 +6734,16 @@ textarea.form-control {
   padding: 8px 30px;
   line-height: 1.2;
   border: unset;
+  display: inline-flex;
+  gap: 5px;
 }
 #multistep-form-section button.purple-bg:hover {
   background: #572562;
+}
+@media (max-width: 768px) {
+  #multistep-form-section button.purple-bg {
+    padding: 8px 22px;
+  }
 }
 #multistep-form-section button.next-btn {
   display: flex;
@@ -6796,16 +6824,16 @@ textarea.form-control {
   flex-wrap: wrap;
   box-sizing: border-box;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
   margin-top: 45px;
 }
 #multistep-form-section .list.last-step-form-wrapper {
   justify-content: flex-end;
   flex-direction: row;
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   #multistep-form-section .list {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 #multistep-form-section .list .askItem {
@@ -6905,6 +6933,11 @@ textarea.form-control {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 768px) {
+  #multistep-form-section .form-step-advancement-wrapper {
+    gap: 5px;
+  }
+}
 #multistep-form-section .form-step-advancement-wrapper .prev-btn {
   display: flex;
   align-items: center;
@@ -6920,13 +6953,31 @@ textarea.form-control {
 #multistep-form-section .form-step-advancement-wrapper .prev-btn svg path {
   stroke: #6A257A;
 }
+#multistep-form-section .horizontal-line {
+  background-color: #AA2159;
+  z-index: 1;
+}
 #multistep-form-section .bottom-progress-wrapper {
   display: flex;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  padding-bottom: 100px;
+  margin-bottom: 80px;
+  position: relative;
+}
+@media (max-height: 650px) {
+  #multistep-form-section .bottom-progress-wrapper {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #multistep-form-section .bottom-progress-wrapper {
+    margin-bottom: 30px;
+  }
+}
+#multistep-form-section .bottom-progress-wrapper .next-btn {
+  position: relative;
 }
 #multistep-form-section .personal-data-wrapper {
   display: grid;
@@ -6971,6 +7022,9 @@ textarea.form-control {
 }
 #multistep-form-section .progress-container {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
 }
 #multistep-form-section .progress-container .progress-bar {
   display: block;
@@ -6987,6 +7041,30 @@ textarea.form-control {
   background-color: var(--progress-value-color);
   border-radius: 10px;
   transition: width 0.3s ease;
+}
+#multistep-form-section .progress-container .progress-circle-wrapper {
+  position: relative;
+}
+#multistep-form-section .progress-container .progress-circle-wrapper .step-count {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 3px;
+  color: black;
+  font-weight: 600;
+  display: none;
+}
+#multistep-form-section .progress-container .progress-circle-wrapper .step-count.active {
+  display: block;
+}
+#multistep-form-section .progress-container .progress-circle-wrapper .progress-circle {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 100%;
+  border: 1px solid #6A257A;
+}
+#multistep-form-section .progress-container .progress-circle-wrapper .progress-circle.active {
+  background: #6A257A;
 }
 #multistep-form-section #no-answer-notification {
   background: #6A257A;
