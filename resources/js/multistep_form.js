@@ -118,10 +118,10 @@ $(document).ready(function () {
                     console.log('success: ' + response);
 
                     // Hide the current question
-                    currentQuestion.hide();
+                    // currentQuestion.hide();
 
-                    // Show the next question
-                    currentQuestion.next(".question").show();
+                    // // Show the next question
+                    // currentQuestion.next(".question").show();
                     
                 }else{
                     console.log('error: ' + response);
