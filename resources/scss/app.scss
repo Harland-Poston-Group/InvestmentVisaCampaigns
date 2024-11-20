@@ -3065,7 +3065,7 @@ textarea.form-control {
             justify-content: flex-end;
         }
     }
-    
+
     .multistep-wrapper{
         max-width:1200px;
         margin: auto;
@@ -3074,7 +3074,7 @@ textarea.form-control {
         height: 100vh;
         position: relative;
         z-index: 2;
-    
+
         #multistep-form{
             height: 100%;
 
@@ -3085,7 +3085,7 @@ textarea.form-control {
 
                 .head{
                     padding: 1.25rem 0;
-                    padding-bottom: 2rem;
+                    padding-bottom: 4rem;
 
                     &.logo-row{
 
@@ -3107,13 +3107,13 @@ textarea.form-control {
         padding-left: 30px;
         padding-right: 30px;
     }
-    
+
 
     button{
         transition: 0.2s all ease-in;
 
         &:disabled{
-            
+
             filter: brightness(0.8);
 
             &:hover{
@@ -3249,7 +3249,7 @@ textarea.form-control {
                 display: none;
 
                 &:checked{
-                    
+
                     &  ~ .itemName{
                         border: 1px solid $brand_purple;
                     }
@@ -3271,7 +3271,7 @@ textarea.form-control {
                     cursor: pointer;
                 }
             }
-            
+
             .checkbox{
                 width: 10px;
                 display:block;
@@ -3345,11 +3345,11 @@ textarea.form-control {
                 color: #333;
                 margin-left: 6px;
             }
-          
+
             input:checked + .custom-circle {
                 border-color: #6a1b9a; // Purple border
             }
-          
+
             input:checked + .custom-circle::after {
                 background-color: #6a1b9a; // Purple inner circle
             }
@@ -3365,6 +3365,8 @@ textarea.form-control {
 
             display: flex;
             align-items: center;
+            border: 1px solid $brand_purple;
+            border-radius: 4px;
 
             &:hover{
                 filter: brightness(0.9);

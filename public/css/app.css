@@ -6684,7 +6684,7 @@ textarea.form-control {
 }
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
   padding: 1.25rem 0;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head.logo-row .head-inner-wrapper {
   text-align: end;
@@ -6908,6 +6908,8 @@ textarea.form-control {
 #multistep-form-section .form-step-advancement-wrapper .prev-btn {
   display: flex;
   align-items: center;
+  border: 1px solid #6A257A;
+  border-radius: 4px;
 }
 #multistep-form-section .form-step-advancement-wrapper .prev-btn:hover {
   filter: brightness(0.9);
