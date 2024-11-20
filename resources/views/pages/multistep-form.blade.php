@@ -101,8 +101,8 @@
                                 <div class="head-inner-wrapper">
 
                                     {{-- Logo --}}
-                                    {{-- <img src="/assets/img/logos/logo-white.svg"> --}}
-                                    <img class="logo" src="/assets/img/logos/logo.png">
+                                    <img src="/assets/img/logos/logo-white.svg">
+                                    {{-- <img class="logo" src="/assets/img/logos/logo.png"> --}}
 
 
                                 </div>

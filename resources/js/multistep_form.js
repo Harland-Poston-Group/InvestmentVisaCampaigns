@@ -29,6 +29,15 @@ $(document).ready(function () {
 
         }
 
+        if ( currentQuestion.next('.question').hasClass('last-step') ) {
+
+            horizontalLine.css({'background':'#aa2159'});
+
+        }else{
+
+            horizontalLine.css({'background':'#6A257A'});
+        }
+
         // Hide the current question
         currentQuestion.hide();
 
