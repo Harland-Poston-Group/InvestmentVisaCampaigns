@@ -56,4 +56,4 @@ Route::post('/form-submission', [App\Http\Controllers\EnquiriesController::class
 Route::post('/multistep-form-submission', [App\Http\Controllers\EnquiriesController::class, 'multistep_form_enquiry'])->name('multistep_form_enquiry');
 
 // Test Multistep Form LP
-Route::get('/form', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');
+Route::get('/quiz', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');
