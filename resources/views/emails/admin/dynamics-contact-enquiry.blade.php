@@ -67,9 +67,9 @@
 ## Quiz Submission Details
 @foreach($maildata['quiz_submission'] as $question => $answers)
 @component('mail::panel')
-<div style="margin-bottom: 10px;">
+<div>
 <strong>Question:</strong> {!! $question !!} <br>
-<strong>Answers:</strong>
+<strong>Answer:</strong>
 <ul>
 @foreach($answers as $answer)
 <li>{!! $answer !!}</li>

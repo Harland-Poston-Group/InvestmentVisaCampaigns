@@ -250,13 +250,13 @@ class Dynamics_Helper {
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
 
-            // Web Enquiry Record creation
-            // self::createWebEnquiryRecord($post);
-
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
             ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
         }
+
+        // Web Enquiry Record creation
+        self::createWebEnquiryRecord($post);
 
     }
 
