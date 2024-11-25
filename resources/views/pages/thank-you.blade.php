@@ -42,7 +42,7 @@ https://www.googletagmanager.com/ns.html?id=GTM-N5WRRKQX"
             <div phpb-blocks-container="" id="thank-you-header" class="col-12 IDM154R9F911IC623">
                 <h1 data-raw-content="true" class="thank-you-title">Thank you for your submission!</h1>
                     <img src="/images/thank-you/IV-Logo-Color-Negat.png" alt="Investment Visa" class="logo float-end">
-                <p data-raw-content="true" class="thank-you-desc">Our team of Investment Advisors<br>shall be in touch with you shortly.</p>
+                <p data-raw-content="true" class="thank-you-desc">Our team of Investment Advisors<br> shall be in touch with you shortly.</p>
             </div><div phpb-blocks-container="" id="thank-you-menu" class="container IDM157TNB4DWLH41">
                 <div class="row">
                     <div class="col-md-4 col-12"><a href="https://www.investmentvisa.com/" target="_blank" title="Visit our website" class="IDM157TNB6LITVL2 visit-website">Visit investmentvisa.com</a></div>
