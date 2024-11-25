@@ -12,6 +12,7 @@ class Dynamics_Helper {
 
     private static $access_token;
     private static $api_url;
+    private static $web_enquiry_api_url;
     private static $client_id;
     private static $client_secret;
     private static $resource;
@@ -22,6 +23,7 @@ class Dynamics_Helper {
 
         // Define the credentials within the variables to connect to Dynamics 365
         self::$api_url = env('DYNAMICS_API_URL');
+        self::$web_enquiry_api_url = env('DYNAMICS_WEB_ENQUIRY_API_URL');
         self::$client_id = env('DYNAMICS_CLIENT_ID');
         self::$client_secret = env('DYNAMICS_CLIENT_SECRET');
         self::$token_url = env('DYNAMICS_TOKEN_URL');
@@ -175,15 +177,26 @@ class Dynamics_Helper {
 
         }
 
+        // dd($post);
 
         // Check if there's a lead with the same email in Dynamics
         $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
         // The email to where the notification of this submission should be sent to
         $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+        // $admin_notification_emails = ['antonio.lima@portugalhomes.com'];
 
         // Set timezone to Portugal
         date_default_timezone_set('Europe/Lisbon');
+
+        /* Check if there's a multistep form that has data we want to send to the enquiries email */
+
+            if( isset($submission_data['quiz_email_submission']) ){
+                // dd($submission_data['quiz_email_submission']);
+                $maildata['quiz_submission'] = $submission_data['quiz_email_submission'];
+            }
+
+        /* End of multistep check */
 
         // If there's a contact with this submission's email
         if( $existing_lead ){
@@ -210,13 +223,17 @@ class Dynamics_Helper {
 
                 // Prepare data to update Dynamics
                 $post['ans_message'] = $combined_message;
-                
+
             }
 
             // Update the existing lead with the new message
             try {
                 $response = self::updateExistingLead($lead_id, $post);
                 // echo "Lead updated successfully<br>. Response: <pre>" . $response. '</pre>';
+
+                // $post['ans_lead'] = $lead_id;
+                // // Web Enquiry Record creation
+                // self::createWebEnquiryRecord($post);
 
                 // Email the admin of the form submission
                 Mail::to($admin_notification_emails)
@@ -227,14 +244,18 @@ class Dynamics_Helper {
             }
 
         }else{
+
             // Contact/Lead Creation
 
             // Run the function that will submit the data over to Dynamics 365
             self::sendToDynamics365($post);
 
-                // Email the admin of the form submission
-                Mail::to($admin_notification_emails)
-                ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
+            // Web Enquiry Record creation
+            // self::createWebEnquiryRecord($post);
+
+            // Email the admin of the form submission
+            Mail::to($admin_notification_emails)
+            ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
         }
 
     }
@@ -357,10 +378,94 @@ class Dynamics_Helper {
         Log::info('Dynamics 365 Response: ' . print_r($response->body(), true), ['context' => 'custom-debug']);
 
         if ($response->status() !== 204) {
-            Log::error('Failed to send data to Dynamics 365: ' . $response->body(), ['context' => 'custom-debug']);
+            Log::error('Failed to create lead in Dynamics 365: ' . $response->body(), ['context' => 'custom-debug']);
             // Handle the error as needed
-            throw new \Exception('Failed to send data to Dynamics 365' . $response->body());
+            throw new \Exception('Failed to create lead in Dynamics 365' . $response->body());
         }
+    }
+
+    // Create Web Enquiry Record
+    protected static function createWebEnquiryRecord($data)
+    {
+
+        // Log access token status
+        // Log::info('Access token retrieved: ' . (self::$access_token ? 'Success' : 'Failed'), ['context' => 'custom-debug']);
+
+        /* Clean Data and convert input names for Web Enquiry field names (Thanks ANS for not keeping the same input names as in Leads) */
+
+            $web_enquiry_data = [];
+
+
+            // First Name
+            if( isset( $data['firstname'] ) ){
+                $web_enquiry_data['ans_firstname'] = $data['firstname'];
+            }
+
+            // Last Name
+            if ( isset( $data['lastname'] )){
+                $web_enquiry_data['ans_lastname'] = $data['lastname'];
+            }
+
+            // Phone Number
+            if( isset( $data['telephone1'] ) ){
+
+                if( isset($data['ans_countrycode']) && !empty($data['ans_countrycode']) ){
+                    $country_code = $data['ans_countrycode'] . ' ';
+                }else{
+                    $country_code = '';
+                }
+
+                $web_enquiry_data['ans_businessphone'] = $country_code . $data['telephone1'];
+
+            }
+
+            // Email
+            if( isset( $data['emailaddress1'] ) ){
+                $web_enquiry_data['ans_emailaddress'] = $data['emailaddress1'];
+            }
+
+            // Brand
+            if( isset( $data['ans_brand'] ) ){
+                $web_enquiry_data['ans_brand'] = $data['ans_brand'];
+            }
+
+            // First Page Seen
+            if( isset( $data['ans_firstpageseen'] ) ){
+                $web_enquiry_data['ans_firstpageseen'] = $data['ans_firstpageseen'];
+            }
+
+            // What are you looking for
+            if( isset( $data['ans_whatareyoulookingfortext'] ) ){
+                $web_enquiry_data['ans_whatareyoulookingfor'] = $data['ans_whatareyoulookingfortext'];
+            }
+
+            // Property Ref
+            if( isset( $data['ans_propertyref'] ) ){
+                $web_enquiry_data['ans_propertyref'] = $data['ans_propertyref'];
+            }
+
+            // Unit REF
+            if( isset( $data['ans_unitref'] ) ){
+                $web_enquiry_data['ans_unitref'] = $data['ans_unitref'];
+            }
+
+        /* End of input cleaning */
+
+        $response_web_enquiry = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization' => 'Bearer ' . self::$access_token,
+        ])
+        ->post(self::$web_enquiry_api_url, $web_enquiry_data);
+
+        // Log the response from Dynamics 365
+        Log::info('Dynamics 365 Response: ' . print_r($response_web_enquiry->body(), true), ['context' => 'custom-debug']);
+
+        if ($response_web_enquiry->status() !== 204) {
+            Log::error('Failed to create Web Enquiry record in Dynamics 365: ' . $response_web_enquiry->body(), ['context' => 'custom-debug']);
+            // Handle the error as needed
+            throw new \Exception('Failed to create Web Enquiry record in Dynamics 365: ' . $response_web_enquiry->body());
+        }
+
     }
 
     /**

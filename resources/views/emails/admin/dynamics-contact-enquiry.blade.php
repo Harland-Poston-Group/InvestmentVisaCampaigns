@@ -62,6 +62,24 @@
 @endisset
 </ul>
 
+{{-- In case there's a quiz submission --}}
+@isset($maildata['quiz_submission'])
+## Quiz Submission Details
+@foreach($maildata['quiz_submission'] as $question => $answers)
+@component('mail::panel')
+<div style="margin-bottom: 10px;">
+<strong>Question:</strong> {!! $question !!} <br>
+<strong>Answers:</strong>
+<ul>
+@foreach($answers as $answer)
+<li>{!! $answer !!}</li>
+@endforeach
+</ul>
+</div>
+@endcomponent
+@endforeach
+@endisset
+
 @isset( $maildata['ans_message'] )
 ## Message
 @component('mail::panel')
