@@ -6614,6 +6614,7 @@ input.form-control,
 textarea.form-control {
   border-radius: 5px;
   border: 1px solid #25283D;
+  background: #EAE0D5;
 }
 
 /* Multi Step Form */
@@ -6707,6 +6708,11 @@ textarea.form-control {
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
   padding: 2rem 0;
   padding-bottom: 4rem;
+}
+@media (max-width: 410px) {
+  #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
+    padding-bottom: 3rem;
+  }
 }
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head.logo-row .head-inner-wrapper {
   text-align: end;
@@ -6993,6 +6999,7 @@ textarea.form-control {
 #multistep-form-section .personal-data-wrapper .input-container {
   display: flex;
   gap: 6px;
+  align-items: end;
 }
 #multistep-form-section .personal-data-wrapper .wrapper {
   display: grid;
