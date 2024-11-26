@@ -274,39 +274,50 @@
 
                                     </div>
 
-                                    {{-- Email --}}
-                                    {{-- @include('forms.inputs.email') --}}
-                                    <div class="email-input-container">
-                                        <label>Email Address*</label>
-                                        <input type="email" id="email_address" name="email_address" class="form-control" placeholder="" style="width:100%" required>
+                                    <div class="input-container">
 
-                                        {{-- Zero Bounce status code --}}
-                                        <span class="zerobounce-status">Invalid email</span>
+                                        {{-- Email --}}
+                                        {{-- @include('forms.inputs.email') --}}
+                                        <div class="wrapper">
+                                            <div class="email-input-container">
+                                                <label>Email Address*</label>
+                                                <input type="email" id="email_address" name="email_address" class="form-control" placeholder="" style="width:100%" required>
 
-                                        {{-- Loading Spinning Icon --}}
-                                        <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <style>
-                                                .spinner_qM83{
-                                                    animation:spinner_8HQG 1.05s infinite
-                                                }
-                                                .spinner_oXPr{
-                                                    animation-delay:.1s
-                                                }
-                                                .spinner_ZTLf{
-                                                    animation-delay:.2s
-                                                }
-                                                @keyframes spinner_8HQG{0%,57.14%{animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)}28.57%{animation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)}100%{transform:translate(0)}}
-                                            </style>
-                                            <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
-                                        </svg>
+                                                {{-- Zero Bounce status code --}}
+                                                <span class="zerobounce-status">Invalid email</span>
+
+                                                {{-- Loading Spinning Icon --}}
+                                                <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <style>
+                                                        .spinner_qM83{
+                                                            animation:spinner_8HQG 1.05s infinite
+                                                        }
+                                                        .spinner_oXPr{
+                                                            animation-delay:.1s
+                                                        }
+                                                        .spinner_ZTLf{
+                                                            animation-delay:.2s
+                                                        }
+                                                        @keyframes spinner_8HQG{0%,57.14%{animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)}28.57%{animation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)}100%{transform:translate(0)}}
+                                                    </style>
+                                                    <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        {{-- Phone Number --}}
+                                        {{-- @include('forms.inputs.phone_number') --}}
+                                        <div class="wrapper">
+                                            <label for="phone_number">Contact Number*</label>
+                                            <input type="tel" id="phone_number" class="contact-number phone-number-extension form-control" name="phone_number" placeholder="" style="width:100%" required>
+                                        </div>
 
                                     </div>
 
-                                    {{-- Phone Number --}}
-                                    {{-- @include('forms.inputs.phone_number') --}}
                                     <div class="wrapper">
-                                        <label for="phone_number">Contact Number*</label>
-                                        <input type="tel" id="phone_number" class="contact-number phone-number-extension form-control" name="phone_number" placeholder="" style="width:100%" required>
+                                        <label for="message">Would you like to share more details with us?</label>
+                                        <textarea id="message" class="form-control" name="message"></textarea>
                                     </div>
 
 

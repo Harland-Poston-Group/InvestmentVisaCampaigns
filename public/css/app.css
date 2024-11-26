@@ -6612,7 +6612,8 @@ select.form-control:focus {
 select.form-control,
 input.form-control,
 textarea.form-control {
-  box-shadow: inset 1px 1px 7px 0 #ccc;
+  border-radius: 5px;
+  border: 1px solid #25283D;
 }
 
 /* Multi Step Form */
@@ -6996,6 +6997,7 @@ textarea.form-control {
 #multistep-form-section .personal-data-wrapper .wrapper {
   display: grid;
   gap: 3px;
+  width: 100%;
 }
 @keyframes fadeInLeft {
   from {

@@ -3001,9 +3001,12 @@ select.form-control {
 select.form-control,
 input.form-control,
 textarea.form-control {
-    -webkit-box-shadow: inset 1px 1px 7px 0 #ccc;
-    -moz-box-shadow: inset 1px 1px 7px 0 #ccc;
-    box-shadow: inset 1px 1px 7px 0 #ccc;
+    // -webkit-box-shadow: inset 1px 1px 7px 0 #ccc;
+    // -moz-box-shadow: inset 1px 1px 7px 0 #ccc;
+    // box-shadow: inset 1px 1px 7px 0 #ccc;
+    border-radius: 5px;
+    border: 1px solid $cobblestone_black;
+    background: $white_text;
 }
 
 
@@ -3115,6 +3118,10 @@ textarea.form-control {
                 .head{
                     padding: 2rem 0;
                     padding-bottom: 4rem;
+
+                    @media (max-width:410px) {
+                        padding-bottom: 3rem;
+                    }
 
                     &.logo-row{
 
@@ -3469,11 +3476,13 @@ textarea.form-control {
         .input-container{
             display: flex;
             gap: 6px;
+            align-items: end;
         }
 
         .wrapper{
             display: grid;
             gap: 3px;
+            width: 100%;
         }
     }
 
