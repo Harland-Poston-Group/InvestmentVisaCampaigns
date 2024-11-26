@@ -3123,6 +3123,10 @@ textarea.form-control {
                         padding-bottom: 3rem;
                     }
 
+                    @media (max-height:700px) {
+                        padding-bottom: 3rem;
+                    }
+
                     &.logo-row{
 
                         .head-inner-wrapper{
@@ -3279,6 +3283,10 @@ textarea.form-control {
 
         @media (max-width:768px) {
             margin-top: 20px;
+        }
+
+        @media (max-height:740px) {
+            margin-top: unset;
         }
 
         // Answer Item

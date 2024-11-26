@@ -6714,6 +6714,11 @@ textarea.form-control {
     padding-bottom: 3rem;
   }
 }
+@media (max-height: 700px) {
+  #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
+    padding-bottom: 3rem;
+  }
+}
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head.logo-row .head-inner-wrapper {
   text-align: end;
 }
@@ -6841,6 +6846,11 @@ textarea.form-control {
 @media (max-width: 768px) {
   #multistep-form-section .list {
     margin-top: 20px;
+  }
+}
+@media (max-height: 740px) {
+  #multistep-form-section .list {
+    margin-top: unset;
   }
 }
 #multistep-form-section .list .askItem {
