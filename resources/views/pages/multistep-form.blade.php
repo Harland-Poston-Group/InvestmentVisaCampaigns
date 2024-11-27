@@ -260,8 +260,8 @@
                         <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
                             <h2 class="title">Thank you for taking the quiz</h2>
 
-                            <h4 class="subtitle">Please fill in your details to finish</h4>
-                            <h4 class="subtitle">We will contact you soon to present our best options</h4>
+                            <h4 class="subtitle">Please fill in your details, and we will contact<br> you shortly to present our best options.</h4>
+                            {{-- <h4 class="subtitle">We will contact you soon to present our best options</h4> --}}
                         </div>
 
                         {{-- List of questions --}}
