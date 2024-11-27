@@ -262,10 +262,10 @@ class LandingPageController extends BaseController
         // dump($form);
 
         return view('pages.multistep-form',
-        [
-            'multistep_form' => $form,
-        ]
-    );
+            [
+                'multistep_form' => $form,
+            ]
+        );
 
     }
 
