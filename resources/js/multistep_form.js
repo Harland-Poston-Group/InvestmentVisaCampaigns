@@ -163,26 +163,47 @@ $(document).ready(function () {
     })
 
     // Adjust vertical position of the horizontal line
+    // function adjustPlaceLine() {
+    //     const $progressWrapper = $('.bottom-progress-wrapper:visible');
+    //     const $placeLine = $('.place-line');
+
+    //     if ($progressWrapper.length && $placeLine.length) {
+    //         const wrapperOffset = $progressWrapper.offset().top; // Distance from top of the document
+    //         const wrapperHeight = $progressWrapper.outerHeight(); // Total height of the element
+    //         const middlePosition = wrapperOffset + (wrapperHeight / 2); // Calculate the center point
+
+    //         $placeLine.css({
+    //             top: middlePosition + 'px', // Position it at the center of the wrapper
+    //             left: 0, // Adjust `left` as needed
+    //             width: '100%', // Adjust width as needed
+    //             height: '2px', // Set line thickness
+    //             position: 'absolute', // Ensure it's absolutely positioned
+    //             // backgroundColor: '#000' // Example styling
+    //         });
+    //     }
+    // }
     function adjustPlaceLine() {
-        const $progressWrapper = $('.bottom-progress-wrapper:visible');
-        const $placeLine = $('.place-line');
-
+        const $progressWrapper = $('.bottom-progress-wrapper:visible'); // Target wrapper
+        const $placeLine = $('.place-line'); // Line element
+    
         if ($progressWrapper.length && $placeLine.length) {
-            const wrapperOffset = $progressWrapper.offset().top; // Distance from top of the document
-            const wrapperHeight = $progressWrapper.outerHeight(); // Total height of the element
-            const middlePosition = wrapperOffset + (wrapperHeight / 2); // Calculate the center point
-
+            // Get the wrapper's position relative to its parent
+            const wrapperPosition = $progressWrapper.position().top; // Relative to #multistep-form-section
+            const wrapperHeight = $progressWrapper.outerHeight(); // Total height of the wrapper
+    
+            // Calculate the center of the wrapper
+            const middlePosition = wrapperPosition + (wrapperHeight / 2);
+    
+            // Apply styles to center the line within the wrapper
             $placeLine.css({
-                top: middlePosition + 'px', // Position it at the center of the wrapper
-                left: 0, // Adjust `left` as needed
-                width: '100%', // Adjust width as needed
-                height: '2px', // Set line thickness
-                position: 'absolute', // Ensure it's absolutely positioned
-                // backgroundColor: '#000' // Example styling
+                top: `${middlePosition}px`, // Center relative to the progress wrapper
+                left: 0, // Full width alignment
+                width: '100%', // Full width
+                height: '2px', // Thickness of the line
+                position: 'absolute', // Position within the parent
             });
         }
     }
-
 
 
     // Place the element in the same vertical line as the progress of the multistep form if it exists in the page

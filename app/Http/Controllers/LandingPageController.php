@@ -253,6 +253,20 @@ class LandingPageController extends BaseController
 
     }
 
+    // Greece GV Page Revamp
+    public function greece_gv_page()
+    {
+        // Fetch the form using the model's method
+        $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
+
+        return view('pages.campaigns.greece_gv',
+            [
+                'multistep_form' => $form,
+            ]
+        );
+
+    }
+
     // Test Multistep form LP
     public function multistep_lp_1(){
 

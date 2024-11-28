@@ -49,4 +49,5 @@
     @endif
 
     {{-- FontAwesome --}}
-    <script src="https://kit.fontawesome.com/76c891ceee.js" crossorigin="anonymous"></script>
+    {{-- <script src="https://kit.fontawesome.com/76c891ceee.js" crossorigin="anonymous"></script> --}}
+    <script src="https://kit.fontawesome.com/d1a59e9898.js" crossorigin="anonymous"></script>

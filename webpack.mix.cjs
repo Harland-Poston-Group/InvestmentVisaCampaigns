@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/residency.js', 'public/js')
     .js('resources/js/script.js', 'public/js')
     .js('resources/js/multistep_form.js', 'public/assets/js')
+    .js('resources/js/greece_gv.js', 'public/assets/js')
     .js('resources/js/notify.js', 'public/js');
 
 // Enable source maps for easier debugging (optional)

@@ -8,6 +8,39 @@ h1 {
   font-size: 55px;
 }
 
+h2 {
+  font-size: 47px;
+  line-height: 59px;
+  letter-spacing: 1.41px;
+  color: #6A257A;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 1px;
+  color: #6A257A;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: 0.84px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 20px;
+  color: #6A257A;
+}
+
+.section-inner-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 header {
   background: #6A257A;
   color: white;
@@ -26,17 +59,150 @@ header .options-wrapper {
 header .options-wrapper:hover {
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  header .options-wrapper {
+    display: none;
+  }
+}
 
 #banner-section {
   height: 95vh;
   background: brown;
   position: relative;
+  background: url("/assets/img/bg/greece-gv-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #banner-section .rollover-element {
   background: #6A257A;
   color: #F9F7F4;
   padding-bottom: 20px;
   transition: 1s ease;
+  height: 100%;
+}
+#banner-section .banner-subtitle {
+  color: #F9F7F4;
+  font-size: 28px;
+  line-height: 35px;
+  margin-top: 40px;
+  letter-spacing: 0.84px;
+  display: none;
+}
+#banner-section .animate__animated {
+  display: block;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#golden-visa-benefits .benefits-wrapper {
+  margin-top: 60px;
+}
+#golden-visa-benefits .benefits-wrapper .item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#golden-visa-benefits .benefits-wrapper img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#our-top-picks-section {
+  background: #EAEAEC;
+}
+#our-top-picks-section .top-picks-wrapper {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  #our-top-picks-section .top-picks-wrapper .row {
+    gap: 30px;
+  }
+}
+#our-top-picks-section .top-picks-wrapper .item .title {
+  background: #6A257A;
+  padding: 0 22px;
+}
+#our-top-picks-section .top-picks-wrapper .item .title h3 {
+  color: #F9F7F4;
+}
+#our-top-picks-section .top-picks-wrapper .program-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+#our-top-picks-section .top-picks-wrapper .program-details h5 {
+  font-weight: 600;
+}
+#our-top-picks-section .top-picks-wrapper img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#our-top-picks-section .top-picks-wrapper .mobile-horizontal-line {
+  display: none;
+  height: 1px;
+  background: #6A257A;
+  width: calc(100% - 30px);
+  margin: auto;
+}
+@media (max-width: 768px) {
+  #our-top-picks-section .top-picks-wrapper .mobile-horizontal-line {
+    display: block;
+  }
+}
+
+/* Multistep Form Specific Styles for Page */
+body #multistep-form-section {
+  position: relative;
+}
+body #multistep-form-section .form-step-advancement-wrapper .prev-btn {
+  background: #F9F7F4;
+  padding: 8px 10px;
+}
+body #multistep-form-section .list {
+  margin-top: unset;
+}
+body #multistep-form-section .bottom-progress-wrapper {
+  margin-bottom: 40px;
+}
+body #multistep-form-section .name {
+  padding-top: 2rem;
+  width: 80%;
+  margin-bottom: 20px;
+}
+body #multistep-form-section .multistep-wrapper {
+  height: 70vh;
+}
+body #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
+  position: absolute;
+  right: 0;
+}
+body #multistep-form-section h2 {
+  color: #F9F7F4;
+}
+
+#testimonials-gv-page-revamp-section .testimonials-wrapper {
+  margin-top: 45px;
+}
+#testimonials-gv-page-revamp-section .testimonials-wrapper .item {
+  display: grid;
+  grid-template-rows: 35px auto auto;
+}
+#testimonials-gv-page-revamp-section .testimonials-wrapper .item .client-name {
+  align-self: flex-end;
 }
 
 button {
@@ -64,6 +230,7 @@ button:hover {
   position: absolute;
   overflow: hidden;
   border-radius: 5px;
+  display: none;
 }
 .generic-form-container .input-container {
   display: flex;
@@ -121,4 +288,9 @@ button:hover {
   border: 1px solid #25283D;
   background: #F9F7F4;
   padding: 5px 10px;
+}
+
+footer {
+  background: #6A257A;
+  color: #F9F7F4;
 }
