@@ -1,4 +1,4 @@
-<select class="investment-amount form-control" name="investment_amount" required>
+<select class="investment-amount form-control" id="investment_amount" name="investment_amount" required>
     <option selected disabled hidden value="">How much are you willing to invest? *</option>
     <option value="€50k - €250k">€50k - €250k</option>
     <option value="€250k - €500k">€250k - €500k</option>

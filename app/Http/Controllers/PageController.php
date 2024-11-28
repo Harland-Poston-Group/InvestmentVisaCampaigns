@@ -21,5 +21,13 @@ class PageController extends Controller
         return view('pages.campaigns.greece');
     }
 
+    // Greece GV Page Revamp
+    public function greece_gv_page()
+    {
+
+        return view('pages.campaigns.greece_gv');
+
+    }
+
 
 }

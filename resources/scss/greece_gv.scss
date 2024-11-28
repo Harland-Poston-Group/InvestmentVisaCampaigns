@@ -1,0 +1,140 @@
+// Variables
+@import 'variables';
+
+h1{
+    letter-spacing: 1.65px;
+    font-size: 55px;
+}
+
+header{
+
+    background: $brand_purple;
+    color: white;
+
+    .header-inner-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .options-wrapper{
+        display: flex;
+        gap: 25px;
+        font-weight: 600;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+}
+
+#banner-section{
+    height: 95vh;
+    background: brown;
+    position: relative;
+
+    .rollover-element{
+        background: $brand_purple;
+        color: $plaster;
+        padding-bottom: 20px;
+        transition: 1s ease;
+    }
+}
+
+button{
+    padding: 8px 20px;
+    background: $brand_purple;
+    color: $plaster;
+    border-radius: 5px;
+    border: 1px solid $brand_purple;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    transition: 0.2s all;
+
+    &:hover{
+        background: $brand_purple_hover;
+    }
+}
+
+.generic-form-container{
+    top: 25px;
+    right: 25px;
+    width: 400px;
+    background: rgba(249, 247, 244, 0.30);
+    backdrop-filter: blur(20px);
+    padding: 20px 25px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+
+    .input-container{
+        display: flex;
+        gap: 6px;
+    }
+
+    label{
+        margin-bottom: 5px;
+    }
+
+    .button-row{
+        position: relative;
+
+        .horizontal-line{
+            position: absolute;
+            height: 1px;
+            top: 0;
+            left: -25px;
+            margin: auto;
+            bottom: 0;
+            background: $brand_purple;
+            width: calc(100% + 50px);
+        }
+
+    }
+
+    button[type=submit]{
+        display: flex;
+        justify-self: flex-end;
+        position: relative;
+    }
+
+    .consent-text{
+        display: block;
+        margin-top: 15px;
+        font-size: 13px;
+        color: $cobblestone_black;
+        opacity: 0.75;
+    }
+
+    .visas-disclaimer-revamp{
+        display: block;
+        color: $cobblestone_black;
+        opacity: 0.75;
+        font-size: 13px;
+        letter-spacing: 0.39px;
+        line-height: 16px;
+        margin: 15px 0;
+    }
+
+    .title{
+        color: $brand_purple;
+        font-weight: 400;
+        letter-spacing: 0.72px;
+        margin-bottom: 15px;
+    }
+
+    .form-row {
+        margin-bottom: 6px;
+    }
+
+    input{
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $cobblestone_black;
+        background: $plaster;
+        padding: 5px 10px;
+    }
+
+}

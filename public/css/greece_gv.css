@@ -1,0 +1,124 @@
+/* Our brand's gold color */
+/* Our brand's Purple color */
+/* Baby Blue Background Color used in the PM's Landing Pages */
+/* GREY TEXT */
+/* Harland & Poston Brand Blue */
+h1 {
+  letter-spacing: 1.65px;
+  font-size: 55px;
+}
+
+header {
+  background: #6A257A;
+  color: white;
+}
+header .header-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+header .options-wrapper {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+}
+header .options-wrapper:hover {
+  cursor: pointer;
+}
+
+#banner-section {
+  height: 95vh;
+  background: brown;
+  position: relative;
+}
+#banner-section .rollover-element {
+  background: #6A257A;
+  color: #F9F7F4;
+  padding-bottom: 20px;
+  transition: 1s ease;
+}
+
+button {
+  padding: 8px 20px;
+  background: #6A257A;
+  color: #F9F7F4;
+  border-radius: 5px;
+  border: 1px solid #6A257A;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+  transition: 0.2s all;
+}
+button:hover {
+  background: #572562;
+}
+
+.generic-form-container {
+  top: 25px;
+  right: 25px;
+  width: 400px;
+  background: rgba(249, 247, 244, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 20px 25px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.generic-form-container .input-container {
+  display: flex;
+  gap: 6px;
+}
+.generic-form-container label {
+  margin-bottom: 5px;
+}
+.generic-form-container .button-row {
+  position: relative;
+}
+.generic-form-container .button-row .horizontal-line {
+  position: absolute;
+  height: 1px;
+  top: 0;
+  left: -25px;
+  margin: auto;
+  bottom: 0;
+  background: #6A257A;
+  width: calc(100% + 50px);
+}
+.generic-form-container button[type=submit] {
+  display: flex;
+  justify-self: flex-end;
+  position: relative;
+}
+.generic-form-container .consent-text {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #25283D;
+  opacity: 0.75;
+}
+.generic-form-container .visas-disclaimer-revamp {
+  display: block;
+  color: #25283D;
+  opacity: 0.75;
+  font-size: 13px;
+  letter-spacing: 0.39px;
+  line-height: 16px;
+  margin: 15px 0;
+}
+.generic-form-container .title {
+  color: #6A257A;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  margin-bottom: 15px;
+}
+.generic-form-container .form-row {
+  margin-bottom: 6px;
+}
+.generic-form-container input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #25283D;
+  background: #F9F7F4;
+  padding: 5px 10px;
+}
