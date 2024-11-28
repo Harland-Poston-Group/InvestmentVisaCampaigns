@@ -182,6 +182,8 @@ $(document).ready(function () {
     //         });
     //     }
     // }
+
+    // Rewrote this function as this was not working when using the multistep form as a component
     function adjustPlaceLine() {
         const $progressWrapper = $('.bottom-progress-wrapper:visible'); // Target wrapper
         const $placeLine = $('.place-line'); // Line element
