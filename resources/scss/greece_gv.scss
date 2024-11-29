@@ -345,6 +345,7 @@ header{
 
             h5{
                 font-weight: 600;
+                color: $brand_purple;
             }
         }
 
@@ -381,6 +382,26 @@ body{
             }
         }
 
+        @media (max-width:576px) {
+
+            .name.thank-you-wrapper{
+
+                .title{
+                    font-size: 28px;
+                    line-height: 1.25em;
+                }
+
+                .subtitle{
+                    font-size: 18px;
+                }
+            }
+
+            .name{
+                margin-bottom: 10px;
+            }
+
+        }
+
         .form-step-advancement-wrapper .prev-btn{
             background: $plaster;
             padding: 8px 10px;
@@ -394,12 +415,26 @@ body{
 
                 .answer-option{
                     font-size: 16px;
+
+                    .custom-circle{
+                        width: 25px;
+                        height: 25px;
+
+                        &::after{
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
                 }
             }
         }
 
         .bottom-progress-wrapper{
             margin-bottom: 40px;
+
+            @media (max-width:768px) {
+                margin-bottom: 0px;
+            }
         }
 
         .name{
@@ -409,7 +444,7 @@ body{
         }
 
         .multistep-wrapper{
-            height: 70vh;
+            height: 75vh;
 
             #multistep-form .form-inner-wrapper .head {
                 position: absolute;
@@ -417,7 +452,7 @@ body{
             }
         }
 
-        h2{
+        h2,h3{
             color: $plaster;
         }
 

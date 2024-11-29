@@ -348,6 +348,7 @@ header .mobile-menu .horizontal-line {
 }
 #our-top-picks-section .top-picks-wrapper .program-details h5 {
   font-weight: 600;
+  color: #6A257A;
 }
 #our-top-picks-section .top-picks-wrapper img {
   width: 100%;
@@ -378,6 +379,18 @@ body #multistep-form-section {
     display: none;
   }
 }
+@media (max-width: 576px) {
+  body #multistep-form-section .name.thank-you-wrapper .title {
+    font-size: 28px;
+    line-height: 1.25em;
+  }
+  body #multistep-form-section .name.thank-you-wrapper .subtitle {
+    font-size: 18px;
+  }
+  body #multistep-form-section .name {
+    margin-bottom: 10px;
+  }
+}
 body #multistep-form-section .form-step-advancement-wrapper .prev-btn {
   background: #F9F7F4;
   padding: 8px 10px;
@@ -392,9 +405,22 @@ body #multistep-form-section .list {
   body #multistep-form-section .list .answer-option {
     font-size: 16px;
   }
+  body #multistep-form-section .list .answer-option .custom-circle {
+    width: 25px;
+    height: 25px;
+  }
+  body #multistep-form-section .list .answer-option .custom-circle::after {
+    width: 13px;
+    height: 13px;
+  }
 }
 body #multistep-form-section .bottom-progress-wrapper {
   margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  body #multistep-form-section .bottom-progress-wrapper {
+    margin-bottom: 0px;
+  }
 }
 body #multistep-form-section .name {
   padding-top: 2rem;
@@ -402,13 +428,13 @@ body #multistep-form-section .name {
   margin-bottom: 20px;
 }
 body #multistep-form-section .multistep-wrapper {
-  height: 70vh;
+  height: 75vh;
 }
 body #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
   position: absolute;
   right: 15px;
 }
-body #multistep-form-section h2 {
+body #multistep-form-section h2, body #multistep-form-section h3 {
   color: #F9F7F4;
 }
 body #multistep-form-section textarea {
