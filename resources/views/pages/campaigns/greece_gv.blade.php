@@ -933,10 +933,10 @@
 
                             <div class="country-list">
 
-                                <span>Portugal</span>
-                                <span>UK</span>
-                                <span>Greece</span>
-                                <span>UAE</span>
+                                <span>Portugal ·</span>
+                                <span>UK ·</span>
+                                <span>Greece ·</span>
+                                <span>UAE ·</span>
                                 <span>Hong Kong</span>
 
                             </div>
