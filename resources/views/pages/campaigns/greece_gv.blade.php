@@ -853,19 +853,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h5>
+                                <h5 class="testimonial-text">I couldn't be happier with the guidance I received from the Investment Visa team for my Golden Visa in Greece. I highly recommend them to anyone looking for a professional service.</h5>
 
-                                <span class="client-name">Mr. & Ms. Demir</span>
-
-                            </div>
-
-                            {{-- Item --}}
-                            <div class="splide__slide item">
-
-                                @include('partials.quote_marks')
-                                <h5 class="testimonial-text">20 WORDS - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h5>
-
-                                <span class="client-name">Mr. & Ms. Demir</span>
+                                <span class="client-name">Mr.Demir</span>
 
                             </div>
 
@@ -873,9 +863,19 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h5>
+                                <h5 class="testimonial-text">Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.</h5>
 
-                                <span class="client-name">Mr. & Ms. Demir</span>
+                                <span class="client-name">Mr. & Mrs. Chongrak</span>
+
+                            </div>
+
+                            {{-- Item --}}
+                            <div class="splide__slide item">
+
+                                @include('partials.quote_marks')
+                                <h5 class="testimonial-text">We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.</h5>
+
+                                <span class="client-name">Mark Steinberg</span>
 
                             </div>
 
