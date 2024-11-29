@@ -257,6 +257,12 @@ header{
         @media (min-width:768px) {
             padding-top: 60px;
         }
+
+        .banner-title h1{
+            @media (max-width:576px) {
+                font-size: 28px;
+            }
+        }
     }
 
     .banner-subtitle{

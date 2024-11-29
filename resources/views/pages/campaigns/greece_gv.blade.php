@@ -181,7 +181,7 @@
 
                 @csrf
 
-                <h4 class="title">Get Started Now</h4>
+                <h3 class="title">Get Started Now</h3>
 
                 <div class="input-container form-row">
 

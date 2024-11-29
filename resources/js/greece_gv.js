@@ -35,7 +35,8 @@ $(document).ready(function () {
         }, 1500); // Add it temporarily to the DOM
 
         // Get the natural height
-        let naturalHeight = clone.outerHeight() + 15; // Use .height() if padding/border are irrelevant
+        // let naturalHeight = clone.outerHeight() + 15; // Use .height() if padding/border are irrelevant
+        let naturalHeight = clone.outerHeight(); // Use .height() if padding/border are irrelevant
 
         // Remove the clone
         clone.remove();

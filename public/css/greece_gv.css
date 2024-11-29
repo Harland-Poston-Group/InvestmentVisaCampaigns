@@ -279,6 +279,11 @@ header .mobile-menu .horizontal-line {
     padding-top: 60px;
   }
 }
+@media (max-width: 576px) {
+  #banner-section .rollover-element .banner-title h1 {
+    font-size: 28px;
+  }
+}
 #banner-section .banner-subtitle {
   color: #F9F7F4;
   margin-top: 40px;
