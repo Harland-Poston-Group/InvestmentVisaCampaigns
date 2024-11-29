@@ -3,11 +3,15 @@ import 'animate.css';
 $(document).ready(function () {
 
     var bannerForm = $('.generic-form-container');
+    var mobileMenu = $('.mobile-menu');
+    var mobileMenuButton = $('.mobile-menu-button');
+    var mobileMenuCloseButton = $('.mobile-menu-close-button');
 
     function bannerLoadAnimation(){
 
         let bannerContent = $('.rollover-element');
         let bannerSubtitle = $('.banner-subtitle');
+        // $('html').toggleClass('no-scroll');
         // let bannerContentHeight = bannerContent.outerHeight();
 
 
@@ -25,6 +29,8 @@ $(document).ready(function () {
 
             bannerSubtitle.addClass('animate__animated animate__fadeInLeft');
             bannerForm.addClass('animate__animated animate__fadeInRight');
+            $('html').toggleClass('no-scroll');
+
 
         }, 1500); // Add it temporarily to the DOM
 
@@ -44,11 +50,15 @@ $(document).ready(function () {
 
         let bannerContent = $('.rollover-element');
         let bannerContentTop = bannerContent.offset().top;
+        let bannerContentPaddingTop = parseFloat(bannerContent.css('padding-top'));
+
+        // Add padding-top to the top offset to place the form below the padding
+        let formTopPosition = bannerContentTop + bannerContentPaddingTop;
 
 
-        bannerForm.css({'top':bannerContentTop});
+        bannerForm.css({'top':formTopPosition});
 
-        console.log(bannerContentTop);
+        // console.log(bannerContentTop);
 
     }
 
@@ -89,6 +99,30 @@ $(document).ready(function () {
 
     // Place the form in the correct top position
     formDesktopPosition();
+
+    /* MOBILE FUNCTIONS */
+
+        // Open mobile menu
+        mobileMenuButton.on('click', function(){
+
+            mobileMenu.fadeIn();
+
+            mobileMenuButton.hide();
+            mobileMenuCloseButton.show();
+
+        });
+
+        // Close mobile menu
+        mobileMenuCloseButton.on('click', function(){
+
+            mobileMenu.fadeOut();
+
+            mobileMenuCloseButton.hide();
+            mobileMenuButton.show();
+
+        });
+
+    /* END OF MOBILE FUNCTIONS */
 
     /* Banner Form Submission */
     $(".generic-form-container").on("submit", function(e){
@@ -177,5 +211,75 @@ $(document).ready(function () {
             }
         }).mount();
     }
+
+    // Slide to section
+    $('a.linkSlide').on('click',function(){
+
+
+        // event.preventDefault();
+        var target = $($.attr(this, 'href'));
+        console.log(target);
+        var fixedHeaderHeight = $('#header').outerHeight() + 20;
+        console.log(fixedHeaderHeight);
+        var offset = target.offset().top;
+        console.log(offset);
+
+        // Calculate the distance between the target and the top of the viewport
+        var distanceToTarget = offset - $(window).scrollTop();
+
+        // Check if the target is below 100vh
+        if (distanceToTarget > window.innerHeight) {
+            // If the target is below 100vh, apply the offset compensation
+            offset -= fixedHeaderHeight;
+        } else {
+            // If the target is above 100vh, apply a minimum offset of 125px
+            offset = Math.max(offset - fixedHeaderHeight, offset - 125);
+        }
+
+        // Scroll to the target item
+        $('html, body').animate({ scrollTop: offset }, 800);
+
+        // Check if the mobile menu is open, if it is, close it and re-show menu button
+        if ( mobileMenu.is(':visible') ) {
+            mobileMenu.fadeOut();
+            mobileMenuCloseButton.hide();
+            mobileMenuButton.show();
+        }
+
+
+        return false;
+    });
+
+    /* HEADER SCROLL POSITION FIXED */
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            scrollHeader()
+        };
+
+        // Get the header
+        // var header = document.getElementById("header");
+        var header = document.getElementById("header");
+        // var headerElement = document.getElementById("header");
+        // Hover menus that we want to append to the header if it is with a position:fixed
+        // var hoverMenus = document.getElementsByClassName("dropdown-menu");
+        var body = document.body;
+
+        var headerHeight = header.clientHeight;
+        // console.log(headerHeight);
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop + headerHeight;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function scrollHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                body.style.marginTop = headerHeight + "px";
+            } else {
+                header.classList.remove("sticky");
+                body.style.marginTop = '0px';
+            }
+        }
+    /* END OF HEADER SCROLL POSITION FIXED */
 
 })

@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   letter-spacing: 0.03em;
   font-size: 55px;
@@ -139,7 +143,6 @@ h4 {
 h5 {
   font-size: 20px;
   letter-spacing: 0.03em;
-  color: #6A257A;
   line-height: 1.5em;
 }
 @media ((min-width: 1201px) and (max-width: 1400px)) {
@@ -168,6 +171,11 @@ h5 {
   }
 }
 
+p {
+  line-height: 1.25em;
+  letter-spacing: 0.03em;
+}
+
 a {
   color: unset;
   text-decoration: unset;
@@ -182,12 +190,30 @@ header {
   background: #6A257A;
   color: white;
 }
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
 header .header-inner-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  padding-bottom: 60px;
+}
+header .mobile-menu-button {
+  margin: unset;
+  display: none;
+}
+@media (max-width: 768px) {
+  header .mobile-menu-button {
+    display: block;
+  }
+}
+header .mobile-menu-close-button {
+  display: none;
+  margin: unset;
 }
 header .options-wrapper {
   display: flex;
@@ -201,6 +227,26 @@ header .options-wrapper:hover {
   header .options-wrapper {
     display: none;
   }
+}
+header .mobile-menu {
+  position: absolute;
+  width: 100%;
+  background: green;
+  background: linear-gradient(180deg, rgb(106, 37, 122) 0%, rgb(106, 37, 122) 62%, rgba(106, 37, 122, 0) 100%);
+  z-index: 12;
+  height: 80vh;
+  display: none;
+}
+header .mobile-menu .options-wrapper-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+  padding-top: 50px;
+}
+header .mobile-menu .horizontal-line {
+  height: 1px;
+  background: #F9F7F4;
 }
 
 #banner-section {
@@ -227,6 +273,11 @@ header .options-wrapper:hover {
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
+}
+@media (min-width: 768px) {
+  #banner-section .rollover-element {
+    padding-top: 60px;
+  }
 }
 #banner-section .banner-subtitle {
   color: #F9F7F4;
@@ -266,6 +317,7 @@ header .options-wrapper:hover {
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 3px;
 }
 
 #our-top-picks-section {
@@ -282,6 +334,8 @@ header .options-wrapper:hover {
 #our-top-picks-section .top-picks-wrapper .item .title {
   background: #6A257A;
   padding: 0 22px;
+  color: #F9F7F4;
+  border-radius: 3px;
 }
 #our-top-picks-section .top-picks-wrapper .item .title h3 {
   color: #F9F7F4;
@@ -300,6 +354,7 @@ header .options-wrapper:hover {
   height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 3px;
 }
 #our-top-picks-section .top-picks-wrapper .mobile-horizontal-line {
   display: none;
@@ -348,6 +403,9 @@ body #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrap
 body #multistep-form-section h2 {
   color: #F9F7F4;
 }
+body #multistep-form-section textarea {
+  resize: none;
+}
 
 @media (max-width: 576px) {
   #testimonials-gv-page-revamp-section .container {
@@ -368,6 +426,10 @@ body #multistep-form-section h2 {
   #testimonials-gv-page-revamp-section .testimonials-wrapper .item {
     width: calc(50% + 50px) !important;
   }
+}
+#testimonials-gv-page-revamp-section .testimonials-wrapper .item .testimonial-text {
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 #testimonials-gv-page-revamp-section .testimonials-wrapper .item .client-name {
   align-self: flex-end;
@@ -490,6 +552,12 @@ button:hover {
   border: 1px solid #25283D;
   background: #F9F7F4;
   padding: 5px 10px;
+}
+.generic-form-container textarea::-moz-placeholder {
+  color: #25283D; /* Modern browsers */
+}
+.generic-form-container textarea::placeholder {
+  color: #25283D; /* Modern browsers */
 }
 
 footer {

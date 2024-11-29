@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-scroll" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +61,7 @@
     <body>
 
         {{-- Header --}}
-        <header>
+        <header id="header">
 
             <div class="container">
 
@@ -72,13 +72,59 @@
                         <img src="/assets/img/logos/logo-white.svg" id="header-logo">
                     </div>
 
+                    {{-- Mobile Menu Button --}}
+                    <p class="mobile-menu-button">Menu</p>
+                    <p class="mobile-menu-close-button">Close</p>
+
                     {{-- Sections Options --}}
                     <div class="options-wrapper">
 
-                        <div class="section-anchor">Benefits</div>
-                        <div class="section-anchor">Top Picks</div>
-                        <div class="section-anchor">Take a Quiz</div>
-                        <div class="section-anchor">Testimonials</div>
+                        <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
+                        <a href="#our-top-picks-section" class="section-anchor linkSlide">Top Picks</a>
+                        <a href="#multistep-form-section" class="section-anchor linkSlide">Take a Quiz</a>
+                        <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{-- Mobile Menu --}}
+            <div class="mobile-menu">
+
+
+
+                    {{-- Sections Options --}}
+                    <div class="options-wrapper-mobile">
+
+                        <div class="container">
+                            <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
+                        </div>
+
+                        {{-- Horizontal Line (separator) --}}
+                        <div class="horizontal-line"></div>
+
+                        <div class="container">
+                            <a href="#our-top-picks-section" class="section-anchor linkSlide">Top Picks</a>
+                        </div>
+
+                        {{-- Horizontal Line (separator) --}}
+                        <div class="horizontal-line"></div>
+
+                        <div class="container">
+                            <a href="#multistep-form-section" class="section-anchor linkSlide">Take a Quiz</a>
+                        </div>
+
+                        {{-- Horizontal Line (separator) --}}
+                        <div class="horizontal-line"></div>
+
+                        <div class="container">
+                            <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
+                        </div>
+
+                        {{-- Horizontal Line (separator) --}}
+                        <div class="horizontal-line"></div>
 
                     </div>
 
@@ -127,6 +173,7 @@
 
         </section>
 
+        {{-- Banner Form --}}
         <div class="container form-container-element">
 
             {{-- Revamped Form --}}
@@ -264,7 +311,7 @@
                             <img src="/assets/img/greece_gv/pool_family.png">
 
                             {{-- Title --}}
-                            <h3>Plan B Peace of Mind</h3>
+                            <h3>Plan B<br> Peace of Mind</h3>
 
                             {{-- Description --}}
                             <p>Safety and quality living, along with top-tier healthcare and education, for you and your family.</p>
@@ -305,7 +352,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h3>Greece Golden Visa</h3>
+                                <h4>Greece Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -339,7 +386,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h3>Portugal Golden Visa</h3>
+                                <h4>Portugal Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -373,7 +420,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h3>UAE Golden Visa</h3>
+                                <h4>UAE Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -806,7 +853,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h4 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h4>
+                                <h5 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h5>
 
                                 <span class="client-name">Mr. & Ms. Demir</span>
 
@@ -816,7 +863,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h4 class="testimonial-text">20 WORDS - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h4>
+                                <h5 class="testimonial-text">20 WORDS - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h5>
 
                                 <span class="client-name">Mr. & Ms. Demir</span>
 
@@ -826,7 +873,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h4 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h4>
+                                <h5 class="testimonial-text">Improved my family standing for the future with Investment Visa's advise on Greek real estate.</h5>
 
                                 <span class="client-name">Mr. & Ms. Demir</span>
 

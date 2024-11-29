@@ -5,6 +5,10 @@ body{
     overflow-x: hidden;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 h1{
     letter-spacing: 0.03em;
     font-size: 55px;
@@ -117,7 +121,7 @@ h4{
 h5{
     font-size: 20px;
     letter-spacing: 0.03em;
-    color: $brand_purple;
+    // color: $brand_purple;
     line-height: 1.5em;
 
     @media ( (min-width:1201px) and (max-width:1400px) ) {
@@ -141,6 +145,11 @@ h5{
     }
 }
 
+p{
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
+}
+
 a{
     color: unset;
     text-decoration: unset;
@@ -157,12 +166,32 @@ header{
     background: $brand_purple;
     color: white;
 
+    &.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 11;
+    }
+
     .header-inner-wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 30px 0;
-        padding-bottom: 60px;
+    }
+
+    .mobile-menu-button{
+        margin: unset;
+        display: none;
+
+        @media (max-width:768px) {
+            display: block;
+        }
+    }
+
+    .mobile-menu-close-button{
+        display: none;
+        margin: unset;
     }
 
     .options-wrapper{
@@ -179,6 +208,28 @@ header{
         }
     }
 
+    .mobile-menu{
+        position: absolute;
+        width: 100%;
+        background: green;
+        background: linear-gradient(180deg, rgba(106, 37, 122, 1) 0%, rgba(106, 37, 122, 1) 62%, rgba(106, 37, 122, 0) 100%);
+        z-index: 12;
+        height: 80vh;
+        display: none;
+
+        .options-wrapper-mobile{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: 600;
+            padding-top: 50px;
+        }
+
+        .horizontal-line{
+            height: 1px;
+            background: $plaster;
+        }
+    }
 }
 
 #banner-section{
@@ -202,6 +253,10 @@ header{
         transition: 1s ease;
         height: 100%;
         min-height: fit-content;
+
+        @media (min-width:768px) {
+            padding-top: 60px;
+        }
     }
 
     .banner-subtitle{
@@ -250,6 +305,7 @@ header{
             width: 100%;
             height: 180px;
             object-fit: cover;
+            border-radius: 3px;
         }
     }
 }
@@ -272,6 +328,8 @@ header{
             .title{
                 background: $brand_purple;
                 padding: 0 22px;
+                color: $plaster;
+                border-radius: 3px;
 
                 h3{
                     color: $plaster;
@@ -294,6 +352,7 @@ header{
             width: 100%;
             height: 240px;
             object-fit: cover;
+            border-radius: 3px;
         }
 
         .mobile-horizontal-line{
@@ -353,6 +412,10 @@ body{
         h2{
             color: $plaster;
         }
+
+        textarea{
+            resize: none;
+        }
     }
 
 }
@@ -380,6 +443,12 @@ body{
             @media (max-width:576px) {
                 // Match with the design, having one item slightly sticking into the page despite having a perPage set to 1
                 width: calc((100% / 2) + 50px) !important;
+            }
+
+
+            .testimonial-text{
+                font-weight: 400;
+                margin-bottom: 15px;
             }
 
             .client-name{
@@ -521,6 +590,12 @@ button{
         border: 1px solid $cobblestone_black;
         background: $plaster;
         padding: 5px 10px;
+    }
+
+    textarea{
+        &::placeholder {
+            color: $cobblestone_black; /* Modern browsers */
+        }
     }
 
 }
