@@ -701,6 +701,7 @@ footer .trademark {
   transition: 0.2s all;
   width: 112px;
   line-height: 1.25em;
+  display: none;
 }
 #call-cta:hover {
   cursor: pointer;
