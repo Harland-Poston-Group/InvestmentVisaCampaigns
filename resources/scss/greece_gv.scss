@@ -711,3 +711,62 @@ footer{
         font-size: 14px;
     }
 }
+
+.cta-form-container{
+    height: fit-content;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 11;
+    transition: 0.2s all;
+
+    &.hidden{
+        right: -400px;
+    }
+
+    form{
+        display: block;
+        position: unset;
+    }
+
+    .title-close-wrapper{
+        color: $brand_purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .title{
+            margin: unset;
+        }
+
+        .close-button-span{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#call-cta{
+    position: fixed;
+    right: 0;
+    top: 25%;
+    z-index: 10;
+    background: $brand_purple;
+    color: $plaster;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    transition: 0.2s all;
+    width: 112px;
+    line-height: 1.25em;
+
+    &:hover{
+        cursor: pointer;
+        background: $brand_purple_hover;
+    }
+}

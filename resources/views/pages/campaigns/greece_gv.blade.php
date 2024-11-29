@@ -134,7 +134,6 @@
 
         </header>
 
-
         {{-- Banner Section --}}
         <section id="banner-section">
 
@@ -174,7 +173,7 @@
         </section>
 
         {{-- Banner Form --}}
-        <div class="container form-container-element">
+        <div class="container form-container-element banner-form-container">
 
             {{-- Revamped Form --}}
             <form id="" class="generic-form-container">
@@ -950,6 +949,112 @@
                 </div>
             </div>
         </footer>
+
+        {{-- Call CTA --}}
+        <div id="call-cta">
+
+            <img src="/assets/img/greece_gv/sandy.png">
+
+            <span>Hi, we're glad to help you.</span>
+
+        </div>
+
+        {{-- Banner Form --}}
+        <div class="form-container-element cta-form-container hidden">
+
+            {{-- Revamped Form --}}
+            <form id="" class="generic-form-container">
+
+                @csrf
+
+                <div class="title-close-wrapper">
+                    <h3 class="title">Get Started Now</h3>
+                    <span class="close-button-span">Close</span>
+                </div>
+
+                <div class="input-container form-row">
+
+                    {{-- First Name --}}
+                    <div class="wrapper">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+
+                    {{-- Last Name --}}
+                    <div class="wrapper">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+
+                </div>
+
+                <div class="input-container form-row">
+
+                    {{-- Email --}}
+                    <div class="email-input-container">
+
+                        <label for="email_address">Email Address*</label>
+                        <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address*" style="width:100%" required>
+
+                        {{-- Zero Bounce status code --}}
+                        <span class="zerobounce-status">Invalid email</span>
+
+                        {{-- Loading Spinning Icon --}}
+                        <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <style>
+                                .spinner_qM83{
+                                    animation:spinner_8HQG 1.05s infinite
+                                }
+                                .spinner_oXPr{
+                                    animation-delay:.1s
+                                }
+                                .spinner_ZTLf{
+                                    animation-delay:.2s
+                                }
+                                @keyframes spinner_8HQG{0%,57.14%{animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)}28.57%{animation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)}100%{transform:translate(0)}}
+                            </style>
+                            <circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/>
+                        </svg>
+
+                    </div>
+
+                    {{-- Phone Number --}}
+                    <div class="wrapper">
+                        <label for="last_name">Phone*</label>
+                        @include('forms.inputs.phone_number')
+                    </div>
+
+                </div>
+
+                <div class="wrapper form-row">
+                    <label for="enquiry_subject">What are you looking for*</label>
+                    @include('forms.inputs.what_are_you_looking_for')
+                </div>
+
+                <div class="wrapper form-row">
+                    <label>How much are you willing to invest?*</label>
+                    @include('forms.inputs.investment_amount')
+                </div>
+
+                <div class="wrapper form-row">
+                    <label for="message_textarea">Message us</label>
+                    @include('forms.inputs.message')
+                </div>
+
+                <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
+
+                <div class="button-row">
+
+                    <div class="horizontal-line"></div>
+
+                    <button class="stylize" type="submit">Book Your Meeting</button>
+                </div>
+
+                <span class="consent-text">By submitting this form, you confirm that you agree that your data will be used to contact you.</span>
+
+            </form>
+
+        </div>
 
     </body>
 

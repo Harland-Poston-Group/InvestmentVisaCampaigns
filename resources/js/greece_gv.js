@@ -2,10 +2,12 @@ import 'animate.css';
 
 $(document).ready(function () {
 
-    var bannerForm = $('.generic-form-container');
+    var bannerForm = $('.banner-form-container .generic-form-container');
+    var ctaForm = $('.cta-form-container .generic-form-container');
     var mobileMenu = $('.mobile-menu');
     var mobileMenuButton = $('.mobile-menu-button');
     var mobileMenuCloseButton = $('.mobile-menu-close-button');
+    var ctaFormContainer = $('.cta-form-container');
 
     function bannerLoadAnimation(){
 
@@ -97,6 +99,7 @@ $(document).ready(function () {
 
     // Remove the form's placeholders
     removeFormPlaceholders(bannerForm);
+    removeFormPlaceholders(ctaForm);
 
     // Place the form in the correct top position
     formDesktopPosition();
@@ -282,5 +285,20 @@ $(document).ready(function () {
             }
         }
     /* END OF HEADER SCROLL POSITION FIXED */
+
+    /* CTA SIDE FORM FUNCTIONS */
+
+        // Open side form from side CTA click
+        $('#call-cta').on('click', function(){
+
+            ctaFormContainer.toggleClass('hidden');
+
+        });
+
+        $('.cta-form-container .close-button-span').on('click', function(){
+
+            ctaFormContainer.toggleClass('hidden');
+
+        })
 
 })

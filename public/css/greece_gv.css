@@ -654,3 +654,55 @@ footer .country-list {
 footer .trademark {
   font-size: 14px;
 }
+
+.cta-form-container {
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 11;
+  transition: 0.2s all;
+}
+.cta-form-container.hidden {
+  right: -400px;
+}
+.cta-form-container form {
+  display: block;
+  position: unset;
+}
+.cta-form-container .title-close-wrapper {
+  color: #6A257A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cta-form-container .title-close-wrapper .title {
+  margin: unset;
+}
+.cta-form-container .title-close-wrapper .close-button-span:hover {
+  cursor: pointer;
+}
+
+#call-cta {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 10;
+  background: #6A257A;
+  color: #F9F7F4;
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  transition: 0.2s all;
+  width: 112px;
+  line-height: 1.25em;
+}
+#call-cta:hover {
+  cursor: pointer;
+  background: #572562;
+}
