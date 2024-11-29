@@ -629,6 +629,10 @@ button{
         font-weight: 400;
         letter-spacing: 0.72px;
         margin-bottom: 15px;
+
+        @media (min-width:768px) {
+            font-size: 28px;
+        }
     }
 
     .form-row {

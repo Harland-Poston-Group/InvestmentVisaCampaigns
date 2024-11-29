@@ -586,6 +586,11 @@ button:hover {
   letter-spacing: 0.72px;
   margin-bottom: 15px;
 }
+@media (min-width: 768px) {
+  .generic-form-container .title {
+    font-size: 28px;
+  }
+}
 .generic-form-container .form-row {
   margin-bottom: 6px;
 }
