@@ -902,11 +902,11 @@
 
                             <div class="social-media-list">
 
-                                <a>Facebook</a>
-                                <a>Instagram</a>
-                                <a>YouTube</a>
-                                <a>LinkedIn</a>
-                                <a>X</a>
+                                <a href="https://www.facebook.com/hpginvestmentvisa/" target="_blank">Facebook</a>
+                                <a href="https://www.instagram.com/investment_visa/" target="_blank">Instagram</a>
+                                <a href="https://www.youtube.com/@HarlandPostonGroup" target="_blank">YouTube</a>
+                                <a href="https://pt.linkedin.com/company/investmentvisa" target="_blank">LinkedIn</a>
+                                <a href="https://x.com/investment_visa" target="_blank">X</a>
 
                             </div>
 
@@ -941,7 +941,7 @@
 
                             </div>
 
-                            <span class="trademark">2023 Investment Visa. Investment Visa is part of the Harland & Poston Group.</span>
+                            <span class="trademark">© {{ date('Y') }} Investment Visa. Investment Visa is part of the Harland & Poston Group.</span>
 
                         </div>
 
