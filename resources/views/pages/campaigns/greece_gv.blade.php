@@ -527,7 +527,7 @@
                                 </div>
 
                                 {{-- Question Title --}}
-                                <h1 class="name animate__animated animate__fadeInLeft">{{ $question['question_text'] }}</h1>
+                                <h2 class="name animate__animated animate__fadeInLeft">{{ $question['question_text'] }}</h2>
 
                                 @if( $question['allows_multiple_answers'] )
                                     <div class="detail animate__animated animate__fadeInLeft">

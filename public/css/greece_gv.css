@@ -385,6 +385,14 @@ body #multistep-form-section .form-step-advancement-wrapper .prev-btn {
 body #multistep-form-section .list {
   margin-top: unset;
 }
+@media (max-width: 576px) {
+  body #multistep-form-section .list {
+    gap: 15px;
+  }
+  body #multistep-form-section .list .answer-option {
+    font-size: 16px;
+  }
+}
 body #multistep-form-section .bottom-progress-wrapper {
   margin-bottom: 40px;
 }

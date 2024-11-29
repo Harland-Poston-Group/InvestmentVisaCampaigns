@@ -388,6 +388,14 @@ body{
 
         .list{
             margin-top: unset;
+
+            @media (max-width:576px) {
+                gap: 15px;
+
+                .answer-option{
+                    font-size: 16px;
+                }
+            }
         }
 
         .bottom-progress-wrapper{
