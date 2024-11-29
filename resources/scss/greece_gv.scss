@@ -536,7 +536,7 @@ button{
 
 .generic-form-container{
     top: 25px;
-    right: 25px;
+    // right: 25px;
     width: 360px;
     background: rgba(249, 247, 244, 0.40);
     backdrop-filter: blur(20px);
@@ -545,6 +545,14 @@ button{
     overflow: hidden;
     border-radius: 5px;
     display: none;
+
+    @media ( min-width:768px ) {
+        right: 25px;
+    }
+
+    @media ( min-width:900px ) {
+        right: 75px;
+    }
 
     @media ( max-width:768px ) {
         position: unset;
