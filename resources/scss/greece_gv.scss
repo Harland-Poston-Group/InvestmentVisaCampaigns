@@ -1,37 +1,149 @@
 // Variables
 @import 'variables';
 
+body{
+    overflow-x: hidden;
+}
+
 h1{
-    letter-spacing: 1.65px;
+    letter-spacing: 0.03em;
     font-size: 55px;
+    line-height: 1.25em;
+
+    @media ( (min-width:1201px) and (max-width:1400px) ) {
+        font-size: 50px;
+    }
+
+    @media ( (min-width:992px) and (max-width:1200px) ) {
+        font-size: 45px;
+    }
+
+    @media ( (min-width:768px) and (max-width:991px) ) {
+        font-size: 41px;
+    }
+
+    @media ( (min-width:577px) and (max-width:767px) ) {
+        font-size: 38px;
+    }
+
+    @media ( max-width:576px ) {
+        font-size: 35px;
+    }
 }
 
 h2{
     font-size: 47px;
-    line-height: 59px;
-    letter-spacing: 1.41px;
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
     color: $brand_purple;
     font-weight: 600;
+
+    @media ( (min-width:1201px) and (max-width:1400px) ) {
+        font-size: 42px;
+    }
+
+    @media ( (min-width:992px) and (max-width:1200px) ) {
+        font-size: 37px;
+    }
+
+    @media ( (min-width:768px) and (max-width:991px) ) {
+        font-size: 33px;
+    }
+
+    @media ( (min-width:577px) and (max-width:767px) ) {
+        font-size: 30px;
+    }
+
+    @media ( max-width:576px ) {
+        font-size: 28px;
+    }
 }
 
 h3{
     font-size: 33px;
     font-weight: 400;
-    line-height: 42px;
-    letter-spacing: 1px;
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
     color: $brand_purple;
+
+    @media ( (min-width:1201px) and (max-width:1400px) ) {
+        font-size: 33px;
+    }
+
+    @media ( (min-width:992px) and (max-width:1200px) ) {
+        font-size: 30px;
+    }
+
+    @media ( (min-width:768px) and (max-width:991px) ) {
+        font-size: 28px;
+    }
+
+    @media ( (min-width:577px) and (max-width:767px) ) {
+        font-size: 26px;
+    }
+
+    @media ( max-width:576px ) {
+        font-size: 24px;
+    }
 }
 
 h4{
     font-size: 28px;
-    line-height: 35px;
-    letter-spacing: 0.84px;
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
     font-weight: 400;
+
+    @media ( (min-width:1201px) and (max-width:1400px) ) {
+        font-size: 25px;
+    }
+
+    @media ( (min-width:992px) and (max-width:1200px) ) {
+        font-size: 22px;
+    }
+
+    @media ( (min-width:768px) and (max-width:991px) ) {
+        font-size: 20px;
+    }
+
+    @media ( (min-width:577px) and (max-width:767px) ) {
+        font-size: 20px;
+    }
+
+    @media ( max-width:576px ) {
+        font-size: 18px;
+    }
 }
 
 h5{
     font-size: 20px;
+    letter-spacing: 0.03em;
     color: $brand_purple;
+    line-height: 1.5em;
+
+    @media ( (min-width:1201px) and (max-width:1400px) ) {
+        font-size: 18px;
+    }
+
+    @media ( (min-width:992px) and (max-width:1200px) ) {
+        font-size: 18px;
+    }
+
+    @media ( (min-width:768px) and (max-width:991px) ) {
+        font-size: 18px;
+    }
+
+    @media ( (min-width:577px) and (max-width:767px) ) {
+        font-size: 18px;
+    }
+
+    @media ( max-width:576px ) {
+        font-size: 18px;
+    }
+}
+
+a{
+    color: unset;
+    text-decoration: unset;
 }
 
 
@@ -50,6 +162,7 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 30px 0;
+        padding-bottom: 60px;
     }
 
     .options-wrapper{
@@ -76,6 +189,11 @@ header{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: fit-content;
+
+    @media (max-width:768px) {
+        height: 70vh;
+    }
 
     .rollover-element{
         background: $brand_purple;
@@ -83,15 +201,21 @@ header{
         padding-bottom: 20px;
         transition: 1s ease;
         height: 100%;
+        min-height: fit-content;
     }
 
     .banner-subtitle{
         color: $plaster;
-        font-size: 28px;
-        line-height: 35px;
+        // font-size: 28px;
+        // line-height: 35px;
         margin-top: 40px;
-        letter-spacing: 0.84px;
+        // letter-spacing: 0.84px;
         display: none;
+        text-shadow: 0px 2px 9px rgba(0,0,0,0.75);
+
+        @media (max-width:768px){
+            padding-bottom: 40px;
+        }
     }
 
     .animate__animated{
@@ -148,7 +272,7 @@ header{
             .title{
                 background: $brand_purple;
                 padding: 0 22px;
-                
+
                 h3{
                     color: $plaster;
                 }
@@ -192,6 +316,12 @@ body{
     #multistep-form-section{
         position: relative;
 
+        .head-inner-wrapper{
+            @media (max-width:768px) {
+                display: none;
+            }
+        }
+
         .form-step-advancement-wrapper .prev-btn{
             background: $plaster;
             padding: 8px 10px;
@@ -216,7 +346,7 @@ body{
 
             #multistep-form .form-inner-wrapper .head {
                 position: absolute;
-                right: 0;
+                right: 15px;
             }
         }
 
@@ -229,15 +359,28 @@ body{
 
 #testimonials-gv-page-revamp-section{
 
+    .container{
+
+        @media (max-width:576px) {
+            padding-right: unset;
+
+            .title{
+                padding-right: 15px;
+            }
+        }
+    }
+
     .testimonials-wrapper{
         margin-top: 45px;
 
         .item{
-            // display: flex;
-            // flex-direction: column;
             display: grid;
             grid-template-rows: 35px auto auto;
-            // justify-content: space-between;
+
+            @media (max-width:576px) {
+                // Match with the design, having one item slightly sticking into the page despite having a perPage set to 1
+                width: calc((100% / 2) + 50px) !important;
+            }
 
             .client-name{
                 align-self: flex-end;
@@ -261,17 +404,45 @@ button{
     }
 }
 
+.banner-column{
+    @media (max-width:991px) {
+        width: 50%;
+    }
+
+    @media (max-width:768px) {
+        width: 100%;
+    }
+}
+
+.form-container-element{
+    @media (max-width:768px) {
+        width: 100%;
+        max-width: unset;
+        padding: unset;
+    }
+}
+
 .generic-form-container{
     top: 25px;
     right: 25px;
-    width: 400px;
-    background: rgba(249, 247, 244, 0.30);
+    width: 360px;
+    background: rgba(249, 247, 244, 0.40);
     backdrop-filter: blur(20px);
-    padding: 20px 25px;
+    padding: 20px 20px;
     position: absolute;
     overflow: hidden;
     border-radius: 5px;
     display: none;
+
+    @media ( max-width:768px ) {
+        position: unset;
+        width: 100%;
+        background: #EAEAEC;
+    }
+
+    &.animate__animated{
+        display: block;
+    }
 
     .input-container{
         display: flex;
@@ -298,10 +469,21 @@ button{
 
     }
 
+    .wrapper,
+    .email-input-container{
+        width: 100%;
+    }
+
     button[type=submit]{
         display: flex;
         justify-self: flex-end;
         position: relative;
+
+        &:disabled,
+        &[disabled] {
+            cursor: not-allowed;
+            filter: grayscale(0.5);
+        }
     }
 
     .consent-text{
@@ -346,4 +528,49 @@ button{
 footer{
     background: $brand_purple;
     color: $plaster;
+
+    .row{
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .social-media-list{
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-column{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    h5{
+        color: $plaster;
+        font-size: 30px;
+        margin: unset;
+    }
+
+    .terms-privacy-wrapper{
+        display: flex;
+        gap: 10px;
+    }
+
+    .vertical-separator{
+        background: white;
+        width: 1px;
+    }
+
+    .footer-email{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .country-list{
+        font-size: 14px;
+    }
+
+    .trademark{
+        font-size: 14px;
+    }
 }
