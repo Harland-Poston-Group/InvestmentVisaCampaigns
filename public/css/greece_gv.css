@@ -3,6 +3,10 @@
 /* Baby Blue Background Color used in the PM's Landing Pages */
 /* GREY TEXT */
 /* Harland & Poston Brand Blue */
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -770,5 +774,10 @@ footer .trademark {
   }
   .call-cta-wrapper #call-cta span {
     padding: 10px 12px;
+  }
+}
+@media (max-width: 420px) {
+  .call-cta-wrapper #call-cta {
+    right: 30px;
   }
 }

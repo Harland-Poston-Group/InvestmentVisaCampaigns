@@ -1,6 +1,10 @@
 // Variables
 @import 'variables';
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     overflow-x: hidden;
 }
@@ -850,6 +854,10 @@ footer{
             span{
                 padding: 10px 12px;
             }
+        }
+
+        @media (max-width:420px) {
+            right: 30px;
         }
     }
 
