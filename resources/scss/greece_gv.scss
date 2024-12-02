@@ -802,6 +802,7 @@ footer{
         background: rgba(234, 234, 236, 0.5);
         bottom: 0;
         backdrop-filter: blur(3px);
+        z-index: 2;
 
         .horizontal-line{
             position: absolute;
