@@ -356,6 +356,35 @@ jQuery(function() {
         alignHorizontalLine();
         $(window).on('resize', alignHorizontalLine);
 
+        $(window).on('click', function (e) {
+            const element = $('.form-container-element.cta-form-container');
+
+            // Check if the element is visible and within the viewport
+            if (element.is(':visible') && isElementInViewport(element)) {
+                // Check if the click was outside the element
+                if (!$(e.target).closest('.form-container-element.cta-form-container form').length) {
+
+                    // If in desktop
+                    if( !isMobile() ){
+                        // Add the 'hidden' class
+                        element.addClass('hidden');
+                    }
+
+                }
+            }
+        });
+
+        // Helper function to check if an element is within the viewport
+        function isElementInViewport(el) {
+            const rect = el[0].getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
         // Check if the user is in a mobile screen
         function isMobile(){
 
