@@ -497,10 +497,13 @@ button:hover {
   .banner-column {
     width: 100%;
   }
-  .form-container-element {
+  .form-container-element.banner-form-container {
     width: 100%;
     max-width: unset;
     padding: unset;
+  }
+  .banner-form-container .generic-form-container {
+    width: 100%;
   }
 }
 
@@ -530,7 +533,6 @@ button:hover {
 @media (max-width: 768px) {
   .generic-form-container {
     position: unset;
-    width: 100%;
     background: #EAEAEC;
   }
 }
@@ -659,7 +661,9 @@ footer .trademark {
   height: -moz-fit-content;
   height: fit-content;
   position: fixed;
-  top: 25%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   right: 0;
   z-index: 11;
   transition: 0.2s all;
@@ -670,6 +674,27 @@ footer .trademark {
 .cta-form-container form {
   display: block;
   position: unset;
+}
+@media (max-width: 768px) {
+  .cta-form-container {
+    height: 100%;
+    right: unset;
+    left: 0;
+    width: 100%;
+  }
+  .cta-form-container form {
+    width: 100%;
+  }
+  .cta-form-container.hidden {
+    right: unset;
+    left: 100%;
+  }
+  .cta-form-container form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .cta-form-container .title-close-wrapper {
   color: #6A257A;
@@ -685,7 +710,29 @@ footer .trademark {
   cursor: pointer;
 }
 
-#call-cta {
+.call-cta-wrapper {
+  display: none;
+}
+@media (max-width: 768px) {
+  .call-cta-wrapper {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: rgba(234, 234, 236, 0.5);
+    bottom: 0;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+  }
+  .call-cta-wrapper .horizontal-line {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #6A257A;
+  }
+}
+.call-cta-wrapper #call-cta {
   position: fixed;
   right: 0;
   top: 25%;
@@ -701,9 +748,27 @@ footer .trademark {
   transition: 0.2s all;
   width: 112px;
   line-height: 1.25em;
-  display: none;
 }
-#call-cta:hover {
+.call-cta-wrapper #call-cta:hover {
   cursor: pointer;
   background: #572562;
+}
+@media (max-width: 768px) {
+  .call-cta-wrapper #call-cta {
+    display: flex;
+    flex-direction: row-reverse;
+    width: unset;
+    align-items: center;
+    padding: unset;
+    right: 50px;
+    top: unset;
+    bottom: 10px;
+  }
+  .call-cta-wrapper #call-cta img {
+    width: 50px;
+    border-radius: 5px;
+  }
+  .call-cta-wrapper #call-cta span {
+    padding: 10px 12px;
+  }
 }

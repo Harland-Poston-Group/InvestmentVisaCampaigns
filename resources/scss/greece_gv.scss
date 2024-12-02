@@ -532,12 +532,24 @@ button{
     }
 }
 
-.form-container-element{
+.form-container-element.banner-form-container{
     @media (max-width:768px) {
         width: 100%;
         max-width: unset;
         padding: unset;
     }
+}
+
+.banner-form-container{
+
+    .generic-form-container{
+
+        @media ( max-width:768px ) {
+            width: 100%;
+        }
+
+    }
+
 }
 
 .generic-form-container{
@@ -561,9 +573,8 @@ button{
         right: 75px;
     }
 
-    @media ( max-width:768px ) {
+    @media (max-width:768px) {
         position: unset;
-        width: 100%;
         background: #EAEAEC;
     }
 
@@ -715,7 +726,9 @@ footer{
 .cta-form-container{
     height: fit-content;
     position: fixed;
-    top: 25%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     right: 0;
     z-index: 11;
     transition: 0.2s all;
@@ -727,6 +740,32 @@ footer{
     form{
         display: block;
         position: unset;
+    }
+
+    @media (max-width:768px) {
+        height: 100%;
+        right: unset;
+        left: 0;
+
+        // &:not(.hidden){
+            width: 100%;
+
+            form{
+                width: 100%;
+            }
+        // }
+
+        &.hidden{
+            right: unset;
+            left: 100%;
+        }
+
+        form{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     .title-close-wrapper{
@@ -748,26 +787,71 @@ footer{
     }
 }
 
-#call-cta{
-    position: fixed;
-    right: 0;
-    top: 25%;
-    z-index: 10;
-    background: $brand_purple;
-    color: $plaster;
-    display: flex;
-    gap: 3px;
-    flex-direction: column;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px 0 0 5px;
-    transition: 0.2s all;
-    width: 112px;
-    line-height: 1.25em;
+.call-cta-wrapper{
+
     display: none;
 
-    &:hover{
-        cursor: pointer;
-        background: $brand_purple_hover;
+    @media (max-width:768px) {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        background: rgba(234, 234, 236, 0.5);
+        bottom: 0;
+        backdrop-filter: blur(3px);
+
+        .horizontal-line{
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $brand_purple;
+        }
     }
+
+    #call-cta{
+        position: fixed;
+        right: 0;
+        top: 25%;
+        z-index: 10;
+        background: $brand_purple;
+        color: $plaster;
+        display: flex;
+        gap: 3px;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px 0 0 5px;
+        transition: 0.2s all;
+        width: 112px;
+        line-height: 1.25em;
+
+        &:hover{
+            cursor: pointer;
+            background: $brand_purple_hover;
+        }
+
+        @media (max-width:768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            width: unset;
+            align-items: center;
+            padding: unset;
+
+            right: 50px;
+            top: unset;
+            bottom: 10px;
+
+            img{
+                width: 50px;
+                border-radius: 5px;
+            }
+
+            span{
+                padding: 10px 12px;
+            }
+        }
+    }
+
+
 }

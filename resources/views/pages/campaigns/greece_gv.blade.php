@@ -951,12 +951,17 @@
         </footer>
 
         {{-- Call CTA --}}
-        <div id="call-cta">
+        <div class="call-cta-wrapper">
 
-            <img src="/assets/img/greece_gv/sandy.png">
+            <div class="horizontal-line"></div>
 
-            <span>Hi, we're glad to help you.</span>
+            <div id="call-cta">
 
+                <img src="/assets/img/greece_gv/sandy.png">
+
+                <span>Hi, we're glad to help you.</span>
+
+            </div>
         </div>
 
         {{-- Banner Form --}}

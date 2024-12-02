@@ -1,6 +1,6 @@
 import 'animate.css';
 
-$(document).ready(function () {
+jQuery(function() {
 
     var bannerForm = $('.banner-form-container .generic-form-container');
     var ctaForm = $('.cta-form-container .generic-form-container');
@@ -288,6 +288,35 @@ $(document).ready(function () {
 
     /* CTA SIDE FORM FUNCTIONS */
 
+        // Check visibility on scroll
+        $(window).on('scroll', function () {
+
+            // Get the #banner-section position
+            var bannerSection = $('#banner-section');
+            var bannerTop = bannerSection.offset().top;
+            var bannerBottom = bannerTop + bannerSection.outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            // Check if #banner-section is out of viewport
+            if (bannerBottom <= viewportTop || bannerTop >= viewportBottom) {
+                // Banner is out of view, fade in #call-cta
+                // $('#call-cta').fadeIn();
+                $('.call-cta-wrapper').fadeIn();
+
+                // Align horizontal line
+                if(isMobile()){
+                    alignHorizontalLine();
+                }
+
+            } else {
+                // Banner is in view, fade out #call-cta
+                // $('#call-cta').fadeOut();
+                $('.call-cta-wrapper').fadeOut();
+
+            }
+        });
+
         // Open side form from side CTA click
         $('#call-cta').on('click', function(){
 
@@ -300,5 +329,36 @@ $(document).ready(function () {
             ctaFormContainer.toggleClass('hidden');
 
         })
+
+        // Horizontal line in call cta bar
+        function alignHorizontalLine() {
+            const callCta = $('#call-cta'); // Element whose bottom we need to calculate
+            const line = $('.call-cta-wrapper .horizontal-line'); // Line to align
+
+            // Get the bottom value of #call-cta relative to the parent
+            const ctaBottom = parseFloat(callCta.css('bottom')); // Get bottom value directly from CSS
+
+            // Calculate the bottom value for the horizontal line
+            const lineBottom = ctaBottom + callCta.outerHeight() / 2 - line.outerHeight() / 2;
+
+            // Apply the calculated bottom value to the horizontal line
+            line.css('bottom', `${lineBottom}px`);
+        }
+
+        // Align on page load and window resize
+        alignHorizontalLine();
+        $(window).on('resize', alignHorizontalLine);
+
+        // Check if the user is in a mobile screen
+        function isMobile(){
+
+            if($("body").width() < 768){
+                return true;
+            }else{
+                return false;
+
+            }
+
+        }
 
 })
