@@ -282,7 +282,7 @@
                             <img src="/assets/img/greece_gv/beach.jpeg">
 
                             {{-- Title --}}
-                            <h3>Differentiate Your Assets</h3>
+                            <h3>Diversify Your Assets</h3>
 
                             {{-- Description --}}
                             <p>Expand your assets and build equity by investing in international real estate and investment funds.</p>
