@@ -290,30 +290,37 @@ jQuery(function() {
 
         // Check visibility on scroll
         $(window).on('scroll', function () {
-
-            // Get the #banner-section position
+            // Get #banner-section position
             var bannerSection = $('#banner-section');
             var bannerTop = bannerSection.offset().top;
             var bannerBottom = bannerTop + bannerSection.outerHeight();
+
+            // Get #footer position
+            var footer = $('footer');
+            var footerTop = footer.offset().top;
+
+            // Get viewport positions
             var viewportTop = $(window).scrollTop();
             var viewportBottom = viewportTop + $(window).height();
 
             // Check if #banner-section is out of viewport
-            if (bannerBottom <= viewportTop || bannerTop >= viewportBottom) {
-                // Banner is out of view, fade in #call-cta
-                // $('#call-cta').fadeIn();
+            var isBannerOutOfView = bannerBottom <= viewportTop || bannerTop >= viewportBottom;
+
+            // Check if #footer is visible
+            var isFooterVisible = footerTop < viewportBottom;
+
+            // Logic for fading in/out the call-to-action
+            if (isBannerOutOfView && !isFooterVisible) {
+                // Banner is out of view and footer is not visible, show the CTA
                 $('.call-cta-wrapper').fadeIn();
 
-                // Align horizontal line
-                if(isMobile()){
+                // Align horizontal line if on mobile
+                if (isMobile()) {
                     alignHorizontalLine();
                 }
-
             } else {
-                // Banner is in view, fade out #call-cta
-                // $('#call-cta').fadeOut();
+                // Either banner is in view or footer is visible, hide the CTA
                 $('.call-cta-wrapper').fadeOut();
-
             }
         });
 
