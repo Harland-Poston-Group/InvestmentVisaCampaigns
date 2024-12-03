@@ -339,21 +339,53 @@ jQuery(function() {
 
         // Horizontal line in call cta bar
         function alignHorizontalLine() {
-            const callCta = $('#call-cta'); // Element whose bottom we need to calculate
-            const line = $('.call-cta-wrapper .horizontal-line'); // Line to align
+            let callCta = $('#call-cta'); // Element whose bottom we need to calculate
+            let line = $('.call-cta-wrapper .horizontal-line'); // Line to align
 
             // Get the bottom value of #call-cta relative to the parent
-            const ctaBottom = parseFloat(callCta.css('bottom')); // Get bottom value directly from CSS
+            let ctaBottom = parseFloat(callCta.css('bottom')); // Get bottom value directly from CSS
 
             // Calculate the bottom value for the horizontal line
-            const lineBottom = ctaBottom + callCta.outerHeight() / 2 - line.outerHeight() / 2;
+            let lineBottom = ctaBottom + callCta.outerHeight() / 2 - line.outerHeight() / 2;
 
             // Apply the calculated bottom value to the horizontal line
             line.css('bottom', `${lineBottom}px`);
         }
 
+        // Mark's banner
+        function alignHorizontalLineContactUsBanner() {
+            // Get the section and button container elements
+            const $section = $('#book-a-free-consultation-section');
+            const $buttonContainer = $section.find('.button-container button');
+            const $horizontalLine = $section.find('.horizontal-line');
+
+            // Get the position of button container relative to the parent section
+            const buttonOffset = $buttonContainer.position().top; // Position relative to parent container
+
+            // Calculate the center of the button container
+            const buttonHeight = $buttonContainer.outerHeight();
+            const centerPosition = buttonOffset + (buttonHeight / 2);
+
+            // Set the horizontal line position to match the center of the button container
+            $horizontalLine.css({
+                position: 'absolute',
+                top: centerPosition + 'px',
+            });
+        }
+
+
+        // Book a free consultation - align to the middle of the button position
+        if( $('#book-a-free-consultation-section').length > 0 ){
+
+            alignHorizontalLineContactUsBanner();
+            $(window).on('resize', alignHorizontalLineContactUsBanner);
+
+        }
+
         // Align on page load and window resize
         alignHorizontalLine();
+
+        // Align lines on resize
         $(window).on('resize', alignHorizontalLine);
 
         $(window).on('click', function (e) {

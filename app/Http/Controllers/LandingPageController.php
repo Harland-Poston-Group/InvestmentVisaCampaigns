@@ -253,8 +253,22 @@ class LandingPageController extends BaseController
 
     }
 
-    // Greece GV Page Revamp
-    public function greece_gv_page()
+    // Residency and Citizenship Page Revamp
+    public function residency_and_citizenship_page()
+    {
+        // Fetch the form using the model's method
+        $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
+
+        return view('pages.campaigns.residency_and_citizenship',
+            [
+                'multistep_form' => $form,
+            ]
+        );
+
+    }
+
+    // Greece Golden Visa V2
+    public function greece_golden_visa_v2_page()
     {
         // Fetch the form using the model's method
         $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();

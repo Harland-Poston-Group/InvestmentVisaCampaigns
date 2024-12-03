@@ -239,7 +239,7 @@ header{
     height: 95vh;
     background: brown;
     position: relative;
-    background: url('/assets/img/bg/banner_greece_gv.png');
+    background: url('/assets/img/bg/greece-gv-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -312,85 +312,70 @@ header{
 
         img{
             width: 100%;
-            height: 210px;
+            height: 180px;
             object-fit: cover;
             border-radius: 3px;
         }
     }
 }
 
-#greece-finest-properties-section{
+#our-top-picks-section{
     background: #EAEAEC;
 
+    .top-picks-wrapper{
 
-}
+        margin-top: 60px;
 
-#book-a-free-consultation-section{
-
-    padding-top: 50px;
-    position: relative;
-
-    .button-container{
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 70px;
-    }
-
-    .content-column{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-bottom: 50px;
-
-        .subtitle{
-            color: $cobblestone_black;
-            margin-top: 20px;
+        .row{
+            @media (max-width:768px) {
+                gap: 30px;
+            }
         }
-    }
 
-    button{
-        position: relative;
-        z-index: 1;
-    }
+        .item{
 
-    .rep-name-position{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        right: 10px;
-        z-index: 1;
-        color: $cobblestone_black;
+            .title{
+                background: $brand_purple;
+                padding: 0 22px;
+                color: $plaster;
+                border-radius: 3px;
 
-        h5{
-            margin:unset;
-            font-weight: 600;
+                h3{
+                    color: $plaster;
+                }
+            }
         }
-    }
 
-    .image-container{
-        position: relative;
+        .program-details{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+
+            h5{
+                font-weight: 600;
+                color: $brand_purple;
+            }
+        }
 
         img{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-            object-fit: contain;
-            z-index: 1;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 3px;
         }
-    }
 
-    img{
-        width: 100%;
-    }
+        .mobile-horizontal-line{
+            display: none;
+            height: 1px;
+            background: $brand_purple;
+            width: calc(100% - 30px);
+            margin: auto;
 
-    .horizontal-line{
-        position: absolute;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: $brand_purple;
+            @media (max-width:768px) {
+                display: block;
+            }
+        }
     }
 }
 
@@ -488,8 +473,6 @@ body{
 }
 
 #testimonials-gv-page-revamp-section{
-
-    background: $cobblestone_black10;
 
     .container{
 

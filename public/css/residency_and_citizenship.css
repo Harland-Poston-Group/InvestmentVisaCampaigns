@@ -258,7 +258,7 @@ header .mobile-menu .horizontal-line {
   height: 95vh;
   background: brown;
   position: relative;
-  background: url("/assets/img/bg/banner_greece_gv.png");
+  background: url("/assets/img/bg/greece-gv-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -324,73 +324,60 @@ header .mobile-menu .horizontal-line {
 }
 #golden-visa-benefits .benefits-wrapper img {
   width: 100%;
-  height: 210px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px;
 }
 
-#greece-finest-properties-section {
+#our-top-picks-section {
   background: #EAEAEC;
 }
-
-#book-a-free-consultation-section {
-  padding-top: 50px;
-  position: relative;
+#our-top-picks-section .top-picks-wrapper {
+  margin-top: 60px;
 }
-#book-a-free-consultation-section .button-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 70px;
+@media (max-width: 768px) {
+  #our-top-picks-section .top-picks-wrapper .row {
+    gap: 30px;
+  }
 }
-#book-a-free-consultation-section .content-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 50px;
+#our-top-picks-section .top-picks-wrapper .item .title {
+  background: #6A257A;
+  padding: 0 22px;
+  color: #F9F7F4;
+  border-radius: 3px;
 }
-#book-a-free-consultation-section .content-column .subtitle {
-  color: #25283D;
-  margin-top: 20px;
+#our-top-picks-section .top-picks-wrapper .item .title h3 {
+  color: #F9F7F4;
 }
-#book-a-free-consultation-section button {
-  position: relative;
-  z-index: 1;
-}
-#book-a-free-consultation-section .rep-name-position {
+#our-top-picks-section .top-picks-wrapper .program-details {
   display: flex;
   flex-direction: column;
-  position: relative;
-  right: 10px;
-  z-index: 1;
-  color: #25283D;
+  gap: 15px;
+  margin-top: 15px;
 }
-#book-a-free-consultation-section .rep-name-position h5 {
-  margin: unset;
+#our-top-picks-section .top-picks-wrapper .program-details h5 {
   font-weight: 600;
+  color: #6A257A;
 }
-#book-a-free-consultation-section .image-container {
-  position: relative;
-}
-#book-a-free-consultation-section .image-container img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  z-index: 1;
-}
-#book-a-free-consultation-section img {
+#our-top-picks-section .top-picks-wrapper img {
   width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
 }
-#book-a-free-consultation-section .horizontal-line {
-  position: absolute;
-  right: 0;
-  left: 0;
-  width: 100%;
+#our-top-picks-section .top-picks-wrapper .mobile-horizontal-line {
+  display: none;
   height: 1px;
   background: #6A257A;
+  width: calc(100% - 30px);
+  margin: auto;
+}
+@media (max-width: 768px) {
+  #our-top-picks-section .top-picks-wrapper .mobile-horizontal-line {
+    display: block;
+  }
 }
 
 /* Multistep Form Specific Styles for Page */
@@ -464,9 +451,6 @@ body #multistep-form-section textarea {
   resize: none;
 }
 
-#testimonials-gv-page-revamp-section {
-  background: #EAEAEC;
-}
 @media (max-width: 576px) {
   #testimonials-gv-page-revamp-section .container {
     padding-right: unset;
