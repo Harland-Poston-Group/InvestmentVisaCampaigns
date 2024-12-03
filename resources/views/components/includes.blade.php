@@ -63,11 +63,6 @@
             });
         });
     </script>
-
-    <script>
-        window.uetq = window.uetq || [];
-        window.uetq.push("event", "submit_lead_form", {});
-    </script>
     {{-- End of Microsoft Ads --}}
 
     {{-- Reddit Pixel --}}
