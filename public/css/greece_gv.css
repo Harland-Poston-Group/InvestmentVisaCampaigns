@@ -553,6 +553,7 @@ button:hover {
 }
 .generic-form-container .button-row {
   position: relative;
+  margin-top: 15px;
 }
 .generic-form-container .button-row .horizontal-line {
   position: absolute;

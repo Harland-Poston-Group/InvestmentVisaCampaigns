@@ -125,7 +125,6 @@ h4{
 h5{
     font-size: 20px;
     letter-spacing: 0.03em;
-    // color: $brand_purple;
     line-height: 1.5em;
 
     @media ( (min-width:1201px) and (max-width:1400px) ) {
@@ -597,6 +596,7 @@ button{
 
     .button-row{
         position: relative;
+        margin-top: 15px;
 
         .horizontal-line{
             position: absolute;

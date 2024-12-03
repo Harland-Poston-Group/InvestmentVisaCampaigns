@@ -160,7 +160,7 @@
                 <div class="col-md-7 banner-column">
 
                     <h4 class="banner-subtitle">
-                        <strong>With a minimum 250k investment</strong>, you can diversify your portfolio, gain the freedom to travel, and secure a Plan B in a stable economy for you and your family.
+                        <strong>Invest €250k</strong> and diversify your portfolio, gain the freedom to travel, and secure a Plan B for your family.
                     </h4>
 
                 </div>
@@ -251,7 +251,7 @@
                     @include('forms.inputs.message')
                 </div>
 
-                <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
+                {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
 
                 <div class="button-row">
 
@@ -862,9 +862,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.</h5>
+                                <h5 class="testimonial-text">We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.</h5>
 
-                                <span class="client-name">Mr. & Mrs. Chongrak</span>
+                                <span class="client-name">Mark Steinberg</span>
 
                             </div>
 
@@ -872,9 +872,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.</h5>
+                                <h5 class="testimonial-text">Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.</h5>
 
-                                <span class="client-name">Mark Steinberg</span>
+                                <span class="client-name">Mr. & Mrs. Chongrak</span>
 
                             </div>
 
@@ -1046,7 +1046,7 @@
                     @include('forms.inputs.message')
                 </div>
 
-                <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span>
+                {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
 
                 <div class="button-row">
 
