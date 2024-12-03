@@ -46,9 +46,10 @@ Route::get('/page', function () {
 Route::get('/greece-golden-visa', [PageController::class, 'campaigns']);
 
 // NEW GREECE GV PAGE
-Route::get('/greece-golden-visa-revamp', [App\Http\Controllers\LandingPageController::class, 'greece_gv_page']);
+// Route::get('/greece-golden-visa-revamp', [App\Http\Controllers\LandingPageController::class, 'greece_gv_page']);
+Route::get('/residency-and-citizenship', [App\Http\Controllers\LandingPageController::class, 'greece_gv_page']);
 
-Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
+// Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 
 Route::get('/thank-you', [PageController::class, 'thankYou']);
 
