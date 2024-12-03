@@ -36,6 +36,35 @@
     <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187135592", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('form');
+            forms.forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    const emailField = form.querySelector('input[type="email"]');
+                    const phoneField = form.querySelector('input[type="tel"]');
+
+                    const email = emailField ? emailField.value : '';
+                    const phone = phoneField ? phoneField.value : '';
+
+                    console.log(email);
+                    console.log(phone);
+
+                    // Microsoft Ads Enhanced Conversion Tracking
+                    window.uetq = window.uetq || [];
+                    window.uetq.push('set', {
+                        'pid': {
+                            'em': email,
+                            'ph': phone,
+                        },
+                    });
+
+                    console.log('Enhanced Conversion tracking executed.');
+                });
+            });
+        });
+    </script>
+
+    <script>
         window.uetq = window.uetq || [];
         window.uetq.push("event", "submit_lead_form", {});
     </script>
