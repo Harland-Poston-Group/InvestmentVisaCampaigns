@@ -216,6 +216,73 @@ jQuery(function() {
         }).mount();
     }
 
+    if( $('#greece-finest-properties-section .property-slider').length ){
+
+        let properties_slider = new Splide('.property-slider', {
+            // type: 'loop',
+            type: 'slide',
+            perPage: 3,
+            perMove: 1,
+            autoplay: false,
+            interval: 3500,
+            gap:'30px',
+            speed: '500',
+            easing: 'ease',
+            arrows: false,
+            pagination: false,
+            drag: true,
+            breakpoints: {
+                991: {
+                    perPage: 2,
+                    // type: 'loop',
+                    // drag: true,
+                },
+                768: {
+                    gap:'15px',
+                },
+                576: {
+                    perPage: 1,
+                }
+            }
+        }).mount();
+
+        /* Using custom elements to skip sliders */
+        var leftArrow = $("#investments-section .left-arrow");
+        var rightArrow = $("#greece-finest-properties-section .right-arrow");
+
+        // Function to update arrow states
+        function updateArrowState() {
+            // if (investments_slider.index === 0) {
+            //     leftArrow.addClass('disabled'); // Add 'disabled' class to left arrow
+            // } else {
+            //     leftArrow.removeClass('disabled'); // Remove 'disabled' class from left arrow
+            // }
+
+            if (properties_slider.index >= properties_slider.length - properties_slider.options.perPage) {
+                rightArrow.addClass('disabled'); // Add 'disabled' class to right arrow
+            } else {
+                rightArrow.removeClass('disabled'); // Remove 'disabled' class from right arrow
+            }
+        }
+
+        // Initial state check
+        updateArrowState();
+
+        // Update arrows on move or mount
+        properties_slider.on('mounted move', function () {
+            updateArrowState();
+        });
+
+        // Custom arrow click events
+        rightArrow.on('click', function(){
+            properties_slider.go('>');
+        });
+        leftArrow.click(function () {
+            properties_slider.go('<');
+        });
+
+    }
+
     // Slide to section
     $('a.linkSlide').on('click',function(){
 
