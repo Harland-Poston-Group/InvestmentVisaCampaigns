@@ -523,6 +523,9 @@ header{
         z-index: 2;
         color: $cobblestone_black;
 
+        @media (min-width:991px) and (max-width:1200px) {
+            right: 35px;
+        }
 
         @media (max-width:768px) {
             right: unset;

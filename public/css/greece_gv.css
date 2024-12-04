@@ -509,6 +509,11 @@ header .mobile-menu .horizontal-line {
   z-index: 2;
   color: #25283D;
 }
+@media (min-width: 991px) and (max-width: 1200px) {
+  #book-a-free-consultation-section .rep-name-position {
+    right: 35px;
+  }
+}
 @media (max-width: 768px) {
   #book-a-free-consultation-section .rep-name-position {
     right: unset;
