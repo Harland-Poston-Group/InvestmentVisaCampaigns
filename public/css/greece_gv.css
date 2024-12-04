@@ -276,6 +276,14 @@ header .mobile-menu .horizontal-line {
     height: 70vh;
   }
 }
+@media (max-width: 576px) {
+  #banner-section {
+    background: url("/assets/img/bg/banner_greece_gv_mobile.webp");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 #banner-section .rollover-element {
   background: #6A257A;
   color: #F9F7F4;

@@ -255,6 +255,13 @@ header{
         height: 70vh;
     }
 
+    @media (max-width:576px) {
+        background: url('/assets/img/bg/banner_greece_gv_mobile.webp');
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .rollover-element{
         background: $brand_purple;
         color: $plaster;
