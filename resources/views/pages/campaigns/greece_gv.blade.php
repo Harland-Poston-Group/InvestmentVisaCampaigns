@@ -106,14 +106,14 @@
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#our-top-picks-section" class="section-anchor linkSlide">Top Picks</a>
+                            <a href="#greece-finest-properties-section" class="section-anchor linkSlide">Real Estate Options</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#multistep-form-section" class="section-anchor linkSlide">Take a Quiz</a>
+                            <a href="#book-a-free-consultation-section" class="section-anchor linkSlide">Start Your Journey</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
