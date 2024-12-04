@@ -145,7 +145,8 @@
                         <div class="col-md-7 banner-column">
 
                             <div class="banner-title">
-                                <h1>Golden Visa. The Best<br> Investment For Your Future</h1>
+                                <h1>Get your Greece Golden Visa</h1>
+                                <h2>With a minimum €250,000 Real Estate Investment</h2>
                             </div>
 
                         </div>
@@ -412,13 +413,13 @@
                                         <div class="property-card splide__slide">
 
                                             <div class="property-image-container">
-                                                <a href="{{ $property['link'] }}">
+                                                <a href="{{ $property['link'] }}" target="_blank">
                                                     <img class="property-image" src="{{ $property['image'] }}">
                                                 </a>
                                             </div>
 
                                             <h4>
-                                                <a href="{{ $property['link'] }}">{{ $property['name'] }}</a>
+                                                <a href="{{ $property['link'] }}" target="_blank">{{ $property['name'] }}</a>
                                             </h4>
                                             <h6>from € {{ $property['from_price'] }}</h6>
 
@@ -455,9 +456,7 @@
                         {{-- Contact Us --}}
                         <div class="button-container">
                             <button>
-                                <a href="https://www.google.pt">
-                                    Contact Us
-                                </a>
+                                Contact Us
                             </button>
                         </div>
 
@@ -502,19 +501,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">I couldn't be happier with the guidance I received from the Investment Visa team for my Golden Visa in Greece. I highly recommend them to anyone looking for a professional service.</h5>
+                                <h5 class="testimonial-text">Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.</h5>
 
-                                <span class="client-name">Mr.Demir</span>
-
-                            </div>
-
-                            {{-- Item --}}
-                            <div class="splide__slide item">
-
-                                @include('partials.quote_marks')
-                                <h5 class="testimonial-text">We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.</h5>
-
-                                <span class="client-name">Mark Steinberg</span>
+                                <span class="client-name">Neena Joyce</span>
 
                             </div>
 
@@ -522,9 +511,19 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.</h5>
+                                <h5 class="testimonial-text">The process was easy, and the support we received made all the difference. I can't recommend the Greece Golden Visa enough.</h5>
 
-                                <span class="client-name">Mr. & Mrs. Chongrak</span>
+                                <span class="client-name">Beniel Saab</span>
+
+                            </div>
+
+                            {{-- Item --}}
+                            <div class="splide__slide item">
+
+                                @include('partials.quote_marks')
+                                <h5 class="testimonial-text">Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.</h5>
+
+                                <span class="client-name">Alexander Petrus</span>
 
                             </div>
 

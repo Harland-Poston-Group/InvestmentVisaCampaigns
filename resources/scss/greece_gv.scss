@@ -267,9 +267,24 @@ header{
             padding-top: 60px;
         }
 
-        .banner-title h1{
-            @media (max-width:576px) {
-                font-size: 28px;
+        .banner-title{
+            h1{
+                @media (max-width:576px) {
+                    font-size: 28px;
+                }
+            }
+
+            h2{
+                font-size: 30px;
+                color: $plaster;
+
+                @media (max-width:991px) {
+                    font-size: 24px;
+                }
+
+                @media (max-width:576px) {
+                    font-size: 18px;
+                }
             }
         }
     }

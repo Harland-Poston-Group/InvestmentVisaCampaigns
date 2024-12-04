@@ -392,7 +392,7 @@ jQuery(function() {
         });
 
         // Open side form from side CTA click
-        $('#call-cta').on('click', function(){
+        $('#call-cta, #book-a-free-consultation-section .button-container button').on('click', function(){
 
             ctaFormContainer.toggleClass('hidden');
 

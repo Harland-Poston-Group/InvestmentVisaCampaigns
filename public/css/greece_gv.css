@@ -295,6 +295,20 @@ header .mobile-menu .horizontal-line {
     font-size: 28px;
   }
 }
+#banner-section .rollover-element .banner-title h2 {
+  font-size: 30px;
+  color: #F9F7F4;
+}
+@media (max-width: 991px) {
+  #banner-section .rollover-element .banner-title h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 576px) {
+  #banner-section .rollover-element .banner-title h2 {
+    font-size: 18px;
+  }
+}
 #banner-section .banner-subtitle {
   color: #F9F7F4;
   margin-top: 40px;
