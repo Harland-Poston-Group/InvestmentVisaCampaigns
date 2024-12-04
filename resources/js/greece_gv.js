@@ -496,4 +496,11 @@ jQuery(function() {
 
         }
 
+        $('#header-logo').on('click', function(){
+
+            // Animate the scroll to the top of the page
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+        });
+
 })
