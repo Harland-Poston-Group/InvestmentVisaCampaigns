@@ -366,35 +366,35 @@
                                 ],
                                 [
                                     'name' => 'Molos Seaside Villas',
-                                    'description' => 'Charming mountain cabin in Switzerland, offering breathtaking views and a peaceful retreat.',
+                                    'description' => 'Introducing an exquisite new development on the picturesque island of Paros, Greece, where modern sophistication meets Mediterranean charm.',
                                     'from_price' => '256.000',
                                     'link' => 'https://www.investmentvisa.com/properties/greece/iv1084-molos-seaside-villas-gv250',
                                     'image' => 'https://www.investmentvisa.com/images/Properties/IV1084-Paros/Molos%20Image%202.jpg'
                                 ],
                                 [
                                     'name' => 'The Brooklyn Block',
-                                    'description' => 'Charming mountain cabin in Switzerland, offering breathtaking views and a peaceful retreat.',
+                                    'description' => 'The Brooklyn Block is an exceptional new residential development located in the vibrant neighborhood of Agios Dimitrios, Athens.',
                                     'from_price' => '250.000',
                                     'link' => 'https://www.investmentvisa.com/properties/greece/iv8159-the-brooklyn-block',
                                     'image' => 'https://www.investmentvisa.com/images/Properties/IV8159-Athens/GrigoriouMoschopoulou8.jpg'
                                 ],
                                 [
                                     'name' => 'Piraeus Marina Hotel',
-                                    'description' => 'Charming mountain cabin in Switzerland, offering breathtaking views and a peaceful retreat.',
+                                    'description' => 'Live in a luxurious penthouse with all the facilities of a 5* Hotel in Piraeus, Athens.',
                                     'from_price' => '565.000',
                                     'link' => 'https://www.investmentvisa.com/properties/greece/iv8102-piraeus-marina-hotel-c-block-residential',
                                     'image' => 'https://www.investmentvisa.com/images/Properties/IV8102-Athens/1.2-min.png'
                                 ],
                                 [
                                     'name' => 'Apollonia Suites',
-                                    'description' => 'Charming mountain cabin in Switzerland, offering breathtaking views and a peaceful retreat.',
+                                    'description' => 'Located in the charming area of Piraeus, this area is distinguished by its winding streets, lush greenery, and Mediterranean ambiance.',
                                     'from_price' => '250.000',
                                     'link' => 'https://www.investmentvisa.com/properties/greece/iv8066-apollonia-suites',
                                     'image' => 'https://www.investmentvisa.com/images/Properties/IV8066-Athens/K1.png'
                                 ],
                                 [
                                     'name' => 'Grenville IV Residence',
-                                    'description' => 'Charming mountain cabin in Switzerland, offering breathtaking views and a peaceful retreat.',
+                                    'description' => 'Strategically positioned in a pine-tree location in the northeastern part of Athens, Grenville IV Residence is an exquisite residential development.',
                                     'from_price' => '259.000',
                                     'link' => 'https://www.investmentvisa.com/properties/greece/iv1604-grenville-iv-residence',
                                     'image' => 'https://www.investmentvisa.com/images/Properties/IV1604-Athens/1_B2_LIVING_1-min.jpg'
