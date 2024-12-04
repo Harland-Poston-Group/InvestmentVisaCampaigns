@@ -25,7 +25,7 @@ jQuery(function() {
             height: 'auto', // Let it expand naturally
             width: bannerContent.width() // Match the original element's width
         })
-        .appendTo('body');
+        .appendTo('body #banner-section');
 
         setTimeout(() => {
 
