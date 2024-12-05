@@ -293,7 +293,7 @@
                         <div class="col-md-3 col-6 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/crypt.jpeg">
+                            <img src="/assets/img/greece_gv/crypt-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Developed Economies</h3>
@@ -307,7 +307,7 @@
                         <div class="col-md-3 col-6 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/pool_family.png">
+                            <img src="/assets/img/greece_gv/pool_family-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Plan B<br> Peace of Mind</h3>
@@ -321,7 +321,7 @@
                         <div class="col-md-3 col-6 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/eu-flag.jpeg">
+                            <img src="/assets/img/greece_gv/eu-flag-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Schengen Area Access</h3>
@@ -355,7 +355,7 @@
                             </div>
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/greece-gv.png">
+                            <img src="/assets/img/greece_gv/greece-gv-compressed.webp">
 
                             <div class="program-details">
 
@@ -389,7 +389,7 @@
                             </div>
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/portugal-gv.png">
+                            <img src="/assets/img/greece_gv/portugal-gv-compressed.webp">
 
                             <div class="program-details">
 
@@ -423,7 +423,7 @@
                             </div>
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/uae-gv.png">
+                            <img src="/assets/img/greece_gv/uae-gv-compressed.webp">
 
                             <div class="program-details">
 
