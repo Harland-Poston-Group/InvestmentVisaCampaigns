@@ -280,7 +280,7 @@
                         <div class="col-md-4 col-12 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/pool_family.png">
+                            <img src="/assets/img/greece_gv/pool_family-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Stable Environment</h3>
@@ -294,7 +294,7 @@
                         <div class="col-md-4 col-12 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/beach_side.png">
+                            <img src="/assets/img/greece_gv/beach_side-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Investment Opportunities</h3>
@@ -308,7 +308,7 @@
                         <div class="col-md-4 col-12 item">
 
                             {{-- Image --}}
-                            <img src="/assets/img/greece_gv/eu-flag.jpeg">
+                            <img src="/assets/img/greece_gv/eu-flag-compressed.webp">
 
                             {{-- Title --}}
                             <h3>Schengen Area Access</h3>
