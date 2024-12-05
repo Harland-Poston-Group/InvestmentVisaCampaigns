@@ -469,6 +469,9 @@ header .mobile-menu .horizontal-line {
 #greece-finest-properties-section .properties-container .property-slider .splide__track {
   overflow: visible;
 }
+#greece-finest-properties-section .properties-container .property-slider .splide__track:active {
+  cursor: grab;
+}
 #greece-finest-properties-section .properties-container .property-slider .splide__track .splide__list {
   position: relative;
 }

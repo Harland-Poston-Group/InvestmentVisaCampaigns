@@ -470,6 +470,10 @@ header{
             .splide__track{
                 overflow: visible;
 
+                &:active{
+                    cursor: grab;
+                }
+
                 .splide__list{
                     position: relative;
 
