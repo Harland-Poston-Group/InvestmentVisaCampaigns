@@ -470,7 +470,7 @@ header .mobile-menu .horizontal-line {
   overflow: visible;
 }
 #greece-finest-properties-section .properties-container .property-slider .splide__track:active {
-  cursor: grab;
+  cursor: grabbing;
 }
 #greece-finest-properties-section .properties-container .property-slider .splide__track .splide__list {
   position: relative;
