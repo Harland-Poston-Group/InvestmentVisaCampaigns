@@ -51,6 +51,10 @@ Route::get('/residency-and-citizenship', [App\Http\Controllers\LandingPageContro
 Route::get('/greece-golden-visa', [App\Http\Controllers\LandingPageController::class, 'greece_golden_visa_v2_page']);
 
 // Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
+// Testing the translation feature of Deepl
+Route::get('/greece-gv-translations/{lang?}', [PageController::class, 'campaigns_translation_test']);
+
+// Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 
 Route::get('/thank-you', [PageController::class, 'thankYou']);
 
