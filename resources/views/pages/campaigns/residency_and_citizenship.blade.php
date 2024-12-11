@@ -933,11 +933,11 @@
 
                             <div class="country-list">
 
-                                <span>Portugal ·</span>
-                                <span>UK ·</span>
-                                <span>Greece ·</span>
-                                <span>UAE ·</span>
-                                <span>Hong Kong</span>
+                                <span>{{ translate('Portugal', $lang) }} ·</span>
+                                <span>{{ translate('UK', $lang) }} ·</span>
+                                <span>{{ translate('Greece', $lang) }} ·</span>
+                                <span>{{ translate('UAE', $lang) }} ·</span>
+                                <span>{{ translate('Hong Kong', $lang) }}</span>
 
                             </div>
 
