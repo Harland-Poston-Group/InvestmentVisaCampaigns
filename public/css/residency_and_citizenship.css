@@ -314,6 +314,14 @@ header .mobile-menu .horizontal-line {
   }
 }
 
+#golden-visa-benefits .title {
+  width: 70%;
+}
+@media (max-width: 768px) {
+  #golden-visa-benefits .title {
+    width: 100%;
+  }
+}
 #golden-visa-benefits .benefits-wrapper {
   margin-top: 60px;
 }

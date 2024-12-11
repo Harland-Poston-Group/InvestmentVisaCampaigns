@@ -26,6 +26,9 @@
                 $targetLang = 'pt-PT';
             }
 
+            // Strip HTML tags from the text before translation
+            $text = strip_tags($text);
+
             // Generate a unique cache key for this text and language
             $cacheKey = "translation_{$targetLang}_" . md5($text);
         

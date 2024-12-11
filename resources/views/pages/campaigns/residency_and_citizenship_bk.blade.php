@@ -1,3 +1,4 @@
+{{-- Backup of page - 11/12 for testing the translation features --}}
 <!DOCTYPE html>
 <html class="no-scroll" lang="en">
 <head>
@@ -73,16 +74,16 @@
                     </div>
 
                     {{-- Mobile Menu Button --}}
-                    <p class="mobile-menu-button">{{ translate('Menu', $lang) }}</p>
-                    <p class="mobile-menu-close-button">{{ translate('Close', $lang) }}</p>
+                    <p class="mobile-menu-button">Menu</p>
+                    <p class="mobile-menu-close-button">Close</p>
 
                     {{-- Sections Options --}}
                     <div class="options-wrapper">
 
-                        <a href="#golden-visa-benefits" class="section-anchor linkSlide">{{ translate('Benefits', $lang) }}</a>
-                        <a href="#our-top-picks-section" class="section-anchor linkSlide">{{ translate('Top Picks', $lang) }}</a>
-                        <a href="#multistep-form-section" class="section-anchor linkSlide">{{ translate('Take a Quiz', $lang) }}</a>
-                        <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">{{ translate('Testimonials', $lang) }}</a>
+                        <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
+                        <a href="#our-top-picks-section" class="section-anchor linkSlide">Top Picks</a>
+                        <a href="#multistep-form-section" class="section-anchor linkSlide">Take a Quiz</a>
+                        <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
 
                     </div>
 
@@ -99,28 +100,28 @@
                     <div class="options-wrapper-mobile">
 
                         <div class="container">
-                            <a href="#golden-visa-benefits" class="section-anchor linkSlide">{{ translate('Benefits', $lang) }}</a>
+                            <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#our-top-picks-section" class="section-anchor linkSlide">{{ translate('Top Picks', $lang) }}</a>
+                            <a href="#our-top-picks-section" class="section-anchor linkSlide">Top Picks</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#multistep-form-section" class="section-anchor linkSlide">{{ translate('Take a Quiz', $lang) }}</a>
+                            <a href="#multistep-form-section" class="section-anchor linkSlide">Take a Quiz</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">{{ translate('Testimonials', $lang) }}</a>
+                            <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
@@ -145,7 +146,7 @@
                         <div class="col-md-7 banner-column">
 
                             <div class="banner-title">
-                                <h1>{!! translate('Golden Visa. The Best<br> Investment For Your Future', $lang) !!}</h1>
+                                <h1>Golden Visa. The Best<br> Investment For Your Future</h1>
                             </div>
 
                         </div>
@@ -160,7 +161,7 @@
                 <div class="col-md-7 banner-column">
 
                     <h4 class="banner-subtitle">
-                        {!! translate('<strong>Invest €250k</strong> and diversify your portfolio, gain the freedom to travel, and secure a Plan B for your family.', $lang) !!}
+                        <strong>Invest €250k</strong> and diversify your portfolio, gain the freedom to travel, and secure a Plan B for your family.
                     </h4>
 
                 </div>
@@ -180,19 +181,19 @@
 
                 @csrf
 
-                <h3 class="title">{{ translate('Get Started Now', $lang) }}</h3>
+                <h3 class="title">Get Started Now</h3>
 
                 <div class="input-container form-row">
 
                     {{-- First Name --}}
                     <div class="wrapper">
-                        <label for="first_name">{{ translate('First Name', $lang) }} *</label>
+                        <label for="first_name">First Name *</label>
                         <input type="text" name="first_name" required>
                     </div>
 
                     {{-- Last Name --}}
                     <div class="wrapper">
-                        <label for="last_name">{{ translate('Last Name', $lang) }} *</label>
+                        <label for="last_name">Last Name *</label>
                         <input type="text" name="last_name" required>
                     </div>
 
@@ -203,11 +204,11 @@
                     {{-- Email --}}
                     <div class="email-input-container">
 
-                        <label for="email_address">{{ translate('Email Address', $lang) }}*</label>
+                        <label for="email_address">Email Address*</label>
                         <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address*" style="width:100%" required>
 
                         {{-- Zero Bounce status code --}}
-                        <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
+                        <span class="zerobounce-status">Invalid email</span>
 
                         {{-- Loading Spinning Icon --}}
                         <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -230,24 +231,24 @@
 
                     {{-- Phone Number --}}
                     <div class="wrapper">
-                        <label for="last_name">{{ translate('Phone', $lang) }}*</label>
+                        <label for="last_name">Phone*</label>
                         @include('forms.inputs.phone_number')
                     </div>
 
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="enquiry_subject">{{ translate('What are you looking for', $lang) }}*</label>
+                    <label for="enquiry_subject">What are you looking for*</label>
                     @include('forms.inputs.what_are_you_looking_for')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label>{{ translate('How much are you willing to invest?', $lang) }}*</label>
+                    <label>How much are you willing to invest?*</label>
                     @include('forms.inputs.investment_amount')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
+                    <label for="message_textarea">Message us</label>
                     @include('forms.inputs.message')
                 </div>
 
@@ -257,10 +258,10 @@
 
                     <div class="horizontal-line"></div>
 
-                    <button class="stylize" type="submit">{{ translate('Book Your Meeting', $lang) }}</button>
+                    <button class="stylize" type="submit">Book Your Meeting</button>
                 </div>
 
-                <span class="consent-text">{{ translate('By submitting this form, you confirm that you agree that your data will be used to contact you.', $lang) }}</span>
+                <span class="consent-text">By submitting this form, you confirm that you agree that your data will be used to contact you.</span>
 
             </form>
 
@@ -270,8 +271,7 @@
         <section id="golden-visa-benefits" class="section-inner-padding">
             <div class="container">
 
-                {{-- <h2 class="title">A Golden Visa Program Grants<br> Access to Many Benefits</h2> --}}
-                <h2 class="title">{{ translate('A Golden Visa Program Grants Access to Many Benefits', $lang) }}</h2>
+                <h2 class="title">A Golden Visa Program Grants<br> Access to Many Benefits</h2>
 
                 <div class="benefits-wrapper">
                     <div class="row">
@@ -283,10 +283,10 @@
                             <img src="/assets/img/greece_gv/beach.jpeg">
 
                             {{-- Title --}}
-                            <h3>{{ translate('Diversify Your Assets', $lang) }}</h3>
+                            <h3>Diversify Your Assets</h3>
 
                             {{-- Description --}}
-                            <p>{{ translate('Expand your assets and build equity by investing in international real estate and investment funds.', $lang) }}</p>
+                            <p>Expand your assets and build equity by investing in international real estate and investment funds.</p>
 
                         </div>
 
@@ -297,10 +297,10 @@
                             <img src="/assets/img/greece_gv/crypt-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>{{ translate('Economies', $lang) }}</h3>
+                            <h3>Developed Economies</h3>
 
                             {{-- Description --}}
-                            <p>{{ translate('Expose your business to new markets and explore dynamic opportunities.', $lang) }}</p>
+                            <p>Expose your business to new markets and explore dynamic opportunities.</p>
 
                         </div>
 
@@ -311,10 +311,10 @@
                             <img src="/assets/img/greece_gv/pool_family-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>{!! translate('Plan B<br> Peace of Mind', $lang) !!}</h3>
+                            <h3>Plan B<br> Peace of Mind</h3>
 
                             {{-- Description --}}
-                            <p>{{ translate('Safety and quality living, along with top-tier healthcare and education, for you and your family.', $lang) }}</p>
+                            <p>Safety and quality living, along with top-tier healthcare and education, for you and your family.</p>
 
                         </div>
 
@@ -325,10 +325,10 @@
                             <img src="/assets/img/greece_gv/eu-flag-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>{{ translate('Schengen Area Access', $lang) }}</h3>
+                            <h3>Schengen Area Access</h3>
 
                             {{-- Description --}}
-                            <p>{{ translate('Enjoy seamless travel across 26 European countries with your Golden Visa.', $lang) }}</p>
+                            <p>Enjoy seamless travel across 26 European countries with your Golden Visa.</p>
 
                         </div>
 
@@ -342,7 +342,7 @@
         <section id="our-top-picks-section" class="section-inner-padding">
             <div class="container">
 
-                <h2 class="title">{{ translate('Our top pick programs', $lang) }}</h2>
+                <h2 class="title">Our top pick programs</h2>
 
                 <div class="top-picks-wrapper">
                     <div class="row">
@@ -352,7 +352,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h4>{{ translate('Greece Golden Visa', $lang) }}</h4>
+                                <h4>Greece Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -362,15 +362,15 @@
 
                                 <div class="investment-minimum-wrapper">
 
-                                    <h5>{{ translate('Investment Minimum', $lang) }}</h5>
+                                    <h5>Investment Minimum</h5>
                                     <span>€ 250.000</span>
 
                                 </div>
 
                                 <div class="process-duration-wrapper">
 
-                                    <h5>{{ translate('Process Duration', $lang) }}</h5>
-                                    <span>{{ translate('1 to 3 Months', $lang) }}</span>
+                                    <h5>Process Duration</h5>
+                                    <span>1 to 3 Months</span>
 
                                 </div>
 
@@ -386,7 +386,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h4>{{ translate('Portugal Golden Visa', $lang) }}</h4>
+                                <h4>Portugal Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -396,15 +396,15 @@
 
                                 <div class="investment-minimum-wrapper">
 
-                                    <h5>{{ translate('Investment Minimum', $lang) }}</h5>
+                                    <h5>Investment Minimum</h5>
                                     <span>€ 250.000</span>
 
                                 </div>
 
                                 <div class="process-duration-wrapper">
 
-                                    <h5>{{ translate('Process Duration', $lang) }}</h5>
-                                    <span>{{ translate('6 to 18 Months', $lang) }}</span>
+                                    <h5>Process Duration</h5>
+                                    <span>6 to 18 Months</span>
 
                                 </div>
 
@@ -420,7 +420,7 @@
 
                             {{-- Title --}}
                             <div class="title">
-                                <h4>{{ translate('UAE Golden Visa', $lang) }}</h4>
+                                <h4>UAE Golden Visa</h4>
                             </div>
 
                             {{-- Image --}}
@@ -430,15 +430,15 @@
 
                                 <div class="investment-minimum-wrapper">
 
-                                    <h5>{{ translate('Investment Minimum', $lang) }}</h5>
+                                    <h5>Investment Minimum</h5>
                                     <span>AED 750.00</span>
 
                                 </div>
 
                                 <div class="process-duration-wrapper">
 
-                                    <h5>{{ translate('Process Duration', $lang) }}</h5>
-                                    <span>{{ translate('2 to 6 Months', $lang) }}</span>
+                                    <h5>Process Duration</h5>
+                                    <span>2 to 6 Months</span>
 
                                 </div>
 
@@ -482,9 +482,9 @@
                             {{-- Question Title --}}
                             {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                             <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                                <h2 class="title">{!! translate('Find out which one of our programs<br> is the best fit for your plans', $lang) !!}</h2>
+                                <h2 class="title">Find out which one of our programs<br> is the best fit for your plans</h2>
 
-                                <h4 class="subtitle">{!! translate('Diversify your investments, get freedom of travel and secure<br> a plan B in a stable economy for you and your family.', $lang) !!}</h4>
+                                <h4 class="subtitle">Diversify your investments, get freedom of travel and secure<br> a plan B in a stable economy for you and your family.</h4>
                             </div>
 
                             {{-- List of questions --}}
@@ -502,7 +502,7 @@
                                 {{-- Edit the progress of the form by advancing in it --}}
                                 <div class="form-step-advancement-wrapper">
 
-                                    <button class="next-btn purple-bg">{!! translate('Start Golden Visa Quiz', $lang) !!} @include('partials.arrows.right_arrow')</button>
+                                    <button class="next-btn purple-bg">Start Golden Visa Quiz @include('partials.arrows.right_arrow')</button>
 
                                 </div>
 
@@ -527,11 +527,11 @@
                                 </div>
 
                                 {{-- Question Title --}}
-                                <h2 class="name animate__animated animate__fadeInLeft">{!! translate($question['question_text'], $lang) !!}</h2>
+                                <h2 class="name animate__animated animate__fadeInLeft">{{ $question['question_text'] }}</h2>
 
                                 @if( $question['allows_multiple_answers'] )
                                     <div class="detail animate__animated animate__fadeInLeft">
-                                        <span class="multiple-answers-option">{!! translate('Multiple answers options', $lang) !!}</span>
+                                        <span class="multiple-answers-option">Multiple answers options</span>
                                     </div>
                                 @endif
 
@@ -567,7 +567,7 @@
                                                         value="{{ $answer['id'] }}"
                                                     />
                                                     <span class="custom-circle"></span>
-                                                    <span class="custom-label">{{ translate($answer['answer_text'], $lang) }}</span>
+                                                    <span class="custom-label">{{ $answer['answer_text'] }}</span>
                                                 </label>
 
                                             {{-- </div> --}}
@@ -636,10 +636,10 @@
                                         {{-- If this is the last question - present the submit button --}}
                                         @if( $loop->last )
                                             {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
-                                            <button class="next-btn last-question purple-bg">{{ translate('Next', $lang) }} @include('partials.arrows.right_arrow')</button>
+                                            <button class="next-btn last-question purple-bg">Next @include('partials.arrows.right_arrow')</button>
 
                                         @else
-                                            <button class="next-btn purple-bg">{{ translate('Next', $lang) }} @include('partials.arrows.right_arrow')</button>
+                                            <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
                                         @endif
 
                                     </div>
@@ -665,9 +665,9 @@
                             {{-- Question Title --}}
                             {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                             <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                                <h2 class="title">{{ translate('Thank you for taking the quiz', $lang) }}</h2>
+                                <h2 class="title">Thank you for taking the quiz</h2>
 
-                                <h4 class="subtitle">{{ translate('Please fill in your details, and we will contact<br> you shortly to present our best options.', $lang) }}</h4>
+                                <h4 class="subtitle">Please fill in your details, and we will contact<br> you shortly to present our best options.</h4>
                                 {{-- <h4 class="subtitle">We will contact you soon to present our best options</h4> --}}
                             </div>
 
@@ -681,12 +681,12 @@
                                         <div class="input-container">
 
                                             <div class="wrapper">
-                                                <label for="first_name">{{ translate('First Name', $lang) }}*</label>
+                                                <label for="first_name">First Name*</label>
                                                 <input type="text" id="first_name" placeholder="" class="form-control" name="first_name" required>
                                             </div>
 
                                             <div class="wrapper">
-                                                <label for="last_name">{{ translate('Last Name', $lang) }}*</label>
+                                                <label for="last_name">Last Name*</label>
                                                 <input type="text" id="last_name" placeholder="" class="form-control" name="last_name" required>
                                             </div>
 
@@ -698,11 +698,11 @@
                                             {{-- @include('forms.inputs.email') --}}
                                             <div class="wrapper">
                                                 <div class="email-input-container">
-                                                    <label>{{ translate('Email Address', $lang) }}*</label>
+                                                    <label>Email Address*</label>
                                                     <input type="email" id="email_address" name="email_address" class="form-control" placeholder="" style="width:100%" required>
 
                                                     {{-- Zero Bounce status code --}}
-                                                    <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
+                                                    <span class="zerobounce-status">Invalid email</span>
 
                                                     {{-- Loading Spinning Icon --}}
                                                     <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -727,14 +727,14 @@
                                             {{-- Phone Number --}}
                                             {{-- @include('forms.inputs.phone_number') --}}
                                             <div class="wrapper">
-                                                <label for="phone_number">{{ translate('Contact Number', $lang) }}*</label>
+                                                <label for="phone_number">Contact Number*</label>
                                                 <input type="tel" id="phone_number" class="contact-number phone-number-extension form-control" name="phone_number" placeholder="" style="width:100%" required>
                                             </div>
 
                                         </div>
 
                                         <div class="wrapper">
-                                            <label for="message">{{ translate('Would you like to share more details with us?', $lang) }}</label>
+                                            <label for="message">Would you like to share more details with us?</label>
                                             <textarea id="message" class="form-control" name="message"></textarea>
                                         </div>
 
@@ -790,7 +790,7 @@
                                     {{-- If this is the last question - present the submit button --}}
                                     {{-- @if( $loop->last ) --}}
                                         {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
-                                        <button type="submit" class="submit-btn last-question purple-bg">{{ translate('Complete', $lang) }} @include('partials.arrows.right_arrow')</button>
+                                        <button type="submit" class="submit-btn last-question purple-bg">Complete @include('partials.arrows.right_arrow')</button>
 
                                     {{-- @else --}}
                                         {{-- <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
@@ -817,9 +817,9 @@
                             {{-- Question Title --}}
                             {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                             <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                                <h2 class="title">{{ translate('Thank you for your submission', $lang) }}</h2>
+                                <h2 class="title">Thank you for your submission</h2>
 
-                                <h4 class="subtitle">{{ translate('We will contact you soon to present our best options', $lang) }}</h4>
+                                <h4 class="subtitle">We will contact you soon to present our best options</h4>
                             </div>
 
 
@@ -834,7 +834,7 @@
 
                 {{-- Answer not picked notification --}}
                 <div id="no-answer-notification">
-                    <span>{{ translate('Please answer the question', $lang) }}</span>
+                    <span>Please answer the question</span>
                 </div>
         </section>
 
@@ -842,7 +842,7 @@
         <section id="testimonials-gv-page-revamp-section" class="section-inner-padding">
             <div class="container">
 
-                <h2 class="title">{{ translate('What Our Clients Say About Us', $lang) }}</h2>
+                <h2 class="title">What Our Clients Say About Us</h2>
 
                 <div class="splide testimonials-wrapper">
                     {{-- <div class="row"> --}}
@@ -853,9 +853,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">{{ translate('I couldn\'t be happier with the guidance I received from the Investment Visa team for my Golden Visa in Greece. I highly recommend them to anyone looking for a professional service.', $lang) }}</h5>
+                                <h5 class="testimonial-text">I couldn't be happier with the guidance I received from the Investment Visa team for my Golden Visa in Greece. I highly recommend them to anyone looking for a professional service.</h5>
 
-                                <span class="client-name">{{ translate('Mr.Demir', $lang) }}</span>
+                                <span class="client-name">Mr.Demir</span>
 
                             </div>
 
@@ -863,7 +863,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">{{ translate('We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.', $lang) }}</h5>
+                                <h5 class="testimonial-text">We have been impressed with the professionalism and expertise of the Investment Visa team and have therefore decided to appoint the After Sales service as our Tax Representative in Portugal, as it is a request when we applied for the Golden Visa.</h5>
 
                                 <span class="client-name">Mark Steinberg</span>
 
@@ -873,9 +873,9 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">{{ translate('Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.', $lang) }}</h5>
+                                <h5 class="testimonial-text">Could not have asked for a better team. I am very happy and glad we did business with Investment Visa, part of the Harland & Poston Group.</h5>
 
-                                <span class="client-name">{{ translate('Mr. & Mrs. Chongrak', $lang) }}</span>
+                                <span class="client-name">Mr. & Mrs. Chongrak</span>
 
                             </div>
 
@@ -898,7 +898,7 @@
 
                         <div class="footer-column">
 
-                            <h5>{{ translate('Stay Connected', $lang) }}</h5>
+                            <h5>Stay Connected</h5>
 
                             <div class="social-media-list">
 
@@ -912,9 +912,9 @@
 
                             <div class="terms-privacy-wrapper">
 
-                                <a>{{ translate('Terms & Conditions', $lang) }}</a>
+                                <a>Terms & Conditions</a>
                                 <div class="vertical-separator"></div>
-                                <a>{{ translate('Privacy Policy', $lang) }}</a>
+                                <a>Privacy Policy</a>
 
                             </div>
 
@@ -941,7 +941,7 @@
 
                             </div>
 
-                            <span class="trademark">© {{ date('Y') }} {{ translate('Investment Visa. Investment Visa is part of the Harland & Poston Group', $lang) }}.</span>
+                            <span class="trademark">© {{ date('Y') }} Investment Visa. Investment Visa is part of the Harland & Poston Group.</span>
 
                         </div>
 
@@ -960,7 +960,7 @@
 
                 <img src="/assets/img/greece_gv/sandy.png">
 
-                <span>{{ translate('Hi, we\'re glad to help you.', $lang) }}</span>
+                <span>Hi, we're glad to help you.</span>
 
             </div>
         </div>
@@ -974,21 +974,21 @@
                 @csrf
 
                 <div class="title-close-wrapper">
-                    <h3 class="title">{{ translate('Get Started Now', $lang) }}</h3>
-                    <span class="close-button-span">{{ translate('Close', $lang) }}</span>
+                    <h3 class="title">Get Started Now</h3>
+                    <span class="close-button-span">Close</span>
                 </div>
 
                 <div class="input-container form-row">
 
                     {{-- First Name --}}
                     <div class="wrapper">
-                        <label for="first_name">{{ translate('First Name', $lang) }} *</label>
+                        <label for="first_name">First Name *</label>
                         <input type="text" name="first_name" required>
                     </div>
 
                     {{-- Last Name --}}
                     <div class="wrapper">
-                        <label for="last_name">{{ translate('Last Name', $lang) }} *</label>
+                        <label for="last_name">Last Name *</label>
                         <input type="text" name="last_name" required>
                     </div>
 
@@ -999,11 +999,11 @@
                     {{-- Email --}}
                     <div class="email-input-container">
 
-                        <label for="email_address">{{ translate('Email Address', $lang) }}*</label>
+                        <label for="email_address">Email Address*</label>
                         <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address*" style="width:100%" required>
 
                         {{-- Zero Bounce status code --}}
-                        <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
+                        <span class="zerobounce-status">Invalid email</span>
 
                         {{-- Loading Spinning Icon --}}
                         <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1026,24 +1026,24 @@
 
                     {{-- Phone Number --}}
                     <div class="wrapper">
-                        <label for="last_name">{{ translate('Phone', $lang) }}*</label>
+                        <label for="last_name">Phone*</label>
                         @include('forms.inputs.phone_number')
                     </div>
 
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="enquiry_subject">{{ translate('What are you looking for', $lang) }}*</label>
+                    <label for="enquiry_subject">What are you looking for*</label>
                     @include('forms.inputs.what_are_you_looking_for')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label>{{ translate('How much are you willing to invest?', $lang) }}*</label>
+                    <label>How much are you willing to invest?*</label>
                     @include('forms.inputs.investment_amount')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
+                    <label for="message_textarea">Message us</label>
                     @include('forms.inputs.message')
                 </div>
 
@@ -1053,10 +1053,10 @@
 
                     <div class="horizontal-line"></div>
 
-                    <button class="stylize" type="submit">{{ translate('Book Your Meeting', $lang) }}</button>
+                    <button class="stylize" type="submit">Book Your Meeting</button>
                 </div>
 
-                <span class="consent-text">{{ translate('By submitting this form, you confirm that you agree that your data will be used to contact you.', $lang) }}</span>
+                <span class="consent-text">By submitting this form, you confirm that you agree that your data will be used to contact you.</span>
 
             </form>
 

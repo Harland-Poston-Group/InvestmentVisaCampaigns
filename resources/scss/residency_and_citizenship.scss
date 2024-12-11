@@ -302,6 +302,14 @@ header{
 
 #golden-visa-benefits{
 
+    .title{
+        width: 70%;
+
+        @media (max-width:768px) {
+            width: 100%;
+        }
+    }
+
     .benefits-wrapper{
         margin-top: 60px;
 

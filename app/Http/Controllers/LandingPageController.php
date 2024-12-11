@@ -254,14 +254,27 @@ class LandingPageController extends BaseController
     }
 
     // Residency and Citizenship Page Revamp
-    public function residency_and_citizenship_page()
+    public function residency_and_citizenship_page($lang = null)
     {
         // Fetch the form using the model's method
         $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
 
+        // Check if the provided $lang is supported and not English
+        if (!is_null($lang) && $lang !== 'en' && check_supported_locale($lang)) {
+
+            App::setLocale($lang);
+
+        } else {
+
+        }
+
+        // Assigning lang to a variable
+        $lang = App::getLocale();
+
         return view('pages.campaigns.residency_and_citizenship',
             [
                 'multistep_form' => $form,
+                'lang'  =>  $lang,
             ]
         );
 
