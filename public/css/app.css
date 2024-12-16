@@ -4157,9 +4157,11 @@ footer {
   right: 0;
   z-index: 12;
 }
+.nav-wrapper.language-picker a {
+  text-decoration: unset;
+}
 @media (max-width: 768px) {
   .nav-wrapper.language-picker {
-    right: 20px;
     font-size: 12px;
   }
 }
@@ -6829,6 +6831,8 @@ textarea.form-control {
 #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
   padding: 2rem 0;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 410px) {
   #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {

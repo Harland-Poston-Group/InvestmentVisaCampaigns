@@ -308,16 +308,27 @@ class LandingPageController extends BaseController
     }
 
     // Test Multistep form LP
-    public function multistep_lp_1(){
+    public function multistep_lp_1($lang = null){
 
         // Fetch the form using the model's method
         $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
 
-        // dump($form);
+        // Check if the provided $lang is supported and not English
+        if (!is_null($lang) && $lang !== 'en' && check_supported_locale($lang)) {
+
+            App::setLocale($lang);
+
+        } else {
+
+        }
+
+        // Assigning lang to a variable
+        $lang = App::getLocale();
 
         return view('pages.multistep-form',
             [
                 'multistep_form' => $form,
+                'lang'  =>  $lang
             ]
         );
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Golden Visa Quiz</title>
+    <title>{{ translate('Golden Visa Quiz', $lang) }}</title>
 
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -66,6 +66,9 @@
                         <div class="head animate__animated animate__fadeInLeft logo-row">
                             <div class="head-inner-wrapper">
 
+                                {{-- Language Picker --}}
+                                @include('components.language.language-picker')
+
                                 {{-- Logo --}}
                                 <img src="/assets/img/logos/logo-white.svg">
 
@@ -75,9 +78,9 @@
                         {{-- Question Title --}}
                         {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                         <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                            <h2 class="title">Find out which one of our programs<br> is the best fit for your plans</h2>
+                            <h2 class="title">{!! translate('Find out which one of our programs<br> is the best fit for your plans', $lang) !!}</h2>
 
-                            <h4 class="subtitle">Diversify your investments, get freedom of travel and secure<br> a plan B in a stable economy for you and your family.</h4>
+                            <h4 class="subtitle">{!! translate('Diversify your investments, get freedom of travel and secure<br> a plan B in a stable economy for you and your family.', $lang) !!}</h4>
                         </div>
 
                         {{-- List of questions --}}
@@ -95,7 +98,7 @@
                             {{-- Edit the progress of the form by advancing in it --}}
                             <div class="form-step-advancement-wrapper">
 
-                                <button class="next-btn purple-bg">Start Golden Visa Quiz @include('partials.arrows.right_arrow')</button>
+                                <button class="next-btn purple-bg">{{ translate('Start Golden Visa Quiz', $lang) }} @include('partials.arrows.right_arrow')</button>
 
                             </div>
 
@@ -120,11 +123,11 @@
                             </div>
 
                             {{-- Question Title --}}
-                            <h1 class="name animate__animated animate__fadeInLeft">{{ $question['question_text'] }}</h1>
+                            <h1 class="name animate__animated animate__fadeInLeft">{{ translate($question['question_text'], $lang) }}</h1>
 
                             @if( $question['allows_multiple_answers'] )
                                 <div class="detail animate__animated animate__fadeInLeft">
-                                    <span class="multiple-answers-option">Multiple answers options</span>
+                                    <span class="multiple-answers-option">{{ translate('Multiple answers options', $lang) }}</span>
                                 </div>
                             @endif
 
@@ -160,7 +163,7 @@
                                                     value="{{ $answer['id'] }}"
                                                 />
                                                 <span class="custom-circle"></span>
-                                                <span class="custom-label">{{ $answer['answer_text'] }}</span>
+                                                <span class="custom-label">{{ translate($answer['answer_text'], $lang) }}</span>
                                             </label>
 
                                         {{-- </div> --}}
@@ -229,10 +232,10 @@
                                     {{-- If this is the last question - present the submit button --}}
                                     @if( $loop->last )
                                         {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
-                                        <button class="next-btn last-question purple-bg">Next @include('partials.arrows.right_arrow')</button>
+                                        <button class="next-btn last-question purple-bg">{{ translate('Next', $lang) }} @include('partials.arrows.right_arrow')</button>
 
                                     @else
-                                        <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
+                                        <button class="next-btn purple-bg">{{ translate('Next', $lang) }} @include('partials.arrows.right_arrow')</button>
                                     @endif
 
                                 </div>
@@ -258,9 +261,9 @@
                         {{-- Question Title --}}
                         {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                         <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                            <h2 class="title">Thank you for taking the quiz</h2>
+                            <h2 class="title">{{ translate('Thank you for taking the quiz', $lang) }}</h2>
 
-                            <h4 class="subtitle">Please fill in your details, and we will contact<br> you shortly to present our best options.</h4>
+                            <h4 class="subtitle">{!! translate('Please fill in your details, and we will contact<br> you shortly to present our best options.', $lang) !!}</h4>
                             {{-- <h4 class="subtitle">We will contact you soon to present our best options</h4> --}}
                         </div>
 
@@ -274,12 +277,12 @@
                                     <div class="input-container">
 
                                         <div class="wrapper">
-                                            <label for="first_name">First Name*</label>
+                                            <label for="first_name">{{ translate('First Name', $lang) }}*</label>
                                             <input type="text" id="first_name" placeholder="" class="form-control" name="first_name" required>
                                         </div>
 
                                         <div class="wrapper">
-                                            <label for="last_name">Last Name*</label>
+                                            <label for="last_name">{{ translate('Last Name', $lang) }}*</label>
                                             <input type="text" id="last_name" placeholder="" class="form-control" name="last_name" required>
                                         </div>
 
@@ -291,11 +294,11 @@
                                         {{-- @include('forms.inputs.email') --}}
                                         <div class="wrapper">
                                             <div class="email-input-container">
-                                                <label>Email Address*</label>
+                                                <label>{{ translate('Email Address', $lang) }}*</label>
                                                 <input type="email" id="email_address" name="email_address" class="form-control" placeholder="" style="width:100%" required>
 
                                                 {{-- Zero Bounce status code --}}
-                                                <span class="zerobounce-status">Invalid email</span>
+                                                <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
 
                                                 {{-- Loading Spinning Icon --}}
                                                 <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -320,14 +323,14 @@
                                         {{-- Phone Number --}}
                                         {{-- @include('forms.inputs.phone_number') --}}
                                         <div class="wrapper">
-                                            <label for="phone_number">Contact Number*</label>
+                                            <label for="phone_number">{{ translate('Contact Number', $lang) }}*</label>
                                             <input type="tel" id="phone_number" class="contact-number phone-number-extension form-control" name="phone_number" placeholder="" style="width:100%" required>
                                         </div>
 
                                     </div>
 
                                     <div class="wrapper">
-                                        <label for="message">Would you like to share more details with us?</label>
+                                        <label for="message">{{ translate('Would you like to share more details with us?', $lang) }}</label>
                                         <textarea id="message" class="form-control" name="message"></textarea>
                                     </div>
 
@@ -383,7 +386,7 @@
                                 {{-- If this is the last question - present the submit button --}}
                                 {{-- @if( $loop->last ) --}}
                                     {{-- <button type="submit" class="submit-btn purple-bg">Submit</button> --}}
-                                    <button type="submit" class="submit-btn last-question purple-bg">Complete @include('partials.arrows.right_arrow')</button>
+                                    <button type="submit" class="submit-btn last-question purple-bg">{{ translate('Complete', $lang) }} @include('partials.arrows.right_arrow')</button>
 
                                 {{-- @else --}}
                                     {{-- <button class="next-btn purple-bg">Next @include('partials.arrows.right_arrow')</button>
@@ -410,9 +413,9 @@
                         {{-- Question Title --}}
                         {{-- <h1 class="name animate__animated animate__fadeInLeft">Thank you for taking the quiz</h1> --}}
                         <div class="name thank-you-wrapper animate__animated animate__fadeInLeft">
-                            <h2 class="title">Thank you for your submission</h2>
+                            <h2 class="title">{{ translate('Thank you for your submission', $lang) }}</h2>
 
-                            <h4 class="subtitle">We will contact you soon to present our best options</h4>
+                            <h4 class="subtitle">{{ translate('We will contact you soon to present our best options', $lang) }}</h4>
                         </div>
 
 
@@ -427,7 +430,7 @@
 
             {{-- Answer not picked notification --}}
             <div id="no-answer-notification">
-                <span>Please answer the question</span>
+                <span>{{ translate('Please answer the question', $lang) }}</span>
             </div>
     </section>
 
