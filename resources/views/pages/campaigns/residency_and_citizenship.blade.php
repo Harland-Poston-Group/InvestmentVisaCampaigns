@@ -90,6 +90,16 @@
 
                     @php
                         $curr_locale = App::getLocale();
+                        
+                        if( $curr_locale === 'ar' ){
+                            echo '<style>
+                                    body{
+                                        text-align: right;
+                                        direction: ltr;
+                                    }
+                                </style>';
+                        }
+
                         $locales_array = config('localization.supported_locales_array');
                         $locale_data = config('localization.supported_locales_array')[$curr_locale] ?? null;
                     @endphp
@@ -318,7 +328,7 @@
 
                 <div class="wrapper form-row">
                     <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
-                    @include('forms.inputs.message')
+                    @include('forms.inputs.message', ['placeholder' => translate('Tell us more so we can provide you with better help.', $lang)])
                 </div>
 
                 {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
@@ -1114,7 +1124,7 @@
 
                 <div class="wrapper form-row">
                     <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
-                    @include('forms.inputs.message')
+                    @include('forms.inputs.message', ['placeholder' => translate('Tell us more so we can provide you with better help.', $lang)])
                 </div>
 
                 {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
