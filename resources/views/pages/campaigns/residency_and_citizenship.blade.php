@@ -54,7 +54,7 @@
 
     {{-- App.css --}}
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/residency_and_citizenship.css">
+    <link rel="stylesheet" href="/css/residency_and_citizenship.css?v={{ uniqid() }}">
 
 </head>
 
