@@ -113,7 +113,7 @@
                                 <li>
 
                                     {{-- Current Language --}}
-                                    <b class="current-language">{{ $locale_data['name'] }}</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <b class="current-language">{{ translate($locale_data['name'], $lang) }}</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
 
                                     {{-- <div class="triangle"></div> --}}
 
