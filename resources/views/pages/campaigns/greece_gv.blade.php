@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Visa - Greece Golden Visa</title>
+    <title>Investment Visa - {{ translate('Greece Golden Visa', $lang) }}</title>
 
     <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     {{-- OG Meta Tags --}}
-    <meta property="og:title" content="Investment Visa - Greece Golden Visa" />
+    <meta property="og:title" content="Investment Visa - {{ translate('Greece Golden Visa', $lang) }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta property="og:description" content="{{ translate('Unlock Your European Dream With the Greece Golden Visa', $lang) }}" />
     <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
     <meta property="og:url" content="https://campaigns.investmentvisa.com/residency-and-citizenship" />
     <meta property="og:site_name" content="Investment Visa" />
@@ -24,10 +24,10 @@
 
     {{-- Twitter Card Meta Tags --}}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="twitter:description" content="{{ translate('Grant of Residency or Citizenship on the Basis of an Investment', $lang) }}" />
     <meta name="twitter:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
 
-    <meta name="description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="description" content="{{ translate('Grant of Residency or Citizenship on the Basis of an Investment', $lang) }}" />
 
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -53,10 +53,12 @@
     <script src="/assets/js/multistep_form.js"></script>
 
     {{-- App.css --}}
-    <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/greece_gv.css">
+    <link rel="stylesheet" href="/css/app.css?v={{ uniqid() }}">
+    <link rel="stylesheet" href="/css/greece_gv.css?v={{ uniqid() }}">
 
 </head>
+
+{{-- @dump(App::getLocale()) --}}
 
     <body>
 
@@ -73,18 +75,21 @@
                     </div>
 
                     {{-- Mobile Menu Button --}}
-                    <p class="mobile-menu-button">Menu</p>
-                    <p class="mobile-menu-close-button">Close</p>
+                    <p class="mobile-menu-button">{{ translate('Menu', $lang) }}</p>
+                    <p class="mobile-menu-close-button">{{ translate('Close', $lang) }}</p>
 
                     {{-- Sections Options --}}
                     <div class="options-wrapper">
 
-                        <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
-                        <a href="#greece-finest-properties-section" class="section-anchor linkSlide">Real Estate Options</a>
-                        <a href="#book-a-free-consultation-section" class="section-anchor linkSlide">Start Your Journey</a>
-                        <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
+                        <a href="#golden-visa-benefits" class="section-anchor linkSlide">{{ translate('Benefits', $lang) }}</a>
+                        <a href="#greece-finest-properties-section" class="section-anchor linkSlide">{{ translate('Real Estate Options', $lang) }}</a>
+                        <a href="#book-a-free-consultation-section" class="section-anchor linkSlide">{{ translate('Start Your Journey', $lang) }}</a>
+                        <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">{{ translate('Testimonials', $lang) }}</a>
 
                     </div>
+
+                    {{-- Language Picker --}}
+                    @include('components.language.language-picker')
 
                 </div>
 
@@ -93,34 +98,32 @@
             {{-- Mobile Menu --}}
             <div class="mobile-menu">
 
-
-
                     {{-- Sections Options --}}
                     <div class="options-wrapper-mobile">
 
                         <div class="container">
-                            <a href="#golden-visa-benefits" class="section-anchor linkSlide">Benefits</a>
+                            <a href="#golden-visa-benefits" class="section-anchor linkSlide">{{ translate('Benefits', $lang) }}</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#greece-finest-properties-section" class="section-anchor linkSlide">Real Estate Options</a>
+                            <a href="#greece-finest-properties-section" class="section-anchor linkSlide">{{ translate('Real Estate Options', $lang) }}</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#book-a-free-consultation-section" class="section-anchor linkSlide">Start Your Journey</a>
+                            <a href="#book-a-free-consultation-section" class="section-anchor linkSlide">{{ translate('Start Your Journey', $lang) }}</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
                         <div class="horizontal-line"></div>
 
                         <div class="container">
-                            <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">Testimonials</a>
+                            <a href="#testimonials-gv-page-revamp-section" class="section-anchor linkSlide">{{ translate('Testimonials', $lang) }}</a>
                         </div>
 
                         {{-- Horizontal Line (separator) --}}
@@ -145,8 +148,8 @@
                         <div class="col-md-7 banner-column">
 
                             <div class="banner-title">
-                                <h1>Get your Greece Golden Visa</h1>
-                                <h2>With a minimum €250,000 Real Estate Investment</h2>
+                                <h1>{{ translate('Get your Greece Golden Visa', $lang) }}</h1>
+                                <h2>{{ translate('With a minimum €250,000 Real Estate Investment', $lang) }}</h2>
                             </div>
 
                         </div>
@@ -181,19 +184,19 @@
 
                 @csrf
 
-                <h3 class="title">Get Started Now</h3>
+                <h3 class="title">{{ translate('Get Started Now', $lang) }}</h3>
 
                 <div class="input-container form-row">
 
                     {{-- First Name --}}
                     <div class="wrapper">
-                        <label for="first_name">First Name *</label>
+                        <label for="first_name">{{ translate('First Name', $lang) }} *</label>
                         <input type="text" name="first_name" required>
                     </div>
 
                     {{-- Last Name --}}
                     <div class="wrapper">
-                        <label for="last_name">Last Name *</label>
+                        <label for="last_name">{{ translate('Last Name', $lang) }} *</label>
                         <input type="text" name="last_name" required>
                     </div>
 
@@ -204,11 +207,11 @@
                     {{-- Email --}}
                     <div class="email-input-container">
 
-                        <label for="email_address">Email Address*</label>
+                        <label for="email_address">{{ translate('Email Address', $lang) }}*</label>
                         <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address*" style="width:100%" required>
 
                         {{-- Zero Bounce status code --}}
-                        <span class="zerobounce-status">Invalid email</span>
+                        <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
 
                         {{-- Loading Spinning Icon --}}
                         <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -231,25 +234,25 @@
 
                     {{-- Phone Number --}}
                     <div class="wrapper">
-                        <label for="last_name">Phone*</label>
+                        <label for="last_name">{{ translate('Phone', $lang) }}*</label>
                         @include('forms.inputs.phone_number')
                     </div>
 
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="enquiry_subject">What are you looking for*</label>
+                    <label for="enquiry_subject">{{ translate('What are you looking for', $lang) }}*</label>
                     @include('forms.inputs.what_are_you_looking_for')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label>How much are you willing to invest?*</label>
+                    <label>{{ translate('How much are you willing to invest?', $lang) }}*</label>
                     @include('forms.inputs.investment_amount')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="message_textarea">Message us</label>
-                    @include('forms.inputs.message')
+                    <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
+                    @include('forms.inputs.message', ['placeholder' => translate('Tell us more so we can provide you with better help.', $lang)])
                 </div>
 
                 {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
@@ -258,10 +261,10 @@
 
                     <div class="horizontal-line"></div>
 
-                    <button class="stylize" type="submit">Book Your Meeting</button>
+                    <button class="stylize" type="submit">{{ translate('Book Your Meeting', $lang) }}</button>
                 </div>
 
-                <span class="consent-text">By submitting this form, you confirm that you agree that your data will be used to contact you. <a href="https://www.investmentvisa.com/privacy-policy" target="_blank"><u>Read More</u></a></span>
+                <span class="consent-text">{{ translate('By submitting this form, you confirm that you agree that your data will be used to contact you.', $lang) }}</span>
 
             </form>
 
@@ -271,7 +274,7 @@
         <section id="golden-visa-benefits" class="section-inner-padding">
             <div class="container">
 
-                <h2 class="title">Experience the Mediterranean Lifestyle<br> and Secure Your Future in Europe</h2>
+                <h2 class="title">{{ translate('Experience the Mediterranean Lifestyle<br> and Secure Your Future in Europe', $lang) }}</h2>
 
                 <div class="benefits-wrapper">
                     <div class="row">
@@ -283,10 +286,10 @@
                             <img src="/assets/img/greece_gv/pool_family-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>Stable Environment</h3>
+                            <h3>{{ translate('Stable Environment', $lang) }}</h3>
 
                             {{-- Description --}}
-                            <p>Greece offers high quality of living, a favorable climate, and friendly communities.</p>
+                            <p>{{ translate('Greece offers high quality of living, a favorable climate, and friendly communities.', $lang) }}</p>
 
                         </div>
 
@@ -297,10 +300,10 @@
                             <img src="/assets/img/greece_gv/beach_side-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>Investment Opportunities</h3>
+                            <h3>{{ translate('Investment Opportunities', $lang) }}</h3>
 
                             {{-- Description --}}
-                            <p>Invest in one of Europe’s most promising real estate markets and secure a future for you and your family.</p>
+                            <p>{{ translate('Invest in one of Europe\'s most promising real estate markets and secure a future for you and your family.', $lang) }}</p>
 
                         </div>
 
@@ -311,10 +314,10 @@
                             <img src="/assets/img/greece_gv/eu-flag-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>Schengen Area Access</h3>
+                            <h3>{{ translate('Schengen Area Access', $lang) }}</h3>
 
                             {{-- Description --}}
-                            <p>Enjoy seamless travel across 29 European countries with your Golden Visa.</p>
+                            <p>{{ translate('Enjoy seamless travel across 29 European countries with your Golden Visa.', $lang) }}</p>
 
                         </div>
 
@@ -330,7 +333,7 @@
 
                 <div class="title-arrow-container">
 
-                    <h2 class="title">Greece's Finest Properties Await</h2>
+                    <h2 class="title">{{ translate('Greece\'s Finest Properties Await', $lang) }}</h2>
 
                     {{-- Arrow --}}
                     {{-- @include('partials.arrows.right_arrow') --}}
@@ -423,7 +426,7 @@
                                             </h4>
                                             <h6>from € {{ $property['from_price'] }}</h6>
 
-                                            <p>{{ $property['description'] }}</p>
+                                            <p>{{ translate($property['description'], $lang) }}</p>
 
                                         </div>
 
@@ -450,13 +453,13 @@
 
                     <div class="col-md-8 content-column">
 
-                        <h2>Ready to get started?<br> Book a Free Consultation today.</h2>
-                        <h3 class="subtitle">Take the first step towards your European lifestyle with the Greece Golden Visa.</h3>
+                        <h2>{{ translate('Ready to get started?<br> Book a Free Consultation today.', $lang) }}</h2>
+                        <h3 class="subtitle">{{ translate('Take the first step towards your European lifestyle with the Greece Golden Visa.', $lang) }}</h3>
 
                         {{-- Contact Us --}}
                         <div class="button-container">
                             <button>
-                                Contact Us
+                                {{ translate('Contact Us', $lang) }}
                             </button>
                         </div>
 
@@ -469,7 +472,7 @@
                             {{-- Rep Name / Position --}}
                             <div class="rep-name-position">
                                 <h5>Mark Wills</h5>
-                                <p>Investment Advisor</p>
+                                <p>{{ translate('Investment Advisor', $lang) }}</p>
                             </div>
 
                             <img src="/assets/img/greece_gv/mark-wills.png">
@@ -490,7 +493,7 @@
         <section id="testimonials-gv-page-revamp-section" class="section-inner-padding">
             <div class="container">
 
-                <h2 class="title">What Our Clients Say About Us</h2>
+                <h2 class="title">{{ translate('What Our Clients Say About Us', $lang) }}</h2>
 
                 <div class="splide testimonials-wrapper">
                     {{-- <div class="row"> --}}
@@ -501,7 +504,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.</h5>
+                                <h5 class="testimonial-text">{{ translate('Greece has given my family and me a lifestyle we never dreamed possible. The beautiful landscapes and welcoming atmosphere make every day feel like a vacation.', $lang) }}</h5>
 
                                 <span class="client-name">Neena Joyce</span>
 
@@ -511,7 +514,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">The process was easy, and the support we received made all the difference. I can't recommend the Greece Golden Visa enough.</h5>
+                                <h5 class="testimonial-text">{{ translate('The process was easy, and the support we received made all the difference. I can\'t recommend the Greece Golden Visa enough.', $lang) }}</h5>
 
                                 <span class="client-name">Beniel Saab</span>
 
@@ -521,7 +524,7 @@
                             <div class="splide__slide item">
 
                                 @include('partials.quote_marks')
-                                <h5 class="testimonial-text">Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.</h5>
+                                <h5 class="testimonial-text">{{ translate('Obtaining my Golden Visa was a life-changing decision. Greece has become our second home, and the lifestyle is unmatched.', $lang) }}</h5>
 
                                 <span class="client-name">Alexander Petrus</span>
 
@@ -551,7 +554,7 @@
 
                         <div class="footer-column">
 
-                            <h5>Stay Connected</h5>
+                            <h5>{{ translate('Stay Connected', $lang) }}</h5>
 
                             <div class="social-media-list">
 
@@ -594,16 +597,16 @@
 
                         <div class="terms-privacy-wrapper">
 
-                            <a>Terms & Conditions</a>
+                            <a>{{ translate('Terms & Conditions', $lang) }}</a>
                             <div class="vertical-separator"></div>
-                            <a href="https://www.investmentvisa.com/privacy-policy">Privacy Policy</a>
+                            <a href="https://www.investmentvisa.com/privacy-policy">{{ translate('Privacy Policy', $lang) }}</a>
 
                         </div>
 
                     </div>
 
                     <div class="col-md-5">
-                        <span class="trademark">© {{ date('Y') }} Investment Visa. Investment Visa is part of the Harland & Poston Group.</span>
+                        <span class="trademark">© {{ date('Y') }} {{ translate('Investment Visa. Investment Visa is part of the Harland & Poston Group.', $lang) }}</span>
                     </div>
 
                 </div>
@@ -625,7 +628,7 @@
 
                 <img src="/assets/img/greece_gv/sandy.png">
 
-                <span>Hi, we're glad to help you.</span>
+                <span>{{ translate('Hi, we\'re glad to help you.', $lang) }}</span>
 
             </div>
         </div>
@@ -639,21 +642,21 @@
                 @csrf
 
                 <div class="title-close-wrapper">
-                    <h3 class="title">Get Started Now</h3>
-                    <span class="close-button-span">Close</span>
+                    <h3 class="title">{{ translate('Get Started Now', $lang) }}</h3>
+                    <span class="close-button-span">{{ translate('Close', $lang) }}</span>
                 </div>
 
                 <div class="input-container form-row">
 
                     {{-- First Name --}}
                     <div class="wrapper">
-                        <label for="first_name">First Name *</label>
+                        <label for="first_name">{{ translate('First Name', $lang) }} *</label>
                         <input type="text" name="first_name" required>
                     </div>
 
                     {{-- Last Name --}}
                     <div class="wrapper">
-                        <label for="last_name">Last Name *</label>
+                        <label for="last_name">{{ translate('Last Name', $lang) }} *</label>
                         <input type="text" name="last_name" required>
                     </div>
 
@@ -664,11 +667,11 @@
                     {{-- Email --}}
                     <div class="email-input-container">
 
-                        <label for="email_address">Email Address*</label>
+                        <label for="email_address">{{ translate('Email Address', $lang) }}*</label>
                         <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address*" style="width:100%" required>
 
                         {{-- Zero Bounce status code --}}
-                        <span class="zerobounce-status">Invalid email</span>
+                        <span class="zerobounce-status">{{ translate('Invalid email', $lang) }}</span>
 
                         {{-- Loading Spinning Icon --}}
                         <svg class="email-validation-spinner" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -691,25 +694,25 @@
 
                     {{-- Phone Number --}}
                     <div class="wrapper">
-                        <label for="last_name">Phone*</label>
+                        <label for="last_name">{{ translate('Phone', $lang) }}*</label>
                         @include('forms.inputs.phone_number')
                     </div>
 
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="enquiry_subject">What are you looking for*</label>
+                    <label for="enquiry_subject">{{ translate('What are you looking for', $lang) }}*</label>
                     @include('forms.inputs.what_are_you_looking_for')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label>How much are you willing to invest?*</label>
+                    <label>{{ translate('How much are you willing to invest?', $lang) }}*</label>
                     @include('forms.inputs.investment_amount')
                 </div>
 
                 <div class="wrapper form-row">
-                    <label for="message_textarea">Message us</label>
-                    @include('forms.inputs.message')
+                    <label for="message_textarea">{{ translate('Message us', $lang) }}</label>
+                    @include('forms.inputs.message', ['placeholder' => translate('Tell us more so we can provide you with better help.', $lang)])
                 </div>
 
                 {{-- <span class="visas-disclaimer-revamp">Portugal Homes <b>does not</b> provide Work Visas, Tourism Visas, or Temporary Visas.</span> --}}
@@ -718,10 +721,10 @@
 
                     <div class="horizontal-line"></div>
 
-                    <button class="stylize" type="submit">Book Your Meeting</button>
+                    <button class="stylize" type="submit">{{ translate('Book Your Meeting', $lang) }}</button>
                 </div>
 
-                <span class="consent-text">By submitting this form, you confirm that you agree that your data will be used to contact you. <a href="https://www.investmentvisa.com/privacy-policy" target="_blank"><u>Read More</u></a></span>
+                <span class="consent-text">{{ translate('By submitting this form, you confirm that you agree that your data will be used to contact you.', $lang) }}</span>
 
             </form>
 

@@ -33,7 +33,7 @@
             $cacheKey = "translation_{$targetLang}_" . md5($text);
         
             // Check if the translation is already cached
-            return Cache::remember($cacheKey, now()->addHours($cacheDuration), function () use ($text, $targetLang, $sourceLang) {
+            return Cache::remember($cacheKey, now()->addWeeks($cacheDuration), function () use ($text, $targetLang, $sourceLang) {
                 try {
                     $apiKey = config('deepl.api_key');
                     $translator = new Translator($apiKey);

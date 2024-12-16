@@ -182,6 +182,10 @@ header{
         z-index: 11;
     }
 
+    .container{
+        position: relative;
+    }
+
     .header-inner-wrapper{
         display: flex;
         justify-content: space-between;

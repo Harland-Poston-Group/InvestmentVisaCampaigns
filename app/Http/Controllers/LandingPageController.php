@@ -281,14 +281,27 @@ class LandingPageController extends BaseController
     }
 
     // Greece Golden Visa V2
-    public function greece_golden_visa_v2_page()
+    public function greece_golden_visa_v2_page($lang = null)
     {
         // Fetch the form using the model's method
         $form = Multistep_Form::fetchWithQuestionsAndAnswers('residency-by-investment')->toArray();
 
+        // Check if the provided $lang is supported and not English
+        if (!is_null($lang) && $lang !== 'en' && check_supported_locale($lang)) {
+
+            App::setLocale($lang);
+
+        } else {
+
+        }
+
+        // Assigning lang to a variable
+        $lang = App::getLocale();
+
         return view('pages.campaigns.greece_gv',
             [
                 'multistep_form' => $form,
+                'lang'  =>  $lang,
             ]
         );
 
