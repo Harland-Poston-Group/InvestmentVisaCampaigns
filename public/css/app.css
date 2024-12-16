@@ -6832,7 +6832,7 @@ textarea.form-control {
   padding: 2rem 0;
   padding-bottom: 4rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 @media (max-width: 410px) {
   #multistep-form-section .multistep-wrapper #multistep-form .form-inner-wrapper .head {
