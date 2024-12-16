@@ -274,7 +274,7 @@
         <section id="golden-visa-benefits" class="section-inner-padding">
             <div class="container">
 
-                <h2 class="title">{{ translate('Experience the Mediterranean Lifestyle<br> and Secure Your Future in Europe', $lang) }}</h2>
+                <h2 class="title">{!! translate('Experience the Mediterranean Lifestyle<br> and Secure Your Future in Europe', $lang) !!}</h2>
 
                 <div class="benefits-wrapper">
                     <div class="row">
@@ -453,7 +453,7 @@
 
                     <div class="col-md-8 content-column">
 
-                        <h2>{{ translate('Ready to get started?<br> Book a Free Consultation today.', $lang) }}</h2>
+                        <h2>{!! translate('Ready to get started?<br> Book a Free Consultation today.', $lang) !!}</h2>
                         <h3 class="subtitle">{{ translate('Take the first step towards your European lifestyle with the Greece Golden Visa.', $lang) }}</h3>
 
                         {{-- Contact Us --}}
