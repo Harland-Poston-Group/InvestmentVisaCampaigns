@@ -367,7 +367,7 @@
                             <img src="/assets/img/greece_gv/crypt-compressed.webp">
 
                             {{-- Title --}}
-                            <h3>{{ translate('Stable Economies', $lang) }}</h3>
+                            <h3>{!! translate('Stable<br> Economies', $lang) !!}</h3>
 
                             {{-- Description --}}
                             <p>{{ translate('Expose your business to new markets and explore dynamic opportunities.', $lang) }}</p>
