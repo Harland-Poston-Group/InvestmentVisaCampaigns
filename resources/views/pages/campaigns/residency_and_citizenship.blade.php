@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Visa - Golden Visa</title>
+    <title>Investment Visa - {{ translate('Residency and Citizenship', $lang) }}</title>
 
     <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     {{-- OG Meta Tags --}}
-    <meta property="og:title" content="Investment Visa - Greece Golden Visa" />
+    <meta property="og:title" content="Investment Visa - Residency and Citinzeship" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Unlock Your European Dream With the Greece Golden Visa" />
+    <meta property="og:description" content="{{ translate('Unlock Your European Dream With the Greece Golden Visa', $lang) }}" />
     <meta property="og:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
     <meta property="og:url" content="https://campaigns.investmentvisa.com/residency-and-citizenship" />
     <meta property="og:site_name" content="Investment Visa" />
@@ -24,10 +24,10 @@
 
     {{-- Twitter Card Meta Tags --}}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="twitter:description" content="{{ translate('Grant of Residency or Citizenship on the Basis of an Investment', $lang) }}" />
     <meta name="twitter:image" content="https://campaigns.investmentvisa.com/assets/img/campaigns/greece/GR-Scene-Med-DTP.webp" />
 
-    <meta name="description" content="Grant of Residency or Citizenship on the Basis of an Investment" />
+    <meta name="description" content="{{ translate('Grant of Residency or Citizenship on the Basis of an Investment', $lang) }}" />
 
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -98,7 +98,7 @@
 
                         <div class="nav-wrapper">
                             <div class="sl-nav">
-                            <span class="language">Language:</span>
+                            <span class="language">{{ translate('Language:', $lang) }}</span>
                             <ul>
                                 <li>
 
@@ -130,7 +130,7 @@
                                                     {{-- <i class="sl-flag flag-usa"
                                                         style="background:url({{ $locale['flag'] }})"
                                                     ></i> --}}
-                                                    <span>{{ $locale['name'] }}</span>
+                                                    <span>{{ translate($locale['name'], $lang) }}</span>
                                                 </li>
                                             </a>
                                             
