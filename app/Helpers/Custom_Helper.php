@@ -27,7 +27,10 @@
             }
 
             // Strip HTML tags from the text before translation
-            $text = strip_tags($text);
+            // EDIT: Commented this as I've found the tag_handling option in the DeepL API Documentation which allows us
+            // to translate text within HTML tags and reinserted the translated contexted text within the HTML tags
+            // Will enable this for testing purposes to see how well it works
+            // $text = strip_tags($text);
 
             // Generate a unique cache key for this text and language
             $cacheKey = "translation_{$targetLang}_" . md5($text);
@@ -38,8 +41,12 @@
                     $apiKey = config('deepl.api_key');
                     $translator = new Translator($apiKey);
         
+                    $options = [
+                        'tag_handling'  =>  'html',
+                    ];
+
                     // Perform the translation
-                    $result = $translator->translateText($text, $sourceLang, $targetLang);
+                    $result = $translator->translateText($text, $sourceLang, $targetLang, $options);
         
                     return $result->text;
                 } catch (\Exception $e) {
