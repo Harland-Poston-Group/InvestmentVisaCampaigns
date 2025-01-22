@@ -6748,7 +6748,8 @@ textarea.form-control {
   bottom: 0;
   right: 0;
   left: 0;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   background-image: url("/assets/img/bg/multistep-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;

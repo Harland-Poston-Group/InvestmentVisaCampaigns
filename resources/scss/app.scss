@@ -3173,7 +3173,8 @@ textarea.form-control {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 100%;
+    // height: 100%;
+    height: fit-content;
 
     // background-image:url('/assets/img/bg/multistep.jpeg');
     background-image:url('/assets/img/bg/multistep-bg.jpeg');
