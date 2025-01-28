@@ -195,7 +195,7 @@
                     <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
                 </div>
 
-                <div class="col-12 px-3 my-2">
+                <div class="col-12 px-3 my-0">
                     {{-- <div class="desctext">
                         By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
                     </div> --}}
