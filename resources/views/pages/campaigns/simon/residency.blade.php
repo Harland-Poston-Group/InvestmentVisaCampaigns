@@ -47,10 +47,7 @@
     {{-- Intl Tel Input --}}
     <link rel="stylesheet" href="/assets/css/country-code-plugin/intlTelInput.css">
 
-    <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
-    <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
-    <script src="/assets/js/country-code-plugin/utils.js"></script>
-    {{--<script src="/assets/js/country-code-plugin/tel-input-script.js"></script> --}}
+
     {{-- moved to script.js --}}
 
     {{-- Includes --}}
@@ -312,6 +309,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/notify.js"></script>
 <script src="/js/script.js"></script>
+
+
+<!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
+<script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
+<script src="/assets/js/country-code-plugin/utils.js"></script>
+<script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
 
 <!-- Notifications Element -->
 <div id="notifications"></div>
