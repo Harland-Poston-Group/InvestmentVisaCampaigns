@@ -240,37 +240,49 @@
             <div class="col-12 col-sm-12">
                 <h2 id="cards-title" class="mb-5 text-center">OTHER PROGRAMS AVAILABLE FOR YOU</h2>
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-lg-4">
                 <div class="card-residency portugal h-100">
                     <h1 class="card-title">
                         <span class="one">PORTUGAL</span><br><span class="two">RBI & Citizenship</span>
                     </h1>
-                    <div class="info">
-                        From <b>€155K</b><br> in stagement payments
-                        <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
+                    <div class="info row">
+                        <div class="info-text col-12 col-sm-8 ps-0">
+                            From <b>€155K</b><br> in stagement payments
+                        </div>
+                        <div class="info-img col-12 col-sm-2">
+                            <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-lg-4">
                 <div class="card-residency greece h-100">
                     <h1 class="card-title">
                         <span class="one">GREECE</span><br><span class="two">GOLDEN VISA</span>
                     </h1>
                     <div class="info">
+                        <div class="info-text col-12 col-sm-8 ps-0">
                         From <b>€250K</b> via<br> property investment
-                        <img src="/assets/img/campaigns/simon/gr-flag.webp" alt="list arrow" class="list-arrow">
+                        </div>
+                        <div class="info-img col-12 col-sm-2">
+                            <img src="/assets/img/campaigns/simon/gr-flag.webp" alt="list arrow" class="list-arrow">
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-lg-4">
                 <div class="card-residency portugal h-100">
                     <h1 class="card-title">
                         <span class="one">PORTUGAL</span><br><span class="two">RBI & Citizenship</span>
                     </h1>
                     <div class="info">
+                        <div class="info-text col-12 col-md-8 ps-0">
                         <b>10%</b> fixed returns<br> on part of the investment
-                        <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
+                        </div>
+                        <div class="info-img col-12 col-md-2">
+                            <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -374,6 +386,22 @@
         }
     }
     window.addEventListener('load', addGclid);
+
+
+    $(window).on('scroll', function () {
+        const scrollPosition = $(this).scrollTop();
+        const element = $('#top-header');
+
+        if (scrollPosition > 150) {
+            console.log(scrollPosition);
+            element.addClass('hidden');
+
+        } else {
+            element.removeClass('hidden');
+            console.log(scrollPosition);
+        }
+    });
+
 </script>
 
 </body>
