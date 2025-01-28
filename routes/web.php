@@ -71,6 +71,10 @@ Route::get('/portugal-golden-visa', function () {
     return view('pages.campaigns.simon.residency');
 })->name('campaigns.simon.residency');
 
-Route::get('/campaigns/staged-residency', function () {
-    return view('pages.campaigns.simon.staged-residency');
-})->name('campaigns.simon.staged-residency');
+Route::get('/rbi-and-cbi', function () {
+    return view('pages.campaigns.simon.rbi-and-cbi');
+})->name('campaigns.simon.rbi-and-cbi');
+
+Route::get('/greece-golden-visa-program', function () {
+    return view('pages.campaigns.simon.greece-golden-visa-program');
+})->name('campaigns.simon.greece-golden-visa-program');

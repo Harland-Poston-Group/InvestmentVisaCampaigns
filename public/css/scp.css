@@ -322,3 +322,9 @@ body, html {
     }
 
 }
+
+body.page-rbi-and-cdi .country-name {
+    color: #fff;
+    text-transform: none;
+
+}
