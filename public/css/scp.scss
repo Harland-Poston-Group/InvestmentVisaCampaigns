@@ -1,0 +1,228 @@
+body, html {
+    ::-webkit-scrollbar {
+        width: 10px; /* Set the width of the scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #9294A1; /* Set the thumb color */
+        border-radius: 0; /* Round the corners of the thumb */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Set the track color */
+    }
+}
+#top-header {
+    background: none;
+}
+#top-banner {
+    position: relative;
+    height: 85vh;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,254,255,1) 0%, rgba(255,255,255,0) 100%);
+        pointer-events: none; // Ensures the overlay doesn't block interactions
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    // Add a gradient overlay to create the fade effect
+
+    .header-title {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 9;
+        color: white;
+
+        h1 {
+            font-weight: 700;
+            font-size: 4rem ;
+        }
+
+    }
+
+    .residency-form-container {
+
+
+        #form-bt {
+            float: none;
+            background: #6A257A;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    }
+
+
+}
+#campaign-form, #add-blog-post-form {
+    background: #a18abbe0;
+    box-shadow: none;
+}
+
+.form-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.form-subtitle {
+    font-weight: 800;
+    color: #6b2c84;
+}
+
+
+
+.header-title {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 9;
+    color: white;
+
+    .country-name {
+        font-size: 3.5rem;
+        color: #6b2c84;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+
+    h1 {
+        font-weight: 400;
+        font-size: 5rem ;
+        color: #a786b7;
+        margin: 0;
+    }
+    .subtitle {
+        font-size: 2.5rem;
+        color: #6b2c84;
+
+        b {
+            font-size: 50px;
+        }
+    }
+
+    #header-list{
+        padding: 0;
+        margin-left: 0;
+
+        li{
+            display: flex;
+            margin: 20px 0;
+
+            .icon {
+                height: 40px;
+
+                .list-arrow{
+                    width: 19px;
+                    height: 17px;
+                    position: relative;
+                    transform: rotate(-90deg);
+                }
+            }
+            .list-content {
+                padding-left: 10px;
+                color: #000;
+                font-size: 24px;
+                max-width: 65%;
+                line-height: normal;
+            }
+
+        }
+    }
+
+}
+#cards-info {
+    h2#cards-title {
+        color: #6b2c84;
+    }
+
+    .cards-bottom-info {
+        h2 {
+            color: #6b2c84;
+        }
+    }
+
+
+    }
+
+.card-residency {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background: #f1f1f1;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+.card-residency {
+
+    .card-title {
+        margin-left: 20px;
+        margin-top: 20px;
+        color: #6b2c84;
+        font-size: 2rem;
+        font-weight: 600;
+
+        .two {
+            color: #a786b7;
+        }
+
+    }
+    .info {
+        text-align: left;
+        position: relative;
+        margin-top: 2rem;
+        padding-bottom: 20px;
+        width: 100%;
+        color: #6b2c84;
+        font-size: 25px;
+        line-height: normal;
+
+        b {
+            font-size: 32px;
+        }
+
+        img {
+            position: absolute;
+            bottom: -3px;
+            right: 35px;
+            width: 100px;
+        }
+    }
+}
+
+
+#footer {
+    display: flex;
+    background: #6b2c84;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+}

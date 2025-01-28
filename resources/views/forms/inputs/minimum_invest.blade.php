@@ -1,0 +1,5 @@
+<select class="new_minimum_investment_amount form-control" id="new_minimum_investment_amount" name="new_minimum_investment_amount" required>
+    <option selected disabled hidden value="">Minimum Investment</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>

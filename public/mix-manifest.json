@@ -4,10 +4,14 @@
     "/js/campaigns.js": "/js/campaigns.js",
     "/js/residency.js": "/js/residency.js",
     "/js/script.js": "/js/script.js",
+    "/assets/js/multistep_form.js": "/assets/js/multistep_form.js",
+    "/assets/js/greece_gv.js": "/assets/js/greece_gv.js",
     "/js/notify.js": "/js/notify.js",
     "/css/app.css": "/css/app.css",
-    "/css/residency.css": "/css/residency.css",
+    "/css/greece_gv.css": "/css/greece_gv.css",
     "/css/always_on.css": "/css/always_on.css",
     "/css/campaigns.css": "/css/campaigns.css",
-    "/css/private-meetings.css": "/css/private-meetings.css"
+    "/css/private-meetings.css": "/css/private-meetings.css",
+    "/css/residency.css": "/css/residency.css",
+    "/css/residency_and_citizenship.css": "/css/residency_and_citizenship.css"
 }

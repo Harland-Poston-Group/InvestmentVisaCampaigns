@@ -289,7 +289,7 @@ if( $(".testimonials-slider").length ){
 }
 /* Properties Slider */
 if( $(".properties-slider").length ){
-
+/*
     var properties_slide = new Splide('.properties-slider', {
         type: 'loop',
         perPage: 3,
@@ -304,13 +304,14 @@ if( $(".properties-slider").length ){
         // pagination: '#testimonial-slider-container',
         breakpoints: {
             991: {
-                perPage: 1
+                perPage: 3
             },
         }
         // autoWidth: true,
     }).mount();
-
+*/
     // Adaptar a height do container ao tamanho de cada slider dado que há testimonials com tamanhos diferentes no website
+    /*
     properties_slide.on('mounted moved', function () {
 
         // If we are on mobile, adapt the slider height on each slider move
@@ -323,6 +324,7 @@ if( $(".properties-slider").length ){
         }
 
     })
+    */
 }
 
 

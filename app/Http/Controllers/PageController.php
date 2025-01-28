@@ -11,7 +11,10 @@ class PageController extends Controller
     {
         return view('pages.residency-and-citizenship');
     }
-
+    public function residencyAndCitizenshipTwo()
+    {
+        return view('pages.residency-and-citizenship-2');
+    }
     public function thankYou()
     {
         return view('pages.thank-you');

@@ -55,7 +55,8 @@ class Dynamics_Helper {
             'company' => 'companyname',
             'position' => 'jobtitle',
             'website_url' => 'websiteurl',
-            'quiz_submission'   =>  'ans_quiz_submission'
+            'quiz_submission'   =>  'ans_quiz_submission',
+            'new_minimum_investment_amount' => 'new_minimum_investment_amount'
         ];
 
         // Loop through field mappings and populate the $post array

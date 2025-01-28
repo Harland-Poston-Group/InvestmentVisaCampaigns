@@ -41,20 +41,7 @@ $resource = getenv('DYNAMICS_RESOURCE'); // Replace with your resource URL
 if( isset($_POST['petname']) && !empty($_POST['petname']) ){
     $petname = $_POST['petname'];
 }
-/*
- echo '<pre>';
- print_r($apiUrl);
- echo '<br>';
- print_r($tokenUrl);
- echo '<br>';
- print_r($clientId);
- echo '<br>';
- print_r($clientSecret);
- echo '<br>';
- print_r($resource);
- echo '</pre>';
- die('hey');
-*/
+
 if( isset($_POST['first_name']) && !empty($_POST['first_name']) ){
 
     $first_name = $_POST['first_name'];
@@ -111,6 +98,38 @@ if( isset($_POST['message']) && !empty($_POST['message']) ){
 
 }
 
+function getUserIP() {
+    // Check for shared internet/ISP IP
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    }
+    // Check if user is behind a proxy
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    // Get the remote IP address
+    else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+function getCountryCode($ip) {
+    // API endpoint
+    $url = "https://ipinfo.io/{$ip}/json";
+
+    // Use file_get_contents or curl to send the request
+    $response = file_get_contents($url);
+    $data = json_decode($response, true);
+
+    // Return the country code
+    return isset($data['country']) ? $data['country'] : 'Unknown';
+}
+
+$ip = getUserIP();
+$countryCode = getCountryCode($ip);
+
+echo "Country Code: " . $countryCode;
+
 // echo $_SERVER['HTTP_REFERER'];
 // $referer = $_SERVER['HTTP_REFERER'];
 
@@ -129,6 +148,19 @@ $data = [
     'enquiry_subject' => $_POST['enquiry_subject'] ?? '',
     'message' => $message ?? 'Automatically Generated Message | IV Landing Page',
 ];
+/*
+if($utm_source === 'google'){
+    $utm_source = '119020008';
+}
+*/
+if($utm_source === 'google'){
+    $utm_source = '119020001';
+}
+if ($utm_source === 'facebook' || $utm_source === 'instagram') {
+    $utm_source = '119020000';
+}
+
+// 119020000: Paid Social = facebook / instagram
 
 // Prepare data for Dynamics 365
 $contactData = [
@@ -139,7 +171,8 @@ $contactData = [
     "ans_whatareyoulookingfortext"  => $data['enquiry_subject'],
     "ans_brand" => 119020001,
     // "campaignid" => $utm_campaign ?? null,
-    // "ans_leadsource" => $utm_source ?? null,
+    "ans_leadsource" => 'N/A',
+    "ans_originalsource" => $utm_source ?? null,
     // "ans_googleadclickid" => 'google add test',
     // "ans_ipcountrycode" => 'some ip country code',
     // "ans_message" => $data['message'],
@@ -149,6 +182,81 @@ $contactData = [
 echo '<pre>';
 print_r($contactData);
 echo '</pre>';
+*/
+
+
+
+/*
+ans_leadsource
+
+Options:
+119020028: Aftersales
+119020029: Agent
+119020015: Agent Referral
+119020030: BondTilli
+119020009: Call In /Walk In
+119020031: Casafari
+119020011: Client Referral
+119020032: Direct
+119020033: Domaza
+119020021: Edge Int Lawyers
+119020045: Employee Referral
+119020001: Facebook
+119020034: Fortune Investments
+119020008: Google
+119020002: Google Ads
+119020035: Google Business
+119020013: Green-Acres
+119020007: IREX INVESTOR
+119020004: Instagram
+119020012: Investment Visa
+119020018: James Edition
+119020022: Kormakur
+119020003: Kormakur / Fortune Investment
+119020014: Kyero
+119020023: Linkedin
+119020016: List Globally
+119020036: Live Chat
+119020020: Newsletter
+119020037: Other
+119020038: Portal
+119020024: Portugal Property Ex-Clients
+119020039: Property Lisbon
+119020025: Prospected
+119020019: Resourceful Minds Limited
+119020040: Rightmove
+119020010: Self-Gen
+119020027: Seminar Campaign
+119020041: Spanish Homes
+119020006: Twitter
+119020042: Vizzit
+119020043: Webinar Ads
+119020005: Website
+119020044: Whatsapp
+119020026: Youtube
+119020017: Zoopla
+Default: N/A
+
+ans_originalsource
+
+
+Options:
+119020005: Direct Traffic
+119020004: Email Marketing
+119020002: Offline Sources
+119020006: Organic Search
+119020008: Organic Social
+119020003: Other Campaigns = reddit
+119020001: Paid Search = google
+119020000: Paid Social = facebook / instagram
+119020007: Referrals
+Default: N/A
+
+
+
+
+
+
 */
 
 // Avoid sending message if it's empty - on duplicate entries, this will delete the previous message submission
@@ -230,8 +338,6 @@ function sendToDynamics365($apiUrl, $accessToken, $contactData) {
 }
 
 // Function to check if lead/contact exists in Dynamics 365
-
-// Function to check if lead/contact exists in Dynamics 365
 function checkExistingLead($apiUrl, $accessToken, $email) {
     $http = curl_init();
 
@@ -266,39 +372,6 @@ function checkExistingLead($apiUrl, $accessToken, $email) {
     }
 }
 
-
-/*
-function checkExistingLead($apiUrl, $accessToken, $email) {
-    $http = curl_init();
-
-    // $queryUrl = $apiUrl . "/contacts?" . urlencode("\$filter") . "=emailaddress1 eq '" . urlencode($email) . "'"; // Query to check if contact exists by email
-    $queryUrl = $apiUrl . "?\$filter=emailaddress1%20eq%20'".$email."'";
-
-    curl_setopt($http, CURLOPT_URL, $queryUrl);
-    curl_setopt($http, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($http, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        'Authorization: Bearer ' . $accessToken,
-    ]);
-
-    $response = curl_exec($http);
-    $error = curl_error($http);
-    curl_close($http);
-
-    if ($error) {
-        throw new Exception("Curl error: $error");
-    }
-
-    $responseData = json_decode($response, true);
-
-    // If the query returns results, return the first lead's ID
-    if (isset($responseData['value']) && count($responseData['value']) > 0) {
-        return $responseData['value'][0]['leadid']; // Return the 'leadid' (GUID)
-    } else {
-        return false; // No existing lead found
-    }
-}
-*/
 // Function to update an existing lead/contact in Dynamics 365
 function updateExistingLead($apiUrl, $accessToken, $leadId, $contactData) {
     $http = curl_init();
@@ -332,67 +405,6 @@ function updateExistingLead($apiUrl, $accessToken, $leadId, $contactData) {
     return $response;
 }
 
-// Main logic
-/*
-if( !isset($petname) && !empty($first_name) && !empty($last_name) && !empty($phone_number) && !empty($message) ){
-
-
-    if( $data['enquiry_subject'] !== 'Work Visa' && $data['enquiry_subject'] !== '0' ){
-
-        try {
-            $accessToken = getAccessToken($tokenUrl, $clientId, $clientSecret, $resource);
-
-            // Check if the contact/lead already exists
-            $existingLead = checkExistingLead($apiUrl, $accessToken, $data['email']);
-
-
-            if ($existingLead) {
-                // Update existing lead
-                // die("Lead already exists!");
-
-                // If the request comes true, the ID of the lead is returned
-                $lead_id = $existingLead;
-
-                try {
-                    $response = updateExistingLead($apiUrl, $accessToken, $lead_id, $contactData);
-                    echo "Lead updated successfully. Response: " . $response;
-                } catch (Exception $e) {
-                    echo "Error: " . $e->getMessage();
-                }
-
-            } else {
-                // Create a new lead
-                // die("Lead doesn'te xist");
-                sendToDynamics365($apiUrl, $accessToken, $contactData);
-                // die("New lead created successfully.");
-            }
-            // sendToDynamics365($apiUrl, $accessToken, $contactData);
-            // echo "Data successfully sent to Dynamics 365.";
-
-        } catch (Exception $e) {
-            echo "Error: " . $e->getMessage();
-        }
-
-    }else{
-
-        print_r('Work Visa Submission attempt');
-    }
-
-}else{
-
-    // Do nothing as it's a BOT submission
-    print_r('illegitimate submission');
-    echo '<br>';
-    print_r($first_name);
-    echo '<br>';
-    print_r($last_name);
-    echo '<br>';
-    print_r($phone_number);
-    echo '<br>';
-    print_r($message);
-
-}
-*/
 // Main logic
 if( !isset($petname) && !empty($first_name) && !empty($last_name) && !empty($phone_number) && !empty($message) ){
 
@@ -461,8 +473,8 @@ Mail::send([], [], function ($message) use ($data, $contactData) {
 
     $referer = $_SERVER['HTTP_REFERER'];
 
-    $message->to('enquiries@investmentvisa.com')
-        //$message->to('paulo.bernardes@portugalhomes.com')
+    // $message->to('enquiries@investmentvisa.com')
+    $message->to('paulo.bernardes@portugalhomes.com')
         ->subject('New form submission for Investment Visa')
         ->html('<h2>Contact Data for Dynamics 365</h2>
                 <p><strong>First Name:</strong> ' . $contactData['firstname'] . '</p>
