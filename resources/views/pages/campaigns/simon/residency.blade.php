@@ -61,11 +61,11 @@
 
     {{-- App.css --}}
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/scp.scss">
+    <link rel="stylesheet" href="/css/scp.css">
 
     {{-- mix('/assets/css/app.css') }}
-    {{ mix('/assets/css/scp.scss') }}
-    {{ mix('css/scp.scss') --}}
+    {{ mix('/assets/css/scp.css') }}
+    {{ mix('css/scp.css') --}}
 </head>
 <body class="page-residency-and-citizenship">
 
