@@ -266,7 +266,7 @@
             <div class="col-12 col-sm-4">
                 <div class="card-residency portugal h-100">
                     <h1 class="card-title">
-                        <span class="one">PORTUGAL</span><br><span class="two">RBI & CBI</span>
+                        <span class="one">PORTUGAL</span><br><span class="two">RBI & Citizenship</span>
                     </h1>
                     <div class="info">
                         <b>10%</b> fixed returns<br> on part of the investment

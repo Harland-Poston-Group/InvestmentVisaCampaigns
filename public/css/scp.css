@@ -66,14 +66,19 @@ body, html {
     #mobile-fixed-bottom-cta {
         display: none !important;
     }
+    #footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
+.consent-text.desctext {
+    font-size: 11px;
+}
 
-
-#footer .footer-content {
-    flex-direction: column;
-    align-items: center;
+#campaign-form > div.form-group.row.align-center > div.col-12.px-3.my-2 {
+    margin: 0;
 }
 
 
