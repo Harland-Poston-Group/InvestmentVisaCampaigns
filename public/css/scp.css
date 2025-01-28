@@ -15,6 +15,69 @@ body, html {
 #top-header {
     background: none;
 }
+@media (max-width: 768px) {
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    #top-header {
+        box-shadow: none;
+    }
+    #top-banner {
+        height: auto !important;
+        padding-top: 115px;
+        margin-top: 0;
+    }
+
+    .header-title {
+        position: relative !important;
+        left: 10% !important;
+        margin-top: 40px;
+    }
+
+    .country-name {
+        font-size: 2.5rem !important;
+        font-weight: 600;
+    }
+
+    .header-title h1 {
+        font-weight: 400;
+        font-size: 2rem !important;
+        }
+
+    .residency-form-container {
+        position: relative;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    div.icon .list-arrow {
+        position: relative !important;
+    }
+    #cards-info > div > div > div {
+        margin: 1rem 0;
+    }
+
+    .card-residency .info {
+            font-size: 20px !important;
+        }
+
+    #mobile-fixed-bottom-cta {
+        display: none !important;
+    }
+
+}
+
+
+
+#footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 #top-banner {
     position: relative;
     height: 85vh;
@@ -64,6 +127,8 @@ body, html {
             background: #6A257A;
             border-radius: 8px;
             margin: 20px 0;
+            z-index: 9;
+            position: sticky;
         }
     }
 
