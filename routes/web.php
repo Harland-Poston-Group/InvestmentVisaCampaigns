@@ -67,7 +67,7 @@ Route::post('/multistep-form-submission', [App\Http\Controllers\EnquiriesControl
 // Test Multistep Form LP
 Route::get('/quiz/{lang?}', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');
 
-Route::get('/campaigns/portugal-golden-visa', function () {
+Route::get('/portugal-golden-visa', function () {
     return view('pages.campaigns.simon.residency');
 })->name('campaigns.simon.residency');
 
