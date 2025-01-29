@@ -92,7 +92,7 @@
 <section id="top-banner">
     <div class="container h-100">
         <div class="row h-100">
-        <div class="col-12 col-lg-6 order-2 order-md-1">
+        <div class="col-12 col-lg-6">
             <div class="header-title">
                 <div class="country-name">Portugal</div>
                 <h1>Golden Visa</h1>
@@ -119,7 +119,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-12 col-lg-6 order-1 order-md-2" style="
+        <div class="col-12 col-lg-6" style="
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -307,6 +307,24 @@
         </div>
     </div>
 </section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{-- Modal Form --}}
+                {{-- @include('partials.forms.modal_form') --}}
+
+
+                {{-- Footer
+                @include('components.footer-cp')
+                --}}
+                <button id="scrollToTopBtn" title="Go to top">
+                    <img src="/images/GoTopArrow.png" alt="gotop">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="footer">
     <div class="container">
@@ -323,16 +341,8 @@
 
 
 </section>
-{{-- Modal Form --}}
-@include('partials.forms.modal_form')
 
 
-{{-- Footer
-@include('components.footer-cp')
---}}
-<button id="scrollToTopBtn" title="Go to top">
-    <img src="/images/GoTopArrow.png">
-</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -351,7 +361,7 @@
 <div id="notifications"></div>
 
 {{-- Bottom Mobile Bar --}}
-@include('partials.bottom_fixed_cta')
+{{-- @include('partials.bottom_fixed_cta') --}}
 
 <script>
     function getParam(p) {
@@ -405,12 +415,36 @@
             const element = $('#top-header');
 
             if (scrollPosition > 150) {
-                console.log(scrollPosition);
+               // console.log(scrollPosition);
                 element.addClass('hidden');
             } else {
                 element.removeClass('hidden');
-                console.log(scrollPosition);
+               // console.log(scrollPosition);
             }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            // console.log('scrollToTopBtn');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     });
 

@@ -6737,7 +6737,7 @@ input.form-control,
 textarea.form-control {
   border-radius: 5px;
   border: 1px solid #25283D;
-  background-color: #F9F7F4;
+  background: #F9F7F4;
 }
 
 /* Multi Step Form */

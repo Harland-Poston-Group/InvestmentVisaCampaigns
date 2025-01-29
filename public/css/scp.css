@@ -36,8 +36,8 @@ body, html {
         box-shadow: none;
     }
     #top-banner {
-        height: 210vh !important;
-        padding-top: 115px;
+        height: 200vh !important;
+        padding-top: 0;
         margin-top: 0;
     }
 
@@ -45,6 +45,7 @@ body, html {
         position: relative !important;
         left: 6% !important;
         top: 0 !important;
+        height: 10vh !important;
     }
 
     .country-name {
@@ -70,8 +71,11 @@ body, html {
         margin: 1rem 0;
     }
 
+    .card-residency .card-title {
+        font-size: 1.5em !important;
+    }
     .card-residency .info {
-            font-size: 20px !important;
+            font-size: 16px !important;
         }
 
     #mobile-fixed-bottom-cta {
@@ -80,6 +84,17 @@ body, html {
     #footer .footer-content {
         flex-direction: column;
         align-items: center;
+    }
+    #footer .footer-content a {
+        margin: 4px 0;
+    }
+
+
+    #top-banner > div > div > div:nth-child(2) {
+        display: block !important;
+    }
+    h2#cards-title {
+        margin-bottom: 0 !important;
     }
 
 }
@@ -109,7 +124,7 @@ body, html {
     .header-title {
         left: 6% !important;
         top: 15% !important;
-        height: 65vh;
+        height: 70vh;
     }
 
 }
