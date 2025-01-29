@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\App;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -332,6 +333,121 @@ class LandingPageController extends BaseController
             ]
         );
 
+    }
+
+    // Simon LPs
+    public function simon_campaigns(Request $request)
+    {
+        $routeName = $request->route()->getName();
+        // dump($routeName);
+        
+        $content = array(
+            'campaigns.simon.simon_pt_gv_lp' => array(
+                'mininum_investment_amount' => '500K',
+                'banner_content' => array(
+                    'background_image' => '/assets/img/campaigns/simon/Portugal.webp',
+                    'banner_title' => 'PORTUGAL<br>
+                            <span class="gv-span">Golden Visa</span><br>
+                            <span class="from-span">from</span> <b>€500K</b>',
+                    'bullet_points' => array(
+                        'European Residency by Investment & future Citizenship',
+                        'Include your family for a visa-free Schengen travel'
+                    )
+                ),
+                'cards' => array(
+                    0 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'RBI & Citizenship',
+                        'content' => 'From <b>€155K</b><br> in stagement payments',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                    1 => array(
+                        'title' => 'Greece',
+                        'subtitle' => 'Golden Visa',
+                        'content' => 'From <b>€250K</b> via<br> property investment',
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                    ),
+                    2 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'RBI & Citizenship',
+                        'content' => '<b>10%</b> fixed returns<br> on part of the investment',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                )
+            ),
+            'campaigns.simon.rbi-and-cbi' => array(
+                'mininum_investment_amount' => '155K',
+                'banner_content' => array(
+                    'background_image' => '/assets/img/campaigns/simon/Geral.webp',
+                    'banner_title' => 'EU Residency<br>
+                            & citizenship programs<br>
+                            <span class="from-span">from</span> <b>€155K</b>',
+                    'bullet_points' => array(
+                        '5 years staged payments option',
+                        'Cheapest European Union residency by investment'
+                    )
+                ),
+                'cards' => array(
+                    0 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'Golden Visa',
+                        'content' => 'From <b>€500kK</b><br> via investment funds',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                    1 => array(
+                        'title' => 'Greece',
+                        'subtitle' => 'Golden Visa',
+                        'content' => 'From <b>€250K</b> via<br> property investment',
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                    ),
+                    2 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'RBI & Citizenship',
+                        'content' => '<b>10%</b> fixed returns<br> on part of the investment',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                )
+            ),
+            'campaigns.simon.greece-golden-visa-program' => array(
+                'mininum_investment_amount' => '250K',
+                'banner_content' => array(
+                    'background_image' => '/assets/img/campaigns/simon/Greece.webp',
+                    'banner_title' => 'GREECE<br>
+                            <span class="gv-span">Golden Visa</span><br>
+                            <span class="from-span">from</span> <b>€250K</b>',
+                    'bullet_points' => array(
+                        'Income generating properties from a vast catalogue',
+                        'Cheapest EU Residency via property investment'
+                    )
+                ),
+                'cards' => array(
+                    0 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'RBI & Citizenship',
+                        'content' => 'From <b>€155K</b><br> in stagement payments',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                    1 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'Golden Visa',
+                        'content' => 'From <b>€500K</b><br> via investment funds',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                    2 => array(
+                        'title' => 'Portugal',
+                        'subtitle' => 'RBI & Citizenship',
+                        'content' => '<b>10%</b> fixed returns<br> on part of the investment',
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                    ),
+                )
+            ),
+        );
+
+        // dump($content);
+
+        $page_content = $content[$routeName];
+
+        return view('pages.campaigns.simon.residency', ['content' => $page_content]);
     }
 
 }

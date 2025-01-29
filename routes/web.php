@@ -67,14 +67,19 @@ Route::post('/multistep-form-submission', [App\Http\Controllers\EnquiriesControl
 // Test Multistep Form LP
 Route::get('/quiz/{lang?}', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');
 
-Route::get('/portugal-golden-visa', function () {
-    return view('pages.campaigns.simon.residency');
-})->name('campaigns.simon.residency');
 
-Route::get('/rbi-and-cbi', function () {
-    return view('pages.campaigns.simon.rbi-and-cbi');
-})->name('campaigns.simon.rbi-and-cbi');
+// Route::get('/portugal-golden-visa', function () {
+//     return view('pages.campaigns.simon.residency');
+// })->name('campaigns.simon.residency');
 
-Route::get('/greece-golden-visa-program', function () {
-    return view('pages.campaigns.simon.greece-golden-visa-program');
-})->name('campaigns.simon.greece-golden-visa-program');
+// Route::get('/rbi-and-cbi', function () {
+//     return view('pages.campaigns.simon.rbi-and-cbi');
+// })->name('campaigns.simon.rbi-and-cbi');
+
+// Route::get('/greece-golden-visa-program', function () {
+//     return view('pages.campaigns.simon.greece-golden-visa-program');
+// })->name('campaigns.simon.greece-golden-visa-program');
+
+Route::get('/portugal-golden-visa', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.simon_pt_gv_lp');
+Route::get('/rbi-and-cbi', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.rbi-and-cbi');
+Route::get('/greece-golden-visa-program', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.greece-golden-visa-program');

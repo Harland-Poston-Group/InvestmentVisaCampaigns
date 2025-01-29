@@ -71,273 +71,263 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+{{-- @dump($content) --}}
 
+    <section id="top-banner-residency">
 
-<section id="top-banner-residency">
+        {{-- Background Element --}}
+        <div class="background-element">
+            <div class="gradient-element"></div>
 
-    {{-- Background Element --}}
-    <div class="background-element">
-        <div class="gradient-element"></div>
-        <img src="/assets/img/campaigns/simon/Portugal.webp">
-    </div>
+            @if( isset($content['banner_content']['background_image']) )
 
-    <section id="header">
-        <div class="container">
-            <header class="header row">
-                <div class="col-6 col-sm-2">
-                    <div class="logo">
-                        <a href="/" style="color: #fff; text-decoration: none;">
-                            <img src="/assets/img/campaigns/simon/Logo-Invest-Visa-W-Endossed.svg">
-                        </a>
+                <img src="{{ $content['banner_content']['background_image'] }}">
+
+            @else
+
+                <img src="/assets/img/campaigns/simon/Portugal.webp">
+
+            @endif
+
+        </div>
+
+        <section id="header">
+            <div class="container">
+                <header class="header row">
+                    <div class="col-6 col-sm-2">
+                        <div class="logo">
+                            <a href="/" style="color: #fff; text-decoration: none;">
+                                <img src="/assets/img/campaigns/simon/Logo-Invest-Visa-W-Endossed.svg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-10">
+                    </div>
+                </header>
+            </div>
+        </section>
+
+        <div class="container h-100">
+            <div class="row h-100">
+            <div class="col-12 col-md-6">
+                <div class="header-text-wrapper">
+                    <div class="header-title">
+
+                        <div class="banner-title-wrapper">
+                            <h1 class="country-name">
+
+                                @if( isset($content['banner_content']['banner_title']) )
+
+                                    {!! $content['banner_content']['banner_title'] !!}
+
+                                @else
+
+                                    PORTUGAL<br>
+                                    <span class="gv-span">Golden Visa</span><br>
+                                    <span class="from-span">from</span> <b>€500K</b>
+
+                                @endif
+
+                            </h1>
+                        </div>
+
+                        <ul id="header-list">
+                            
+                            @if ( $content['banner_content']['bullet_points'] )
+                            
+                                @foreach ($content['banner_content']['bullet_points'] as $bullet_point)
+
+                                    <li>
+                                        <div class="icon">
+                                            <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                                        </div>
+                                        <div class="list-content">
+                                            {{ $bullet_point }}
+                                        </div>
+                                    </li>
+                                    
+                                @endforeach
+
+                            @endif
+
+                        </ul>
                     </div>
                 </div>
-                <div class="col-6 col-sm-10">
+
+            </div>
+            <div class="col-12 col-md-6" style="
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            ">
+
+                {{-- Header form --}}
+                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
+
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                    <h2 class="form-title text-center">Fill the form for more info on exclusive offers from our company</h2>
+                    <!--<h4 class="form-subtitle text-center">CONTACT US AND FIND OUT HOW</h4>-->
+
+                    <div class="form-group row mb-2">
+                        <div class="col-6">
+                            <label>First Name  *</label>
+                            <input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>Last Name  *</label>
+                            <input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-12">
+                            <label>Email  *</label>
+                            {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"> --}}
+
+                            {{-- Email Input --}}
+                            @include('forms.inputs.email')
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-12">
+                            <label>Phone Number  *</label>
+                            {{-- <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"> --}}
+                            {{-- Phone Number --}}
+                            @include('forms.inputs.phone_number')
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>I have a minimum of €{{ $content['mininum_investment_amount'] }} to invest *</label>
+                            {{-- Investment Amount --}}
+                            @include('forms.inputs.minimum_invest', ['investment_amount' => $content['mininum_investment_amount'] ])
+
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="petname" id="petname">
+                    <div class="form-group row align-center">
+
+                        {{-- Submit button --}}
+                        <div class="col-12 col-md-12 text-center position-relative">
+                            <hr style="
+                        position: absolute;
+                        bottom: 22px;
+                        left: 0;
+                        right: 0;
+                        border-top: 2px solid;
+                        z-index: 1;"
+                            >
+                            <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
+                        </div>
+
+                        <div class="col-12 px-3 my-0">
+                            {{-- <div class="desctext">
+                                By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
+                            </div> --}}
+
+                            {{-- Consent text --}}
+                            @include('forms.content.consent_text')
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+    <section id="cards-info">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-12 col-sm-12">
+                    <h2 id="cards-title" class="text-center">OTHER PROGRAMS AVAILABLE FOR YOU</h2>
                 </div>
-            </header>
+
+                @if( isset($content['cards']) )
+
+                    @foreach ($content['cards'] as $card)
+
+                        {{-- Card --}}
+                        <div class="col-12 col-lg-4">
+                            <div class="card-residency portugal h-100">
+
+                                <h1 class="card-title">
+                                    <span class="one">{{ $card['title'] }}</span>
+                                    <br>
+                                    <span class="two">{{ $card['subtitle'] }}</span>
+                                </h1>
+
+                                <div class="info row">
+                                    <div class="info-text col-12 col-sm-8 ps-0">
+                                        {!! $card['content'] !!}
+                                    </div>
+                                    <div class="info-img col-12 col-sm-2">
+                                        <img src="{{ $card['image'] }}" alt="list arrow" class="list-arrow">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    @endforeach
+
+                @endif
+
+
+                <div class="col-12 col-sm-12">
+                    <div class="cards-bottom-info py-4">
+                        <h2 class="text-center">
+                            With a <b>100%</b> success rate, <b>2,000+</b> clients, and <b>75+</b> experts<br> <b>we deliver seamless and trusted service globally</b>.
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container h-100">
-        <div class="row h-100">
-        <div class="col-12 col-md-6">
-            <div class="header-text-wrapper">
-                <div class="header-title">
-
-                    <div class="banner-title-wrapper">
-                        <h1 class="country-name">PORTUGAL<br>
-                            <span class="gv-span">Golden Visa</span><br>
-                            <span class="from-span">from</span> <b>€500K</b>
-                        </h1>
-                    </div>
-
-                    <ul id="header-list">
-                        <li>
-                            <div class="icon">
-                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                            </div>
-                            <div class="list-content">
-                                European Residency by Investment & future Citizenship
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                            </div>
-                            <div class="list-content">
-                                Include your family for a visa-free Schengen travel
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-md-6" style="
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                        ">
-
-            {{-- Header form --}}
-            <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
-
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                <h2 class="form-title text-center">Fill the form for more info on exclusive offers from our company</h2>
-                <!--<h4 class="form-subtitle text-center">CONTACT US AND FIND OUT HOW</h4>-->
-
-                <div class="form-group row mb-2">
-                    <div class="col-6">
-                        <label>First Name  *</label>
-                        <input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control">
-                    </div>
-                    <div class="col-6">
-                        <label>Last Name  *</label>
-                        <input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control">
-                    </div>
-                </div>
-
-                <div class="form-group row mb-2">
-                    <div class="col-12">
-                        <label>Email  *</label>
-                        {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"> --}}
-
-                        {{-- Email Input --}}
-                        @include('forms.inputs.email')
-                    </div>
-                </div>
-
-                <div class="form-group row mb-2">
-                    <div class="col-12">
-                        <label>Phone Number  *</label>
-                        {{-- <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"> --}}
-                        {{-- Phone Number --}}
-                        @include('forms.inputs.phone_number')
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-12">
-                        <label>I have a minimum of €500K to invest *</label>
-                        {{-- Investment Amount --}}
-                        @include('forms.inputs.minimum_invest')
-
-                    </div>
-                </div>
-                <!--
-            <div class="form-group row mb-2">
+    <section>
+        <div class="container">
+            <div class="row">
                 <div class="col-12">
-                    {{-- <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea> --}}
-
-                {{-- Message --}}
-                {{-- @include('forms.inputs.message')  --}}
-                </div>
-            </div>
-            -->
-                <input type="hidden" name="petname" id="petname">
-                <div class="form-group row align-center">
-
-                    <div class="col-12 col-md-4">
-                        {{-- Keep me updated Checkbox --}}
-                        {{-- <div class="checkbox-wrapper">
-                            <input type="hidden" name="signup" value="0" />
-                            <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
-                            <label class="keep-me-updated-form-span" for="signup">
-                                Please keep me updated on Harland and Poston Group news, events and offers.
-                            </label>
-                        </div> --}}
-
-                        {{-- Keep me updated Checkbox --}}
-                        {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
-                    </div>
-
-                    {{-- Submit button --}}
-                    <div class="col-12 col-md-12 text-center position-relative">
-                        <hr style="
-                    position: absolute;
-                    bottom: 22px;
-                    left: 0;
-                    right: 0;
-                    border-top: 2px solid;
-                    z-index: 1;"
-                        >
-                        <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
-                    </div>
-
-                    <div class="col-12 px-3 my-0">
-                        {{-- <div class="desctext">
-                            By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
-                        </div> --}}
-
-                        {{-- Consent text --}}
-                        @include('forms.content.consent_text')
-                    </div>
+                    {{-- Modal Form --}}
+                    {{-- @include('partials.forms.modal_form') --}}
 
 
-                </div>
-            </form>
-        </div>
-
-    </div>
-    </div>
-    <!-- <img src="/assets/img/campaigns/simon/Portugal.webp" alt="Residency and Citizenship" class="header-image"> -->
-</section>
-<section id="cards-info">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12">
-                <h2 id="cards-title" class="text-center">OTHER PROGRAMS AVAILABLE FOR YOU</h2>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card-residency portugal h-100">
-                    <h1 class="card-title">
-                        <span class="one">PORTUGAL</span><br><span class="two">RBI & Citizenship</span>
-                    </h1>
-                    <div class="info row">
-                        <div class="info-text col-12 col-sm-8 ps-0">
-                            From <b>€155K</b><br> in stagement payments
-                        </div>
-                        <div class="info-img col-12 col-sm-2">
-                            <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card-residency greece h-100">
-                    <h1 class="card-title">
-                        <span class="one">GREECE</span><br><span class="two">GOLDEN VISA</span>
-                    </h1>
-                    <div class="info">
-                        <div class="info-text col-12 col-sm-8 ps-0">
-                        From <b>€250K</b> via<br> property investment
-                        </div>
-                        <div class="info-img col-12 col-sm-2">
-                            <img src="/assets/img/campaigns/simon/gr-flag.webp" alt="list arrow" class="list-arrow">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card-residency portugal h-100">
-                    <h1 class="card-title">
-                        <span class="one">PORTUGAL</span><br><span class="two">RBI & Citizenship</span>
-                    </h1>
-                    <div class="info">
-                        <div class="info-text col-12 col-md-8 ps-0">
-                        <b>10%</b> fixed returns<br> on part of the investment
-                        </div>
-                        <div class="info-img col-12 col-md-2">
-                            <img src="/assets/img/campaigns/simon/pt-flag.webp" alt="list arrow" class="list-arrow">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12">
-                <div class="cards-bottom-info py-4">
-                    <h2 class="text-center">
-                        With a <b>100%</b> success rate, <b>2,000+</b> clients, and <b>75+</b> experts<br> <b>we deliver seamless and trusted service globally</b>.
-                    </h2>
+                    {{-- Footer
+                    @include('components.footer-cp')
+                    --}}
+                    <button id="scrollToTopBtn" title="Go to top">
+                        <img src="/images/GoTopArrow.png" alt="gotop">
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {{-- Modal Form --}}
-                {{-- @include('partials.forms.modal_form') --}}
+    </section>
 
-
-                {{-- Footer
-                @include('components.footer-cp')
-                --}}
-                <button id="scrollToTopBtn" title="Go to top">
-                    <img src="/images/GoTopArrow.png" alt="gotop">
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-content">
-                <a title="Mail us" href="mailto:info@investmentvisa.com">info@investmentvisa.com</a>
-                <a title="Visit our website" href="https://info@investmentvisa.com" target="_blank">www.investmentvisa.com</a>
-                <div class="bottom-nav">
-                    <a title="Terms and Privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Terms | Privacy Policy</a>
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-content">
+                    <a title="Mail us" href="mailto:info@investmentvisa.com">info@investmentvisa.com</a>
+                    <a title="Visit our website" href="https://info@investmentvisa.com" target="_blank">www.investmentvisa.com</a>
+                    <div class="bottom-nav">
+                        <a title="Terms and Privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Terms | Privacy Policy</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-</section>
+    </section>
 
 
 
