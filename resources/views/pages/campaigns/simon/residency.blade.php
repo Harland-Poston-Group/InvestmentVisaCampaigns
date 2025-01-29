@@ -57,7 +57,7 @@
 
     {{-- App.css --}}
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/scp.css">
+    <link rel="stylesheet" href="/css/scp.css?v={{ uniqid() }}">
 
     {{-- mix('/assets/css/app.css') }}
     {{ mix('/assets/css/scp.css') }}
@@ -133,7 +133,7 @@
                             @isset($content['banner_content']['badge'])
                                 <img class="badge-image" src="{{ $content['banner_content']['badge'] }}">
                             @endisset
-                            
+
                         </div>
 
                         <ul id="header-list">
