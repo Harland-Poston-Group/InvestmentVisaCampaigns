@@ -419,7 +419,7 @@ class LandingPageController extends BaseController
                             <span class="from-span">from</span> <b>€250K</b>',
                     'badge' => '/assets/img/badges/1-program.webp',
                     'bullet_points' => array(
-                        'Change to high capital gain potential',
+                        'High capital gain potential',
                         'Cheapest EU Residency via property investment'
                     )
                 ),
