@@ -96,7 +96,7 @@
                 <header class="header row">
                     <div class="col-6 col-sm-2">
                         <div class="logo">
-                            <a href="/" style="color: #fff; text-decoration: none;">
+                            <a href="https://www.investmentvisa.com/?utm_source=lp&utm_medium=landing_page&utm_campaign=rbi_and_cbi&utm_content=logo" style="color: #fff; text-decoration: none;">
                                 <img src="/assets/img/campaigns/simon/Logo-Invest-Visa-W-Endossed.svg">
                             </a>
                         </div>
@@ -167,7 +167,7 @@
                                             ">
 
                 {{-- Header form --}}
-                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
+                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form simon-campaigns-form">
 
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -323,9 +323,9 @@
             <div class="row">
                 <div class="footer-content">
                     <a title="Mail us" href="mailto:info@investmentvisa.com">info@investmentvisa.com</a>
-                    <a title="Visit our website" href="https://info@investmentvisa.com" target="_blank">www.investmentvisa.com</a>
+                    <a title="Visit our website" href="https://www.investmentvisa.com/?utm_source=lp&utm_medium=landing_page&utm_campaign=rbi_and_cbi&utm_content=logo" target="_blank">www.investmentvisa.com</a>
                     <div class="bottom-nav">
-                        <a title="Terms and Privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Terms | Privacy Policy</a>
+                        <a title="Terms and Privacy" href="https://www.investmentvisa.com/privacy-policy?utm_source=lp&utm_medium=landing_page&utm_campaign=rbi_and_cbi&utm_content=logo" target="_blank">Terms | Privacy Policy</a>
                     </div>
                 </div>
             </div>

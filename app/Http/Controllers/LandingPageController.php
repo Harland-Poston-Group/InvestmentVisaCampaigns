@@ -359,7 +359,7 @@ class LandingPageController extends BaseController
                     0 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
-                        'content' => 'From <b>€155K</b><br> in stagement payments',
+                        'content' => 'From <b>€155K</b><br> in staged payments',
                         'image' => '/assets/img/campaigns/simon/pt-flag.webp'
                     ),
                     1 => array(
@@ -393,7 +393,7 @@ class LandingPageController extends BaseController
                     0 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'Golden Visa',
-                        'content' => 'From <b>€500kK</b><br> via investment funds',
+                        'content' => 'From <b>€500K</b><br> via investment funds',
                         'image' => '/assets/img/campaigns/simon/pt-flag.webp'
                     ),
                     1 => array(
@@ -419,7 +419,7 @@ class LandingPageController extends BaseController
                             <span class="from-span">from</span> <b>€250K</b>',
                     'badge' => '/assets/img/badges/1-program.webp',
                     'bullet_points' => array(
-                        'Income generating properties from a vast catalogue',
+                        'Change to high capital gain potential',
                         'Cheapest EU Residency via property investment'
                     )
                 ),
@@ -427,7 +427,7 @@ class LandingPageController extends BaseController
                     0 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
-                        'content' => 'From <b>€155K</b><br> in stagement payments',
+                        'content' => 'From <b>€155K</b><br> in staged payments',
                         'image' => '/assets/img/campaigns/simon/pt-flag.webp'
                     ),
                     1 => array(

@@ -331,6 +331,11 @@ body, html {
             text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
             font-size: 30px;
             line-height: 40px;
+            max-width: calc(100% - 90px);
+        }
+
+        @media (max-width:360px) {
+            max-width: calc(100% - 70px);
         }
     }
 
@@ -461,6 +466,10 @@ body, html {
         color: #6b2c84;
         font-size: 2rem;
         font-weight: 600;
+
+        .one{
+            font-size: 28px;
+        }
 
         .two {
             color: #a786b7;

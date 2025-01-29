@@ -108,4 +108,21 @@ $(document).ready(function() {
         });
 
     });
+
+    $('.card-residency').on('click', function(){
+
+        if( $('.simon-campaigns-form').length > 0 ){
+
+            let target = $('.simon-campaigns-form');
+    
+            let scrollTarget = target.position().top;
+
+            console.log(scrollTarget);
+    
+            $('html, body').animate({
+                scrollTop: scrollTarget - 20 // Adjust for headers if needed
+            }, 10);
+        }
+
+    })
 });

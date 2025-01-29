@@ -271,6 +271,12 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
     font-size: 30px;
     line-height: 40px;
+    max-width: calc(100% - 90px);
+  }
+}
+@media (max-width: 360px) {
+  .header-title .country-name {
+    max-width: calc(100% - 70px);
   }
 }
 .header-title .gv-span {
@@ -385,6 +391,9 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
   color: #6b2c84;
   font-size: 2rem;
   font-weight: 600;
+}
+.card-residency .card-title .one {
+  font-size: 28px;
 }
 .card-residency .card-title .two {
   color: #a786b7;
