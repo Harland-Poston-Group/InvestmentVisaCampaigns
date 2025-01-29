@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
@@ -92,31 +91,34 @@
     <div class="container h-100">
         <div class="row h-100">
         <div class="col-12 col-lg-6">
-            <div class="header-title">
-                <div class="country-name">Portugal</div>
-                <h1>Golden Visa</h1>
-                <h4 class="subtitle">
-                    from <b>€500K</b>
-                </h4>
-                <ul id="header-list" class="mt-5">
-                    <li>
-                        <div class="icon">
-                            <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                        </div>
-                        <div class="list-content">
-                            European Residency by Investment & future Citizenship
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                        </div>
-                        <div class="list-content">
-                            Include your family for a visa-free Schengen travel
-                        </div>
-                    </li>
-                </ul>
+            <div class="header-text-wrapper">
+                <div class="header-title">
+                    <div class="country-name">Portugal</div>
+                    <h1>Golden Visa</h1>
+                    <h4 class="subtitle">
+                        from <b>€500K</b>
+                    </h4>
+                    <ul id="header-list" class="mt-5">
+                        <li>
+                            <div class="icon">
+                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                            </div>
+                            <div class="list-content">
+                                European Residency by Investment & future Citizenship
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                            </div>
+                            <div class="list-content">
+                                Include your family for a visa-free Schengen travel
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
         <div class="col-12 col-lg-6" style="
         display: flex;

@@ -54,9 +54,6 @@ body, html {
 
     .header-title {
         position: relative !important;
-        left: 6% !important;
-        top: 0 !important;
-        height: 10vh !important;
     }
 
     .country-name {
@@ -117,8 +114,7 @@ body, html {
     }
 
     .header-title {
-        left: 0 !important;
-        top: 10% !important;
+
     }
 
     #top-banner {
@@ -133,9 +129,7 @@ body, html {
 @media (max-width: 1198px) {
 
     .header-title {
-        left: 6% !important;
-        top: 15% !important;
-        height: 70vh;
+
     }
 
 }
@@ -149,11 +143,17 @@ body, html {
     margin: 0;
 }
 
-
+.header-text-wrapper {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+}
 
 #top-banner {
     position: relative;
-    height: 80vh;
+    margin-bottom: 4rem;
+    padding-top: 70px;
 
     &:after {
         content: "";
@@ -178,10 +178,10 @@ body, html {
 
     // Add a gradient overlay to create the fade effect
 
+
+
     .header-title {
         position: relative;
-        top: 20%;
-        left: 6%;
         z-index: 9;
         color: white;
 
@@ -228,8 +228,6 @@ body, html {
 
 .header-title {
     position: relative;
-    top: 20%;
-    left: 0;
     z-index: 9;
     color: white;
 

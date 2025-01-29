@@ -92,31 +92,34 @@
     <div class="container h-100">
         <div class="row h-100">
             <div class="col-12 col-lg-6">
-                <div class="header-title">
-                    <div class="country-name">EU Residency <br>& Citizenship programs</div>
-                    <!-- <h1>Golden Visa</h1> -->
-                    <h4 class="subtitle">
-                        <span class="text-white">from</span>  <b>€155K</b>
-                    </h4>
-                    <ul id="header-list" class="mt-5">
-                        <li>
-                            <div class="icon">
-                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                            </div>
-                            <div class="list-content">
-                                5 years staged payments option
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                            </div>
-                            <div class="list-content">
-                                Cheapest European Union residency by investment
-                            </div>
-                        </li>
-                    </ul>
+                <div class="header-text-wrapper">
+                    <div class="header-title">
+                        <div class="country-name">EU Residency <br>& Citizenship programs</div>
+                        <!-- <h1>Golden Visa</h1> -->
+                        <h4 class="subtitle">
+                            <span class="text-white">from</span>  <b>€155K</b>
+                        </h4>
+                        <ul id="header-list" class="mt-5">
+                            <li>
+                                <div class="icon">
+                                    <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                                </div>
+                                <div class="list-content">
+                                    5 years staged payments option
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                                </div>
+                                <div class="list-content">
+                                    Cheapest European Union residency by investment
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
             <div class="col-12 col-lg-6" style="
         display: flex;
