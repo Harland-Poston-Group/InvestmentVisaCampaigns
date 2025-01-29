@@ -71,34 +71,46 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<section id="top-header">
-    <div class="container">
-        <header class="header row">
-            <div class="col-6 col-sm-2">
-                <div class="logo">
-                    <a href="/" style="color: #fff; text-decoration: none;">
-                        <img src="/assets/img/campaigns/simon/Logo-Invest-Visa-W-Endossed.svg">
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-sm-10">
-            </div>
-        </header>
-    </div>
-</section>
 
-<section id="top-banner">
+
+<section id="top-banner-residency">
+
+    {{-- Background Element --}}
+    <div class="background-element">
+        <div class="gradient-element"></div>
+        <img src="/assets/img/campaigns/simon/Portugal.webp">
+    </div>
+
+    <section id="header">
+        <div class="container">
+            <header class="header row">
+                <div class="col-6 col-sm-2">
+                    <div class="logo">
+                        <a href="/" style="color: #fff; text-decoration: none;">
+                            <img src="/assets/img/campaigns/simon/Logo-Invest-Visa-W-Endossed.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-10">
+                </div>
+            </header>
+        </div>
+    </section>
+
     <div class="container h-100">
         <div class="row h-100">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-md-6">
             <div class="header-text-wrapper">
                 <div class="header-title">
-                    <div class="country-name">Portugal</div>
-                    <h1>Golden Visa</h1>
-                    <h4 class="subtitle">
-                        from <b>€500K</b>
-                    </h4>
-                    <ul id="header-list" class="mt-5">
+
+                    <div class="banner-title-wrapper">
+                        <h1 class="country-name">PORTUGAL<br>
+                            <span class="gv-span">Golden Visa</span><br>
+                            <span class="from-span">from</span> <b>€500K</b>
+                        </h1>
+                    </div>
+
+                    <ul id="header-list">
                         <li>
                             <div class="icon">
                                 <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
@@ -120,11 +132,11 @@
             </div>
 
         </div>
-        <div class="col-12 col-lg-6" style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        ">
+        <div class="col-12 col-md-6" style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        ">
 
             {{-- Header form --}}
             <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
@@ -163,23 +175,7 @@
                         @include('forms.inputs.phone_number')
                     </div>
                 </div>
-                <!--
-            <div class="form-group row">
-                <div class="col-12">
-                    {{-- <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
-                        <option selected hidden value="">What are you looking for?</option>
-                        <option value="Business Visa">Business Visa</option>
-                        <option value="Greece Golden Visa">Golden Visa</option>
-                        <option value="Other Investment Opportunities">Investment Opportunities</option>
-                        <option value="Retirement">Retirement</option>
-                        <option value="Work visa">Work Visa</option>
-                    </select> --}}
 
-                {{-- What are you looking for? --}}
-                {{-- @include('forms.inputs.what_are_you_looking_for') --}}
-                </div>
-            </div>
-            -->
                 <div class="form-group row">
                     <div class="col-12">
                         <label>I have a minimum of €500K to invest *</label>
@@ -250,7 +246,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12">
-                <h2 id="cards-title" class="mb-5 text-center">OTHER PROGRAMS AVAILABLE FOR YOU</h2>
+                <h2 id="cards-title" class="text-center">OTHER PROGRAMS AVAILABLE FOR YOU</h2>
             </div>
             <div class="col-12 col-lg-4">
                 <div class="card-residency portugal h-100">
@@ -299,7 +295,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12">
-                <div class="cards-bottom-info py-4 my-5">
+                <div class="cards-bottom-info py-4">
                     <h2 class="text-center">
                         With a <b>100%</b> success rate, <b>2,000+</b> clients, and <b>75+</b> experts<br> <b>we deliver seamless and trusted service globally</b>.
                     </h2>

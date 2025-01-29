@@ -1,376 +1,382 @@
-body, html {
-    ::-webkit-scrollbar {
-        width: 10px; /* Set the width of the scrollbar */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #9294A1; /* Set the thumb color */
-        border-radius: 0; /* Round the corners of the thumb */
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: #f0f0f0; /* Set the track color */
-    }
+html, body {
+  overflow-x: hidden;
 }
+
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+  background-color: #9294A1; /* Set the thumb color */
+  border-radius: 0; /* Round the corners of the thumb */
+}
+body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Set the track color */
+}
+
 #top-header {
-    background: none;
+  background: none;
 }
 
-#top-banner {
-    background: url("/assets/img/campaigns/simon/Portugal.webp");
-    background-position: top center;
-    background-repeat: no-repeat;
+#top-banner-residency {
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+#top-banner-residency .background-element {
+  position: absolute;
+  top: 0;
+  height: 85%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #top-banner-residency .background-element {
+    height: 450px;
+  }
+  #top-banner-residency .background-element .gradient-element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 254, 255, 0.7) 30%, rgba(255, 255, 255, 0.5) 100%);
+  }
+}
+#top-banner-residency .background-element img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#top-banner-residency .row form {
+  max-width: 415px;
+  width: unset;
+  padding-bottom: 20px;
+  padding: 30px 30px;
+}
+@media (max-width: 576px) {
+  #top-banner-residency .row form {
+    padding: 30px 15px;
+  }
+}
+#top-banner-residency .row form label {
+  font-weight: 600;
+}
+#top-banner-residency .row form .form-title {
+  position: unset;
+  margin-bottom: 30px;
+}
+#top-banner-residency .gv-span {
+  font-weight: 500;
 }
 
-#top-banner.greece {
-    background: url("/assets/img/campaigns/simon/Greece.webp");
-    background-position: top center;
-    background-repeat: no-repeat;
-}
-#top-banner.rbi {
-    background: url("/assets/img/campaigns/simon/Geral.webp");
-    background-position: top center;
-    background-repeat: no-repeat;
+#top-banner-residency.greece {
+  background: url("/assets/img/campaigns/simon/Greece.webp");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
-.hidden{
-    display: none;
+#top-banner-residency.rbi {
+  background: url("/assets/img/campaigns/simon/Geral.webp");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {
-/*
-    body, html {
-        overflow-x: hidden;
-    }
-*/
-    #top-header {
-        box-shadow: none;
-    }
-    #top-banner {
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .header-title {
-        position: relative !important;
-    }
-
-    .country-name {
-        font-size: 2.5rem !important;
-        font-weight: 600;
-    }
-
-    .header-title h1 {
-        font-weight: 400;
-        font-size: 2rem !important;
-        }
-
-    .residency-form-container {
-        position: relative;
-        margin-top: 0;
-        width: 100%;
-    }
-
-    div.icon .list-arrow {
-        position: relative !important;
-    }
-    #cards-info > div > div > div {
-        margin: 1rem 0;
-    }
-
-    .card-residency .card-title {
-        font-size: 1.5em !important;
-    }
-    .card-residency .info {
-            font-size: 16px !important;
-        }
-
-    #mobile-fixed-bottom-cta {
-        display: none !important;
-    }
-    #footer .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    #footer .footer-content a {
-        margin: 4px 0;
-    }
-
-
-    #top-banner > div > div > div:nth-child(2) {
-        display: block !important;
-    }
-    h2#cards-title {
-        margin-bottom: 0 !important;
-    }
-
-    .cards-bottom-info h2 {
-        font-size: larger;
-    }
-
-
-    }
-
+  /*
+      body, html {
+          overflow-x: hidden;
+      }
+  */
+  #top-header {
+    box-shadow: none;
+  }
+  #top-banner-residency {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .header-title {
+    position: relative !important;
+  }
+  .country-name {
+    font-weight: 600;
+  }
+  .residency-form-container {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+  }
+  div.icon .list-arrow {
+    position: relative !important;
+  }
+  #cards-info > div > div > div {
+    margin: 1rem 0;
+  }
+  .card-residency .card-title {
+    font-size: 1.5em !important;
+  }
+  .card-residency .info {
+    font-size: 16px !important;
+  }
+  #mobile-fixed-bottom-cta {
+    display: none !important;
+  }
+  #footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer .footer-content a {
+    margin: 4px 0;
+  }
+  #top-banner-residency-residency > div > div > div:nth-child(2) {
+    display: block !important;
+  }
+  h2#cards-title {
+    margin-bottom: 0 !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
-
-    html {
-        overflow-y: scroll;
-    }
-
-    .header-title {
-
-    }
-
-    #top-banner {
-        height:auto !important;
-    }
-    #cards-info > div > div > div {
-        margin: 1rem 0;
-    }
-
+  html {
+    overflow-y: scroll;
+  }
+  #top-banner-residency {
+    height: auto !important;
+  }
+  #cards-info > div > div > div {
+    margin: 1rem 0;
+  }
 }
-
-@media (max-width: 1198px) {
-
-    .header-title {
-
-    }
-
-}
-
-
 .consent-text.desctext {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 #campaign-form > div.form-group.row.align-center > div.col-12.px-3.my-2 {
-    margin: 0;
+  margin: 0;
 }
 
 .header-text-wrapper {
-    height: 100%;
-    display: flex;
-    align-content: center;
-    align-items: flex-end;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
 }
 
-#top-banner {
-    position: relative;
-    margin-bottom: 4rem;
-    padding-top: 70px;
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,254,255,1) 0%, rgba(255,255,255,0) 100%);
-        pointer-events: none; // Ensures the overlay doesn't block interactions
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    // Add a gradient overlay to create the fade effect
-
-
-
-    .header-title {
-        position: relative;
-        z-index: 9;
-        color: white;
-
-        h1 {
-            font-weight: 700;
-            font-size: 4rem ;
-        }
-
-    }
-
-
-
-
-        #form-bt {
-            float: none;
-            background: #6A257A;
-            border-radius: 8px;
-            margin: 20px 0;
-            z-index: 9;
-            position: sticky;
-        }
-
-
-
+#top-banner-residency {
+  position: relative;
+  margin-bottom: 5rem;
 }
+#top-banner-residency:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 30%, rgb(255, 254, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+#top-banner-residency #header {
+  position: relative;
+}
+#top-banner-residency .header-title {
+  position: relative;
+  z-index: 9;
+  color: white;
+}
+@media (max-width: 768px) {
+  #top-banner-residency .header-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+#top-banner-residency #form-bt {
+  float: none;
+  background: #6A257A;
+  border-radius: 8px;
+  margin: 20px 0;
+  z-index: 9;
+  position: sticky;
+}
+
 #campaign-form, #add-blog-post-form {
-    background: #a18abbe0;
-    box-shadow: none;
-    margin: 0 auto;
-    padding-bottom: 20px;
+  background: rgba(161, 138, 187, 0.8784313725);
+  box-shadow: none;
+  margin-left: auto;
+  padding-bottom: 20px;
 }
 
 .form-title {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
+
 .form-subtitle {
-    font-weight: 800;
-    color: #6b2c84;
+  font-weight: 800;
+  color: #6b2c84;
 }
-
-
 
 .header-title {
-    position: relative;
-    z-index: 9;
-    color: white;
-
-    .country-name {
-        font-size: 3.5rem;
-        color: #6b2c84;
-        text-transform: uppercase;
-        font-weight: 600;
-    }
-
-
-    h1 {
-        font-weight: 400;
-        font-size: 5rem ;
-        color: #a786b7;
-        margin: 0;
-    }
-    .subtitle {
-        font-size: 2.5rem;
-        color: #6b2c84;
-
-        b {
-            font-size: 50px;
-        }
-    }
-
-    #header-list{
-        padding: 0;
-        margin-left: 0;
-
-        li{
-            display: flex;
-            margin: 20px 0;
-
-            .icon {
-                height: 40px;
-
-                .list-arrow{
-                    width: 19px;
-                    height: 17px;
-                    position: relative;
-                    transform: rotate(-90deg);
-                }
-            }
-            .list-content {
-                padding-left: 10px;
-                color: #000;
-                font-size: 24px;
-                max-width: 65%;
-                line-height: normal;
-            }
-
-        }
-    }
-
+  position: relative;
+  z-index: 9;
+  color: white;
 }
-#cards-info {
-    h2#cards-title {
-        color: #6b2c84;
-    }
+.header-title .country-name {
+  font-size: 3.5rem;
+  color: #6b2c84;
+  font-weight: 600;
+  line-height: 1.1;
+}
+@media (max-width: 991px) {
+  .header-title .country-name {
+    line-height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .header-title .country-name {
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 30px;
+  }
+}
+.header-title .gv-span {
+  color: rgba(161, 138, 187, 0.8784313725);
+  font-size: 65px;
+}
+.header-title .from-span {
+  font-size: 30px;
+  font-weight: 500;
+}
+.header-title h1 {
+  font-weight: 400;
+  font-size: 5rem;
+  color: #a786b7;
+  margin: 0;
+}
+.header-title .subtitle {
+  font-size: 2.5rem;
+  color: #6b2c84;
+}
+.header-title .subtitle b {
+  font-size: 50px;
+}
+.header-title #header-list {
+  padding: 0;
+  margin-left: 0;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .header-title #header-list {
+    margin-top: 30px;
+  }
+}
+.header-title #header-list li {
+  display: flex;
+  margin: 20px 0;
+}
+.header-title #header-list li .icon {
+  height: 40px;
+}
+.header-title #header-list li .icon .list-arrow {
+  width: 19px;
+  height: 17px;
+  position: relative;
+  transform: rotate(-90deg);
+}
+.header-title #header-list li .list-content {
+  padding-left: 10px;
+  color: #000;
+  font-size: 24px;
+  line-height: normal;
+}
 
-    .cards-bottom-info {
-        h2 {
-            color: #6b2c84;
-        }
-    }
-
-
-    }
+#cards-info #cards-title {
+  color: #6b2c84;
+  margin-bottom: 40px;
+}
+@media (max-width: 991px) {
+  #cards-info #cards-title {
+    margin-bottom: unset;
+  }
+}
+#cards-info .cards-bottom-info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  #cards-info .cards-bottom-info {
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+}
+#cards-info .cards-bottom-info h2 {
+  color: #6b2c84;
+}
+@media (max-width: 768px) {
+  #cards-info .cards-bottom-info h2 {
+    font-family: 24px;
+  }
+}
 
 .card-residency {
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    background: #f1f1f1;
-    align-items: baseline;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background: #f1f1f1;
+  align-items: baseline;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
-
-.card-residency {
-
-    .card-title {
-        margin-left: 20px;
-        margin-top: 20px;
-        color: #6b2c84;
-        font-size: 2rem;
-        font-weight: 600;
-
-        .two {
-            color: #a786b7;
-        }
-
-    }
-    .info {
-        text-align: left;
-        position: relative;
-        margin-top: 2rem;
-        padding-bottom: 20px;
-        width: 100%;
-        color: #6b2c84;
-        font-size: 25px;
-        line-height: normal;
-
-        b {
-            font-size: 32px;
-        }
-
-        img {
-            position: absolute;
-            bottom: -3px;
-            right: 35px;
-            width: 100px;
-        }
-    }
+.card-residency .card-title {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #6b2c84;
+  font-size: 2rem;
+  font-weight: 600;
 }
-
+.card-residency .card-title .two {
+  color: #a786b7;
+}
+.card-residency .info {
+  text-align: left;
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 20px;
+  width: 100%;
+  color: #6b2c84;
+  font-size: 25px;
+  line-height: normal;
+}
+.card-residency .info b {
+  font-size: 32px;
+}
+.card-residency .info img {
+  position: absolute;
+  bottom: -3px;
+  right: 35px;
+  width: 100px;
+}
 
 #footer {
-    display: flex;
-    background: #6b2c84;
-    color: #fff;
-
-    a {
-        color: #fff;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        padding: 2rem 0;
-    }
-
+  display: flex;
+  background: #6b2c84;
+  color: #fff;
+}
+#footer a {
+  color: #fff;
+}
+#footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
 body.page-rbi-and-cdi .country-name {
-    color: #fff;
-    text-transform: none;
-
+  color: #fff;
+  text-transform: none;
 }
