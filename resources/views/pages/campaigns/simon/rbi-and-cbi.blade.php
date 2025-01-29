@@ -88,49 +88,80 @@
         </header>
     </div>
 </section>
-
-<section id="top-banner">
-    <img src="/assets/img/campaigns/simon/Geral.webp" alt="Residency and Citizenship" class="header-image">
-    <div class="residency-form-container">
-
-        {{-- Header form --}}
-        <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
-
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-            <h2 class="form-title text-center">Fill the form for more info on exclusive offers from our company</h2>
-            <!--<h4 class="form-subtitle text-center">CONTACT US AND FIND OUT HOW</h4>-->
-
-            <div class="form-group row mb-2">
-                <div class="col-6">
-                    <label>First Name  *</label>
-                    <input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control">
-                </div>
-                <div class="col-6">
-                    <label>Last Name  *</label>
-                    <input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control">
-                </div>
-            </div>
-
-            <div class="form-group row mb-2">
-                <div class="col-12">
-                    <label>Email  *</label>
-                    {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"> --}}
-
-                    {{-- Email Input --}}
-                    @include('forms.inputs.email')
+<section id="top-banner" class="rbi">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 col-lg-6">
+                <div class="header-title">
+                    <div class="country-name">EU Residency <br>& Citizenship programs</div>
+                    <!-- <h1>Golden Visa</h1> -->
+                    <h4 class="subtitle">
+                        <span class="text-white">from</span>  <b>€155K</b>
+                    </h4>
+                    <ul id="header-list" class="mt-5">
+                        <li>
+                            <div class="icon">
+                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                            </div>
+                            <div class="list-content">
+                                5 years staged payments option
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
+                            </div>
+                            <div class="list-content">
+                                Cheapest European Union residency by investment
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <div class="col-12 col-lg-6" style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        ">
 
-            <div class="form-group row mb-2">
-                <div class="col-12">
-                    <label>Phone Number  *</label>
-                    {{-- <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"> --}}
-                    {{-- Phone Number --}}
-                    @include('forms.inputs.phone_number')
-                </div>
-            </div>
-            <!--
+                {{-- Header form --}}
+                <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
+
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                    <h2 class="form-title text-center">Fill the form for more info on exclusive offers from our company</h2>
+                    <!--<h4 class="form-subtitle text-center">CONTACT US AND FIND OUT HOW</h4>-->
+
+                    <div class="form-group row mb-2">
+                        <div class="col-6">
+                            <label>First Name  *</label>
+                            <input type="text" name="first_name" required="" placeholder="First Name *" id="first_name" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>Last Name  *</label>
+                            <input type="text" name="last_name" required="" placeholder="Last Name *" id="last_name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-12">
+                            <label>Email  *</label>
+                            {{-- <input type="email" name="email" required="" placeholder="Email Address *" id="email" class="form-control IDM0XXP2SUXVC5U13"> --}}
+
+                            {{-- Email Input --}}
+                            @include('forms.inputs.email')
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-12">
+                            <label>Phone Number  *</label>
+                            {{-- <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" class="form-control contact-number phone-number-extension"> --}}
+                            {{-- Phone Number --}}
+                            @include('forms.inputs.phone_number')
+                        </div>
+                    </div>
+                    <!--
             <div class="form-group row">
                 <div class="col-12">
                     {{-- <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
@@ -142,98 +173,78 @@
                         <option value="Work visa">Work Visa</option>
                     </select> --}}
 
-            {{-- What are you looking for? --}}
-            {{-- @include('forms.inputs.what_are_you_looking_for') --}}
-            </div>
-        </div>
--->
-            <div class="form-group row">
-                <div class="col-12">
-                    <label>I have a minimum of €500K to invest *</label>
-                    {{-- Investment Amount --}}
-                    @include('forms.inputs.minimum_invest')
-
+                    {{-- What are you looking for? --}}
+                    {{-- @include('forms.inputs.what_are_you_looking_for') --}}
+                    </div>
                 </div>
-            </div>
-            <!--
+-->
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>I have a minimum of €500K to invest *</label>
+                            {{-- Investment Amount --}}
+                            @include('forms.inputs.minimum_invest')
+
+                        </div>
+                    </div>
+                    <!--
             <div class="form-group row mb-2">
                 <div class="col-12">
                     {{-- <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea> --}}
 
-            {{-- Message --}}
-            {{-- @include('forms.inputs.message')  --}}
-            </div>
-        </div>
--->
-            <input type="hidden" name="petname" id="petname">
-            <div class="form-group row align-center">
-
-                <div class="col-12 col-md-4">
-                    {{-- Keep me updated Checkbox --}}
-                    {{-- <div class="checkbox-wrapper">
-                        <input type="hidden" name="signup" value="0" />
-                        <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
-                        <label class="keep-me-updated-form-span" for="signup">
-                            Please keep me updated on Harland and Poston Group news, events and offers.
-                        </label>
-                    </div> --}}
-
-                    {{-- Keep me updated Checkbox --}}
-                    {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
+                    {{-- Message --}}
+                    {{-- @include('forms.inputs.message')  --}}
+                    </div>
                 </div>
+-->
+                    <input type="hidden" name="petname" id="petname">
+                    <div class="form-group row align-center">
 
-                {{-- Submit button --}}
-                <div class="col-12 col-md-12 text-center position-relative">
-                    <hr style="
+                        <div class="col-12 col-md-4">
+                            {{-- Keep me updated Checkbox --}}
+                            {{-- <div class="checkbox-wrapper">
+                                <input type="hidden" name="signup" value="0" />
+                                <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
+                                <label class="keep-me-updated-form-span" for="signup">
+                                    Please keep me updated on Harland and Poston Group news, events and offers.
+                                </label>
+                            </div> --}}
+
+                            {{-- Keep me updated Checkbox --}}
+                            {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
+                        </div>
+
+                        {{-- Submit button --}}
+                        <div class="col-12 col-md-12 text-center position-relative">
+                            <hr style="
                     position: absolute;
                     bottom: 22px;
                     left: 0;
                     right: 0;
                     border-top: 2px solid;
                     z-index: 1;"
-                    >
-                    <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
-                </div>
+                            >
+                            <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
+                        </div>
 
-                <div class="col-12 px-3 my-0">
-                    {{-- <div class="desctext">
-                        By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
-                    </div> --}}
+                        <div class="col-12 px-3 my-0">
+                            {{-- <div class="desctext">
+                                By submitting this form, you confirm that you agree that your data will be used to contact you. <a class="privacy" href="https://www.investmentvisa.com/privacy-policy" target="_blank">Read More</a>
+                            </div> --}}
 
-                    {{-- Consent text --}}
-                    @include('forms.content.consent_text')
-                </div>
+                            {{-- Consent text --}}
+                            @include('forms.content.consent_text')
+                        </div>
 
 
+                    </div>
+                </form>
             </div>
-        </form>
+
+        </div>
     </div>
-    <div class="header-title">
-        <div class="country-name">EU Residency <br>& Citizenship programs</div>
-        <!-- <h1>Golden Visa</h1> -->
-        <h4 class="subtitle">
-            <span class="text-white">from</span>  <b>€155K</b>
-        </h4>
-        <ul id="header-list" class="mt-5">
-            <li>
-                <div class="icon">
-                    <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                </div>
-                <div class="list-content">
-                    5 years staged payments option
-                </div>
-            </li>
-            <li>
-                <div class="icon">
-                    <img src="/assets/img/campaigns/simon/arrow.png" alt="list arrow" class="list-arrow">
-                </div>
-                <div class="list-content">
-                    Cheapest European Union residency by investment
-                </div>
-            </li>
-        </ul>
-    </div>
+    <!-- <img src="/assets/img/campaigns/simon/Portugal.webp" alt="Residency and Citizenship" class="header-image"> -->
 </section>
+
 <section id="cards-info">
     <div class="container">
         <div class="row">
@@ -296,7 +307,24 @@
         </div>
     </div>
 </section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{-- Modal Form --}}
+                {{-- @include('partials.forms.modal_form') --}}
 
+
+                {{-- Footer
+                @include('components.footer-cp')
+                --}}
+                <button id="scrollToTopBtn" title="Go to top">
+                    <img src="/images/GoTopArrow.png" alt="gotop">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="footer">
     <div class="container">
         <div class="row">
@@ -312,16 +340,6 @@
 
 
 </section>
-{{-- Modal Form --}}
-@include('partials.forms.modal_form')
-
-
-{{-- Footer
-@include('components.footer-cp')
---}}
-<button id="scrollToTopBtn" title="Go to top">
-    <img src="/images/GoTopArrow.png">
-</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -400,6 +418,29 @@
             element.removeClass('hidden');
             console.log(scrollPosition);
         }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            // console.log('scrollToTopBtn');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     });
 
 </script>

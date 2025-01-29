@@ -22,6 +22,17 @@ body, html {
     background-repeat: no-repeat;
 }
 
+#top-banner.greece {
+    background: url("/assets/img/campaigns/simon/Greece.webp");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+#top-banner.rbi {
+    background: url("/assets/img/campaigns/simon/Geral.webp");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
 .hidden{
     display: none;
 }
