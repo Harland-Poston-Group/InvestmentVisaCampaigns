@@ -241,7 +241,7 @@ body, html {
 
         @media (max-width:768px) {
             margin-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         h1 {
@@ -301,12 +301,17 @@ body, html {
         @media (max-width:768px) {
             text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
             font-size: 30px;
+            line-height: 40px;
         }
     }
 
     .gv-span{
         color: #a18abbe0;
         font-size: 65px;
+
+        @media (max-width:768px) {
+            font-size: 42px;
+        }
     }
 
     .from-span{
@@ -337,7 +342,7 @@ body, html {
         margin-top: 3rem;
 
         @media (max-width:768px) {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         li{
@@ -352,6 +357,10 @@ body, html {
                     height: 17px;
                     position: relative;
                     transform: rotate(-90deg);
+
+                    @media (max-width:768px) {
+                        height: unset;
+                    }
                 }
             }
             .list-content {
@@ -360,6 +369,10 @@ body, html {
                 font-size: 24px;
                 // max-width: 65%;
                 line-height: normal;
+
+                @media (max-width:768px) {
+                    font-size: 20px;
+                }
             }
 
         }

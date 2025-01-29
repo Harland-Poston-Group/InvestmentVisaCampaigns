@@ -189,7 +189,7 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
 @media (max-width: 768px) {
   #top-banner-residency .header-title {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 #top-banner-residency #form-bt {
@@ -239,11 +239,17 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
   .header-title .country-name {
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
     font-size: 30px;
+    line-height: 40px;
   }
 }
 .header-title .gv-span {
   color: rgba(161, 138, 187, 0.8784313725);
   font-size: 65px;
+}
+@media (max-width: 768px) {
+  .header-title .gv-span {
+    font-size: 42px;
+  }
 }
 .header-title .from-span {
   font-size: 30px;
@@ -270,7 +276,7 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
 }
 @media (max-width: 768px) {
   .header-title #header-list {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 .header-title #header-list li {
@@ -286,11 +292,21 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
   position: relative;
   transform: rotate(-90deg);
 }
+@media (max-width: 768px) {
+  .header-title #header-list li .icon .list-arrow {
+    height: unset;
+  }
+}
 .header-title #header-list li .list-content {
   padding-left: 10px;
   color: #000;
   font-size: 24px;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .header-title #header-list li .list-content {
+    font-size: 20px;
+  }
 }
 
 #cards-info #cards-title {
