@@ -349,6 +349,7 @@ class LandingPageController extends BaseController
                     'banner_title' => 'PORTUGAL<br>
                             <span class="gv-span">Golden Visa</span><br>
                             <span class="from-span">from</span> <b>€500K</b>',
+                    'badge' => '/assets/img/badges/top-choice.webp',
                     'bullet_points' => array(
                         'European Residency by Investment & future Citizenship',
                         'Include your family for a visa-free Schengen travel'
@@ -382,6 +383,7 @@ class LandingPageController extends BaseController
                     'banner_title' => 'EU Residency<br>
                             & citizenship programs<br>
                             <span class="from-span">from</span> <b>€155K</b>',
+                    'badge' => '/assets/img/badges/exclusive-offer.webp',
                     'bullet_points' => array(
                         '5 years staged payments option',
                         'Cheapest European Union residency by investment'
@@ -415,6 +417,7 @@ class LandingPageController extends BaseController
                     'banner_title' => 'GREECE<br>
                             <span class="gv-span">Golden Visa</span><br>
                             <span class="from-span">from</span> <b>€250K</b>',
+                    'badge' => '/assets/img/badges/1-program.webp',
                     'bullet_points' => array(
                         'Income generating properties from a vast catalogue',
                         'Cheapest EU Residency via property investment'

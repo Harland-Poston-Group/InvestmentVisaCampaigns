@@ -192,6 +192,32 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
     margin-bottom: 25px;
   }
 }
+#top-banner-residency .header-title .banner-title-wrapper {
+  position: relative;
+}
+#top-banner-residency .header-title .banner-title-wrapper .badge-image {
+  position: absolute;
+  width: 100px;
+  right: 0;
+  bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #top-banner-residency .header-title .banner-title-wrapper .badge-image {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #top-banner-residency .header-title .banner-title-wrapper .badge-image {
+    bottom: unset;
+    top: 0;
+    width: 90px;
+  }
+}
+@media (max-width: 360px) {
+  #top-banner-residency .header-title .banner-title-wrapper .badge-image {
+    width: 70px;
+  }
+}
 #top-banner-residency #form-bt {
   float: none;
   background: #6A257A;
@@ -229,6 +255,11 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
   color: #6b2c84;
   font-weight: 600;
   line-height: 1.1;
+}
+@media (min-width: 991px) {
+  .header-title .country-name {
+    width: calc(100% - 100px);
+  }
 }
 @media (max-width: 991px) {
   .header-title .country-name {

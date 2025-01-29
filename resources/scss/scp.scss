@@ -244,6 +244,31 @@ body, html {
             margin-bottom: 25px;
         }
 
+        .banner-title-wrapper{
+            position: relative;
+
+            .badge-image{
+                position: absolute;
+                width: 100px;
+                right: 0;
+                bottom: 0;
+
+                @media (min-width:768px) and (max-width:991px) {
+                    display: none;
+                }
+
+                @media (max-width:768px) {
+                    bottom: unset;
+                    top: 0;
+                    width: 90px;            
+                }
+
+                @media (max-width:360px) {
+                    width: 70px;
+                }
+            }
+        }
+
         h1 {
             // font-weight: 700;
             // font-size: 4rem ;
@@ -293,6 +318,10 @@ body, html {
         // text-transform: uppercase;
         font-weight: 600;
         line-height: 1.1;
+
+        @media (min-width:991px) {
+            width: calc(100% - 100px);
+        }
 
         @media (max-width:991px) {
             line-height: 60px;

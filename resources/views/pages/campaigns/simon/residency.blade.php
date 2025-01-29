@@ -129,6 +129,11 @@
                                 @endif
 
                             </h1>
+
+                            @isset($content['banner_content']['badge'])
+                                <img class="badge-image" src="{{ $content['banner_content']['badge'] }}">
+                            @endisset
+                            
                         </div>
 
                         <ul id="header-list">
