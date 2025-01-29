@@ -104,7 +104,12 @@ body, html {
         margin-bottom: 0 !important;
     }
 
-}
+    .cards-bottom-info h2 {
+        font-size: larger;
+    }
+
+
+    }
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
