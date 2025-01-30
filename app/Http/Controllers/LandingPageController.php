@@ -343,6 +343,8 @@ class LandingPageController extends BaseController
         
         $content = array(
             'campaigns.simon.simon_pt_gv_lp' => array(
+                'meta_title' => 'Portugal Golden Visa',
+                'meta_description' => '',
                 'mininum_investment_amount' => '500K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Portugal.webp',
@@ -377,6 +379,8 @@ class LandingPageController extends BaseController
                 )
             ),
             'campaigns.simon.rbi-and-cbi' => array(
+                'meta_title' => 'Residency and Citizenship',
+                'meta_description' => '',
                 'mininum_investment_amount' => '155K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Geral.webp',
@@ -411,12 +415,15 @@ class LandingPageController extends BaseController
                 )
             ),
             'campaigns.simon.greece-golden-visa-program' => array(
+                'meta_title' => 'Greece Golden Visa',
+                'meta_description' => '',
                 'mininum_investment_amount' => '250K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Greece.webp',
                     'banner_title' => 'GREECE<br>
                             <span class="gv-span">Golden Visa</span><br>
-                            <span class="from-span">from</span> <b>€250K</b>',
+                            <span class="from-span">from</span> <b>€250K</b></h1>
+                            <h1 class="via-real-estate"><span class="via-real-estate">via real estate</span>',
                     'badge' => '/assets/img/badges/1-program.webp',
                     'bullet_points' => array(
                         'High capital gain potential',

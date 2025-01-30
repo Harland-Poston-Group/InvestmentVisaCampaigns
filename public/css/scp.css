@@ -279,6 +279,10 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
     max-width: calc(100% - 70px);
   }
 }
+.header-title .via-real-estate {
+  font-size: 26px;
+  line-height: 20px;
+}
 .header-title .gv-span {
   color: rgba(161, 138, 187, 0.8784313725);
   font-size: 65px;

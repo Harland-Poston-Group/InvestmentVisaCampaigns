@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Visa - Residency and Citizenship</title>
+
+    @if( isset($content['meta_title']) && !empty($content['meta_title']) )
+
+        <title>Investment Visa - {{ $content['meta_title'] }}</title><
+
+    @else
+
+        <title>Investment Visa - Residency and Citizenship</title>
+
+    @endif
+
     <link rel="stylesheet" href="/css/style.css" />
 
     <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
