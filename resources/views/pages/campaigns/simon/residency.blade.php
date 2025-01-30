@@ -6,7 +6,7 @@
 
     @if( isset($content['meta_title']) && !empty($content['meta_title']) )
 
-        <title>Investment Visa - {{ $content['meta_title'] }}</title><
+        <title>Investment Visa - {{ $content['meta_title'] }}</title>
 
     @else
 
