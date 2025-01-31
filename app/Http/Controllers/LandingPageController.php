@@ -362,13 +362,15 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => 'From <b>€155K</b><br> in staged payments',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.rbi-and-cbi'),
                     ),
                     1 => array(
                         'title' => 'Greece',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€250K</b> via<br> property investment',
-                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp',
+                        'url' => route('campaigns.simon.greece-golden-visa-program'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
@@ -398,19 +400,21 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€500K</b><br> via investment funds',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                     1 => array(
                         'title' => 'Greece',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€250K</b> via<br> property investment',
-                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp',
+                        'url' => route('campaigns.simon.greece-golden-visa-program'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => '<b>10%</b> fixed returns<br> on part of the investment',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
                     ),
                 )
             ),
@@ -435,19 +439,22 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => 'From <b>€155K</b><br> in staged payments',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.rbi-and-cbi'),
                     ),
                     1 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€500K</b><br> via investment funds',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => '<b>10%</b> fixed returns<br> on part of the investment',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                 )
             ),

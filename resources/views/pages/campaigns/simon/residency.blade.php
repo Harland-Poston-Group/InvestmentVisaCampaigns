@@ -273,7 +273,7 @@
 
                         {{-- Card --}}
                         <div class="col-12 col-lg-4">
-                            <div class="card-residency portugal h-100">
+                            <div class="card-residency portugal h-100" data-url="{{ $card['url'] ?? false ? $card['url'] : '' }}">
 
                                 <h1 class="card-title">
                                     <span class="one">{{ $card['title'] }}</span>

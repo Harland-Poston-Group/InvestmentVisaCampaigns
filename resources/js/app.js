@@ -109,19 +109,30 @@ $(document).ready(function() {
 
     });
 
+    // Simon Campaigns Card Clicks
     $('.card-residency').on('click', function(){
 
-        if( $('.simon-campaigns-form').length > 0 ){
+        let urlValue = $(this).data('url');
 
-            let target = $('.simon-campaigns-form');
-    
-            let scrollTarget = target.position().top;
+        if( urlValue ){
 
-            console.log(scrollTarget);
+            window.location.href = urlValue;
+
+        }else{
+
+            if( $('.simon-campaigns-form').length > 0 ){
+
+                let target = $('.simon-campaigns-form');
+        
+                let scrollTarget = target.position().top;
     
-            $('html, body').animate({
-                scrollTop: scrollTarget - 20 // Adjust for headers if needed
-            }, 10);
+                console.log(scrollTarget);
+        
+                $('html, body').animate({
+                    scrollTop: scrollTarget - 20 // Adjust for headers if needed
+                }, 10);
+            }
+
         }
 
     })
