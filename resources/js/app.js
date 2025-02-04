@@ -109,6 +109,8 @@ $(document).ready(function() {
 
     });
 
+    let simonCampaignsForm = $('.simon-campaigns-form');
+
     // Simon Campaigns Card Clicks
     $('.card-residency').on('click', function(){
 
@@ -120,9 +122,9 @@ $(document).ready(function() {
 
         }else{
 
-            if( $('.simon-campaigns-form').length > 0 ){
+            if( simonCampaignsForm.length > 0 ){
 
-                let target = $('.simon-campaigns-form');
+                let target = simonCampaignsForm;
         
                 let scrollTarget = target.position().top;
     
@@ -136,4 +138,29 @@ $(document).ready(function() {
         }
 
     })
+
+    // If Simon Campagin Form exists
+    if( simonCampaignsForm.length > 0 ){
+
+        simonCampaignsForm.find('select').on('change', function(){
+            
+            let selectedOption = $(this).val();
+            let noMinInvAmountMetDisclaimer = simonCampaignsForm.find('.no-minimum-investment-amount');
+            let submitButton = simonCampaignsForm.find('button[type=submit]');
+
+            // If the user selects "No", show the disclaimer and block submit button
+            if( selectedOption === 'No' ){
+                
+                noMinInvAmountMetDisclaimer.show();
+                submitButton.attr('disabled', true);
+
+            }else{
+
+                noMinInvAmountMetDisclaimer.hide();
+                submitButton.attr('disabled', false);
+            }
+        })
+
+    }
+
 });

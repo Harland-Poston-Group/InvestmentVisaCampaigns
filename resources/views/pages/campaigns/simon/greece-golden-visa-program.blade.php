@@ -189,42 +189,30 @@
 
                         </div>
                     </div>
-                    <!--
-            <div class="form-group row mb-2">
-                <div class="col-12">
-                    {{-- <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea> --}}
 
-                    {{-- Message --}}
-                    {{-- @include('forms.inputs.message')  --}}
+                    {{-- No Minimum Investment Amount Block --}}
+                    <div class="no-minimum-investment-amount">
+
+                        <div class="inner-disclaimer-wrapper">
+
+                            <span>I'm sorry</span>
+
+                        </div>
+
                     </div>
-                </div>
--->
+
                     <input type="hidden" name="petname" id="petname">
                     <div class="form-group row align-center">
-
-                        <div class="col-12 col-md-4">
-                            {{-- Keep me updated Checkbox --}}
-                            {{-- <div class="checkbox-wrapper">
-                                <input type="hidden" name="signup" value="0" />
-                                <input type="checkbox" class="stylize" name="signup" value="1" id="signup">
-                                <label class="keep-me-updated-form-span" for="signup">
-                                    Please keep me updated on Harland and Poston Group news, events and offers.
-                                </label>
-                            </div> --}}
-
-                            {{-- Keep me updated Checkbox --}}
-                            {{-- @include('forms.inputs.keep_me_updated_checkbox') --}}
-                        </div>
 
                         {{-- Submit button --}}
                         <div class="col-12 col-md-12 text-center position-relative">
                             <hr style="
-                    position: absolute;
-                    bottom: 22px;
-                    left: 0;
-                    right: 0;
-                    border-top: 2px solid;
-                    z-index: 1;"
+                                position: absolute;
+                                bottom: 22px;
+                                left: 0;
+                                right: 0;
+                                border-top: 2px solid;
+                                z-index: 1;"
                             >
                             <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
                         </div>

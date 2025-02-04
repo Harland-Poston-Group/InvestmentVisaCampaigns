@@ -223,18 +223,26 @@
                         </div>
                     </div>
 
+                    <div class="no-minimum-investment-amount">
+                        <div class="inner-disclaimer-wrapper">
+
+                            <span>You can't proceed with the process if you don't have the minimum investment amount</span>
+
+                        </div>
+                    </div>
+
                     <input type="hidden" name="petname" id="petname">
                     <div class="form-group row align-center">
 
                         {{-- Submit button --}}
                         <div class="col-12 col-md-12 text-center position-relative">
                             <hr style="
-                        position: absolute;
-                        bottom: 22px;
-                        left: 0;
-                        right: 0;
-                        border-top: 2px solid;
-                        z-index: 1;"
+                                position: absolute;
+                                bottom: 22px;
+                                left: 0;
+                                right: 0;
+                                border-top: 2px solid;
+                                z-index: 1;"
                             >
                             <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
                         </div>
