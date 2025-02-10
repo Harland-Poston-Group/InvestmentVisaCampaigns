@@ -60,6 +60,12 @@
 <span class="value-float-right">{!! $maildata['ans_investmentamount'] !!}</span>
 </li>
 @endisset
+@isset($maildata['new_minimum_investment_amount'])
+<li style="justify-content: space-between">
+<strong>Do you have a minimum value to invest?:</strong>
+<span class="value-float-right">{!! $maildata['new_minimum_investment_amount'] !!}</span>
+</li>
+@endisset
 </ul>
 
 {{-- In case there's a quiz submission --}}
