@@ -48,8 +48,8 @@ class Dynamics_Helper {
 
                 writeBlockedEmail($submission_data['email_address'], $reason);
 
-                Mail::to('miguel.curto@portugalhomes.com')
-                    ->send(new \App\Mail\Admin\InvalidEmail($submission_data['email_address']));
+                // Mail::to('miguel.curto@portugalhomes.com')
+                //     ->send(new \App\Mail\Admin\InvalidEmail($submission_data['email_address']));
 
                 // dump($reason);
                 Log::info('[ZeroBounce] - Email ' . $submission_data['email_address'] . ' verified as not being a credible email address | Blocked from Dynamics 365 submission');
