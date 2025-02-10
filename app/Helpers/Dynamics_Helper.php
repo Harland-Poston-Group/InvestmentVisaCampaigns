@@ -34,6 +34,39 @@ class Dynamics_Helper {
         $post = [];
         $data = $submission_data;
 
+
+        // If the email address exists and is not empty - this is mandatory for any submission
+        if( isset($submission_data['email_address']) && !is_null($submission_data['email_address']) && !empty($submission_data['email_address']) ){
+
+            $valid = verify($submission_data['email_address']);
+
+            // Invalid Email
+            if( $valid->getStatusCode() !== 200 ){
+
+                $reason = $valid->getData(true);
+                $reason = $reason['email_verification_error'];
+
+                writeBlockedEmail($submission_data['email_address'], $reason);
+
+                Mail::to('miguel.curto@portugalhomes.com')
+                    ->send(new \App\Mail\Admin\InvalidEmail($submission_data['email_address']));
+
+                // dump($reason);
+                Log::info('[ZeroBounce] - Email ' . $submission_data['email_address'] . ' verified as not being a credible email address | Blocked from Dynamics 365 submission');
+                return false;
+
+            // Valid Email
+            }else{
+                // The email is valid - nothing to be done
+            }
+
+        }else{
+            return false;
+        }
+
+        // dump($valid);
+        // dd('Passed the email validation!');
+
         /* First we'll create the field mappings and only after, we'll automatically populate our array with the correct fields that we may have */
 
         // Define the mappings from form fields to Dynamics fields
