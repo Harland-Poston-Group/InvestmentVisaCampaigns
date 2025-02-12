@@ -245,6 +245,8 @@ class Dynamics_Helper {
             // Mail::to($admin_notification_emails)
             // ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
 
+            // dd($post);
+
             if( isset($data['message']) ){
 
                 // Get the current timestamp in desired format
@@ -264,7 +266,7 @@ class Dynamics_Helper {
             try {
 
                 /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
-                $response = self::updateExistingLead($lead_id, $post);
+                // $response = self::updateExistingLead($lead_id, $post);
 
                 // echo "Lead updated successfully<br>. Response: <pre>" . $response. '</pre>';
 
@@ -286,7 +288,7 @@ class Dynamics_Helper {
 
             /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
             // Run the function that will submit the data over to Dynamics 365
-            self::sendToDynamics365($post);
+            // self::sendToDynamics365($post);
 
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
@@ -485,6 +487,10 @@ class Dynamics_Helper {
             // Unit REF
             if( isset( $data['ans_unitref'] ) ){
                 $web_enquiry_data['ans_unitref'] = $data['ans_unitref'];
+            }
+
+            if( isset( $data['ans_message'] ) && !empty( $data['ans_message'] ) ){
+                $web_enquiry_data['ans_message'] = $data['ans_message'];
             }
 
         /* End of input cleaning */
