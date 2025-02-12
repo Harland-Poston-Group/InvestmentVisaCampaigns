@@ -214,7 +214,7 @@ class Dynamics_Helper {
         // dd($post);
 
         // Check if there's a lead with the same email in Dynamics
-        $existing_lead = self::checkExistingLead($post['emailaddress1']);
+        // $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
         // The email to where the notification of this submission should be sent to
         $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
@@ -233,7 +233,7 @@ class Dynamics_Helper {
         /* End of multistep check */
 
         // If there's a contact with this submission's email
-        if( $existing_lead ){
+        if( isset($existing_lead) && $existing_lead ){
 
             // Lead exists, get the existing message
             $lead_id = $existing_lead['leadid'];
