@@ -262,7 +262,10 @@ class Dynamics_Helper {
 
             // Update the existing lead with the new message
             try {
-                $response = self::updateExistingLead($lead_id, $post);
+
+                /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
+                // $response = self::updateExistingLead($lead_id, $post);
+
                 // echo "Lead updated successfully<br>. Response: <pre>" . $response. '</pre>';
 
                 // $post['ans_lead'] = $lead_id;
@@ -281,8 +284,9 @@ class Dynamics_Helper {
 
             // Contact/Lead Creation
 
+            /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
             // Run the function that will submit the data over to Dynamics 365
-            self::sendToDynamics365($post);
+            // self::sendToDynamics365($post);
 
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
