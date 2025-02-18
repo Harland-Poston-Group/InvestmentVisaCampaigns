@@ -74,7 +74,6 @@ $(document).ready(function() {
 
 
         $.ajax({
-            // url: "/form-submission.php",
             url: "/form-submission",
             type: "POST",
             headers: {
