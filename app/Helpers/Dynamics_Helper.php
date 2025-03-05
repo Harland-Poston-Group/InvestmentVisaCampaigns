@@ -148,6 +148,9 @@ class Dynamics_Helper {
                     case 'fb':
                         $post['ans_originalsource'] = 119020000;
                         break;
+                    case 'microsoft':
+                        $post['ans_originalsource'] = 100000001;
+                        break;
                     default:
                         # code...
                         break;
