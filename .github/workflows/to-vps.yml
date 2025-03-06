@@ -19,6 +19,8 @@ jobs:
         username: ftp
         password: ${{ secrets.vps_ftp_password }}
         port: 21
-        protocol: ftp      
+        protocol: ftp
+    - name: Update permissions
+      run: chown -R www-data:ftp /var/www/html
       
       
