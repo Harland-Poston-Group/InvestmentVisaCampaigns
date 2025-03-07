@@ -207,6 +207,9 @@ class Dynamics_Helper {
                 case 'work visa':
                     return false;
                     break;
+                case 'work_visa':
+                    return false;
+                    break;
                 default:
                     # Nothing happens
                     break;
