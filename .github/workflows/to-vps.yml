@@ -12,15 +12,13 @@ jobs:
       uses: actions/checkout@master
 
     - name: Push files
-      uses: SamKirkland/FTP-Deploy-Action@master
+      uses: SamKirkland/FTP-Deploy-Action@master 
       with:
         server: 51.141.69.113
         server-dir: /var/www/html/
         username: ftp
         password: ${{ secrets.vps_ftp_password }}
         port: 21
-        protocol: ftp
-    - name: Update permissions
-      run: chown -R www-data:ftp /var/www/html
+        protocol: ftp      
       
       
