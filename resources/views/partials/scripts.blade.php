@@ -84,9 +84,15 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            
+
             gtag('config', 'AW-11285295032');
         </script>
+
+        <!-- Taboola Pixel Code -->
+        <script>
+            _tfa.push({notify: 'event', name: 'lead', id: 1810087});
+        </script>
+        <!-- End of Taboola Pixel Code -->
 
     @endif
 

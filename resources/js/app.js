@@ -124,11 +124,11 @@ $(document).ready(function() {
             if( simonCampaignsForm.length > 0 ){
 
                 let target = simonCampaignsForm;
-        
+
                 let scrollTarget = target.position().top;
-    
+
                 console.log(scrollTarget);
-        
+
                 $('html, body').animate({
                     scrollTop: scrollTarget - 20 // Adjust for headers if needed
                 }, 10);
@@ -142,14 +142,14 @@ $(document).ready(function() {
     if( simonCampaignsForm.length > 0 ){
 
         simonCampaignsForm.find('select').on('change', function(){
-            
+
             let selectedOption = $(this).val();
             let noMinInvAmountMetDisclaimer = simonCampaignsForm.find('.no-minimum-investment-amount');
             let submitButton = simonCampaignsForm.find('button[type=submit]');
 
             // If the user selects "No", show the disclaimer and block submit button
             if( selectedOption === 'No' ){
-                
+
                 noMinInvAmountMetDisclaimer.show();
                 submitButton.attr('disabled', true);
 

@@ -398,6 +398,9 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+.card-residency:hover {
+  cursor: pointer;
+}
 
 .card-residency .card-title {
   margin-left: 20px;
