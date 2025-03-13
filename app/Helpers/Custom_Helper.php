@@ -37,20 +37,20 @@
 
             // Generate a unique cache key for this text and language
             $cacheKey = "translation_{$targetLang}_" . md5($text);
-        
+
             // Check if the translation is already cached
             return Cache::remember($cacheKey, now()->addWeeks($cacheDuration), function () use ($text, $targetLang, $sourceLang) {
                 try {
                     $apiKey = config('deepl.api_key');
                     $translator = new Translator($apiKey);
-        
+
                     $options = [
                         'tag_handling'  =>  'html',
                     ];
 
                     // Perform the translation
                     $result = $translator->translateText($text, $sourceLang, $targetLang, $options);
-        
+
                     return $result->text;
                 } catch (\Exception $e) {
                     Log::error('Translation failed: ' . $e->getMessage());
@@ -163,4 +163,17 @@
 
         // Write the updated array back to the file
         file_put_contents($filePath, json_encode($blockedEmails, JSON_PRETTY_PRINT));
+    }
+
+    // Block specific domains in submitted email addresses
+    function isBlockedEmailDomain($email)
+    {
+
+        // Define blocked domains
+        $blockedDomains = ['th.com', 'armyspy.com', 'teleworm.us'];
+
+        // Extract domain from email
+        $emailDomain = substr(strrchr($email, "@"), 1);
+
+        return in_array($emailDomain, $blockedDomains);
     }

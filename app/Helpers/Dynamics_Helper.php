@@ -38,6 +38,13 @@ class Dynamics_Helper {
         // If the email address exists and is not empty - this is mandatory for any submission
         if( isset($submission_data['email_address']) && !is_null($submission_data['email_address']) && !empty($submission_data['email_address']) ){
 
+            // Check if the email belongs to a list of blocked domains
+            if (isBlockedEmailDomain($submission_data['email_address'])) {
+                Log::info('[ZeroBounce] - Email ' . $submission_data['email_address'] . ' belongs to a blocked domain | Blocked from Dynamics 365 submission');
+                writeBlockedEmail($submission_data['email_address'], 'Email address belongs to a blocked domain by us.');
+                return false;
+            }
+
             $valid = verify($submission_data['email_address']);
 
             // Invalid Email
