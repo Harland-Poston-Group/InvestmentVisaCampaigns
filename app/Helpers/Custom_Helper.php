@@ -170,7 +170,7 @@
     {
 
         // Define blocked domains
-        $blockedDomains = ['th.com', 'armyspy.com', 'teleworm.us'];
+        $blockedDomains = ['th.com', 'armyspy.com', 'teleworm.us', '@dayrep.com'];
 
         // Extract domain from email
         $emailDomain = substr(strrchr($email, "@"), 1);
