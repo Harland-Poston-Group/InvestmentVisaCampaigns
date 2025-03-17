@@ -311,6 +311,7 @@ class Dynamics_Helper {
         // This field has a different name in the web enquiries field
         if( isset($data['investment_amount']) ){
             $post['new_minimum_investment_amount'] = $data['investment_amount'];
+            dd($post);
         }
 
         // Web Enquiry Record creation
