@@ -308,6 +308,11 @@ class Dynamics_Helper {
             ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
         }
 
+        // This field has a different name in the web enquiries field
+        if( isset($data['investment_amount']) ){
+            $post['new_minimum_investment_amount'];
+        }
+
         // Web Enquiry Record creation
         self::createWebEnquiryRecord($post);
 
