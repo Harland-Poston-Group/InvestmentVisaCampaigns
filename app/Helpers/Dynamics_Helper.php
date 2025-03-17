@@ -313,6 +313,8 @@ class Dynamics_Helper {
         //     $post['new_minimum_investment_amount'] = $data['investment_amount'];
         // }
 
+        dd($post);
+
         // Web Enquiry Record creation
         self::createWebEnquiryRecord($post);
 
