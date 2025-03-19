@@ -146,4 +146,15 @@ $(function() {
         }
     });
 
+    // Close modal container on the ESC key click
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const $modal = $('.modal-form-global-container');
+
+            if ($modal.is(':visible')) {
+                $modal.fadeOut(300);
+            }
+        }
+    });
+
 });
