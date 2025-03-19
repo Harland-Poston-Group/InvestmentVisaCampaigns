@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 
 // Helper File to Use Dynamics 365 functions to create leads within the CRM
@@ -116,6 +117,26 @@ class Dynamics_Helper {
         $post = array_filter($post, function($value) {
             return !empty($value); // Keep only non-empty values
         });
+
+        // If this form has a fullname input instead of a first name/last name
+        if( isset( $data['fullname'] ) && !empty($data['fullname']) ){
+
+            // Split full name by spaces
+            $nameParts = Str::of($data['fullname'])->explode(' ');
+
+            // Set the first word as firstname
+            $post['firstname'] = $nameParts->first();
+
+            // Check if there are more than one part
+            if ($nameParts->count() > 1) {
+                // Join the rest as lastname
+                $post['lastname'] = $nameParts->slice(1)->implode(' ');
+            } else {
+                // If only one word, set lastname as empty
+                $post['lastname'] = '';
+            }
+
+        }
 
         // Add the "Portugal Homes" brand to the request (identified by an ID)
         $post['ans_brand'] = 119020001;
@@ -316,6 +337,7 @@ class Dynamics_Helper {
         // dd($post);
 
         // Web Enquiry Record creation
+        dd($post);
         self::createWebEnquiryRecord($post);
 
     }
@@ -509,8 +531,14 @@ class Dynamics_Helper {
                 $web_enquiry_data['ans_unitref'] = $data['ans_unitref'];
             }
 
+            // Message
             if( isset( $data['ans_message'] ) && !empty( $data['ans_message'] ) ){
                 $web_enquiry_data['ans_message'] = $data['ans_message'];
+            }
+
+            // Country Code
+            if( isset($data['ans_countrycode']) && !empty( $data['ans_countrycode'] ) ){
+                $web_enquiry_data['ans_countrycode'] = $data['ans_countrycode'];
             }
 
         /* End of input cleaning */
