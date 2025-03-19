@@ -541,6 +541,11 @@ class Dynamics_Helper {
                 $web_enquiry_data['ans_countrycode'] = $data['ans_countrycode'];
             }
 
+            // Minimum Investment Amount
+            if( isset($data['new_minimum_investment_amount']) && !empty($data['new_minimum_investment_amount']) ){
+                $web_enquiry_data['new_minimum_investment_amount'] = $data['new_minimum_investment_amount'];
+            }
+
         /* End of input cleaning */
 
         $response_web_enquiry = Http::withHeaders([
