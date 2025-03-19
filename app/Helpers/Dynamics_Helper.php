@@ -337,7 +337,7 @@ class Dynamics_Helper {
         // dd($post);
 
         // Web Enquiry Record creation
-        dd($post);
+        // dd($post);
         self::createWebEnquiryRecord($post);
 
     }
