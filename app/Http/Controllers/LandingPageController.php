@@ -340,7 +340,7 @@ class LandingPageController extends BaseController
     {
         $routeName = $request->route()->getName();
         // dump($routeName);
-        
+
         $content = array(
             'campaigns.simon.simon_pt_gv_lp' => array(
                 'meta_title' => 'Portugal Golden Visa',
@@ -465,6 +465,18 @@ class LandingPageController extends BaseController
         $page_content = $content[$routeName];
 
         return view('pages.campaigns.simon.residency', ['content' => $page_content]);
+    }
+
+    // Greece GV by Real Estate
+    public function greece_gv_by_real_estate(Request $request)
+    {
+
+        return view('pages.campaigns.greece_gv_real_estate',
+            [
+                // 'multistep_form' => $form,
+                // 'lang'  =>  $lang
+            ]
+        );
     }
 
 }

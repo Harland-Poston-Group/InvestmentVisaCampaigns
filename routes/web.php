@@ -63,6 +63,7 @@ Route::get('/private-meetings/{country}', [App\Http\Controllers\LandingPageContr
 // Form Submission
 Route::post('/form-submission', [App\Http\Controllers\EnquiriesController::class, 'landing_page_enquiry'])->name('country_private_meetings');
 Route::post('/multistep-form-submission', [App\Http\Controllers\EnquiriesController::class, 'multistep_form_enquiry'])->name('multistep_form_enquiry');
+Route::post('/download-brochure-submission', [App\Http\Controllers\EnquiriesController::class, 'download_brochure_enquiry'])->name('download_brochure_submission');
 
 // Test Multistep Form LP
 Route::get('/quiz/{lang?}', [App\Http\Controllers\LandingPageController::class, 'multistep_lp_1'])->name('test_multistep_lp');
@@ -83,3 +84,5 @@ Route::get('/quiz/{lang?}', [App\Http\Controllers\LandingPageController::class, 
 Route::get('/portugal-golden-visa', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.simon_pt_gv_lp');
 Route::get('/rbi-and-cbi', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.rbi-and-cbi');
 Route::get('/greece-golden-visa-program', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.greece-golden-visa-program');
+
+Route::get('/greece-gv-by-real-estate', [App\Http\Controllers\LandingPageController::class, 'greece_gv_by_real_estate'])->name('greece-gv-real-estate');
