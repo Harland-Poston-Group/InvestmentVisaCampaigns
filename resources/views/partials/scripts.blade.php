@@ -93,8 +93,8 @@
             _tfa.push({notify: 'event', name: 'lead', id: 1810087});
         </script> --}}
         <!-- End of Taboola Pixel Code -->
-        <!-- Yandex.Metrika counter -->
 
+        <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
