@@ -290,7 +290,7 @@
             <p class="modal-subtitle">Fill in the required fields, and get the files by email and messenger</p>
 
             {{-- Form --}}
-            <form id="brochure-download-form">
+            <form id="brochure-download-form" class="brochure-download-form">
 
                 @csrf
 
@@ -307,13 +307,33 @@
 
     </div>
 
+    {{-- Abandon Popup --}}
     <div class="modal-form-global-container abandon-popup">
 
         <div class="modal-element">
 
-            <img src="/assets/img/content/gato-das-botas.webp" style="width:100%">
+            <h2 class="title">Before you leave...</h2>
 
-            <h3 style="text-align: center"><i>Please don't leave!</i></h3>
+            <img src="/assets/img/content/santorini-popup.jpg" style="width:100%">
+
+            <p class="cta-text">Want to know more about the Greece Golden Visa?</p>
+
+            {{-- Form --}}
+            <form id="brochure-download-form" class="brochure-download-form">
+
+                @csrf
+
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="tel" name="phone_number" class="phone-number-extension" placeholder="Phone Number" required>
+                <input type="email" name="email_address" placeholder="Email" required>
+
+                <button type="submit">Download Guide</button>
+
+                <a class="brochure-link" style="display:none" href="/assets/ebooks/USInvestorsGuide_PH_2024.pdf" target="_blank"></a>
+                <input style="display:none" name="brochure-link" value="fact_sheet">
+            </form>
+
+            {{-- <div class="cta-button download-guide">Download Guide</div> --}}
 
         </div>
 

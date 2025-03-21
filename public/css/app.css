@@ -6405,8 +6405,8 @@ select.form-control:focus {
   color: white;
 }
 #notifications .alert-success {
-  background-color: #EEBC56;
-  border-color: #EEBC56;
+  background-color: #AA2159;
+  border-color: #AA2159;
 }
 #notifications .alert-error {
   background-color: #f4403b;

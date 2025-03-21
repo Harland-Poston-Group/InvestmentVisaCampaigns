@@ -37,5 +37,7 @@
         {{-- Page Content --}}
         @yield('content')
 
+        <!-- Notifications Element -->
+        <div id="notifications"></div>
     </body>
 </html>

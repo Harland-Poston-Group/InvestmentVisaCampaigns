@@ -54,8 +54,11 @@ $(function() {
 
     /* Open modal forms */
     let downloadGuideButton = $('.download-guide');
-    let guideDownloadForm = $('#brochure-download-form');
+    // let guideDownloadForm = $('#brochure-download-form');
+    let guideDownloadForm = $('.brochure-download-form');
     let modalGlobalContainer = $('.modal-form-global-container');
+
+    let isMouseDownInsideModal = false;
 
     // Different popups
     let brochureGlobalContainer = $('.brochure-modal-container');
@@ -115,11 +118,11 @@ $(function() {
                 // // Popup wasn't blocked
                 // }else{
                 // }
-
+                Notify('Thank you for downloading the Greece Golden Visa brochure - please check your inbox', null, null, 'success');
                 // FadeOut the entire modal
                 modalGlobalContainer.fadeOut();
 
-                Notify('Thank you for your application. We\'ll be in touch, shortly', null, null, 'success');
+
 
             },
             error: function(xhr, status, errorMessage) {
@@ -144,9 +147,27 @@ $(function() {
     })
 
     // Fade out the global container if not clicked in the modal element
-    modalGlobalContainer.on('click', function(e) {
+    // modalGlobalContainer.on('click', function(e) {
+    //     if ($(e.target).is('.modal-form-global-container')) {
+    //         $(this).fadeOut(300); // Fade out in 300ms
+    //     }
+    // });
+
+    /* Commented the one above so that when a user starts clicking inside
+    the modal element and drags the mouse out and releases it it's not counted as a click outside */
+    $('.modal-element').on('mousedown', function() {
+        isMouseDownInsideModal = true;
+    });
+
+    modalGlobalContainer.on('mousedown', function(e) {
         if ($(e.target).is('.modal-form-global-container')) {
-            $(this).fadeOut(300); // Fade out in 300ms
+            isMouseDownInsideModal = false;
+        }
+    });
+
+    modalGlobalContainer.on('mouseup', function(e) {
+        if (!isMouseDownInsideModal && $(e.target).is('.modal-form-global-container')) {
+            $(this).fadeOut(300);
         }
     });
 
