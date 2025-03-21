@@ -146,6 +146,7 @@ $(function() {
         }
     });
 
+
     // Close modal container on the ESC key click
     $(document).on('keydown', function(e) {
         if (e.key === 'Escape') {
