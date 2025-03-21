@@ -57,9 +57,13 @@ $(function() {
     let guideDownloadForm = $('#brochure-download-form');
     let modalGlobalContainer = $('.modal-form-global-container');
 
+    // Different popups
+    let brochureGlobalContainer = $('.brochure-modal-container');
+    let abandonPopup = $('.abandon-popup');
+
     // Button click
     downloadGuideButton.on('click', function(){
-        modalGlobalContainer.fadeIn();
+        brochureGlobalContainer.fadeIn();
     })
 
     guideDownloadForm.on('submit', function(e){
@@ -168,7 +172,8 @@ $(function() {
             // !getCookie('exit_popup_shown')
         ) {
             // document.getElementById('exit-popup').style.display = 'block';
-            alert('don\'t leave!');
+            abandonPopup.fadeIn();
+            // alert('don\'t leave!');
             // setCookie('exit_popup_shown', 'yes', 7); // Cookie valid for 7 days
             showExitPopup = false;
         }
