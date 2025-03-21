@@ -68,7 +68,7 @@ class EnquiriesController extends Controller
 
         // dd($maildata);
 
-        Mail::to('antonio.lima@portugalhomes.com')
+        Mail::to($submission_data['email_address'])
         ->send(new \App\Mail\User\BrochureDownload($maildata));
 
         return response()->json(['success' => 'Thank you for your enquiry, we\'ll be in touch, shortly.']);
