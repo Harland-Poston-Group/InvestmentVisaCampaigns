@@ -147,9 +147,9 @@
                         </div>
 
                         <ul id="header-list">
-                            
+
                             @if ( $content['banner_content']['bullet_points'] )
-                            
+
                                 @foreach ($content['banner_content']['bullet_points'] as $bullet_point)
 
                                     <li>
@@ -160,7 +160,7 @@
                                             {{ $bullet_point }}
                                         </div>
                                     </li>
-                                    
+
                                 @endforeach
 
                             @endif
@@ -300,7 +300,7 @@
 
                             </div>
                         </div>
-                        
+
                     @endforeach
 
                 @endif
@@ -361,11 +361,45 @@
 <script src="/assets/js/notify.js"></script>
 <script src="/js/script.js"></script>
 
+<script src="/assets/js/strategic-pops.js"></script>
+
 
 <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
 <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
 <script src="/assets/js/country-code-plugin/utils.js"></script>
 <script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
+
+    {{-- Abandon Popup --}}
+    <div class="modal-form-global-container abandon-popup">
+
+        <div class="modal-element">
+
+            <h2 class="title">Before you leave...</h2>
+
+            <img src="/assets/img/content/santorini-popup.jpg" style="width:100%">
+
+            <p class="cta-text">Want to know more about the Greece Golden Visa?</p>
+
+            {{-- Form --}}
+            <form id="brochure-download-form" class="brochure-download-form">
+
+                @csrf
+
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="tel" name="phone_number" class="phone-number-extension" placeholder="Phone Number" required>
+                <input type="email" name="email_address" placeholder="Email" required>
+
+                <button type="submit">Download Guide</button>
+
+                <a class="brochure-link" style="display:none" href="/assets/ebooks/USInvestorsGuide_PH_2024.pdf" target="_blank"></a>
+                <input style="display:none" name="brochure-link" value="fact_sheet">
+            </form>
+
+            {{-- <div class="cta-button download-guide">Download Guide</div> --}}
+
+        </div>
+
+    </div>
 
 <!-- Notifications Element -->
 <div id="notifications"></div>

@@ -193,7 +193,7 @@ $(function() {
         ) {
             // document.getElementById('exit-popup').style.display = 'block';
             abandonPopup.fadeIn();
-            // alert('don\'t leave!');
+
             // setCookie('exit_popup_shown', 'yes', 7); // Cookie valid for 7 days
             showExitPopup = false;
         }

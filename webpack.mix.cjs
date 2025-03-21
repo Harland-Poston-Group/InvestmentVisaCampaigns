@@ -21,6 +21,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/multistep_form.js', 'public/assets/js')
     .js('resources/js/greece_gv.js', 'public/assets/js')
     .js('resources/js/notify.js', 'public/js')
+    .js('resources/js/strategic-pops.js', 'public/assets/js')
     .js('resources/js/greece_gv_real_estate.js', 'public/assets/js');
 
 // Enable source maps for easier debugging (optional)
