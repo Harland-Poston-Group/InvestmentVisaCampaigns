@@ -157,4 +157,20 @@ $(function() {
         }
     });
 
+    /* Abandon Popup */
+    let showExitPopup = true;
+
+    document.addEventListener('mouseout', function(e) {
+        if (
+            e.clientY < 0 && showExitPopup
+            // &&
+            // !getCookie('exit_popup_shown')
+        ) {
+            // document.getElementById('exit-popup').style.display = 'block';
+            alert('don\'t leave!');
+            // setCookie('exit_popup_shown', 'yes', 7); // Cookie valid for 7 days
+            showExitPopup = false;
+        }
+    });
+
 });
