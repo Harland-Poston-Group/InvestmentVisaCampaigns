@@ -35,6 +35,9 @@ class EnquiriesController extends Controller
         // // Send data over to Dynamics 365
         $submission_data = $request->all();
         // // dd($submission_data);
+
+        $submission_data['what_are_you_looking_for'] = 'Brochure Download';
+
         $response = Dynamics_Helper::dynamics_form_submission($submission_data);
 
         if( isset( $submission_data['fullname'] ) && !empty($submission_data['fullname']) ){
