@@ -108,7 +108,6 @@ $(function() {
                 // Open
                 // const openPopup = window.open('assets/ebooks/USInvestorsGuide_PH_2024.pdf', '_blank');
 
-
                 // // Some browsers may block the window.open, we're going for a fallback in that case
                 // if( openPopup === null ){
 
