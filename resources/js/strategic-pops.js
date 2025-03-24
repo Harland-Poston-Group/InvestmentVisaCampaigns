@@ -148,7 +148,7 @@ $(function() {
             // Show popup after 15 seconds
             setTimeout(() => {
                 abandonPopup.fadeIn();
-            }, 15000);
+            }, 10000);
         }
 
     }

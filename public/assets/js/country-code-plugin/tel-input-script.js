@@ -58,6 +58,13 @@ jQuery(function() {
             iti.setCountry(data.country.toUpperCase()); // Set country code based on response
             $(input).closest('form').find('.extension-input').attr('value', data.country_calling_code);
 
+        // ipwho.is
+        }else if( data.ipwhois_country_name || data.ipwhois_calling_code ){
+
+            // Country Initials (e.g. PT, FR)
+            iti.setCountry(data.ipwhois_country_initials.toUpperCase()); // Set country code based on response
+            $(input).closest('form').find('.extension-input').attr('value', data.ipwhois_calling_code);
+
         } else {
             console.log(data);
             console.warn("Unable to determine country code from API response.");
@@ -114,19 +121,55 @@ jQuery(function() {
         });
     }
 
-  // Function to fetch geolocation data from fallback API
-  function fetchFallbackGeoData() {
-    return fetch('https://ipapi.co/json/').then(function (response) {
-      if (!response.ok) {
-        console.log(response);
-        throw new Error("Network response was not ok, find log above");
-      }
-      return response.json();
-    })["catch"](function (error) {
-      console.error("Error fetching geolocation data from fallback API:", error);
-      throw error;
-    });
-  }
+    // Function to fetch geolocation data from fallback API
+    function fetchFallbackGeoData() {
+
+        return fetch('https://ipapi.co/json/')
+        .then(function (response) {
+
+            if (!response.ok) {
+                console.warn("Fallback API failed with status:", response.status);
+                throw new Error("Fallback API rate limit hit or error occurred");
+            }
+            return response.json();
+
+        })
+        .catch(function (error) {
+
+            console.error("Error fetching geolocation from fallback API (ipapi.co):", error);
+            console.log("Trying backup API (ipwho.is)...");
+
+            // Try ipwho.is as the next fallback
+            return fetchBackupGeoData();
+
+        });
+    }
+
+    // Third option in case first two don't work
+    function fetchBackupGeoData() {
+        return fetch('https://ipwho.is/')
+        .then(function (response) {
+            if (!response.ok) {
+                console.warn("Backup API failed with status:", response.status);
+                throw new Error("Backup API (ipwho.is) failed");
+            }
+            return response.json();
+        })
+        .then(function (data) {
+
+            if (!data.country_code || !data.calling_code) {
+                throw new Error("ipwho.is data incomplete: " + JSON.stringify(data));
+            }
+            return {
+                ipwhois_country_initials: data.country_code,
+                ipwhois_calling_code: "+" + data.calling_code
+            };
+        })
+        .catch(function (error) {
+            console.error("Error fetching geolocation from backup API (ipwho.is):", error);
+            throw error;
+        });
+    }
 
   ///////////////////////////////
 
