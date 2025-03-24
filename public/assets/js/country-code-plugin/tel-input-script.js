@@ -118,7 +118,8 @@ jQuery(function() {
   function fetchFallbackGeoData() {
     return fetch('https://ipapi.co/json/').then(function (response) {
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        console.log(response);
+        throw new Error("Network response was not ok, find log above");
       }
       return response.json();
     })["catch"](function (error) {
