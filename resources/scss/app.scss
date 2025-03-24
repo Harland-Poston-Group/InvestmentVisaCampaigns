@@ -2832,30 +2832,34 @@ select.form-control {
     z-index: 10;
     display: none;
 
+    .title{
+        color: $beaujolais;
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .cta-text{
+        font-size: 18px;
+        margin-top: 14px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .cta-button{
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
     &.abandon-popup{
 
-        .title{
-            color: $beaujolais;
-            font-weight: 600;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
 
-        .cta-text{
-            font-size: 18px;
-            margin-top: 14px;
-            text-align: center;
-            line-height: 1.3;
-        }
 
-        img{
-            border-radius: 15px;
-        }
 
-        .cta-button{
-            margin: auto;
-            margin-top: 25px;
-        }
     }
 
     .modal-element{
@@ -2884,12 +2888,16 @@ select.form-control {
     }
 
     #brochure-download-form{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        // display: flex;
+        // flex-direction: column;
+        // gap: 8px;
     }
 
     form{
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
         input{
             border: unset;

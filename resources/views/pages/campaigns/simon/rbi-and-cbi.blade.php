@@ -88,6 +88,7 @@
         </header>
     </div>
 </section>
+
 <section id="top-banner" class="rbi">
     <div class="container h-100">
         <div class="row h-100">
@@ -122,10 +123,10 @@
 
             </div>
             <div class="col-12 col-lg-6" style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        ">
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            ">
 
                 {{-- Header form --}}
                 <form name="add-blog-post-form" method="post" action="/store-form" id="campaign-form" class="generic-form-submission header-form">
@@ -164,23 +165,7 @@
                             @include('forms.inputs.phone_number')
                         </div>
                     </div>
-                    <!--
-            <div class="form-group row">
-                <div class="col-12">
-                    {{-- <select name="enquiry_subject" id="enquiry_subject" class="form-control minimal enquiry_subject">
-                        <option selected hidden value="">What are you looking for?</option>
-                        <option value="Business Visa">Business Visa</option>
-                        <option value="Greece Golden Visa">Golden Visa</option>
-                        <option value="Other Investment Opportunities">Investment Opportunities</option>
-                        <option value="Retirement">Retirement</option>
-                        <option value="Work visa">Work Visa</option>
-                    </select> --}}
 
-                    {{-- What are you looking for? --}}
-                    {{-- @include('forms.inputs.what_are_you_looking_for') --}}
-                    </div>
-                </div>
--->
                     <div class="form-group row">
                         <div class="col-12">
                             <label>I have a minimum of €500K to invest *</label>
@@ -189,16 +174,7 @@
 
                         </div>
                     </div>
-                    <!--
-            <div class="form-group row mb-2">
-                <div class="col-12">
-                    {{-- <textarea name="message" placeholder="Leave us a message..." id="message" class="form-control IDM0XXP2SXKESE916"></textarea> --}}
 
-                    {{-- Message --}}
-                    {{-- @include('forms.inputs.message')  --}}
-                    </div>
-                </div>
--->
                     <input type="hidden" name="petname" id="petname">
                     <div class="form-group row align-center">
 
@@ -310,6 +286,7 @@
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="row">
@@ -328,7 +305,9 @@
         </div>
     </div>
 </section>
+
 <section id="footer">
+
     <div class="container">
         <div class="row">
             <div class="footer-content">
@@ -340,7 +319,6 @@
             </div>
         </div>
     </div>
-
 
 </section>
 
@@ -356,6 +334,12 @@
 <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
 <script src="/assets/js/country-code-plugin/utils.js"></script>
 <script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
+
+{{-- Pop-Ups --}}
+<script src="/assets/js/strategic-pops.js"></script>
+
+{{-- Abandon Popup --}}
+@include('pop-ups.contact-abandon-popup')
 
 <!-- Notifications Element -->
 <div id="notifications"></div>
