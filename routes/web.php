@@ -57,6 +57,7 @@ Route::get('/greece-gv-translations/{lang?}', [PageController::class, 'campaigns
 // Route::get('/residency-and-citizenship', [PageController::class, 'residencyAndCitizenship']);
 
 Route::get('/thank-you', [PageController::class, 'thankYou']);
+Route::get('/thank-you-brochure', [PageController::class, 'thankYouBrochure']);
 
 Route::get('/private-meetings/{country}', [App\Http\Controllers\LandingPageController::class, 'country_private_meetings'])->name('country_private_meetings');
 

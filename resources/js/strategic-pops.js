@@ -126,7 +126,7 @@ $(function() {
                     $("#cv-file-name").text('Allowed files: pdf,doc,docx,jpg,jpeg,png');
 
                     if (window.location.hash !== '#debug') {
-                        window.location.href = "/thank-you";
+                        window.location.href = "/thank-you-brochure";
                     }
                 }
             });
