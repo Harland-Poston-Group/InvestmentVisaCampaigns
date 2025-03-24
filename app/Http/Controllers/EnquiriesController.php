@@ -71,8 +71,19 @@ class EnquiriesController extends Controller
 
         // dd($maildata);
 
-        Mail::to($submission_data['email_address'])
-        ->send(new \App\Mail\User\BrochureDownload($maildata));
+        // Mail::to($submission_data['email_address'])
+        // ->send(new \App\Mail\User\BrochureDownload($maildata));
+
+        try {
+            Mail::to($submission_data['email_address'])
+                ->send(new \App\Mail\User\BrochureDownload($maildata));
+
+            // If no exception was thrown, we consider it "successfully handed off"
+            Log::channel('brochure')->info('Brochure email sent to ' . $submission_data['email_address']);
+        } catch (\Exception $e) {
+            // If mail sending fails or your mail driver throws an exception
+            Log::channel('brochure')->error('Failed to send brochure email to ' . $submission_data['email_address'] . '. Error: ' . $e->getMessage());
+        }
 
         return response()->json(['success' => 'Thank you for your enquiry, we\'ll be in touch, shortly.']);
     }

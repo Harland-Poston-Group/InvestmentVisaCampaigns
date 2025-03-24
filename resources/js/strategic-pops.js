@@ -2,6 +2,17 @@
 // jQuery
 $(function() {
 
+    // Check if the user is in a mobile screen
+    function isMobile(){
+
+        if($("body").width() < 762){
+            return true;
+        }else{
+            return false;
+
+        }
+    }
+
     // Different popups
     let brochureGlobalContainer = $('.brochure-modal-container');
     let abandonPopup = $('.abandon-popup');
@@ -12,6 +23,7 @@ $(function() {
     /* Abandon Popup */
     let showExitPopup = true;
 
+    // /greece-golden-visa-program
     if (window.location.pathname === '/greece-golden-visa-program') {
 
         document.addEventListener('mouseout', function(e) {
@@ -129,6 +141,15 @@ $(function() {
                 $(this).fadeOut(300);
             }
         });
+
+        // Mobile device behavior
+        if( isMobile() ){
+
+            // Show popup after 15 seconds
+            setTimeout(() => {
+                abandonPopup.fadeIn();
+            }, 15000);
+        }
 
     }
 

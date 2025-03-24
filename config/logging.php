@@ -134,6 +134,12 @@ return [
             'days' => 7,
         ],
 
+        'brochure' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/contacted_brochure_downloads.log'),
+            'level' => 'info',
+        ],
+
     ],
 
 ];

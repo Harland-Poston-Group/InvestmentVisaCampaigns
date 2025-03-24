@@ -316,7 +316,7 @@
 
             <img src="/assets/img/content/santorini-popup.jpg" style="width:100%">
 
-            <p class="cta-text">Want to know more about the Greece Golden Visa?</p>
+            <p class="cta-text">Are you curious about the Greece Golden Visa?<br> Please download our brochure to know more</p>
 
             {{-- Form --}}
             <form id="brochure-download-form" class="brochure-download-form">

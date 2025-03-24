@@ -251,7 +251,12 @@ class Dynamics_Helper {
         // $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
         // The email to where the notification of this submission should be sent to
-        $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+        if( env('APP_ENV') == 'production' ){
+            $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+        }else{
+            $admin_notification_emails = ['antonio.lima@portugalhomes.com'];
+        }
+
         // $admin_notification_emails = ['antonio.lima@portugalhomes.com'];
 
         // Set timezone to Portugal
