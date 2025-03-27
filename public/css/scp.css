@@ -453,3 +453,24 @@ body.page-rbi-and-cdi .country-name {
   color: #fff;
   text-transform: none;
 }
+
+@media (max-height: 750px) {
+  #top-banner-residency .row form .form-title {
+    margin-bottom: 10px;
+  }
+  .header.row {
+    padding-bottom: 5px;
+  }
+  #top-banner-residency #form-bt {
+    margin: 10px 0;
+  }
+  form .form-group hr {
+    bottom: 10px !important;
+  }
+  #cards-info #cards-title {
+    margin-bottom: 20px;
+  }
+  #top-banner-residency .row form {
+    padding: 18px 30px;
+  }
+}
