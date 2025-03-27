@@ -543,8 +543,8 @@ body.page-rbi-and-cdi .country-name {
 
 }
 
-//
-@media (max-height:750px) {
+// Adapt LP for laptops with a shorter screen
+@media (min-width:768px) and (max-height:750px) {
     
     #top-banner-residency .row form .form-title{
         margin-bottom: 10px;
