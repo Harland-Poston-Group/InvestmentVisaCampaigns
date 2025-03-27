@@ -175,7 +175,7 @@ body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
 
 #top-banner-residency {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 #top-banner-residency:after {
   content: "";

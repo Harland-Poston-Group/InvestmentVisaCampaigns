@@ -2857,8 +2857,29 @@ select.form-control {
 
     &.abandon-popup{
 
+        max-height: 100vh;
 
+        img{
+            object-fit: cover;
 
+            @media (max-height:710px) {
+            
+                max-height: 230px;
+            }
+
+            @media (max-height:630px) {
+            
+                max-height: 210px;
+            }
+        }
+
+        .title{
+
+            @media (max-height:630px) {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
 
     }
 
