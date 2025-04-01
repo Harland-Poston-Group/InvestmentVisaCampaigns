@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="{{ mix('css/chat.css') }}">
 <link rel="stylesheet" href="{{ mix('css/index.css') }}">
+<link rel="stylesheet" href="{{ mix('css/index.css') }}">
 <div class="container-fluid mx-0 px-0 mt-5">
 <section id="advisor-section" class="mt-5" style="background-image: url('{{ asset('assets/img/ui/contact-us-section.webp') }}');">
     <div class="row h-100">

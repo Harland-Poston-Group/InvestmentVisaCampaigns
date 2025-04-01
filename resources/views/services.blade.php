@@ -9,6 +9,12 @@
 @vite('resources/js/app.js')--}}
 <script src="{{ mix('js/app.js') }}"></script>
 
+<style>
+    nav {
+        display: none;
+    }
+</style>
+
 @section('content')
     <div class="container">
         <div class="row mt-5">
