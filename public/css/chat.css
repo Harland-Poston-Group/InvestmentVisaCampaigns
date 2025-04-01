@@ -1,0 +1,623 @@
+/* Bot CTA */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .choose-advisor {
+    width: 100% !important;
+  }
+  .choose-advisor img {
+    width: 80px !important;
+  }
+}
+
+.choose-advisor.active {
+  border: 2px solid #2d3748 !important;
+  background: #c9c9c9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.choose-advisor .position {
+  color: #2d3748;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .choose-advisor .position {
+    width: 80%;
+    position: relative;
+    display: block;
+    text-align: left !important;
+  }
+}
+
+#main-advisor-img, #selected-advisor-img img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#main-advisor-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.bt_iv.selected {
+  background-color: #b16cdf;
+  color: white;
+}
+
+#advisor {
+  position: relative;
+}
+@media (max-width: 768px) {
+  #advisor {
+    padding: 12px;
+    border-bottom: 1px solid #2d3748;
+  }
+}
+#advisor img {
+  right: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  #advisor img {
+    width: 70%;
+    right: -80px;
+  }
+}
+
+#main-advisor-img {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#main-advisor-img.fade-out {
+  opacity: 0;
+}
+
+.step-section {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  height: 92px;
+}
+@media (max-width: 768px) {
+  .step-section {
+    height: 180px;
+    padding-left: 28px !important;
+  }
+  .step-section button {
+    margin: 6px 4px;
+  }
+}
+
+.hidden-step {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+#cta-chatbox {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 498px; /* Fixed height */
+  /*    overflow-y: auto;
+      scroll-behavior: smooth;
+      */
+}
+
+#chat-results {
+  transition: all 0.3s ease-in-out;
+  height: 573px; /* Fixed height */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  #chat-results {
+    height: auto;
+  }
+}
+
+#chat-form {
+  position: absolute;
+  top: 0;
+}
+
+#chat-results::-webkit-scrollbar-track {
+  background-color: #6A257A;
+}
+
+#chat-results::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+}
+
+#chat-results::-webkit-scrollbar-thumb {
+  background-color: #ddd; /* Set the thumb color */
+  border-radius: 0; /* Round the corners of the thumb */
+}
+
+#selected-advisor-img img {
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.property-price {
+  color: #6A257A;
+  font-weight: 600;
+}
+
+#interest-bubble, #location-bubble, #lifestyle-bubble, #budget-bubble {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.chat-bubble {
+  margin: 4px 0;
+  padding: 10px 14px;
+  border-radius: 4px 16px 16px 16px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.bot-bubble {
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  color: #000;
+  align-self: flex-start;
+}
+
+.user-bubble {
+  background: rgba(106, 37, 122, 0.79);
+  color: #fff;
+  align-self: flex-end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#advisor-section {
+  margin-bottom: 2rem;
+  height: 670px;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  #advisor-section {
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  #advisor-section .title-subtitle-container {
+    margin-bottom: 40px;
+  }
+  #advisor-section .desktop-cta-text {
+    display: none;
+  }
+}
+#advisor-section .mobile-cta-text {
+  display: none;
+}
+@media (max-width: 768px) {
+  #advisor-section .mobile-cta-text {
+    display: block;
+  }
+}
+#advisor-section .name-position-element {
+  border: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 80px;
+  right: -15px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  color: #F4F5F8;
+  background: rgba(234, 224, 213, 0.45);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+#advisor-section .name-position-element.dark {
+  background: rgba(37, 40, 61, 0.55);
+}
+@media (max-width: 768px) {
+  #advisor-section .name-position-element {
+    right: unset;
+    left: -100px;
+    bottom: 40px;
+  }
+}
+#advisor-section .name-position-element .name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#advisor-section .name-position-element .position {
+  font-weight: 300;
+}
+#advisor-section .subtitle {
+  text-transform: unset;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  #advisor-section .subtitle {
+    line-height: 1.5;
+  }
+}
+#advisor-section .iti .iti__selected-dial-code {
+  margin-left: unset;
+}
+#advisor-section .agent-form-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  /*
+          display: grid;
+      // grid-template-columns: 1fr 3fr;
+          grid-template-columns: 1fr 2fr;
+  */
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper {
+    grid-template-columns: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+#advisor-section .agent-form-wrapper .desktop-image-container {
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper .desktop-image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 270px;
+    /*New mobile footer, hiding the bottom image */
+    display: none;
+  }
+}
+#advisor-section .agent-form-wrapper .desktop-image-container .agent-image {
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90%; /* do not occupy the full height of its container */
+  min-width: 100%;
+  /* width: 100%; // Mantain its normal width */
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper .desktop-image-container .agent-image {
+    height: 100%;
+    position: unset;
+  }
+}
+#advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container {
+  display: none;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper .col-12-text-image {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  #advisor-section .agent-form-wrapper .col-12-text-image .title-subtitle-container {
+    width: 100%;
+    margin-bottom: unset;
+  }
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container {
+    width: 33.3333333333%;
+    position: relative;
+    left: 15px;
+    display: flex;
+    justify-content: flex-end;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    /* display: unset; */
+  }
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container .mobile-agent-wrapper {
+    position: relative;
+    /* border: 1px solid #25283D; */
+    border-top: 1px solid #25283D;
+    border-left: 1px solid #25283D;
+    border-bottom: 1px solid #25283D;
+    border-radius: 2px;
+  }
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container .mobile-agent-wrapper .mobile-agent-image {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container .mobile-agent-wrapper .name-position-element {
+    bottom: -30px;
+    left: -60px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container .mobile-agent-wrapper .name-position-element {
+    font-size: 14px;
+    left: -40px;
+  }
+}
+@media (max-width: 768px) and (max-width: 380px) {
+  #advisor-section .agent-form-wrapper .col-12-text-image .mobile-agent-container .mobile-agent-wrapper .name-position-element {
+    left: -20px;
+  }
+}
+#advisor-section .agent-form-wrapper form {
+  padding-bottom: 50px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper form {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  #advisor-section .agent-form-wrapper form input, #advisor-section .agent-form-wrapper form select, #advisor-section .agent-form-wrapper form textarea, #advisor-section .agent-form-wrapper form div {
+    font-size: 15px;
+  }
+}
+#advisor-section .agent-form-wrapper form .input-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 50px;
+  padding-right: 70px;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper form .input-list-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    padding-right: unset;
+  }
+  #advisor-section .agent-form-wrapper form .input-list-wrapper > * {
+    grid-column: unset !important;
+  }
+}
+#advisor-section .agent-form-wrapper form .input-list-wrapper .checkbox-wrapper {
+  grid-column: 2;
+}
+#advisor-section .agent-form-wrapper form input, #advisor-section .agent-form-wrapper form select, #advisor-section .agent-form-wrapper form textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #25283D;
+  padding-bottom: 10px;
+  color: #25283D;
+}
+#advisor-section .agent-form-wrapper form input:focus-visible, #advisor-section .agent-form-wrapper form select:focus-visible, #advisor-section .agent-form-wrapper form textarea:focus-visible {
+  outline: unset;
+}
+#advisor-section .agent-form-wrapper form input::-moz-placeholder, #advisor-section .agent-form-wrapper form select::-moz-placeholder, #advisor-section .agent-form-wrapper form textarea::-moz-placeholder {
+  color: #8D8F99; /* Replace with desired color */
+  opacity: 0.8; /* Optional: controls the transparency of the placeholder text */
+  font-weight: 300;
+}
+#advisor-section .agent-form-wrapper form input::placeholder, #advisor-section .agent-form-wrapper form select::placeholder, #advisor-section .agent-form-wrapper form textarea::placeholder {
+  color: #8D8F99; /* Replace with desired color */
+  opacity: 0.8; /* Optional: controls the transparency of the placeholder text */
+  font-weight: 300;
+}
+#advisor-section .agent-form-wrapper form select {
+  background-image: linear-gradient(45deg, transparent 50%, #25283D 50%), linear-gradient(135deg, #25283D 50%, transparent 50%), linear-gradient(90deg, #ccc, #25283D);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center, calc(100% - 2.5em) center;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+}
+#advisor-section .agent-form-wrapper form textarea {
+  grid-row: span 2;
+  border: 1px solid;
+  padding: 10px 15px;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper form textarea {
+    min-height: 100px;
+  }
+}
+#advisor-section .agent-form-wrapper form .submit-button {
+  grid-column: 2;
+  justify-self: end;
+}
+@media (max-width: 768px) {
+  #advisor-section .agent-form-wrapper form .submit-button {
+    justify-self: unset;
+  }
+}
+#advisor-section .title-quote {
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  #advisor-section .title-quote {
+    line-height: 1.6;
+  }
+}
+@media (max-width: 576px) {
+  #advisor-section .title-quote {
+    font-size: 20px;
+  }
+}
+#advisor-section #phone-number-input {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #advisor-section #phone-number-input {
+    grid-row: 2;
+  }
+  #advisor-section #email-address {
+    grid-row: 3;
+  }
+  #advisor-section #investment-amount {
+    grid-row: 4;
+  }
+}
+#advisor-section.contact_page .col-12-text-image {
+  display: block;
+}
+#advisor-section.contact_page .col-12-text-image .mobile-agent-container {
+  display: none;
+}
+@media (max-width: 768px) {
+  #advisor-section.contact_page .col-12-text-image {
+    margin-bottom: 20px;
+  }
+  #advisor-section.contact_page form {
+    margin-top: 40px;
+  }
+}
+
+/* Checkbox */
+.checkbox-wrapper {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.checkbox-wrapper .stylize {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+  margin-left: -20px;
+}
+.checkbox-wrapper .stylize:checked ~ label::before {
+  color: #25283D;
+  border: 2px solid #25283D;
+}
+.checkbox-wrapper .stylize:checked ~ label::after {
+  transform: rotate(-45deg) scale(1);
+}
+.checkbox-wrapper label {
+  position: relative;
+  min-height: 34px;
+  padding-left: 36px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  vertical-align: sub;
+  line-height: 22px;
+}
+.checkbox-wrapper label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.28s ease;
+  border-radius: 3px;
+  border: 1px solid #25283D;
+}
+.checkbox-wrapper label:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 7px;
+  border-bottom: 2px solid #25283D;
+  border-left: 2px solid #25283D;
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.property-card {
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#chat-results .property-card {
+  height: 80px;
+  opacity: 1;
+}
+
+.property-image-container {
+  height: 100%;
+}
+
+.property-image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.toast-success {
+  position: fixed;
+  bottom: 2rem;
+  right: -400px;
+  background-color: #22c55e; /* green-500 */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 9999;
+  transition: right 0.5s ease-in-out;
+}
+
+.toast-success.show {
+  right: 2rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}

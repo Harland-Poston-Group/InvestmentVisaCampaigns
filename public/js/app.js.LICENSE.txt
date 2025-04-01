@@ -1,0 +1,18 @@
+/*!
+ * Backbone.Undo.js v0.2
+ * 
+ * Copyright (c)2013 Oliver Sartun
+ * Released under the MIT License
+ *
+ * Documentation and full license available at
+ * https://github.com/osartun/Backbone.Undo.js
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */

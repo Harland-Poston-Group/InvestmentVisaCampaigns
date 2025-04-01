@@ -9,7 +9,10 @@ mix.sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/greece_gv.scss', 'public/css')
     .sass('resources/scss/residency_and_citizenship.scss', 'public/css')
     .sass('resources/scss/residency.scss', 'public/css')
-    .sass('resources/scss/scp.scss', 'public/css');
+    .sass('resources/scss/scp.scss', 'public/css')
+    .sass('resources/css/index.scss', 'public/css')
+    .sass('resources/css/chat.scss', 'public/css');
+
 
 // Compile JS files
 mix.js('resources/js/app.js', 'public/js')

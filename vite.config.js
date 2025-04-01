@@ -7,6 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/scss/app.scss',
+                'resources/scss/chat.scss',
                 'resources/js/app.js',
                 'resources/js/private-meetings.js',
                 'resources/js/campaigns.js',

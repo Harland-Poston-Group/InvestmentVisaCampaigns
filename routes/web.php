@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -83,3 +84,17 @@ Route::get('/quiz/{lang?}', [App\Http\Controllers\LandingPageController::class, 
 Route::get('/portugal-golden-visa', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.simon_pt_gv_lp');
 Route::get('/rbi-and-cbi', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.rbi-and-cbi');
 Route::get('/greece-golden-visa-program', [App\Http\Controllers\LandingPageController::class, 'simon_campaigns'])->name('campaigns.simon.greece-golden-visa-program');
+
+
+Route::post('/chatbot/message', [ChatbotController::class, 'handleMessage']);
+Route::post('/chatbot/filter', [ChatbotController::class, 'handleFilter']);
+Route::post('/chatbot/wizard-results', [\App\Http\Controllers\ChatbotController::class, 'wizardResults']);
+
+Route::post('/subscribe-newsletter', [App\Http\Controllers\NewsletterController::class, 'subscribe']);
+Route::post('/request-call', [App\Http\Controllers\NewsletterController::class, 'requestCall']);
+Route::post('/send-email', [App\Http\Controllers\NewsletterController::class, 'sendEmail']);
+
+Route::post('/chatbot/faqs', [\App\Http\Controllers\ContentController::class, 'handleFaqs']);
+Route::post('/chatbot/news', [\App\Http\Controllers\ContentController::class, 'handleNews']);
+
+Route::view('/services', 'services')->name('services.index');
