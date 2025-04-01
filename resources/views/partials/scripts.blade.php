@@ -79,14 +79,38 @@
         </script>
 
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11285295032"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11285295032"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            
+
             gtag('config', 'AW-11285295032');
+        </script> -->
+
+        <!-- Taboola Pixel Code -->
+        {{-- <script>
+            _tfa.push({notify: 'event', name: 'lead', id: 1810087});
+        </script> --}}
+        <!-- End of Taboola Pixel Code -->
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(100301814, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
         </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/100301814" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
 
     @endif
 

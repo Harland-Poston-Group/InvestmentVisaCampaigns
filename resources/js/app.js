@@ -74,7 +74,6 @@ $(document).ready(function() {
 
 
         $.ajax({
-            // url: "/form-submission.php",
             url: "/form-submission",
             type: "POST",
             headers: {
@@ -109,20 +108,58 @@ $(document).ready(function() {
 
     });
 
+    let simonCampaignsForm = $('.simon-campaigns-form');
+
+    // Simon Campaigns Card Clicks
     $('.card-residency').on('click', function(){
 
-        if( $('.simon-campaigns-form').length > 0 ){
+        let urlValue = $(this).data('url');
 
-            let target = $('.simon-campaigns-form');
-    
-            let scrollTarget = target.position().top;
+        if( urlValue ){
 
-            console.log(scrollTarget);
-    
-            $('html, body').animate({
-                scrollTop: scrollTarget - 20 // Adjust for headers if needed
-            }, 10);
+            window.location.href = urlValue;
+
+        }else{
+
+            if( simonCampaignsForm.length > 0 ){
+
+                let target = simonCampaignsForm;
+
+                let scrollTarget = target.position().top;
+
+                console.log(scrollTarget);
+
+                $('html, body').animate({
+                    scrollTop: scrollTarget - 20 // Adjust for headers if needed
+                }, 10);
+            }
+
         }
 
     })
+
+    // If Simon Campagin Form exists
+    if( simonCampaignsForm.length > 0 ){
+
+        simonCampaignsForm.find('select').on('change', function(){
+
+            let selectedOption = $(this).val();
+            let noMinInvAmountMetDisclaimer = simonCampaignsForm.find('.no-minimum-investment-amount');
+            let submitButton = simonCampaignsForm.find('button[type=submit]');
+
+            // If the user selects "No", show the disclaimer and block submit button
+            if( selectedOption === 'No' ){
+
+                noMinInvAmountMetDisclaimer.show();
+                submitButton.attr('disabled', true);
+
+            }else{
+
+                noMinInvAmountMetDisclaimer.hide();
+                submitButton.attr('disabled', false);
+            }
+        })
+
+    }
+
 });

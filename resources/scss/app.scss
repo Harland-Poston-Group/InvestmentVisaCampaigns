@@ -99,37 +99,37 @@ footer{
         // right: 20px;
         font-size: 12px;
     }
-  
+
     .current-language {
       opacity: 0.7;
     }
-  
+
     .fa-angle-down {
       opacity: 0.7;
     }
-  
+
     .language {
       opacity: 0.7;
     }
 
-  
+
     .sl-nav {
         display: inline;
-    
+
         ul {
         margin: 0;
         padding: 0;
         list-style: none;
         position: relative;
         display: inline-block;
-    
+
             li {
                 cursor: pointer;
                 padding-bottom: 10px;
-        
+
                 ul {
                 display: none;
-        
+
                     li {
                         position: relative;
                         text-align: left;
@@ -150,14 +150,14 @@ footer{
                             background:$brand_purple;
                             color: white;
                         }
-            
+
                         &:last-of-type {
                             padding-bottom: 15px;
                         }
-            
+
                         span {
                             padding-left: 5px;
-            
+
                             &:hover,
                             &.active {
                                 // color: #146c78;
@@ -165,7 +165,7 @@ footer{
                         }
                     }
                 }
-        
+
                 &:hover {
 
                     ul {
@@ -180,7 +180,7 @@ footer{
                         border-radius: 5px;
                         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
                     }
-        
+
                     .triangle {
                         position: absolute;
                         top: 15px;
@@ -190,7 +190,7 @@ footer{
                         overflow: hidden;
                         width: 30px;
                         background: transparent;
-            
+
                         &:after {
                             content: '';
                             display: block;
@@ -207,7 +207,7 @@ footer{
             }
         }
     }
-  
+
     .sl-flag {
         display: inline-block;
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
@@ -219,20 +219,20 @@ footer{
         top: 2px;
         overflow: hidden;
         background-size: contain;
-    
+
         &.flag-de {
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAAPUlEQVQ4T+3HMQ0AIBTE0NOHM8x9B7hgh71bIWGieUvze1m7kHGBr/AVvsJX+EpmP5dV5/gKX+ErfIUvVDYcX2NMxQC8PAAAAABJRU5ErkJggg==');
             background-size: cover;
             background-position: center center;
         }
-    
+
         &.flag-usa {
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABhUlEQVQ4T2Ows82PjGixsc4LD2tysC/09Kjw8622tyuICG8u0w/cpGSCBzF4e1VmZkzw9anOzOj38a4KCW4IC22ECHYk1l9tn4gHMeTlTnZxLikvm+XiUpKW2hvgX+vnV5OVOQEoOGfOtv94AYOzU3Fd7XxHh6Lq6rlurqUx0W0J8Z1AnbW18yotonaYuOJBDBXls4A+bGpaBCTz86YEBtQCvVBSPAPIbY0oP1/aiAcxABU1Ny+2tclvbFjo5FgUF9uenNwNDLnmpkWEnV1TPRcY1O1tS4H6i4umA/0MDK2K8tlAwRqHpP1uoXgQKKraWpcClTY3LQZaCLQ5NaUX5OaWJY3++SeTC/AgBmA4AXUClUJs9ver8fKsAAYEUJCws4G21dXNB1oFdD/Qz8DQTk4C+bm2dn6DZ9bRiDQ8iAEYt8CoBpK5YBIYw0AEEZwSXX4oMB4PYoC6gCzAcDqrjGzEsMfen2xEmbMv1rSTjRi26dqRjShz9o2+6WQjBrSShQSkZAIADvW/HLrLY6cAAAAASUVORK5CYII=');
             background-size: cover;
             background-position: center center;
         }
     }
-  
+
 }
 /* End of Language Picker */
 
@@ -2787,8 +2787,8 @@ select.form-control {
     }
 
     .alert-success {
-        background-color: $brand_light_golden;
-        border-color: $brand_light_golden;
+        background-color: $beaujolais;
+        border-color: $beaujolais;
     }
 
     .alert-error {
@@ -2818,6 +2818,133 @@ select.form-control {
     a {
         font-weight: 900;
         color: white;
+    }
+}
+
+// Modal Forms
+.modal-form-global-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+
+    .title{
+        color: $beaujolais;
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .cta-text{
+        font-size: 18px;
+        margin-top: 14px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .cta-button{
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    &.abandon-popup{
+
+        max-height: 100vh;
+
+        img{
+            object-fit: cover;
+
+            @media (max-height:710px) {
+            
+                max-height: 230px;
+            }
+
+            @media (max-height:630px) {
+            
+                max-height: 210px;
+            }
+        }
+
+        .title{
+
+            @media (max-height:630px) {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    .modal-element{
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+
+        max-width: 450px;
+        padding: 20px 20px;
+        border-radius: 10px;
+
+        .modal-title{
+            font-weight: 600;
+        }
+
+        .modal-subtitle{
+            font-size: 18px;
+            line-height: 1.3;
+        }
+    }
+
+    #brochure-download-form{
+        // display: flex;
+        // flex-direction: column;
+        // gap: 8px;
+    }
+
+    form{
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        input{
+            border: unset;
+            background-color: rgb(241, 241, 241);
+            padding: 12px 24px;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        button{
+            background: $beaujolais;
+            color: white;
+            border: unset;
+            padding: 12px 8px;
+            transition: 0.2s all;
+            border-radius: 6px;
+
+            &:hover{
+                background: $beaujolais_hover;
+            }
+
+            &[disabled]{
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
     }
 }
 
@@ -3160,7 +3287,7 @@ textarea.form-control {
     // box-shadow: inset 1px 1px 7px 0 #ccc;
     border-radius: 5px;
     border: 1px solid $cobblestone_black;
-    background: $plaster;
+    background-color: $plaster;
 }
 
 

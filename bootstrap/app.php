@@ -16,6 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
         //
         // $middleware->add(UTMParameters::class);
         $middleware->append(UTMParameters::class);
+
+        $middleware->web([
+            \App\Http\Middleware\LogIncomingRequests::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Visa - Residency and Citizenship</title>
+
+    @if( isset($content['meta_title']) && !empty($content['meta_title']) )
+
+        <title>Investment Visa - {{ $content['meta_title'] }}</title>
+
+    @else
+
+        <title>Investment Visa - Residency and Citizenship</title>
+
+    @endif
+
     <link rel="stylesheet" href="/css/style.css" />
 
     <link rel="icon" type="image/png" href="/images/favicon32x32.png" sizes="16x16">
@@ -137,9 +147,9 @@
                         </div>
 
                         <ul id="header-list">
-                            
+
                             @if ( $content['banner_content']['bullet_points'] )
-                            
+
                                 @foreach ($content['banner_content']['bullet_points'] as $bullet_point)
 
                                     <li>
@@ -150,7 +160,7 @@
                                             {{ $bullet_point }}
                                         </div>
                                     </li>
-                                    
+
                                 @endforeach
 
                             @endif
@@ -213,18 +223,26 @@
                         </div>
                     </div>
 
+                    <div class="no-minimum-investment-amount">
+                        <div class="inner-disclaimer-wrapper">
+
+                            <span>You can't proceed with the process if you don't have the minimum investment amount</span>
+
+                        </div>
+                    </div>
+
                     <input type="hidden" name="petname" id="petname">
                     <div class="form-group row align-center">
 
                         {{-- Submit button --}}
                         <div class="col-12 col-md-12 text-center position-relative">
                             <hr style="
-                        position: absolute;
-                        bottom: 22px;
-                        left: 0;
-                        right: 0;
-                        border-top: 2px solid;
-                        z-index: 1;"
+                                position: absolute;
+                                bottom: 22px;
+                                left: 0;
+                                right: 0;
+                                border-top: 2px solid;
+                                z-index: 1;"
                             >
                             <button type="submit" data-raw-content="true" id="form-bt" class="btn btn-primary form-send-bt">Contact Us Now</button>
                         </div>
@@ -263,7 +281,7 @@
 
                         {{-- Card --}}
                         <div class="col-12 col-lg-4">
-                            <div class="card-residency portugal h-100">
+                            <div class="card-residency portugal h-100" data-url="{{ $card['url'] ?? false ? $card['url'] : '' }}">
 
                                 <h1 class="card-title">
                                     <span class="one">{{ $card['title'] }}</span>
@@ -282,7 +300,7 @@
 
                             </div>
                         </div>
-                        
+
                     @endforeach
 
                 @endif
@@ -343,11 +361,20 @@
 <script src="/assets/js/notify.js"></script>
 <script src="/js/script.js"></script>
 
+<script src="/assets/js/strategic-pops.js"></script>
+
 
 <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
 <script src="/assets/js/country-code-plugin/intlTelInput.js"></script>
 <script src="/assets/js/country-code-plugin/utils.js"></script>
 <script src="/assets/js/country-code-plugin/tel-input-script.js"></script>
+
+    {{-- Abandon Popup --}}
+    @if( request()->routeIs('campaigns.simon.greece-golden-visa-program') )
+        @include('pop-ups.greece-gv-fact-sheet-brochure')
+    @else
+        @include('pop-ups.contact-abandon-popup')
+    @endif
 
 <!-- Notifications Element -->
 <div id="notifications"></div>

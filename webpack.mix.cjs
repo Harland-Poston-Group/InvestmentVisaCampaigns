@@ -9,6 +9,8 @@ mix.sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/greece_gv.scss', 'public/css')
     .sass('resources/scss/residency_and_citizenship.scss', 'public/css')
     .sass('resources/scss/residency.scss', 'public/css')
+    .sass('resources/scss/greece_gv_real_estate.scss', 'public/css')
+    .sass('resources/scss/scp.scss', 'public/css');
     .sass('resources/scss/scp.scss', 'public/css')
     .sass('resources/css/index.scss', 'public/css')
     .sass('resources/css/chat.scss', 'public/css');
@@ -22,7 +24,9 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/script.js', 'public/js')
     .js('resources/js/multistep_form.js', 'public/assets/js')
     .js('resources/js/greece_gv.js', 'public/assets/js')
-    .js('resources/js/notify.js', 'public/js');
+    .js('resources/js/notify.js', 'public/js')
+    .js('resources/js/strategic-pops.js', 'public/assets/js')
+    .js('resources/js/greece_gv_real_estate.js', 'public/assets/js');
 
 // Enable source maps for easier debugging (optional)
 mix.sourceMaps();

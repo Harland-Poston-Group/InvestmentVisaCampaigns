@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 
 // Helper File to Use Dynamics 365 functions to create leads within the CRM
@@ -33,6 +34,46 @@ class Dynamics_Helper {
         // Creating an associative array that contains the received values with Dynamics' form fields values already inserted
         $post = [];
         $data = $submission_data;
+
+
+        // If the email address exists and is not empty - this is mandatory for any submission
+        if( isset($submission_data['email_address']) && !is_null($submission_data['email_address']) && !empty($submission_data['email_address']) ){
+
+            // Check if the email belongs to a list of blocked domains
+            if (isBlockedEmailDomain($submission_data['email_address'])) {
+                Log::info('[ZeroBounce] - Email ' . $submission_data['email_address'] . ' belongs to a blocked domain | Blocked from Dynamics 365 submission');
+                writeBlockedEmail($submission_data['email_address'], 'Email address belongs to a blocked domain by us.');
+                return false;
+            }
+
+            $valid = verify($submission_data['email_address']);
+
+            // Invalid Email
+            if( $valid->getStatusCode() !== 200 ){
+
+                $reason = $valid->getData(true);
+                $reason = $reason['email_verification_error'];
+
+                writeBlockedEmail($submission_data['email_address'], $reason);
+
+                // Mail::to('miguel.curto@portugalhomes.com')
+                //     ->send(new \App\Mail\Admin\InvalidEmail($submission_data['email_address']));
+
+                // dump($reason);
+                Log::info('[ZeroBounce] - Email ' . $submission_data['email_address'] . ' verified as not being a credible email address | Blocked from Dynamics 365 submission');
+                return false;
+
+            // Valid Email
+            }else{
+                // The email is valid - nothing to be done
+            }
+
+        }else{
+            return false;
+        }
+
+        // dump($valid);
+        // dd('Passed the email validation!');
 
         /* First we'll create the field mappings and only after, we'll automatically populate our array with the correct fields that we may have */
 
@@ -77,6 +118,26 @@ class Dynamics_Helper {
             return !empty($value); // Keep only non-empty values
         });
 
+        // If this form has a fullname input instead of a first name/last name
+        if( isset( $data['fullname'] ) && !empty($data['fullname']) ){
+
+            // Split full name by spaces
+            $nameParts = Str::of($data['fullname'])->explode(' ');
+
+            // Set the first word as firstname
+            $post['firstname'] = $nameParts->first();
+
+            // Check if there are more than one part
+            if ($nameParts->count() > 1) {
+                // Join the rest as lastname
+                $post['lastname'] = $nameParts->slice(1)->implode(' ');
+            } else {
+                // If only one word, set lastname as empty
+                $post['lastname'] = '';
+            }
+
+        }
+
         // Add the "Portugal Homes" brand to the request (identified by an ID)
         $post['ans_brand'] = 119020001;
 
@@ -114,6 +175,9 @@ class Dynamics_Helper {
                         break;
                     case 'fb':
                         $post['ans_originalsource'] = 119020000;
+                        break;
+                    case 'microsoft':
+                        $post['ans_originalsource'] = 100000001;
                         break;
                     default:
                         # code...
@@ -171,6 +235,9 @@ class Dynamics_Helper {
                 case 'work visa':
                     return false;
                     break;
+                case 'work_visa':
+                    return false;
+                    break;
                 default:
                     # Nothing happens
                     break;
@@ -181,10 +248,15 @@ class Dynamics_Helper {
         // dd($post);
 
         // Check if there's a lead with the same email in Dynamics
-        $existing_lead = self::checkExistingLead($post['emailaddress1']);
+        // $existing_lead = self::checkExistingLead($post['emailaddress1']);
 
         // The email to where the notification of this submission should be sent to
-        $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+        if( env('APP_ENV') == 'production' ){
+            $admin_notification_emails = ['enquiries@investmentvisa.com', 'antonio.lima@portugalhomes.com'];
+        }else{
+            $admin_notification_emails = ['antonio.lima@portugalhomes.com'];
+        }
+
         // $admin_notification_emails = ['antonio.lima@portugalhomes.com'];
 
         // Set timezone to Portugal
@@ -200,7 +272,7 @@ class Dynamics_Helper {
         /* End of multistep check */
 
         // If there's a contact with this submission's email
-        if( $existing_lead ){
+        if( isset($existing_lead) && $existing_lead ){
 
             // Lead exists, get the existing message
             $lead_id = $existing_lead['leadid'];
@@ -211,6 +283,8 @@ class Dynamics_Helper {
             // Email the admin of the form submission
             // Mail::to($admin_notification_emails)
             // ->send(new \App\Mail\Admin\DynamicsExistingContactEnquiry($maildata));
+
+            // dd($post);
 
             if( isset($data['message']) ){
 
@@ -229,7 +303,10 @@ class Dynamics_Helper {
 
             // Update the existing lead with the new message
             try {
-                $response = self::updateExistingLead($lead_id, $post);
+
+                /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
+                // $response = self::updateExistingLead($lead_id, $post);
+
                 // echo "Lead updated successfully<br>. Response: <pre>" . $response. '</pre>';
 
                 // $post['ans_lead'] = $lead_id;
@@ -248,15 +325,24 @@ class Dynamics_Helper {
 
             // Contact/Lead Creation
 
+            /* NO LONGER NEED TO CREATE/UPDATE LEADS AS WEB ENQUIRIES ARE ALREADY BEING USED */
             // Run the function that will submit the data over to Dynamics 365
-            self::sendToDynamics365($post);
+            // self::sendToDynamics365($post);
 
             // Email the admin of the form submission
             Mail::to($admin_notification_emails)
             ->send(new \App\Mail\Admin\DynamicsEnquiry($maildata));
         }
 
+        // This field has a different name in the web enquiries field
+        // if( isset($data['investment_amount']) ){
+        //     $post['new_minimum_investment_amount'] = $data['investment_amount'];
+        // }
+
+        // dd($post);
+
         // Web Enquiry Record creation
+        // dd($post);
         self::createWebEnquiryRecord($post);
 
     }
@@ -448,6 +534,21 @@ class Dynamics_Helper {
             // Unit REF
             if( isset( $data['ans_unitref'] ) ){
                 $web_enquiry_data['ans_unitref'] = $data['ans_unitref'];
+            }
+
+            // Message
+            if( isset( $data['ans_message'] ) && !empty( $data['ans_message'] ) ){
+                $web_enquiry_data['ans_message'] = $data['ans_message'];
+            }
+
+            // Country Code
+            if( isset($data['ans_countrycode']) && !empty( $data['ans_countrycode'] ) ){
+                $web_enquiry_data['ans_countrycode'] = $data['ans_countrycode'];
+            }
+
+            // Minimum Investment Amount
+            if( isset($data['new_minimum_investment_amount']) && !empty($data['new_minimum_investment_amount']) ){
+                $web_enquiry_data['new_minimum_investment_amount'] = $data['new_minimum_investment_amount'];
             }
 
         /* End of input cleaning */

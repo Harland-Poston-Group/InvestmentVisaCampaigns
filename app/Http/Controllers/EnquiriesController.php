@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Http;
 use App\Helpers\Dynamics_Helper;
 use App\Models\Multistep_Form_Question;
 use App\Models\Multistep_Form_Answer;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
 class EnquiriesController extends Controller
 {
@@ -23,6 +25,66 @@ class EnquiriesController extends Controller
         $response = Dynamics_Helper::dynamics_form_submission($submission_data);
 
         // dd($submission_data);
+
+        return response()->json(['success' => 'Thank you for your enquiry, we\'ll be in touch, shortly.']);
+    }
+
+    // Process the download brochure form submission
+    public function download_brochure_enquiry(Request $request)
+    {
+
+        // // Send data over to Dynamics 365
+        $submission_data = $request->all();
+        // // dd($submission_data);
+
+        $submission_data['what_are_you_looking_for'] = 'Brochure Download';
+
+        $response = Dynamics_Helper::dynamics_form_submission($submission_data);
+
+        if( isset( $submission_data['fullname'] ) && !empty($submission_data['fullname']) ){
+
+            // Split full name by spaces
+            $nameParts = Str::of($submission_data['fullname'])->explode(' ');
+
+            // Set the first word as firstname
+            $submission_data['firstname'] = $nameParts->first();
+
+        }
+
+        // dd($submission_data);
+        if( isset($submission_data['brochure-link']) && !empty($submission_data['brochure-link']) ){
+
+            switch ($submission_data['brochure-link']) {
+                case 'fact_sheet':
+                    $submission_data['brochure-link'] = '/assets/brochures/ggv_fact_sheet.pdf';
+                    break;
+                default:
+                $submission_data['brochure-link'] = '/assets/brochures/ggv_fact_sheet2.pdf';
+                    break;
+            }
+
+            $submission_data['brochure-link'] = url($submission_data['brochure-link']);
+            $maildata = $submission_data;
+
+        }else{
+            return false;
+        }
+
+        // dd($maildata);
+
+        // Mail::to($submission_data['email_address'])
+        // ->send(new \App\Mail\User\BrochureDownload($maildata));
+
+        try {
+            Mail::to($submission_data['email_address'])
+                ->send(new \App\Mail\User\BrochureDownload($maildata));
+
+            // If no exception was thrown, we consider it "successfully handed off"
+            Log::channel('brochure')->info('Brochure email sent to ' . $submission_data['email_address']);
+        } catch (\Exception $e) {
+            // If mail sending fails or your mail driver throws an exception
+            Log::channel('brochure')->error('Failed to send brochure email to ' . $submission_data['email_address'] . '. Error: ' . $e->getMessage());
+        }
 
         return response()->json(['success' => 'Thank you for your enquiry, we\'ll be in touch, shortly.']);
     }

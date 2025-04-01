@@ -127,6 +127,19 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'requestlog' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/request.log'),
+            'level' => 'info',
+            'days' => 7,
+        ],
+
+        'brochure' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/contacted_brochure_downloads.log'),
+            'level' => 'info',
+        ],
+
     ],
 
 ];

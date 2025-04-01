@@ -340,9 +340,11 @@ class LandingPageController extends BaseController
     {
         $routeName = $request->route()->getName();
         // dump($routeName);
-        
+
         $content = array(
             'campaigns.simon.simon_pt_gv_lp' => array(
+                'meta_title' => 'Portugal Golden Visa',
+                'meta_description' => '',
                 'mininum_investment_amount' => '500K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Portugal.webp',
@@ -360,13 +362,15 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => 'From <b>€155K</b><br> in staged payments',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.rbi-and-cbi'),
                     ),
                     1 => array(
                         'title' => 'Greece',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€250K</b> via<br> property investment',
-                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp',
+                        'url' => route('campaigns.simon.greece-golden-visa-program'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
@@ -377,6 +381,8 @@ class LandingPageController extends BaseController
                 )
             ),
             'campaigns.simon.rbi-and-cbi' => array(
+                'meta_title' => 'Residency and Citizenship',
+                'meta_description' => '',
                 'mininum_investment_amount' => '155K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Geral.webp',
@@ -394,29 +400,34 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€500K</b><br> via investment funds',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                     1 => array(
                         'title' => 'Greece',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€250K</b> via<br> property investment',
-                        'image' => '/assets/img/campaigns/simon/gr-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/gr-flag.webp',
+                        'url' => route('campaigns.simon.greece-golden-visa-program'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => '<b>10%</b> fixed returns<br> on part of the investment',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
                     ),
                 )
             ),
             'campaigns.simon.greece-golden-visa-program' => array(
+                'meta_title' => 'Greece Golden Visa',
+                'meta_description' => '',
                 'mininum_investment_amount' => '250K',
                 'banner_content' => array(
                     'background_image' => '/assets/img/campaigns/simon/Greece.webp',
                     'banner_title' => 'GREECE<br>
                             <span class="gv-span">Golden Visa</span><br>
-                            <span class="from-span">from</span> <b>€250K</b>',
+                            <span class="from-span">from</span> <b>€250K</b></h1>
+                            <h1 class="via-real-estate"><span class="via-real-estate">via real estate</span>',
                     'badge' => '/assets/img/badges/1-program.webp',
                     'bullet_points' => array(
                         'High capital gain potential',
@@ -428,19 +439,22 @@ class LandingPageController extends BaseController
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => 'From <b>€155K</b><br> in staged payments',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.rbi-and-cbi'),
                     ),
                     1 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'Golden Visa',
                         'content' => 'From <b>€500K</b><br> via investment funds',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                     2 => array(
                         'title' => 'Portugal',
                         'subtitle' => 'RBI & Citizenship',
                         'content' => '<b>10%</b> fixed returns<br> on part of the investment',
-                        'image' => '/assets/img/campaigns/simon/pt-flag.webp'
+                        'image' => '/assets/img/campaigns/simon/pt-flag.webp',
+                        'url' => route('campaigns.simon.simon_pt_gv_lp'),
                     ),
                 )
             ),
@@ -451,6 +465,18 @@ class LandingPageController extends BaseController
         $page_content = $content[$routeName];
 
         return view('pages.campaigns.simon.residency', ['content' => $page_content]);
+    }
+
+    // Greece GV by Real Estate
+    public function greece_gv_by_real_estate(Request $request)
+    {
+
+        return view('pages.campaigns.greece_gv_real_estate',
+            [
+                // 'multistep_form' => $form,
+                // 'lang'  =>  $lang
+            ]
+        );
     }
 
 }

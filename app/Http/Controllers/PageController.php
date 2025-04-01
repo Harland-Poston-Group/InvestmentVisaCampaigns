@@ -15,9 +15,15 @@ class PageController extends Controller
     {
         return view('pages.residency-and-citizenship-2');
     }
+
     public function thankYou()
     {
         return view('pages.thank-you');
+    }
+
+    public function thankYouBrochure()
+    {
+        return view('pages.thank-you-brochure');
     }
 
     public function campaigns()
