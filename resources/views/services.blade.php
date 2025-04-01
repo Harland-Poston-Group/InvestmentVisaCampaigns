@@ -5,8 +5,8 @@
 
 
 @section('title', 'Our Services')
-{{--@vite('resources/css/app.css') --}}
-@vite('resources/js/app.js')
+{{--@vite('resources/css/app.css')
+@vite('resources/js/app.js')--}}
 <script src="{{ mix('js/app.js') }}"></script>
 
 @section('content')
