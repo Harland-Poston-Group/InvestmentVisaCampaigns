@@ -20,5 +20,6 @@ jobs:
         password: ${{ secrets.vps_ftp_password }}
         port: 21
         protocol: ftp      
-      
+    - name: Post deploy server tasks
+      run: wget "https://campaigns.investmentvisa.com/_manage/index.php?_=ukhljfdlkhjfsdkhljdsfSDNHHJNHUYJDFSFFFhfdhjfsdhyioudfs"
       
