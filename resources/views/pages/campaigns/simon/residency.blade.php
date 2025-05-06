@@ -361,7 +361,7 @@
 <script src="/assets/js/notify.js"></script>
 <script src="/js/script.js"></script>
 
-<script src="/assets/js/strategic-pops.js"></script>
+{{-- <script src="/assets/js/strategic-pops.js"></script> --}}
 
 
 <!-- Scripts that will mount the plugin that will add the user's country extension to the phone number input -->
