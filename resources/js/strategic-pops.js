@@ -25,10 +25,10 @@ $(function() {
     /* Abandon Popup */
     let showExitPopup = true;
 
-    // /greece-golden-visa-program, /rbi-and-cbi and /portugal-golden-visa
-    if ( window.location.pathname === '/greece-golden-visa-program' ||
-        window.location.pathname === '/rbi-and-cbi' ||
-        window.location.pathname === '/portugal-golden-visa'
+    // Disabled per Diogo & Joana request
+    if ( window.location.pathname === '/greece-golden-visa-programa' ||
+        window.location.pathname === '/rbi-and-cbia' ||
+        window.location.pathname === '/portugal-golden-visaa'
     ) {
 
         document.addEventListener('mouseout', function(e) {
@@ -210,7 +210,8 @@ $(function() {
             // Show popup after 10 seconds
             setTimeout(() => {
                 // abandonPopup.fadeIn();
-                modalGlobalContainer.fadeIn();
+                // Disabled per Diogo & Joana Request
+                // modalGlobalContainer.fadeIn();
             }, 10000);
         }
 
