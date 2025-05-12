@@ -11,6 +11,7 @@ use App\Models\Multistep_Form_Question;
 use App\Models\Multistep_Form_Answer;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
+use App\Jobs\SendEnquiryToDynamics;
 
 class EnquiriesController extends Controller
 {
@@ -20,9 +21,19 @@ class EnquiriesController extends Controller
     {
 
         // Send data over to Dynamics 365
-        $submission_data = $request->all();
-        // dd($submission_data);
-        $response = Dynamics_Helper::dynamics_form_submission($submission_data);
+        // $submission_data = $request->all();
+        // // dd($submission_data);
+        // $response = Dynamics_Helper::dynamics_form_submission($submission_data);
+
+        /** 1. Gather & validate  */
+        $data = $request->all();
+        $data['source_page'] =
+                                $request->input('submission_page')      // hidden input (preferred)
+                                ?? $request->headers->get('referer')    // fallback
+                                ?? '';
+
+        /** 2. Dispatch the job - this way the job gets queued and the user does not have a wait time  */
+        SendEnquiryToDynamics::dispatch($data);
 
         // dd($submission_data);
 
